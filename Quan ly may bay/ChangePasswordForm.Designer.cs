@@ -56,7 +56,7 @@
             this.ConfirmNewPassTextBox.Location = new System.Drawing.Point(208, 259);
             this.ConfirmNewPassTextBox.Name = "ConfirmNewPassTextBox";
             this.ConfirmNewPassTextBox.PasswordChar = '*';
-            this.ConfirmNewPassTextBox.Size = new System.Drawing.Size(253, 39);
+            this.ConfirmNewPassTextBox.Size = new System.Drawing.Size(313, 39);
             this.ConfirmNewPassTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.ConfirmNewPassTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.ConfirmNewPassTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -80,7 +80,7 @@
             this.NewPassTextBox.Location = new System.Drawing.Point(208, 199);
             this.NewPassTextBox.Name = "NewPassTextBox";
             this.NewPassTextBox.PasswordChar = '*';
-            this.NewPassTextBox.Size = new System.Drawing.Size(253, 39);
+            this.NewPassTextBox.Size = new System.Drawing.Size(313, 39);
             this.NewPassTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.NewPassTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.NewPassTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -94,7 +94,7 @@
             this.OldPassTextBox.Location = new System.Drawing.Point(208, 135);
             this.OldPassTextBox.Name = "OldPassTextBox";
             this.OldPassTextBox.PasswordChar = '*';
-            this.OldPassTextBox.Size = new System.Drawing.Size(253, 39);
+            this.OldPassTextBox.Size = new System.Drawing.Size(313, 39);
             this.OldPassTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.OldPassTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.OldPassTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -207,6 +207,7 @@
             this.CloseLabel.Size = new System.Drawing.Size(30, 31);
             this.CloseLabel.TabIndex = 38;
             this.CloseLabel.Text = "X";
+            this.CloseLabel.Click += new System.EventHandler(this.CloseLabel_Click);
             // 
             // ChangePasswordForm
             // 
