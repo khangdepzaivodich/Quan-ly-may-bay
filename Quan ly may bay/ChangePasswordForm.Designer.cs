@@ -1,6 +1,6 @@
 ﻿namespace Quan_ly_may_bay
 {
-    partial class LoginForm
+    partial class ChangePasswordForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,78 +29,103 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.UsernameTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.PasswordTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.SubmitButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.ConfirmNewPassTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.NewPassTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.OldPassTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.SignupUsernameTextBox = new System.Windows.Forms.Label();
+            this.SubmitButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.CloseLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Itim", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(148, 61);
+            this.label1.Location = new System.Drawing.Point(169, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "LOGIN";
+            this.label1.Size = new System.Drawing.Size(267, 39);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Change Password";
             // 
-            // label2
+            // ConfirmNewPassTextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Itim", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 154);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 33);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Username";
+            this.ConfirmNewPassTextBox.Location = new System.Drawing.Point(208, 259);
+            this.ConfirmNewPassTextBox.Name = "ConfirmNewPassTextBox";
+            this.ConfirmNewPassTextBox.PasswordChar = '*';
+            this.ConfirmNewPassTextBox.Size = new System.Drawing.Size(253, 39);
+            this.ConfirmNewPassTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.ConfirmNewPassTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.ConfirmNewPassTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.ConfirmNewPassTextBox.StateCommon.Border.Rounding = 20;
+            this.ConfirmNewPassTextBox.TabIndex = 36;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 264);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(169, 24);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Confirm password";
+            // 
+            // NewPassTextBox
+            // 
+            this.NewPassTextBox.Location = new System.Drawing.Point(208, 199);
+            this.NewPassTextBox.Name = "NewPassTextBox";
+            this.NewPassTextBox.PasswordChar = '*';
+            this.NewPassTextBox.Size = new System.Drawing.Size(253, 39);
+            this.NewPassTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.NewPassTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.NewPassTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.NewPassTextBox.StateCommon.Border.Rounding = 20;
+            this.NewPassTextBox.TabIndex = 34;
+            // 
+            // OldPassTextBox
+            // 
+            this.OldPassTextBox.Location = new System.Drawing.Point(208, 135);
+            this.OldPassTextBox.Name = "OldPassTextBox";
+            this.OldPassTextBox.PasswordChar = '*';
+            this.OldPassTextBox.Size = new System.Drawing.Size(253, 39);
+            this.OldPassTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.OldPassTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.OldPassTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.OldPassTextBox.StateCommon.Border.Rounding = 20;
+            this.OldPassTextBox.TabIndex = 33;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Itim", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 228);
+            this.label3.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 33);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Password";
+            this.label3.Size = new System.Drawing.Size(134, 24);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "New password";
             // 
-            // UsernameTextBox
+            // SignupUsernameTextBox
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(170, 154);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(195, 39);
-            this.UsernameTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.UsernameTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.UsernameTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.UsernameTextBox.StateCommon.Border.Rounding = 20;
-            this.UsernameTextBox.TabIndex = 3;
-            // 
-            // PasswordTextBox
-            // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(170, 228);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(195, 39);
-            this.PasswordTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.PasswordTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.PasswordTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.PasswordTextBox.StateCommon.Border.Rounding = 20;
-            this.PasswordTextBox.TabIndex = 4;
+            this.SignupUsernameTextBox.AutoSize = true;
+            this.SignupUsernameTextBox.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupUsernameTextBox.Location = new System.Drawing.Point(27, 141);
+            this.SignupUsernameTextBox.Name = "SignupUsernameTextBox";
+            this.SignupUsernameTextBox.Size = new System.Drawing.Size(129, 24);
+            this.SignupUsernameTextBox.TabIndex = 31;
+            this.SignupUsernameTextBox.Text = "Old password";
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(151, 363);
+            this.SubmitButton.Location = new System.Drawing.Point(232, 351);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.SubmitButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -159,78 +184,55 @@
             this.SubmitButton.StateTracking.Border.Width = 1;
             this.SubmitButton.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.SubmitButton.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.SubmitButton.TabIndex = 0;
+            this.SubmitButton.TabIndex = 37;
             this.SubmitButton.TabStop = false;
             this.SubmitButton.Values.Text = "Submit";
             // 
-            // label4
+            // pictureBox2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(182, 288);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 15);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Sign up";
+            this.pictureBox2.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.nen_removebg_preview;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(5, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(90, 89);
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // CloseLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(231, 288);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(11, 15);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "|";
+            this.CloseLabel.AutoSize = true;
+            this.CloseLabel.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseLabel.Location = new System.Drawing.Point(527, 22);
+            this.CloseLabel.Name = "CloseLabel";
+            this.CloseLabel.Size = new System.Drawing.Size(30, 31);
+            this.CloseLabel.TabIndex = 38;
+            this.CloseLabel.Text = "X";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(243, 288);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 15);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Forgotten password";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.nen_removebg_preview;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 89);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // LoginForm
+            // ChangePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(406, 464);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(581, 425);
+            this.Controls.Add(this.CloseLabel);
             this.Controls.Add(this.SubmitButton);
-            this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.UsernameTextBox);
+            this.Controls.Add(this.ConfirmNewPassTextBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.NewPassTextBox);
+            this.Controls.Add(this.OldPassTextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.SignupUsernameTextBox);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LoginForm";
+            this.Name = "ChangePasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.StateCommon.Border.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.False;
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.StateCommon.Border.Rounding = 30;
-            this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.StateCommon.Border.Width = 1;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,14 +241,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox UsernameTextBox;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox PasswordTextBox;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton SubmitButton;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox ConfirmNewPassTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox NewPassTextBox;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox OldPassTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label SignupUsernameTextBox;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton SubmitButton;
+        private System.Windows.Forms.Label CloseLabel;
     }
 }

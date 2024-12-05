@@ -10,20 +10,11 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 namespace Quan_ly_may_bay
 {
-    public partial class LoginForm : KryptonForm
+    public partial class ResetPassForm : KryptonForm
     {
-        public LoginForm()
+        public ResetPassForm()
         {
             InitializeComponent();
-            InitializeProperties();
-        }
-        private void InitializeProperties()
-        {
-        }
-
-        private void CloseBox_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 namespace Quan_ly_may_bay
 {
-    public partial class LoginForm : KryptonForm
+    public partial class ChangePasswordForm : KryptonForm
     {
-        public LoginForm()
+        public ChangePasswordForm()
         {
             InitializeComponent();
         }
