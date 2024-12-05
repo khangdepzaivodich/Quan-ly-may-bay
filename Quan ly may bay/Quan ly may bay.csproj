@@ -107,15 +107,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+	</EmbeddedResource>
     <Compile Include="UCFlight\UCInfo1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCFlight\UCInfo1.Designer.cs">
       <DependentUpon>UCInfo1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
