@@ -38,7 +38,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.btnHuy = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnXem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,7 +174,7 @@
             // btnHuy
             // 
             this.btnHuy.AutoSize = true;
-            this.btnHuy.Location = new System.Drawing.Point(972, 83);
+            this.btnHuy.Location = new System.Drawing.Point(941, 41);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.OverrideDefault.Back.Color1 = System.Drawing.Color.Salmon;
             this.btnHuy.OverrideDefault.Back.Color2 = System.Drawing.Color.Crimson;
@@ -184,7 +183,7 @@
             this.btnHuy.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnHuy.Size = new System.Drawing.Size(90, 43);
+            this.btnHuy.Size = new System.Drawing.Size(108, 58);
             this.btnHuy.StateCommon.Back.Color1 = System.Drawing.Color.Salmon;
             this.btnHuy.StateCommon.Back.Color2 = System.Drawing.Color.Crimson;
             this.btnHuy.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -200,62 +199,11 @@
             this.btnHuy.TabIndex = 14;
             this.btnHuy.Values.Text = "Hủy";
             // 
-            // btnXem
-            // 
-            this.btnXem.AutoSize = true;
-            this.btnXem.Location = new System.Drawing.Point(972, 23);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.OverrideDefault.Back.Color1 = System.Drawing.Color.LightGreen;
-            this.btnXem.OverrideDefault.Back.Color2 = System.Drawing.Color.ForestGreen;
-            this.btnXem.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXem.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXem.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnXem.Size = new System.Drawing.Size(90, 43);
-            this.btnXem.StateCommon.Back.Color1 = System.Drawing.Color.LightGreen;
-            this.btnXem.StateCommon.Back.Color2 = System.Drawing.Color.ForestGreen;
-            this.btnXem.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXem.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXem.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnXem.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnXem.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnXem.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXem.StateDisabled.Back.Color1 = System.Drawing.Color.LightGreen;
-            this.btnXem.StateDisabled.Back.Color2 = System.Drawing.Color.ForestGreen;
-            this.btnXem.StateDisabled.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXem.StateDisabled.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXem.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnXem.StateNormal.Back.Color1 = System.Drawing.Color.LightGreen;
-            this.btnXem.StateNormal.Back.Color2 = System.Drawing.Color.ForestGreen;
-            this.btnXem.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXem.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXem.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnXem.StatePressed.Back.Color1 = System.Drawing.Color.LightGreen;
-            this.btnXem.StatePressed.Back.Color2 = System.Drawing.Color.ForestGreen;
-            this.btnXem.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXem.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnXem.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnXem.StateTracking.Back.Color1 = System.Drawing.Color.ForestGreen;
-            this.btnXem.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnXem.TabIndex = 15;
-            this.btnXem.Values.Text = "Xem";
-            this.btnXem.Click += new System.EventHandler(this.kryptonButton2_Click);
-            // 
             // UCManageFlight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.btnXem);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.label8);
@@ -286,6 +234,5 @@
         private System.Windows.Forms.Label label8;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnHuy;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnXem;
     }
 }

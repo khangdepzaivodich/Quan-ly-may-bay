@@ -31,9 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtSoGhe = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,7 +46,11 @@
             this.kryptonTextBox8 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox9 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnCreate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.cbxMaLT = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cbxNgXP = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxMaLT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxNgXP)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -90,57 +92,25 @@
             this.label3.Text = "Số ghế";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // kryptonTextBox1
+            // txtSoGhe
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(220, 60);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(146, 48);
-            this.kryptonTextBox1.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kryptonTextBox1.StateActive.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kryptonTextBox1.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtSoGhe.Location = new System.Drawing.Point(220, 355);
+            this.txtSoGhe.Name = "txtSoGhe";
+            this.txtSoGhe.Size = new System.Drawing.Size(190, 48);
+            this.txtSoGhe.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtSoGhe.StateActive.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtSoGhe.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateActive.Border.Rounding = 13;
-            this.kryptonTextBox1.StateActive.Content.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.TabIndex = 4;
-            this.kryptonTextBox1.Text = "HK100000";
-            this.kryptonTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // kryptonTextBox2
-            // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(220, 205);
-            this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Size = new System.Drawing.Size(146, 48);
-            this.kryptonTextBox2.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kryptonTextBox2.StateActive.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kryptonTextBox2.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox2.StateActive.Border.Rounding = 13;
-            this.kryptonTextBox2.StateActive.Content.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox2.TabIndex = 5;
-            this.kryptonTextBox2.Text = "07-01-2025";
-            this.kryptonTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // kryptonTextBox3
-            // 
-            this.kryptonTextBox3.Location = new System.Drawing.Point(220, 355);
-            this.kryptonTextBox3.Name = "kryptonTextBox3";
-            this.kryptonTextBox3.Size = new System.Drawing.Size(146, 48);
-            this.kryptonTextBox3.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kryptonTextBox3.StateActive.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kryptonTextBox3.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateActive.Border.Rounding = 13;
-            this.kryptonTextBox3.StateActive.Content.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox3.TabIndex = 6;
-            this.kryptonTextBox3.Text = "100";
-            this.kryptonTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSoGhe.StateActive.Border.Rounding = 13;
+            this.txtSoGhe.StateActive.Content.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoGhe.TabIndex = 6;
+            this.txtSoGhe.Text = "100";
+            this.txtSoGhe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // kryptonPanel1
             // 
-            this.kryptonPanel1.Location = new System.Drawing.Point(393, 37);
+            this.kryptonPanel1.Location = new System.Drawing.Point(466, 42);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(1, 400);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.DodgerBlue;
@@ -153,7 +123,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label4.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(422, 25);
+            this.label4.Location = new System.Drawing.Point(503, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 33);
             this.label4.TabIndex = 8;
@@ -166,7 +136,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label5.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(422, 105);
+            this.label5.Location = new System.Drawing.Point(503, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 33);
             this.label5.TabIndex = 9;
@@ -179,7 +149,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label6.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(422, 185);
+            this.label6.Location = new System.Drawing.Point(503, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 33);
             this.label6.TabIndex = 10;
@@ -192,7 +162,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label7.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(422, 265);
+            this.label7.Location = new System.Drawing.Point(503, 265);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 33);
             this.label7.TabIndex = 11;
@@ -205,7 +175,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label8.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label8.Location = new System.Drawing.Point(422, 345);
+            this.label8.Location = new System.Drawing.Point(503, 345);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(147, 33);
             this.label8.TabIndex = 12;
@@ -218,7 +188,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label9.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label9.Location = new System.Drawing.Point(422, 425);
+            this.label9.Location = new System.Drawing.Point(503, 425);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(195, 33);
             this.label9.TabIndex = 13;
@@ -227,7 +197,7 @@
             // 
             // kryptonTextBox4
             // 
-            this.kryptonTextBox4.Location = new System.Drawing.Point(633, 20);
+            this.kryptonTextBox4.Location = new System.Drawing.Point(742, 25);
             this.kryptonTextBox4.Name = "kryptonTextBox4";
             this.kryptonTextBox4.Size = new System.Drawing.Size(244, 48);
             this.kryptonTextBox4.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -243,7 +213,7 @@
             // 
             // kryptonTextBox5
             // 
-            this.kryptonTextBox5.Location = new System.Drawing.Point(633, 100);
+            this.kryptonTextBox5.Location = new System.Drawing.Point(742, 105);
             this.kryptonTextBox5.Name = "kryptonTextBox5";
             this.kryptonTextBox5.Size = new System.Drawing.Size(244, 48);
             this.kryptonTextBox5.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -259,7 +229,7 @@
             // 
             // kryptonTextBox6
             // 
-            this.kryptonTextBox6.Location = new System.Drawing.Point(633, 180);
+            this.kryptonTextBox6.Location = new System.Drawing.Point(742, 185);
             this.kryptonTextBox6.Name = "kryptonTextBox6";
             this.kryptonTextBox6.Size = new System.Drawing.Size(244, 48);
             this.kryptonTextBox6.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -275,7 +245,7 @@
             // 
             // kryptonTextBox7
             // 
-            this.kryptonTextBox7.Location = new System.Drawing.Point(633, 260);
+            this.kryptonTextBox7.Location = new System.Drawing.Point(742, 265);
             this.kryptonTextBox7.Name = "kryptonTextBox7";
             this.kryptonTextBox7.Size = new System.Drawing.Size(244, 48);
             this.kryptonTextBox7.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -291,7 +261,7 @@
             // 
             // kryptonTextBox8
             // 
-            this.kryptonTextBox8.Location = new System.Drawing.Point(633, 340);
+            this.kryptonTextBox8.Location = new System.Drawing.Point(742, 345);
             this.kryptonTextBox8.Name = "kryptonTextBox8";
             this.kryptonTextBox8.Size = new System.Drawing.Size(244, 48);
             this.kryptonTextBox8.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -307,7 +277,7 @@
             // 
             // kryptonTextBox9
             // 
-            this.kryptonTextBox9.Location = new System.Drawing.Point(633, 420);
+            this.kryptonTextBox9.Location = new System.Drawing.Point(742, 425);
             this.kryptonTextBox9.Name = "kryptonTextBox9";
             this.kryptonTextBox9.Size = new System.Drawing.Size(244, 48);
             this.kryptonTextBox9.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -324,7 +294,7 @@
             // btnCreate
             // 
             this.btnCreate.AutoSize = true;
-            this.btnCreate.Location = new System.Drawing.Point(381, 489);
+            this.btnCreate.Location = new System.Drawing.Point(436, 492);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.btnCreate.Size = new System.Drawing.Size(135, 63);
@@ -352,12 +322,82 @@
             this.btnCreate.Values.Text = "Tạo";
             this.btnCreate.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
+            // cbxMaLT
+            // 
+            this.cbxMaLT.DropDownWidth = 163;
+            this.cbxMaLT.Items.AddRange(new object[] {
+            "HK02",
+            "HK03",
+            "HK04"});
+            this.cbxMaLT.Location = new System.Drawing.Point(220, 55);
+            this.cbxMaLT.Name = "cbxMaLT";
+            this.cbxMaLT.Size = new System.Drawing.Size(190, 50);
+            this.cbxMaLT.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.cbxMaLT.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxMaLT.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxMaLT.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbxMaLT.StateCommon.ComboBox.Border.Rounding = 20;
+            this.cbxMaLT.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.cbxMaLT.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxMaLT.StateNormal.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.cbxMaLT.StateNormal.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxMaLT.StateNormal.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxMaLT.StateNormal.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbxMaLT.StateNormal.ComboBox.Border.Rounding = 20;
+            this.cbxMaLT.StateTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxMaLT.StateTracking.Item.Back.Color2 = System.Drawing.Color.Teal;
+            this.cbxMaLT.StateTracking.Item.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.cbxMaLT.StateTracking.Item.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.cbxMaLT.StateTracking.Item.Content.ShortText.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxMaLT.TabIndex = 23;
+            this.cbxMaLT.Text = "HK100000";
+            // 
+            // cbxNgXP
+            // 
+            this.cbxNgXP.DropDownWidth = 163;
+            this.cbxNgXP.Items.AddRange(new object[] {
+            "HK02",
+            "HK03",
+            "HK04"});
+            this.cbxNgXP.Location = new System.Drawing.Point(220, 210);
+            this.cbxNgXP.Name = "cbxNgXP";
+            this.cbxNgXP.Size = new System.Drawing.Size(190, 50);
+            this.cbxNgXP.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.cbxNgXP.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxNgXP.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxNgXP.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbxNgXP.StateCommon.ComboBox.Border.Rounding = 20;
+            this.cbxNgXP.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.cbxNgXP.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxNgXP.StateNormal.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.cbxNgXP.StateNormal.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxNgXP.StateNormal.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxNgXP.StateNormal.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbxNgXP.StateNormal.ComboBox.Border.Rounding = 20;
+            this.cbxNgXP.StateTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxNgXP.StateTracking.Item.Back.Color2 = System.Drawing.Color.Teal;
+            this.cbxNgXP.StateTracking.Item.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.cbxNgXP.StateTracking.Item.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.cbxNgXP.StateTracking.Item.Content.ShortText.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxNgXP.TabIndex = 24;
+            this.cbxNgXP.Text = "07-01-2025";
+            // 
             // TaoChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(905, 567);
+            this.ClientSize = new System.Drawing.Size(1039, 567);
+            this.Controls.Add(this.cbxNgXP);
+            this.Controls.Add(this.cbxMaLT);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.kryptonTextBox9);
             this.Controls.Add(this.kryptonTextBox8);
@@ -372,9 +412,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.kryptonPanel1);
-            this.Controls.Add(this.kryptonTextBox3);
-            this.Controls.Add(this.kryptonTextBox2);
-            this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.txtSoGhe);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -393,6 +431,8 @@
             this.StateCommon.Border.Rounding = 30;
             this.Text = "TaoChuyenBay";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxMaLT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxNgXP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,9 +442,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSoGhe;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -419,5 +457,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox8;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox9;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCreate;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbxMaLT;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbxNgXP;
     }
 }

@@ -83,6 +83,16 @@ namespace Quan_ly_may_bay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nen {
+            get {
+                object obj = ResourceManager.GetObject("nen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_orange_suitcase_icon_image_1168652 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-orange-suitcase-icon-image_1168652", resourceCulture);

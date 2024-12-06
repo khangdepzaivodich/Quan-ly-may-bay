@@ -118,7 +118,6 @@
     <Compile Include="UCFlight\UCManageFlight.Designer.cs">
       <DependentUpon>UCManageFlight.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FlightInfo.rdlc" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +166,7 @@
     <None Include="Resources\pngtree-orange-suitcase-icon-image_1168652-removebg-preview.png" />
     <None Include="Resources\pngtree-orange-suitcase-icon-image_1168652.jpg" />
     <None Include="Resources\arrow-right-bar.png" />
+    <None Include="Resources\nen.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

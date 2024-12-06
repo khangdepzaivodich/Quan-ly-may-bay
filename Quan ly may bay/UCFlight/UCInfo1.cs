@@ -19,10 +19,8 @@ namespace Quan_ly_may_bay.UCFlight
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            ReportChuyenBay reportForm = new ReportChuyenBay();
-            reportForm.ShowDialog();
+            ReportChuyenBay reportChuyenBay = new ReportChuyenBay();
+            reportChuyenBay.ShowDialog();
         }
-
-        
     }
 }
