@@ -1,6 +1,6 @@
 ﻿namespace Quan_ly_may_bay
 {
-    partial class MainForm
+    partial class ReportChuyenBay
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucInfo11 = new Quan_ly_may_bay.UCFlight.UCInfo1();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // ucInfo11
+            // reportViewer1
             // 
-            this.ucInfo11.BackColor = System.Drawing.Color.Transparent;
-            this.ucInfo11.Location = new System.Drawing.Point(83, 51);
-            this.ucInfo11.Name = "ucInfo11";
-            this.ucInfo11.Size = new System.Drawing.Size(1082, 150);
-            this.ucInfo11.TabIndex = 0;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Quan_ly_may_bay.FlightInfo.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1056, 561);
+            this.reportViewer1.TabIndex = 0;
             // 
-            // MainForm
+            // ReportChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1315, 541);
-            this.Controls.Add(this.ucInfo11);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "MainForm";
-            this.Text = "Vietnam Airline";
+            this.ClientSize = new System.Drawing.Size(1056, 561);
+            this.Controls.Add(this.reportViewer1);
+            this.Name = "ReportChuyenBay";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ReportForm";
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private UCFlight.UCInfo1 ucInfo11;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
-

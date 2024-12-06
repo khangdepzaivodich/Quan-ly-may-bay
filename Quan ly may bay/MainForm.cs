@@ -7,20 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
 
-namespace Quan_ly_may_bay.UCFlight
+namespace Quan_ly_may_bay
 {
-    public partial class UCInfo1 : UserControl
+    public partial class MainForm : KryptonForm
     {
-        public UCInfo1()
+        public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void kryptonButton2_Click(object sender, EventArgs e)
-        {
-            ReportChuyenBay reportForm = new ReportChuyenBay();
-            reportForm.ShowDialog();
         }
 
         

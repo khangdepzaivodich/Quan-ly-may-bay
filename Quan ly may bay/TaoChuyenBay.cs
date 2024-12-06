@@ -11,11 +11,17 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace Quan_ly_may_bay
 {
-    public partial class MainForm : KryptonForm
+    public partial class TaoChuyenBay : KryptonForm
     {
-        public MainForm()
+        public TaoChuyenBay()
         {
             InitializeComponent();
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            btnCreate.Invalidate();
         }
     }
 }
