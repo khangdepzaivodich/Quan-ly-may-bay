@@ -81,6 +81,16 @@ namespace Quan_ly_may_bay.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GDEF� �PGPOSM,��r(N\GSUB�c�-7LOS/2aL��(`cmap~��&gt;8`cvt ]b�8fpgmp�(m�ogaspglyf�q�����
+        ///head�Oh6hheaaD$hmtx@W^P|loca	�ұ(��maxp1}$ nameHk�*post��ݜST�prep���������4Ds�p�����������CR_&lt;��џȄѵU���&lt;��eeSS{�������&quot;��|�������&quot;��(�������� [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Itim_Regular {
+            get {
+                return ResourceManager.GetString("Itim-Regular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap nen {
