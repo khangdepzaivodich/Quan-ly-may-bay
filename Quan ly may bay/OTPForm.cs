@@ -21,6 +21,5 @@ namespace Quan_ly_may_bay
         {
             this.Close();
         }
-
     }
 }
