@@ -34,19 +34,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>..\..\..\..\Downloads\Krypton-master (1)\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>D:\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>..\..\..\..\Downloads\Krypton-master (1)\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>D:\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>..\..\..\..\Downloads\Krypton-master (1)\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>D:\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\..\..\Downloads\Krypton-master (1)\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>D:\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>..\..\..\..\Downloads\Krypton-master (1)\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>D:\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -61,11 +61,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaff.Designer.cs">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoseSeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoseSeat.Designer.cs">
+      <DependentUpon>ChoseSeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datve.Designer.cs">
+      <DependentUpon>Datve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformationAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformationAccount.Designer.cs">
+      <DependentUpon>InformationAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainLogin.Designer.cs">
+      <DependentUpon>MainLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainNotLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainNotLogin.Designer.cs">
+      <DependentUpon>MainNotLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="OTPForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OTPForm.Designer.cs">
       <DependentUpon>OTPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="ResetPassForm.cs">
       <SubType>Form</SubType>
@@ -99,11 +141,38 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCFlight\UC_MainNotLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFlight\UC_MainNotLogin.Designer.cs">
+      <DependentUpon>UC_MainNotLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddStaff.resx">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChoseSeat.resx">
+      <DependentUpon>ChoseSeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datve.resx">
+      <DependentUpon>Datve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformationAccount.resx">
+      <DependentUpon>InformationAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainLogin.resx">
+      <DependentUpon>MainLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainNotLogin.resx">
+      <DependentUpon>MainNotLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OTPForm.resx">
       <DependentUpon>OTPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResetPassForm.resx">
       <DependentUpon>ResetPassForm.cs</DependentUpon>
@@ -136,6 +205,9 @@
     <EmbeddedResource Include="UCFlight\UCInfo1.resx">
       <DependentUpon>UCInfo1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCFlight\UC_MainNotLogin.resx">
+      <DependentUpon>UC_MainNotLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -160,6 +232,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nen-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nui-phu-si-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
