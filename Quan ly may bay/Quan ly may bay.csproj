@@ -48,6 +48,24 @@
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>D:\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -186,12 +204,40 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="ReportChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportChuyenBay.Designer.cs">
+      <DependentUpon>ReportChuyenBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TaoChuyenBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoChuyenBay.Designer.cs">
+      <DependentUpon>TaoChuyenBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaoLoTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoLoTrinh.Designer.cs">
+      <DependentUpon>TaoLoTrinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCFlight\UCInfo1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCFlight\UCInfo1.Designer.cs">
       <DependentUpon>UCInfo1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCFlight\UCManageFlight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFlight\UCManageFlight.Designer.cs">
+      <DependentUpon>UCManageFlight.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -202,12 +248,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportChuyenBay.resx">
+      <DependentUpon>ReportChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoChuyenBay.resx">
+      <DependentUpon>TaoChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoLoTrinh.resx">
+      <DependentUpon>TaoLoTrinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCFlight\UCInfo1.resx">
       <DependentUpon>UCInfo1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCFlight\UC_MainNotLogin.resx">
       <DependentUpon>UC_MainNotLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCFlight\UCManageFlight.resx">
+      <DependentUpon>UCManageFlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -238,6 +297,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nui-phu-si-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Suitcase_Flat_Icon_Vector.svg.png" />
+    <None Include="Resources\4530643.png" />
+    <None Include="Resources\pngtree-orange-suitcase-icon-image_1168652-removebg-preview.png" />
+    <None Include="Resources\pngtree-orange-suitcase-icon-image_1168652.jpg" />
+    <None Include="Resources\arrow-right-bar.png" />
+    <None Include="Resources\nen.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
