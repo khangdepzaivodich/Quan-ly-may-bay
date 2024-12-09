@@ -11,15 +11,20 @@ using System.Windows.Forms;
 
 namespace Quan_ly_may_bay
 {
-    public partial class MainLogin : Form
+    public partial class NV_QLMB : Form
     {
         
-        public MainLogin()
+        public NV_QLMB()
         {
             InitializeComponent();
         }
         private void label2_Click(object sender, EventArgs e)
         {
+            TaoChuyenBay taoChuyenBay = new TaoChuyenBay();
+            taoChuyenBay.TopLevel = false;
+            taoChuyenBay.Dock = DockStyle.Right;
+            panel1.Controls.Add(taoChuyenBay);
+            taoChuyenBay.Show();
             foreach(Label label in panel3.Controls)
             {
                 if(label == sender)
