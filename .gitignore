@@ -266,6 +266,10 @@ ServiceFabricBackup/
 *.ldf
 *.ndf
 
+# Unignore SqlServerTypes folder and its DLLs
+!/SqlServerTypes/
+!/SqlServerTypes/**/*.dll
+
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout

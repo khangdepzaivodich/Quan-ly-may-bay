@@ -8,19 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quan_ly_may_bay.UCFlight
+namespace Quan_ly_may_bay
 {
-    public partial class UCInfo1 : UserControl
+    public partial class Datve : Form
     {
-        public UCInfo1()
+        public Datve()
         {
             InitializeComponent();
         }
 
-        private void kryptonButton2_Click(object sender, EventArgs e)
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
         {
-            ReportChuyenBay reportChuyenBay = new ReportChuyenBay();
-            reportChuyenBay.ShowDialog();
+
         }
     }
 }
