@@ -143,6 +143,66 @@ namespace Quan_ly_may_bay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ghuy2 {
+            get {
+                object obj = ResourceManager.GetObject("ghuy2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hanoi2 {
+            get {
+                object obj = ResourceManager.GetObject("hanoi2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hanoi3 {
+            get {
+                object obj = ResourceManager.GetObject("hanoi3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hcm1 {
+            get {
+                object obj = ResourceManager.GetObject("hcm1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hcm2 {
+            get {
+                object obj = ResourceManager.GetObject("hcm2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hcm3 {
+            get {
+                object obj = ResourceManager.GetObject("hcm3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hinh_anh_may_bay {
             get {
                 object obj = ResourceManager.GetObject("hinh-anh-may-bay", resourceCulture);
@@ -256,6 +316,36 @@ namespace Quan_ly_may_bay.Properties {
         internal static System.Drawing.Bitmap pngtree_orange_suitcase_icon_image_1168652_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("pngtree-orange-suitcase-icon-image_1168652-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quangninh1 {
+            get {
+                object obj = ResourceManager.GetObject("quangninh1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quangninh2 {
+            get {
+                object obj = ResourceManager.GetObject("quangninh2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quangninh3 {
+            get {
+                object obj = ResourceManager.GetObject("quangninh3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

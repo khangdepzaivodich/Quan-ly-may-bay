@@ -75,7 +75,7 @@
             this.uC_Author3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.uC_Author3.ImageMember = global::Quan_ly_may_bay.Properties.Resources.khang;
             this.uC_Author3.Location = new System.Drawing.Point(12, 228);
-            this.uC_Author3.Mssv = "49.01";
+            this.uC_Author3.Mssv = "49.01.104.066";
             this.uC_Author3.Name = "uC_Author3";
             this.uC_Author3.Size = new System.Drawing.Size(331, 83);
             this.uC_Author3.TabIndex = 2;
@@ -84,7 +84,7 @@
             // uC_Author2
             // 
             this.uC_Author2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.uC_Author2.ImageMember = global::Quan_ly_may_bay.Properties.Resources.ghuy;
+            this.uC_Author2.ImageMember = global::Quan_ly_may_bay.Properties.Resources.ghuy2;
             this.uC_Author2.Location = new System.Drawing.Point(12, 325);
             this.uC_Author2.Mssv = "49.01.104.053";
             this.uC_Author2.Name = "uC_Author2";
@@ -97,7 +97,7 @@
             this.uC_Author1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.uC_Author1.ImageMember = global::Quan_ly_may_bay.Properties.Resources.ky1;
             this.uC_Author1.Location = new System.Drawing.Point(12, 25);
-            this.uC_Author1.Mssv = "49.01";
+            this.uC_Author1.Mssv = "49.01.104.079";
             this.uC_Author1.Name = "uC_Author1";
             this.uC_Author1.Size = new System.Drawing.Size(331, 83);
             this.uC_Author1.TabIndex = 0;

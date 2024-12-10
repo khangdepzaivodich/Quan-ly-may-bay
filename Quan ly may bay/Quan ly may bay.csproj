@@ -103,6 +103,12 @@
     <Compile Include="Datve.Designer.cs">
       <DependentUpon>Datve.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmailForget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailForget.Designer.cs">
+      <DependentUpon>EmailForget.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Datve.resx">
       <DependentUpon>Datve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailForget.resx">
+      <DependentUpon>EmailForget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -369,6 +378,15 @@
     <None Include="Resources\ghuy.jpg" />
     <None Include="Resources\chuong.jpg" />
     <None Include="Resources\ky1.jpg" />
+    <None Include="Resources\ghuy2.jpg" />
+    <None Include="Resources\hcm3.png" />
+    <None Include="Resources\hcm2.jpg" />
+    <None Include="Resources\hcm1.jpg" />
+    <None Include="Resources\quangninh3.png" />
+    <None Include="Resources\quangninh2.jpg" />
+    <None Include="Resources\quangninh1.jpg" />
+    <None Include="Resources\hanoi3.jpg" />
+    <None Include="Resources\hanoi2.jpg" />
     <Content Include="SqlServerTypes\SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\SqlServerSpatial140.dll" />

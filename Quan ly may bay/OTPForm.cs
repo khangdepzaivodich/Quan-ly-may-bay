@@ -12,13 +12,31 @@ namespace Quan_ly_may_bay
 {
     public partial class OTPForm : KryptonForm
     {
-        public OTPForm()
+        private Form frm;
+        public OTPForm(Form _frm)
         {
             InitializeComponent();
+            frm = _frm;
         }
 
         private void CloseLabel_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (frm is SignupForm)
+            {
+                MainNotLogin mainLogin = new MainNotLogin();
+                mainLogin.ShowDialog();
+            }
+            else
+            {
+                ResetPassForm resetPassForm = new ResetPassForm();
+                resetPassForm.ShowDialog();
+            }
             this.Close();
         }
     }

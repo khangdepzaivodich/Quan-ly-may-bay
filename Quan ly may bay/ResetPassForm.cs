@@ -16,5 +16,13 @@ namespace Quan_ly_may_bay
         {
             InitializeComponent();
         }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            this.Hide(); 
+            MainLogin frm = new MainLogin();
+            frm.ShowDialog();
+            this.Close();
+        }
     }
 }
