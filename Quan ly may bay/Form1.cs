@@ -12,7 +12,8 @@ namespace Quan_ly_may_bay
 {
     public partial class Form1 : KryptonForm
     {
-        private KryptonButton[,] seats = new KryptonButton[6, 8];
+        private KryptonButton[,] seats = new KryptonButton[7, 10];
+        private int prevI = -1, prevJ = -1;
         public Form1()
         {
             InitializeComponent();
@@ -20,17 +21,53 @@ namespace Quan_ly_may_bay
         }
         private void CreateSeats()
         {
-            for(int i = 0; i < 6; i++)
+            for(int i = 0; i < 2; ++i)
             {
-                for(int j = 0; j < 8; j++)
+                for(int j = 0; j < 5; ++j)
                 {
                     KryptonButton button = new KryptonButton();
                     CreateButton(button);
-                    button.Location = new Point(j * (button.Size.Width + 20) + 85, i * (button.Size.Height + 20) + 30);
+                    button.Location = new Point(j*(button.Width + 40) + 50, i*(button.Height + 15) + 30);
+                    button.Tag = "deluxe left";
                     seats[i,j] = button;
                     Controls.Add(button);
+                    button.BringToFront();
+                }
+                for(int j = 5; j < 10; ++j)
+                {
+                    KryptonButton button = new KryptonButton();
+                    CreateButton(button);
+                    button.Location = new Point(j * (button.Width + 40) + 160, i * (button.Height + 15) + 30);
+                    button.Tag = "deluxe right";
+                    seats[i, j] = button;
+                    Controls.Add(button);
+                    button.BringToFront();
                 }
             }
+            for(int i = 2; i < 7; ++i)
+            {
+                for (int j = 0; j < 5; ++j)
+                {
+                    KryptonButton button = new KryptonButton();
+                    CreateButton(button);
+                    button.Location = new Point(j * (button.Width + 40) + 50, i * (button.Height + 15) + 90);
+                    button.Tag = "economic left";
+                    seats[i, j] = button;
+                    Controls.Add(button);
+                    button.BringToFront();
+                }
+                for (int j = 5; j < 10; ++j)
+                {
+                    KryptonButton button = new KryptonButton();
+                    CreateButton(button);
+                    button.Location = new Point(j * (button.Width + 40) + 160, i * (button.Height + 15) + 90);
+                    button.Tag = "economic right";
+                    seats[i, j] = button;
+                    Controls.Add(button);
+                    button.BringToFront();
+                }
+            }
+                
         }
 
         private void CreateButton(KryptonButton _btn)
@@ -54,8 +91,53 @@ namespace Quan_ly_may_bay
             _btn.StateCommon.Border.Width = 2;
 
             //Tracking
-            _btn.StateTracking.Back.Color1 = Color.FromArgb(200, 0, 0, 0);
-            _btn.StateTracking.Back.Color2 = Color.FromArgb(200, 0, 0, 0);
+            _btn.StateTracking.Back.Color1 = Color.FromArgb(100, 0, 0, 0);
+            _btn.StateTracking.Back.Color2 = Color.FromArgb(100, 0, 0, 0);
+
+            //Disabled
+            _btn.StateDisabled.Back.Color1 = Color.Green;
+            _btn.StateDisabled.Back.Color2 = Color.Green;
+            _btn.StateDisabled.Border.Color1 = Color.White;
+            _btn.StateDisabled.Border.Color2 = Color.White;
+
+            //Event
+            _btn.Click += _btn_Click;
+
         }
+
+        private void _btn_Click(object sender, EventArgs e)
+        {
+            KryptonButton btn = (KryptonButton)sender;
+            if(prevI != -1 || prevJ != -1)
+            {
+                seats[prevI, prevJ].Enabled = true;
+            }
+            int paddingX, paddingY;
+            if (btn.Tag.ToString() == "deluxe left")
+            {
+                paddingX = 50; 
+                paddingY = 30;
+            }
+            else if (btn.Tag.ToString() == "deluxe right")
+            {
+                paddingX = 160;
+                paddingY = 30;
+            }
+            else if (btn.Tag.ToString() == "economic left")
+            {
+                paddingX = 50;
+                paddingY = 90;
+            }
+            else
+            {
+                paddingX = 160;
+                paddingY = 90;
+            }
+
+            prevJ = (btn.Location.X - paddingX)/(btn.Width+40);
+            prevI = (btn.Location.Y - paddingY)/(btn.Height+15);
+            seats[prevI, prevJ].Enabled = false;
+        }
+
     }
 }
