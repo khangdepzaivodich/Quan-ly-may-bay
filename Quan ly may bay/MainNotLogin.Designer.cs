@@ -203,6 +203,7 @@
             this.LoginBtn.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.TabIndex = 18;
             this.LoginBtn.Values.Text = "Login";
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // SignupBtn
             // 
@@ -252,6 +253,7 @@
             this.SignupBtn.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupBtn.TabIndex = 19;
             this.SignupBtn.Values.Text = "Sign up";
+            this.SignupBtn.Click += new System.EventHandler(this.SignupBtn_Click);
             // 
             // MainNotLogin
             // 

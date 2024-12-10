@@ -22,5 +22,34 @@ namespace Quan_ly_may_bay
         {
             this.Close();
         }
+
+        private void lblForget_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+                EmailForget emailForget = new EmailForget();
+                emailForget.ShowDialog();
+
+        }
+
+        private void lblSignup_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+                SignupForm signupForm = new SignupForm();
+                signupForm.ShowDialog();
+        }
+
+        private void labelHover(object sender, EventArgs e)
+        {
+            Label label = (Label)sender;
+            label.ForeColor = Color.Blue;
+        }
+
+        private void labelLeft(object sender, EventArgs e)
+        {
+            Label label = (Label)sender;
+            label.ForeColor = Color.Black;
+        }
     }
 }

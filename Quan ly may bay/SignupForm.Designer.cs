@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.EmailTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.UsernameTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -40,9 +41,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.FullnameTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.DOBTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.DiaChiTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.AddressTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.PhoneNumTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,8 +54,19 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SubmitButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.CloseLabel = new System.Windows.Forms.Label();
+            this.errUsername = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errConfirm = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errSDT = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errCCCD = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dPkDOB = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errConfirm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errSDT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCCCD)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +83,6 @@
             // 
             this.EmailTextBox.Location = new System.Drawing.Point(213, 172);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.PasswordChar = '*';
             this.EmailTextBox.Size = new System.Drawing.Size(195, 39);
             this.EmailTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.EmailTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -195,18 +205,18 @@
             this.FullnameTextBox.StateCommon.Border.Rounding = 20;
             this.FullnameTextBox.TabIndex = 15;
             // 
-            // DOBTextBox
+            // DiaChiTextBox
             // 
-            this.DOBTextBox.Location = new System.Drawing.Point(687, 172);
-            this.DOBTextBox.Name = "DOBTextBox";
-            this.DOBTextBox.Size = new System.Drawing.Size(195, 39);
-            this.DOBTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.DOBTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.DOBTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.DiaChiTextBox.Location = new System.Drawing.Point(687, 231);
+            this.DiaChiTextBox.Name = "DiaChiTextBox";
+            this.DiaChiTextBox.Size = new System.Drawing.Size(195, 39);
+            this.DiaChiTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.DiaChiTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.DiaChiTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.DOBTextBox.StateCommon.Border.Rounding = 20;
-            this.DOBTextBox.TabIndex = 17;
+            this.DiaChiTextBox.StateCommon.Border.Rounding = 20;
+            this.DiaChiTextBox.TabIndex = 17;
             // 
             // label6
             // 
@@ -217,19 +227,6 @@
             this.label6.Size = new System.Drawing.Size(93, 24);
             this.label6.TabIndex = 16;
             this.label6.Text = "Ngày sinh";
-            // 
-            // AddressTextBox
-            // 
-            this.AddressTextBox.Location = new System.Drawing.Point(687, 231);
-            this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(195, 39);
-            this.AddressTextBox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.AddressTextBox.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.AddressTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.AddressTextBox.StateCommon.Border.Rounding = 20;
-            this.AddressTextBox.TabIndex = 19;
             // 
             // label7
             // 
@@ -283,9 +280,9 @@
             this.label9.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(508, 418);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 24);
+            this.label9.Size = new System.Drawing.Size(88, 24);
             this.label9.TabIndex = 22;
-            this.label9.Text = "Số CCCD/CMND";
+            this.label9.Text = "Số CCCD";
             // 
             // label10
             // 
@@ -300,8 +297,9 @@
             // MaleRadioButton
             // 
             this.MaleRadioButton.AutoSize = true;
+            this.MaleRadioButton.Checked = true;
             this.MaleRadioButton.Font = new System.Drawing.Font("Itim", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaleRadioButton.Location = new System.Drawing.Point(642, 300);
+            this.MaleRadioButton.Location = new System.Drawing.Point(687, 302);
             this.MaleRadioButton.Name = "MaleRadioButton";
             this.MaleRadioButton.Size = new System.Drawing.Size(67, 26);
             this.MaleRadioButton.TabIndex = 27;
@@ -313,11 +311,10 @@
             // 
             this.FemaleRadioButton.AutoSize = true;
             this.FemaleRadioButton.Font = new System.Drawing.Font("Itim", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FemaleRadioButton.Location = new System.Drawing.Point(737, 300);
+            this.FemaleRadioButton.Location = new System.Drawing.Point(789, 302);
             this.FemaleRadioButton.Name = "FemaleRadioButton";
             this.FemaleRadioButton.Size = new System.Drawing.Size(54, 26);
             this.FemaleRadioButton.TabIndex = 28;
-            this.FemaleRadioButton.TabStop = true;
             this.FemaleRadioButton.Text = "Nữ";
             this.FemaleRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -395,6 +392,7 @@
             this.SubmitButton.TabIndex = 30;
             this.SubmitButton.TabStop = false;
             this.SubmitButton.Values.Text = "Submit";
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // CloseLabel
             // 
@@ -407,11 +405,47 @@
             this.CloseLabel.Text = "X";
             this.CloseLabel.Click += new System.EventHandler(this.CloseLabel_Click);
             // 
+            // errUsername
+            // 
+            this.errUsername.ContainerControl = this;
+            // 
+            // errEmail
+            // 
+            this.errEmail.ContainerControl = this;
+            // 
+            // errConfirm
+            // 
+            this.errConfirm.ContainerControl = this;
+            // 
+            // errSDT
+            // 
+            this.errSDT.ContainerControl = this;
+            // 
+            // errCCCD
+            // 
+            this.errCCCD.ContainerControl = this;
+            // 
+            // dPkDOB
+            // 
+            this.dPkDOB.CustomFormat = "dd/MM/yyyy";
+            this.dPkDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dPkDOB.Location = new System.Drawing.Point(687, 172);
+            this.dPkDOB.Name = "dPkDOB";
+            this.dPkDOB.Size = new System.Drawing.Size(195, 37);
+            this.dPkDOB.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.dPkDOB.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.dPkDOB.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dPkDOB.StateCommon.Border.Rounding = 20;
+            this.dPkDOB.TabIndex = 32;
+            // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 587);
+            this.Controls.Add(this.dPkDOB);
             this.Controls.Add(this.CloseLabel);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.pictureBox2);
@@ -422,9 +456,8 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.PhoneNumTextBox);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.AddressTextBox);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.DOBTextBox);
+            this.Controls.Add(this.DiaChiTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.FullnameTextBox);
             this.Controls.Add(this.label5);
@@ -440,7 +473,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignupForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -449,6 +482,11 @@
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errConfirm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errSDT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCCCD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,9 +506,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox FullnameTextBox;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox DOBTextBox;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox DiaChiTextBox;
         private System.Windows.Forms.Label label6;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox AddressTextBox;
         private System.Windows.Forms.Label label7;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox PhoneNumTextBox;
         private System.Windows.Forms.Label label8;
@@ -482,5 +519,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton SubmitButton;
         private System.Windows.Forms.Label CloseLabel;
+        private System.Windows.Forms.ErrorProvider errUsername;
+        private System.Windows.Forms.ErrorProvider errEmail;
+        private System.Windows.Forms.ErrorProvider errConfirm;
+        private System.Windows.Forms.ErrorProvider errSDT;
+        private System.Windows.Forms.ErrorProvider errCCCD;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dPkDOB;
     }
 }
