@@ -103,12 +103,6 @@
     <Compile Include="CapNhatLoTrinhBay.Designer.cs">
       <DependentUpon>CapNhatLoTrinhBay.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChoseSeat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChoseSeat.Designer.cs">
-      <DependentUpon>ChoseSeat.cs</DependentUpon>
-    </Compile>
     <Compile Include="Datve.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,11 +115,11 @@
     <Compile Include="EmailForget.Designer.cs">
       <DependentUpon>EmailForget.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="ChoseSeat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ChoseSeat.Designer.cs">
+      <DependentUpon>ChoseSeat.cs</DependentUpon>
     </Compile>
     <Compile Include="InformationAccount.cs">
       <SubType>Form</SubType>
@@ -150,12 +144,6 @@
     </Compile>
     <Compile Include="OTPForm.Designer.cs">
       <DependentUpon>OTPForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Payment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Payment.Designer.cs">
-      <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -246,17 +234,14 @@
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChoseSeat.resx">
-      <DependentUpon>ChoseSeat.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Datve.resx">
       <DependentUpon>Datve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmailForget.resx">
       <DependentUpon>EmailForget.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ChoseSeat.resx">
+      <DependentUpon>ChoseSeat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InformationAccount.resx">
       <DependentUpon>InformationAccount.cs</DependentUpon>
@@ -269,9 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OTPForm.resx">
       <DependentUpon>OTPForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Payment.resx">
-      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capnhatchuyenbay.resx">
       <DependentUpon>Capnhatchuyenbay.cs</DependentUpon>
