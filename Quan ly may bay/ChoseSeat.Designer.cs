@@ -1,6 +1,6 @@
 ﻿namespace Quan_ly_may_bay
 {
-    partial class ChooseSeat
+    partial class ChoseSeat
     {
         /// <summary>
         /// Required designer variable.

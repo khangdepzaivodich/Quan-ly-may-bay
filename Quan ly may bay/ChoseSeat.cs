@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Quan_ly_may_bay
 {
-    public partial class ChooseSeat : KryptonForm
+    public partial class ChoseSeat : KryptonForm
     {
         private KryptonButton[,] seats = new KryptonButton[7, 10];
         private int prevI = -1, prevJ = -1;
-        public ChooseSeat()
+        public ChoseSeat()
         {
             InitializeComponent();
             CreateSeats();
