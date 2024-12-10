@@ -18,10 +18,14 @@ namespace Quan_ly_may_bay
             InitializeComponent();
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-            btnCreate.Invalidate();
+        }
+
+        private void CreateButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

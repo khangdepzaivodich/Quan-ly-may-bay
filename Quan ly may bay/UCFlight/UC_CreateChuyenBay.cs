@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quan_ly_may_bay
+namespace Quan_ly_may_bay.UCFlight
 {
-    public partial class Payment : Form
+    public partial class UC_CreateChuyenBay : UserControl
     {
-        public Payment()
+        public UC_CreateChuyenBay()
         {
             InitializeComponent();
         }

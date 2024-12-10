@@ -66,6 +66,7 @@
             // kryptonRichTextBox1
             // 
             this.kryptonRichTextBox1.Location = new System.Drawing.Point(12, 157);
+            this.kryptonRichTextBox1.MaxLength = 1;
             this.kryptonRichTextBox1.Name = "kryptonRichTextBox1";
             this.kryptonRichTextBox1.Size = new System.Drawing.Size(52, 62);
             this.kryptonRichTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -84,6 +85,7 @@
             // kryptonRichTextBox2
             // 
             this.kryptonRichTextBox2.Location = new System.Drawing.Point(81, 157);
+            this.kryptonRichTextBox2.MaxLength = 1;
             this.kryptonRichTextBox2.Name = "kryptonRichTextBox2";
             this.kryptonRichTextBox2.Size = new System.Drawing.Size(52, 62);
             this.kryptonRichTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -102,6 +104,7 @@
             // kryptonRichTextBox3
             // 
             this.kryptonRichTextBox3.Location = new System.Drawing.Point(219, 157);
+            this.kryptonRichTextBox3.MaxLength = 1;
             this.kryptonRichTextBox3.Name = "kryptonRichTextBox3";
             this.kryptonRichTextBox3.Size = new System.Drawing.Size(52, 62);
             this.kryptonRichTextBox3.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -120,6 +123,7 @@
             // kryptonRichTextBox4
             // 
             this.kryptonRichTextBox4.Location = new System.Drawing.Point(353, 157);
+            this.kryptonRichTextBox4.MaxLength = 1;
             this.kryptonRichTextBox4.Name = "kryptonRichTextBox4";
             this.kryptonRichTextBox4.Size = new System.Drawing.Size(52, 62);
             this.kryptonRichTextBox4.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -138,6 +142,7 @@
             // kryptonRichTextBox5
             // 
             this.kryptonRichTextBox5.Location = new System.Drawing.Point(151, 157);
+            this.kryptonRichTextBox5.MaxLength = 1;
             this.kryptonRichTextBox5.Name = "kryptonRichTextBox5";
             this.kryptonRichTextBox5.Size = new System.Drawing.Size(52, 62);
             this.kryptonRichTextBox5.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -156,6 +161,7 @@
             // kryptonRichTextBox6
             // 
             this.kryptonRichTextBox6.Location = new System.Drawing.Point(286, 157);
+            this.kryptonRichTextBox6.MaxLength = 1;
             this.kryptonRichTextBox6.Name = "kryptonRichTextBox6";
             this.kryptonRichTextBox6.Size = new System.Drawing.Size(52, 62);
             this.kryptonRichTextBox6.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));

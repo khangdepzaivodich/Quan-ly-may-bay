@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.hinh_anh_may_bay;
+            this.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.hinh_anh_may_bay1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1072, 643);
             this.Controls.Add(this.panelObject);

@@ -1,27 +1,25 @@
-﻿using System;
+﻿using Quan_ly_may_bay.UCFlight;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
-using Quan_ly_may_bay.UCFlight;
 
 namespace Quan_ly_may_bay
 {
-    public partial class Datve : KryptonForm
+    public partial class BookedTicket : Form
     {
-        private List<UC_Ticket> list = new List<UC_Ticket>();
-        public Datve()
+        private List<UCInfo1> list = new List<UCInfo1>();
+        public BookedTicket()
         {
             InitializeComponent();
             for (int i = 0; i < 16; i++)
             {
-                UC_Ticket uc = new UC_Ticket();
+                UCInfo1 uc = new UCInfo1();
                 list.Add(uc);
             }
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
@@ -39,7 +37,8 @@ namespace Quan_ly_may_bay
         {
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
-                if (i >= list.Count) {
+                if (i >= list.Count)
+                {
                     Add.Enabled = false;
                     break;
                 }
@@ -58,6 +57,7 @@ namespace Quan_ly_may_bay
                 }
                 PanelTicket.Controls.Remove(list[i]);
             }
+
             lblStt.Text = (int.Parse(lblStt.Text) - 1).ToString();
             if (int.Parse(lblStt.Text) == 0)
             {
@@ -66,7 +66,8 @@ namespace Quan_ly_may_bay
             Add.Enabled = true;
         }
 
-        private void Add_Click(object sender, EventArgs e){
+        private void Add_Click(object sender, EventArgs e)
+        {
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
                 if (i >= list.Count)
@@ -76,7 +77,7 @@ namespace Quan_ly_may_bay
                 }
                 PanelTicket.Controls.Remove(list[i]);
             }
-            lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();     
+            lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();
             Substract.Enabled = true;
         }
     }
