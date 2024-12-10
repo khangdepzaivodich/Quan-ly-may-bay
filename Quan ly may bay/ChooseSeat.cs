@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Quan_ly_may_bay
 {
-    public partial class Form1 : KryptonForm
+    public partial class ChooseSeat : KryptonForm
     {
         private KryptonButton[,] seats = new KryptonButton[7, 10];
         private int prevI = -1, prevJ = -1;
-        public Form1()
+        public ChooseSeat()
         {
             InitializeComponent();
             CreateSeats();
@@ -27,7 +27,7 @@ namespace Quan_ly_may_bay
                 {
                     KryptonButton button = new KryptonButton();
                     CreateButton(button);
-                    button.Location = new Point(j*(button.Width + 40) + 50, i*(button.Height + 15) + 30);
+                    button.Location = new Point(j*(button.Width + 30) + 50, i*(button.Height + 10) + 30);
                     button.Tag = "deluxe left";
                     seats[i,j] = button;
                     Controls.Add(button);
@@ -37,7 +37,7 @@ namespace Quan_ly_may_bay
                 {
                     KryptonButton button = new KryptonButton();
                     CreateButton(button);
-                    button.Location = new Point(j * (button.Width + 40) + 160, i * (button.Height + 15) + 30);
+                    button.Location = new Point(j * (button.Width + 30) + 90, i * (button.Height + 10) + 30);
                     button.Tag = "deluxe right";
                     seats[i, j] = button;
                     Controls.Add(button);
@@ -50,7 +50,7 @@ namespace Quan_ly_may_bay
                 {
                     KryptonButton button = new KryptonButton();
                     CreateButton(button);
-                    button.Location = new Point(j * (button.Width + 40) + 50, i * (button.Height + 15) + 90);
+                    button.Location = new Point(j * (button.Width + 30) + 50, i * (button.Height + 10) + 60);
                     button.Tag = "economic left";
                     seats[i, j] = button;
                     Controls.Add(button);
@@ -60,7 +60,7 @@ namespace Quan_ly_may_bay
                 {
                     KryptonButton button = new KryptonButton();
                     CreateButton(button);
-                    button.Location = new Point(j * (button.Width + 40) + 160, i * (button.Height + 15) + 90);
+                    button.Location = new Point(j * (button.Width + 30) + 90, i * (button.Height + 10) + 60);
                     button.Tag = "economic right";
                     seats[i, j] = button;
                     Controls.Add(button);
@@ -77,7 +77,7 @@ namespace Quan_ly_may_bay
             _btn.OverrideDefault.Back.Color1 = Color.Black;
             _btn.OverrideDefault.Back.Color2 = Color.Black;
             _btn.OverrideDefault.Back.GraphicsHint = PaletteGraphicsHint.AntiAlias;
-            _btn.Size = new Size(60, 50);
+            _btn.Size = new Size(40, 30);
             _btn.Text = "";
 
             //Common
@@ -120,22 +120,22 @@ namespace Quan_ly_may_bay
             }
             else if (btn.Tag.ToString() == "deluxe right")
             {
-                paddingX = 160;
+                paddingX = 90;
                 paddingY = 30;
             }
             else if (btn.Tag.ToString() == "economic left")
             {
                 paddingX = 50;
-                paddingY = 90;
+                paddingY = 60;
             }
             else
             {
-                paddingX = 160;
-                paddingY = 90;
+                paddingX = 90;
+                paddingY = 60;
             }
 
-            prevJ = (btn.Location.X - paddingX)/(btn.Width+40);
-            prevI = (btn.Location.Y - paddingY)/(btn.Height+15);
+            prevJ = (btn.Location.X - paddingX)/(btn.Width+30);
+            prevI = (btn.Location.Y - paddingY)/(btn.Height+10);
             seats[prevI, prevJ].Enabled = false;
         }
 
