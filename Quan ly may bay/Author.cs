@@ -8,20 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
-using Quan_ly_may_bay.UCFlight;
 
 namespace Quan_ly_may_bay
 {
-    public partial class Datve : KryptonForm
+    public partial class Author : KryptonForm
     {
-        public Datve()
+        public Author()
         {
             InitializeComponent();
-            for (int i = 0; i < 7; i++)
-            {
-                UC_Ticket uc = new UC_Ticket();
-                PanelTicket.Controls.Add(uc);
-            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
