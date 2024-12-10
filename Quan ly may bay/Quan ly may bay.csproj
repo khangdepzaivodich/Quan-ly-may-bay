@@ -133,12 +133,6 @@
     <Compile Include="InformationAccount.Designer.cs">
       <DependentUpon>InformationAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="NV_QLMB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NV_QLMB.Designer.cs">
-      <DependentUpon>NV_QLMB.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,11 +162,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="QLMB.cs">
+    <Compile Include="Capnhatchuyenbay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLMB.Designer.cs">
-      <DependentUpon>QLMB.cs</DependentUpon>
+    <Compile Include="Capnhatchuyenbay.Designer.cs">
+      <DependentUpon>Capnhatchuyenbay.cs</DependentUpon>
     </Compile>
     <Compile Include="ResetPassForm.cs">
       <SubType>Form</SubType>
@@ -212,6 +206,12 @@
     </Compile>
     <Compile Include="UCFlight\UC_btnMainForm.Designer.cs">
       <DependentUpon>UC_btnMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCFlight\UC_CreateChuyenBay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFlight\UC_CreateChuyenBay.Designer.cs">
+      <DependentUpon>UC_CreateChuyenBay.cs</DependentUpon>
     </Compile>
     <Compile Include="UCFlight\UC_CreateLoTrinhBay.cs">
       <SubType>UserControl</SubType>
@@ -261,9 +261,6 @@
     <EmbeddedResource Include="InformationAccount.resx">
       <DependentUpon>InformationAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NV_QLMB.resx">
-      <DependentUpon>NV_QLMB.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainLogin.resx">
       <DependentUpon>MainLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,8 +273,8 @@
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLMB.resx">
-      <DependentUpon>QLMB.cs</DependentUpon>
+    <EmbeddedResource Include="Capnhatchuyenbay.resx">
+      <DependentUpon>Capnhatchuyenbay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ResetPassForm.resx">
       <DependentUpon>ResetPassForm.cs</DependentUpon>
@@ -312,12 +309,6 @@
     <Compile Include="UCFlight\UCInfo1.Designer.cs">
       <DependentUpon>UCInfo1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCFlight\UCManageFlight.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCFlight\UCManageFlight.Designer.cs">
-      <DependentUpon>UCManageFlight.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -341,14 +332,14 @@
     <EmbeddedResource Include="UCFlight\UC_btnMainForm.resx">
       <DependentUpon>UC_btnMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCFlight\UC_CreateChuyenBay.resx">
+      <DependentUpon>UC_CreateChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCFlight\UC_CreateLoTrinhBay.resx">
       <DependentUpon>UC_CreateLoTrinhBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCFlight\UC_MainNotLogin.resx">
       <DependentUpon>UC_MainNotLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCFlight\UCManageFlight.resx">
-      <DependentUpon>UCManageFlight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCFlight\UC_Ticket.resx">
       <DependentUpon>UC_Ticket.cs</DependentUpon>
@@ -418,6 +409,7 @@
     <None Include="Resources\circle-x.png" />
     <None Include="Resources\circle-x %281%29.png" />
     <None Include="Resources\hinh-anh-may-bay.png" />
+    <None Include="Resources\x.png" />
     <Content Include="SqlServerTypes\SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\SqlServerSpatial140.dll" />
