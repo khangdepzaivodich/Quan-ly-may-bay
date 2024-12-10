@@ -87,7 +87,7 @@
             this.Btn1.Name = "Btn1";
             this.Btn1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.Btn1.Size = new System.Drawing.Size(300, 174);
-            this.Btn1.StateCommon.Back.Image = global::Quan_ly_may_bay.Properties.Resources.ho_hoan_kiem;
+            this.Btn1.StateCommon.Back.Image = global::Quan_ly_may_bay.Properties.Resources.hinh_anh_may_bay;
             this.Btn1.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
             this.Btn1.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -147,11 +147,11 @@
             // 
             this.Rank.AutoSize = true;
             this.Rank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Rank.Font = new System.Drawing.Font("Itim", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rank.Font = new System.Drawing.Font("Itim", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rank.ForeColor = System.Drawing.Color.White;
-            this.Rank.Location = new System.Drawing.Point(193, 260);
+            this.Rank.Location = new System.Drawing.Point(219, 182);
             this.Rank.Name = "Rank";
-            this.Rank.Size = new System.Drawing.Size(97, 72);
+            this.Rank.Size = new System.Drawing.Size(72, 53);
             this.Rank.TabIndex = 7;
             this.Rank.Text = "#1";
             // 

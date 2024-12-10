@@ -60,7 +60,7 @@
             // 
             // ConfirmPassTextBox
             // 
-            this.ConfirmPassTextBox.Location = new System.Drawing.Point(226, 239);
+            this.ConfirmPassTextBox.Location = new System.Drawing.Point(250, 233);
             this.ConfirmPassTextBox.Name = "ConfirmPassTextBox";
             this.ConfirmPassTextBox.PasswordChar = '*';
             this.ConfirmPassTextBox.Size = new System.Drawing.Size(258, 39);
@@ -74,7 +74,7 @@
             // 
             // PasswordTexBox
             // 
-            this.PasswordTexBox.Location = new System.Drawing.Point(226, 178);
+            this.PasswordTexBox.Location = new System.Drawing.Point(250, 181);
             this.PasswordTexBox.Name = "PasswordTexBox";
             this.PasswordTexBox.PasswordChar = '*';
             this.PasswordTexBox.Size = new System.Drawing.Size(258, 39);
@@ -108,7 +108,7 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(204, 327);
+            this.SubmitButton.Location = new System.Drawing.Point(228, 327);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.SubmitButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -170,12 +170,13 @@
             this.SubmitButton.TabIndex = 14;
             this.SubmitButton.TabStop = false;
             this.SubmitButton.Values.Text = "Submit";
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // ResetPassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 416);
+            this.ClientSize = new System.Drawing.Size(542, 416);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.ConfirmPassTextBox);
             this.Controls.Add(this.PasswordTexBox);
