@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Quan_ly_may_bay.UCFlight
 {
-    public partial class UCManageFlight : UserControl
+    public partial class UC_CreateChuyenBay : UserControl
     {
-        public UCManageFlight()
+        public UC_CreateChuyenBay()
         {
             InitializeComponent();
-        }
-
-        private void kryptonButton2_Click(object sender, EventArgs e)
-        {
-            TaoChuyenBay taoChuyenBay = new TaoChuyenBay();
-            taoChuyenBay.ShowDialog();
-
         }
     }
 }

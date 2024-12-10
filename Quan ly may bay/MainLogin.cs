@@ -20,6 +20,7 @@ namespace Quan_ly_may_bay
             "View Ticket",
             "Booked Ticket",
             "Flight Itinerary",
+            "Create Flight",
         };
         public MainLogin()
         {
@@ -64,6 +65,13 @@ namespace Quan_ly_may_bay
                     else if (uc.lbl.Text == "Flight Itinerary")
                     {
                         CapNhatLoTrinhBay frm = new CapNhatLoTrinhBay();
+                        frm.TopLevel = false;
+                        panelMain.Controls.Add(frm);
+                        frm.Show();
+                    }
+                    else if (uc.lbl.Text == "Create Flight")
+                    {
+                        Capnhatchuyenbay frm = new Capnhatchuyenbay();
                         frm.TopLevel = false;
                         panelMain.Controls.Add(frm);
                         frm.Show();
