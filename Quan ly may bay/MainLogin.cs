@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,8 @@ namespace Quan_ly_may_bay
         private List<string> str = new List<string>
         {
             "View Ticket",
-            "Booked ticket",
+            "Booked Ticket",
+            "Flight Itinerary",
         };
         public MainLogin()
         {
@@ -36,15 +38,32 @@ namespace Quan_ly_may_bay
 
         private void Btnclick(object sender, EventArgs e)
         {
-            panelMain.Controls.Clear();
+            foreach(Form frm in panelMain.Controls)
+            {
+                panelMain.Controls.Remove(frm);
+            }
             foreach (UC_btnMainForm uc in fpanelBtn.Controls)
             {
                 if (uc.lbl == sender)
                 {
-                    uc.ColorBtn = Color.Blue;
+                    uc.ColorBtn = Color.FromArgb(128,255,255,255);
                     if(uc.lbl.Text == "View Ticket")
                     {
                         Datve frm = new Datve();
+                        frm.TopLevel = false;
+                        panelMain.Controls.Add(frm);
+                        frm.Show();
+                    }
+                    else if (uc.lbl.Text == "Booked Ticket")
+                    {
+                        BookedTicket frm = new BookedTicket();
+                        frm.TopLevel = false;
+                        panelMain.Controls.Add(frm);
+                        frm.Show();
+                    }
+                    else if (uc.lbl.Text == "Flight Itinerary")
+                    {
+                        CapNhatLoTrinhBay frm = new CapNhatLoTrinhBay();
                         frm.TopLevel = false;
                         panelMain.Controls.Add(frm);
                         frm.Show();

@@ -91,6 +91,18 @@
     <Compile Include="Author.Designer.cs">
       <DependentUpon>Author.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookedTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookedTicket.Designer.cs">
+      <DependentUpon>BookedTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatLoTrinhBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatLoTrinhBay.Designer.cs">
+      <DependentUpon>CapNhatLoTrinhBay.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChoseSeat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +213,12 @@
     <Compile Include="UCFlight\UC_btnMainForm.Designer.cs">
       <DependentUpon>UC_btnMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCFlight\UC_CreateLoTrinhBay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFlight\UC_CreateLoTrinhBay.Designer.cs">
+      <DependentUpon>UC_CreateLoTrinhBay.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCFlight\UC_MainNotLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -218,6 +236,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Author.resx">
       <DependentUpon>Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookedTicket.resx">
+      <DependentUpon>BookedTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatLoTrinhBay.resx">
+      <DependentUpon>CapNhatLoTrinhBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
@@ -317,6 +341,9 @@
     <EmbeddedResource Include="UCFlight\UC_btnMainForm.resx">
       <DependentUpon>UC_btnMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCFlight\UC_CreateLoTrinhBay.resx">
+      <DependentUpon>UC_CreateLoTrinhBay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCFlight\UC_MainNotLogin.resx">
       <DependentUpon>UC_MainNotLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +414,10 @@
     <None Include="Resources\quangninh1.jpg" />
     <None Include="Resources\hanoi3.jpg" />
     <None Include="Resources\hanoi2.jpg" />
+    <None Include="Resources\arrow-right %281%29.png" />
+    <None Include="Resources\circle-x.png" />
+    <None Include="Resources\circle-x %281%29.png" />
+    <None Include="Resources\hinh-anh-may-bay.png" />
     <Content Include="SqlServerTypes\SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\SqlServerSpatial140.dll" />

@@ -37,8 +37,13 @@
             this.Time = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.btnTimkiem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.PanelTicket = new System.Windows.Forms.FlowLayoutPanel();
+            this.Add = new System.Windows.Forms.PictureBox();
+            this.Substract = new System.Windows.Forms.PictureBox();
+            this.lblStt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cbbFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Substract)).BeginInit();
             this.SuspendLayout();
             // 
             // ThanhTieuDe
@@ -186,13 +191,47 @@
             // 
             // PanelTicket
             // 
-            this.PanelTicket.AutoScroll = true;
-            this.PanelTicket.BackColor = System.Drawing.Color.DimGray;
-            this.PanelTicket.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelTicket.Location = new System.Drawing.Point(0, 131);
+            this.PanelTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PanelTicket.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.PanelTicket.Location = new System.Drawing.Point(0, 115);
             this.PanelTicket.Name = "PanelTicket";
-            this.PanelTicket.Size = new System.Drawing.Size(821, 512);
+            this.PanelTicket.Size = new System.Drawing.Size(821, 459);
             this.PanelTicket.TabIndex = 9;
+            this.PanelTicket.WrapContents = false;
+            // 
+            // Add
+            // 
+            this.Add.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_right__1_;
+            this.Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Add.Location = new System.Drawing.Point(443, 581);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(53, 50);
+            this.Add.TabIndex = 10;
+            this.Add.TabStop = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // Substract
+            // 
+            this.Substract.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_left;
+            this.Substract.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Substract.Location = new System.Drawing.Point(330, 580);
+            this.Substract.Name = "Substract";
+            this.Substract.Size = new System.Drawing.Size(53, 50);
+            this.Substract.TabIndex = 11;
+            this.Substract.TabStop = false;
+            this.Substract.Click += new System.EventHandler(this.Substract_Click);
+            // 
+            // lblStt
+            // 
+            this.lblStt.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStt.ForeColor = System.Drawing.Color.White;
+            this.lblStt.Location = new System.Drawing.Point(390, 581);
+            this.lblStt.Name = "lblStt";
+            this.lblStt.Size = new System.Drawing.Size(47, 49);
+            this.lblStt.TabIndex = 12;
+            this.lblStt.Text = "0";
+            this.lblStt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblStt.TextChanged += new System.EventHandler(this.lblStt_TextChanged);
             // 
             // Datve
             // 
@@ -200,6 +239,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(821, 643);
+            this.Controls.Add(this.lblStt);
+            this.Controls.Add(this.Substract);
+            this.Controls.Add(this.Add);
             this.Controls.Add(this.PanelTicket);
             this.Controls.Add(this.btnTimkiem);
             this.Controls.Add(this.Time);
@@ -224,6 +266,8 @@
             this.Text = "Datve";
             ((System.ComponentModel.ISupportInitialize)(this.cbbFrom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Substract)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,5 +284,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker Time;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnTimkiem;
         private System.Windows.Forms.FlowLayoutPanel PanelTicket;
+        private System.Windows.Forms.PictureBox Add;
+        private System.Windows.Forms.PictureBox Substract;
+        private System.Windows.Forms.Label lblStt;
     }
 }

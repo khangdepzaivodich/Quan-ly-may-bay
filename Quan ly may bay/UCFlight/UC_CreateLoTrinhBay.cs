@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 
-namespace Quan_ly_may_bay
+namespace Quan_ly_may_bay.UCFlight
 {
-    public partial class ReportChuyenBay : KryptonForm
+    public partial class UC_CreateLoTrinhBay : UserControl
     {
-        public ReportChuyenBay()
+        public UC_CreateLoTrinhBay()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
