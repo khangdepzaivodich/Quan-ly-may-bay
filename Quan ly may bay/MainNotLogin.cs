@@ -17,21 +17,21 @@ namespace Quan_ly_may_bay
         {
             new List<Image>
             {
-                Properties.Resources.nui_phu_si_1,
-                Properties.Resources.hinh_anh_may_bay,
-                Properties.Resources.Suitcase_Flat_Icon_Vector_svg,
+                Properties.Resources.hcm1,
+                Properties.Resources.hcm2,
+                Properties.Resources.hcm3,
             },
             new List<Image>
             {
-                Properties.Resources.nui_phu_si_1,
-                 Properties.Resources.hinh_anh_may_bay,
-                Properties.Resources.Suitcase_Flat_Icon_Vector_svg,
+                Properties.Resources.ho_hoan_kiem,
+                Properties.Resources.hanoi2,
+                Properties.Resources.hanoi3,
             },
             new List<Image>
             {
-                Properties.Resources.nui_phu_si_1,
-                Properties.Resources.hinh_anh_may_bay,
-                Properties.Resources.Suitcase_Flat_Icon_Vector_svg,
+                Properties.Resources.quangninh1,
+                Properties.Resources.quangninh2,
+                Properties.Resources.quangninh3,
             },
         };
         List<UC_MainNotLogin> uC_MainNotLogins = new List<UC_MainNotLogin>();
@@ -39,24 +39,24 @@ namespace Quan_ly_may_bay
         {
             new List<string>
             {
-                "Hà Nội",
-                "TP.HCM - Hà Nội",
-                "Đà Nẵng - Hà Nội",
-                "Sapa - Hà nội"
+                "TP.HCM",
+                "Hà Nội - TP.HCM",
+                "Huế - TP.HCM",
+                "Đà Nẵng - TP.HCM"
             },
             new List<string>
             {
                 "Hà Nội",
                 "TP.HCM - Hà Nội",
                 "Đà Nẵng - Hà Nội",
-                "Sapa - Hà nội"
+                "Phú Quốc - Hà Nội"
             },
             new List<string>
             {
-                "Hà Nội",
-                "TP.HCM - Hà Nội",
-                "Đà Nẵng - Hà Nội",
-                "Sapa - Hà nội"
+                "Quảng Ninh",
+                "TP.HCM - Quảng Ninh",
+                "Khánh Hòa - Quảng Ninh",
+                "Cần Thơ - Quảng Ninh"
             },
 
         };
@@ -74,6 +74,7 @@ namespace Quan_ly_may_bay
                 u.Text2 = Locations[i][2];
                 u.Text3 = Locations[i][3];
                 u.Location = new Point(i * 270 + 25, 150);
+                u.Ranking = "#" + (i + 1).ToString();
                 uC_MainNotLogins.Add(u);
                 Controls.Add(u);
             }
@@ -87,6 +88,24 @@ namespace Quan_ly_may_bay
                 uC_MainNotLogins[i].BgImage = images[i][j];
             }
             ++j;
+        }
+
+        private void TacGiaBtn_Click(object sender, EventArgs e)
+        {
+            Author frm = new Author();  
+            frm.ShowDialog();
+        }
+
+        private void SignupBtn_Click(object sender, EventArgs e)
+        {
+            SignupForm signupForm = new SignupForm();
+            signupForm.ShowDialog();
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
         }
     }
 }

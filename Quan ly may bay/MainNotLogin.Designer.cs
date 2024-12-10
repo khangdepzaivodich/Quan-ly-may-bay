@@ -153,6 +153,7 @@
             this.TacGiaBtn.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TacGiaBtn.TabIndex = 17;
             this.TacGiaBtn.Values.Text = "Tác giả";
+            this.TacGiaBtn.Click += new System.EventHandler(this.TacGiaBtn_Click);
             // 
             // LoginBtn
             // 
@@ -202,6 +203,7 @@
             this.LoginBtn.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.TabIndex = 18;
             this.LoginBtn.Values.Text = "Login";
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // SignupBtn
             // 
@@ -251,6 +253,7 @@
             this.SignupBtn.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupBtn.TabIndex = 19;
             this.SignupBtn.Values.Text = "Sign up";
+            this.SignupBtn.Click += new System.EventHandler(this.SignupBtn_Click);
             // 
             // MainNotLogin
             // 
@@ -270,6 +273,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainNotLogin";
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 

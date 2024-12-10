@@ -17,5 +17,10 @@ namespace Quan_ly_may_bay
         {
             InitializeComponent();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
