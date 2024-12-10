@@ -26,17 +26,15 @@ namespace Quan_ly_may_bay
             {
                 UC_btnMainForm uC = new UC_btnMainForm();
                 uC.Dock = DockStyle.Top;
-                uC.lbl.Click += btnclick;
+                uC.lbl.Click += Btnclick;
                 uC.lbl.Text = str[i];
                 fpanelBtn.Controls.Add(uC);
-                uC.lbl.Click += btnclick;
+                uC.lbl.Click += Btnclick;
             }
-            
-                
         }
 
 
-        private void btnclick(object sender, EventArgs e)
+        private void Btnclick(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
             foreach (UC_btnMainForm uc in fpanelBtn.Controls)
@@ -72,5 +70,6 @@ namespace Quan_ly_may_bay
             panelMain.Controls.Add(frm);
             frm.Show();
         }
+
     }
 }

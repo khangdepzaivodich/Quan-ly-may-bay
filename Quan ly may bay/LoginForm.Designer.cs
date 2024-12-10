@@ -126,7 +126,7 @@
             this.SubmitButton.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.SubmitButton.StateCommon.Back.ColorAngle = 90F;
             this.SubmitButton.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.SubmitButton.StateCommon.Border.Color2 = System.Drawing.Color.Cyan;
+            this.SubmitButton.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.SubmitButton.StateCommon.Border.ColorAngle = 90F;
             this.SubmitButton.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
