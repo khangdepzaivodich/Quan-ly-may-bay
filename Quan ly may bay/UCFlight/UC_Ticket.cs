@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
 
-namespace Quan_ly_may_bay
+namespace Quan_ly_may_bay.UCFlight
 {
-    public partial class AddStaff : KryptonForm
+    public partial class UC_Ticket : UserControl
     {
-        public AddStaff()
+        public UC_Ticket()
         {
             InitializeComponent();
         }

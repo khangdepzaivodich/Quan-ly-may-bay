@@ -88,5 +88,11 @@ namespace Quan_ly_may_bay
             }
             ++j;
         }
+
+        private void TacGiaBtn_Click(object sender, EventArgs e)
+        {
+            Author frm = new Author();  
+            frm.ShowDialog();
+        }
     }
 }
