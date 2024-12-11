@@ -185,7 +185,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label9.Location = new System.Drawing.Point(558, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 33);
+            this.label9.Size = new System.Drawing.Size(112, 34);
             this.label9.TabIndex = 24;
             this.label9.Text = "54/100";
             // 

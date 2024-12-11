@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Quan_ly_may_bay.UCFlight
 {
-    public partial class UC_Ticket : UserControl
+    public partial class UC_Staff : UserControl
     {
-        public UC_Ticket()
+        public UC_Staff()
         {
             InitializeComponent();
         }
-
     }
 }

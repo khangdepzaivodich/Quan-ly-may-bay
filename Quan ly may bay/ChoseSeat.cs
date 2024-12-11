@@ -28,6 +28,7 @@ namespace Quan_ly_may_bay
                     KryptonButton button = new KryptonButton();
                     CreateButton(button);
                     button.Location = new Point(j*(button.Width + 30) + 50, i*(button.Height + 10) + 30);
+                    button.StateCommon.Border.Color1 = Color.Yellow;
                     button.Tag = "deluxe left";
                     seats[i,j] = button;
                     Controls.Add(button);
@@ -38,6 +39,7 @@ namespace Quan_ly_may_bay
                     KryptonButton button = new KryptonButton();
                     CreateButton(button);
                     button.Location = new Point(j * (button.Width + 30) + 90, i * (button.Height + 10) + 30);
+                    button.StateCommon.Border.Color1 = Color.Yellow;
                     button.Tag = "deluxe right";
                     seats[i, j] = button;
                     Controls.Add(button);
@@ -51,6 +53,7 @@ namespace Quan_ly_may_bay
                     KryptonButton button = new KryptonButton();
                     CreateButton(button);
                     button.Location = new Point(j * (button.Width + 30) + 50, i * (button.Height + 10) + 60);
+                    button.StateCommon.Border.Color1 = Color.Green;
                     button.Tag = "economic left";
                     seats[i, j] = button;
                     Controls.Add(button);
@@ -61,6 +64,7 @@ namespace Quan_ly_may_bay
                     KryptonButton button = new KryptonButton();
                     CreateButton(button);
                     button.Location = new Point(j * (button.Width + 30) + 90, i * (button.Height + 10) + 60);
+                    button.StateCommon.Border.Color1 = Color.Green;
                     button.Tag = "economic right";
                     seats[i, j] = button;
                     Controls.Add(button);

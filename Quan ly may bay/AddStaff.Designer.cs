@@ -290,6 +290,7 @@
             this.kryptonLabel11.StateCommon.ShortText.Font = new System.Drawing.Font("Itim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel11.TabIndex = 20;
             this.kryptonLabel11.Values.Text = "Số điện thoại";
+            this.kryptonLabel11.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel11_Paint);
             // 
             // kryptonLabel12
             // 

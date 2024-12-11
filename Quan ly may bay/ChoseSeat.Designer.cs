@@ -145,21 +145,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 31);
+            this.label1.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(-2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 48);
+            this.label1.Size = new System.Drawing.Size(77, 40);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Thương \r\n    \r\ngia";
+            this.label1.Text = "Thương \r\ngia";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 256);
+            this.label2.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Lime;
+            this.label2.Location = new System.Drawing.Point(-2, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 48);
+            this.label2.Size = new System.Drawing.Size(57, 40);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Phổ\r\n    \r\nthông";
+            this.label2.Text = "Phổ\r\nthông";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ChoseSeat

@@ -18,6 +18,9 @@ namespace Quan_ly_may_bay
             InitializeComponent();
         }
 
+        private void kryptonLabel11_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }
