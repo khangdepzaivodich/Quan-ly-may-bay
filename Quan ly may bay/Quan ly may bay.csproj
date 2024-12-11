@@ -103,6 +103,12 @@
     <Compile Include="CapNhatLoTrinhBay.Designer.cs">
       <DependentUpon>CapNhatLoTrinhBay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chitietchuyenbay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chitietchuyenbay.Designer.cs">
+      <DependentUpon>Chitietchuyenbay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datve.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chitietchuyenbay.resx">
+      <DependentUpon>Chitietchuyenbay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Datve.resx">
       <DependentUpon>Datve.cs</DependentUpon>
@@ -392,6 +401,8 @@
     <None Include="Resources\circle-x %281%29.png" />
     <None Include="Resources\hinh-anh-may-bay.png" />
     <None Include="Resources\x.png" />
+    <None Include="Resources\line.png" />
+    <None Include="Resources\arrow-big-down-lines.png" />
     <Content Include="SqlServerTypes\SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\SqlServerSpatial140.dll" />
