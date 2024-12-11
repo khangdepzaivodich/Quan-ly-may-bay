@@ -17,5 +17,7 @@ namespace Quan_ly_may_bay
         {
             InitializeComponent();
         }
+
+
     }
 }
