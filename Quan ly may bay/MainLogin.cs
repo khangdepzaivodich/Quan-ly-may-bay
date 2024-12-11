@@ -22,6 +22,7 @@ namespace Quan_ly_may_bay
             "Flight Itinerary",
             "Create Flight",
         };
+        private Form frm;
         public MainLogin()
         {
             InitializeComponent();
@@ -39,59 +40,63 @@ namespace Quan_ly_may_bay
 
         private void Btnclick(object sender, EventArgs e)
         {
-            foreach(Form frm in panelMain.Controls)
+            //foreach(Form frm in panelMain.Controls)
+            //{
+            //    panelMain.Controls.Remove(frm);
+            //}
+            panelMain.Controls.Remove(frm);
+            foreach (UC_btnMainForm btn in fpanelBtn.Controls)
             {
-                panelMain.Controls.Remove(frm);
+               if (btn.ColorBtn != Color.Transparent)
+                {
+                    btn.ColorBtn = Color.Transparent;
+                    break;
+                }
             }
-            foreach (UC_btnMainForm uc in fpanelBtn.Controls)
+            Label uc = (Label)sender;
+            uc.BackColor = Color.FromArgb(128, 255, 255, 255);
+            if (uc.Text == "View Ticket")
             {
-                if (uc.lbl == sender)
-                {
-                    uc.ColorBtn = Color.FromArgb(128,255,255,255);
-                    if(uc.lbl.Text == "View Ticket")
-                    {
-                        Datve frm = new Datve();
-                        frm.TopLevel = false;
-                        panelMain.Controls.Add(frm);
-                        frm.Show();
-                    }
-                    else if (uc.lbl.Text == "Booked Ticket")
-                    {
-                        BookedTicket frm = new BookedTicket();
-                        frm.TopLevel = false;
-                        panelMain.Controls.Add(frm);
-                        frm.Show();
-                    }
-                    else if (uc.lbl.Text == "Flight Itinerary")
-                    {
-                        CapNhatLoTrinhBay frm = new CapNhatLoTrinhBay();
-                        frm.TopLevel = false;
-                        panelMain.Controls.Add(frm);
-                        frm.Show();
-                    }
-                    else if (uc.lbl.Text == "Create Flight")
-                    {
-                        Capnhatchuyenbay frm = new Capnhatchuyenbay();
-                        frm.TopLevel = false;
-                        panelMain.Controls.Add(frm);
-                        frm.Show();
-                    }
-                }
-                else
-                {
-                    uc.ColorBtn = Color.Transparent;
-                }
+                frm = new Datve();
+                frm.TopLevel = false;
+                panelMain.Controls.Add(frm);
+                frm.Show();
+            }
+            else if (uc.Text == "Booked Ticket")
+            {
+                frm = new BookedTicket();
+                frm.TopLevel = false;
+                panelMain.Controls.Add(frm);
+                frm.Show();
+            }
+            else if (uc.Text == "Flight Itinerary")
+            {
+                frm = new CapNhatLoTrinhBay();
+                frm.TopLevel = false;
+                panelMain.Controls.Add(frm);
+                frm.Show();
+            }
+            else if (uc.Text == "Create Flight")
+            {
+                frm = new Capnhatchuyenbay();
+                frm.TopLevel = false;
+                panelMain.Controls.Add(frm);
+                frm.Show();
             }
         }
 
         private void xemThongTin(object sender, EventArgs e)
         {
-            panelMain.Controls.Clear();
-            foreach (UC_btnMainForm uc in fpanelBtn.Controls)
+            panelMain.Controls.Remove(frm);
+            foreach (UC_btnMainForm btn in fpanelBtn.Controls)
             {
-                    uc.ColorBtn = Color.Transparent;
+                if (btn.ColorBtn != Color.Transparent)
+                {
+                    btn.ColorBtn = Color.Transparent;
+                    break;
+                }
             }
-            InformationAccount frm = new InformationAccount();
+            frm = new InformationAccount();
             frm.TopLevel = false;
             frm.Location = new Point(50, 10);
             panelMain.Controls.Add(frm);
