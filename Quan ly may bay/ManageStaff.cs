@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Quan_ly_may_bay.UCFlight;
 
 namespace Quan_ly_may_bay
 {
@@ -16,11 +17,16 @@ namespace Quan_ly_may_bay
         public ManageStaff()
         {
             InitializeComponent();
+            UC_Staff uc = new UC_Staff();
+            pnlContain.Controls.Add(uc);
+            
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
     }
 }

@@ -425,6 +425,7 @@
     <None Include="Resources\x.png" />
     <None Include="Resources\line.png" />
     <None Include="Resources\arrow-big-down-lines.png" />
+    <None Include="Resources\plus.png" />
     <Content Include="SqlServerTypes\SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\SqlServerSpatial140.dll" />
