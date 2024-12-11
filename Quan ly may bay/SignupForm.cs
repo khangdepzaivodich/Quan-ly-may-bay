@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Quan_ly_may_bay.Base;
 namespace Quan_ly_may_bay
 {
     public partial class SignupForm : KryptonForm
@@ -30,40 +32,66 @@ namespace Quan_ly_may_bay
             errCCCD.Clear();
             errSDT.Clear();
             errEmail.Clear();
-            //if (UsernameTextBox.Text.Length == 0)
-            //{
-            //    errUsername.SetError(UsernameTextBox, "Vui lòng nhập Username");
-            //    check = false;
-            //}
-            //if (ConfirmPasswordTextBox.Text != PasswordTextBox.Text)
-            //{
-            //    errConfirm.SetError(ConfirmPasswordTextBox, "Nhập đúng mật khẩu");
-
-            //    check = false;
-            //}
-            //if (CCCDTextBox.Text.Length != 12)
-            //{
-            //    errCCCD.SetError(CCCDTextBox, "Nhập đúng mã CCCD");
-            //    check = false;
-            //}
-            //if (PhoneNumTextBox.Text.Length != 10)
-            //{
-            //    errSDT.SetError(PhoneNumTextBox, "Nhập đúng số điện thoại");
-            //    check = false;
-            //}
-            //if (EmailTextBox.Text.Trim().LastIndexOf("@gmail.com") == -1)
-            //{
-            //    errEmail.SetError(EmailTextBox, "Nhập đúng định dạng email");
-
-            //    check = false;
-            //}
-            if (check)
+            if (UsernameTextBox.Text.Length == 0)
             {
-                this.Hide();
-                OTPForm frm = new OTPForm(this);
-                    frm.ShowDialog();
-                this.Close();
+                errUsername.SetError(UsernameTextBox, "Vui lòng nhập Username");
+                check = false;
             }
+            if (ConfirmPasswordTextBox.Text != PasswordTextBox.Text)
+            {
+                errConfirm.SetError(ConfirmPasswordTextBox, "Nhập đúng mật khẩu");
+
+                check = false;
+            }
+            if (CCCDTextBox.Text.Length != 12)
+            {
+                errCCCD.SetError(CCCDTextBox, "Nhập đúng mã CCCD");
+                check = false;
+            }
+            if (PhoneNumTextBox.Text.Length != 10)
+            {
+                errSDT.SetError(PhoneNumTextBox, "Nhập đúng số điện thoại");
+                check = false;
+            }
+            if (EmailTextBox.Text.Trim().LastIndexOf("@gmail.com") == -1)
+            {
+                errEmail.SetError(EmailTextBox, "Nhập đúng định dạng email");
+
+                check = false;
+            }
+            if (!check)
+            {
+                return;
+                //this.Hide();
+                //OTPForm frm = new OTPForm(this);
+                //    frm.ShowDialog();
+                //this.Close();
+            }
+            databaseDataContext db = new databaseDataContext();
+            Account lastAccount = db.Accounts.OrderByDescending(a => a.ID).FirstOrDefault();
+            Account newAccount = new Account();
+            newAccount.ID = (int.Parse(lastAccount.ID)+1).ToString();
+            newAccount.Email = EmailTextBox.Text;
+            newAccount.LevelID = 2;
+            newAccount.Password = Common.HashPassword(PasswordTextBox.Text);
+            newAccount.DateCreated = DateTime.Now;
+            newAccount.OTPDateSend = DateTime.Now;
+            newAccount.Active = 0;
+         
+            db.Accounts.InsertOnSubmit(newAccount);
+            db.SubmitChanges();
+
+            KhachHang newKhachHang = new KhachHang();
+            newKhachHang.MaKH = newAccount.ID;
+            newKhachHang.HoTenKH = FullnameTextBox.Text;
+            newKhachHang.NgaySinh = dPkDOB.Value;
+            newKhachHang.DiaChi = DiaChiTextBox.Text;
+            if (MaleRadioButton.Checked) newKhachHang.GioiTinh = "Nam";
+            else newKhachHang.GioiTinh = "Nu";
+            newKhachHang.SDT = PhoneNumTextBox.Text;
+            newKhachHang.CCCD = CCCDTextBox.Text;
+            db.Accounts.InsertOnSubmit(newKhachHang);
+            db.SubmitChanges();
         }
     }
 }

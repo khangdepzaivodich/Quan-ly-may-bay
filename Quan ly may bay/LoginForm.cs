@@ -81,7 +81,8 @@ namespace Quan_ly_may_bay
             }
             string str = PasswordTextBox.Text + account.OTP;
             byte[] hashedPassword = Common.HashPassword(str);
-            if (!account.Password.SequenceEqual(hashedPassword))
+            byte[] dbPasswordBytes = account.Password.ToArray();
+            if (!dbPasswordBytes.SequenceEqual(hashedPassword))
             {
                 MessageBox.Show("Mật khẩu sai!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -89,6 +90,9 @@ namespace Quan_ly_may_bay
 
             // Nếu mật khẩu hợp lệ, thực hiện các thao tác tiếp theo
             MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+            MainLogin frm = new MainLogin(account);
+            frm.ShowDialog();
         }
     }
 }

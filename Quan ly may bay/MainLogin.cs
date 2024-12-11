@@ -23,8 +23,10 @@ namespace Quan_ly_may_bay
             "Create Flight",
         };
         private Form frm;
-        public MainLogin()
+        private Account account;
+        public MainLogin(Account _ac)
         {
+            account = _ac;
             InitializeComponent();
             for(int i = 0; i < str.Count; i++)
             {
