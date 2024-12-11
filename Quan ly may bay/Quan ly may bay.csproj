@@ -70,6 +70,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -95,6 +96,7 @@
     <Compile Include="Author.Designer.cs">
       <DependentUpon>Author.cs</DependentUpon>
     </Compile>
+    <Compile Include="Base\Common.cs" />
     <Compile Include="BookedTicket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +114,11 @@
     </Compile>
     <Compile Include="Chitietchuyenbay.Designer.cs">
       <DependentUpon>Chitietchuyenbay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="database.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>database.dbml</DependentUpon>
     </Compile>
     <Compile Include="Datve.cs">
       <SubType>Form</SubType>
@@ -357,6 +364,14 @@
     <EmbeddedResource Include="UCFlight\UC_Ticket.resx">
       <DependentUpon>UC_Ticket.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="database.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>database.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="database.dbml.layout">
+      <DependentUpon>database.dbml</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -431,6 +446,9 @@
     <Content Include="SqlServerTypes\SqlServerTypes\x64\SqlServerSpatial140.dll" />
     <Content Include="SqlServerTypes\SqlServerTypes\x86\msvcr120.dll" />
     <Content Include="SqlServerTypes\SqlServerTypes\x86\SqlServerSpatial140.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

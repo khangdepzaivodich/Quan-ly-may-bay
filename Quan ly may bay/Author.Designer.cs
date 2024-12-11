@@ -53,7 +53,7 @@
             this.uC_Author5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.uC_Author5.ImageMember = global::Quan_ly_may_bay.Properties.Resources.chuong;
             this.uC_Author5.Location = new System.Drawing.Point(12, 422);
-            this.uC_Author5.Mssv = "49.01";
+            this.uC_Author5.Mssv = "49.01.104.015";
             this.uC_Author5.Name = "uC_Author5";
             this.uC_Author5.Size = new System.Drawing.Size(331, 83);
             this.uC_Author5.TabIndex = 4;

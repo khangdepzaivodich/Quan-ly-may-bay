@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,7 +40,11 @@
             this.lblForget = new System.Windows.Forms.Label();
             this.CloseLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errUsername = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errPassword = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -101,7 +106,7 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(145, 345);
+            this.SubmitButton.Location = new System.Drawing.Point(151, 347);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.SubmitButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -163,6 +168,7 @@
             this.SubmitButton.TabIndex = 0;
             this.SubmitButton.TabStop = false;
             this.SubmitButton.Values.Text = "Submit";
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // lblSignup
             // 
@@ -220,6 +226,14 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // errUsername
+            // 
+            this.errUsername.ContainerControl = this;
+            // 
+            // errPassword
+            // 
+            this.errPassword.ContainerControl = this;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -249,6 +263,8 @@
             this.StateCommon.Border.Rounding = 30;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +283,7 @@
         private System.Windows.Forms.Label lblForget;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label CloseLabel;
+        private System.Windows.Forms.ErrorProvider errUsername;
+        private System.Windows.Forms.ErrorProvider errPassword;
     }
 }
