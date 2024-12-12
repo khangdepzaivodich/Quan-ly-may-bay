@@ -63,8 +63,8 @@
         <classShapeMoniker Id="1755f94a-07ab-4188-b5b3-81b330a22e0f" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 2.03929768880208); (6.25 : 2.03929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/databaseDataContext/LoTrinh/LoTrinh_ChuyenBay" />
+    <associationConnector edgePoints="[(10.75 : 7.95274983723958); (9.125 : 7.95274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/databaseDataContext/SanBay/SanBay_LoTrinh" />
       <nodes>
         <classShapeMoniker Id="3594f015-499a-40b9-9cf3-52af0cd31326" />
         <classShapeMoniker Id="73daaf56-2bbb-4d98-9b77-78c870302210" />

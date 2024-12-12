@@ -71,6 +71,15 @@
       <Association Name="MayBay_LoTrinh" Member="LoTrinhs" ThisKey="MaMB" OtherKey="MaMB" Type="LoTrinh" />
     </Type>
   </Table>
+  <Table Name="dbo.SanBay" Member="SanBays">
+    <Type Name="SanBay">
+      <Column Name="MaSB" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenSB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="SanBay_LoTrinh" Member="LoTrinhs" ThisKey="MaSB" OtherKey="NoiXuatPhat" Type="LoTrinh" />
+      <Association Name="SanBay_LoTrinh1" Member="LoTrinhs1" ThisKey="MaSB" OtherKey="NoiDen" Type="LoTrinh" />
+    </Type>
+  </Table>
   <Table Name="dbo.NhanVien" Member="NhanViens">
     <Type Name="NhanVien">
       <Column Name="MaNV" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -85,15 +94,6 @@
       <Column Name="Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Account_NhanVien" Member="Account" ThisKey="ID" OtherKey="ID" Type="Account" IsForeignKey="true" />
       <Association Name="ChucVu_NhanVien" Member="ChucVu" ThisKey="MaCV" OtherKey="MaCV" Type="ChucVu" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.SanBay" Member="SanBays">
-    <Type Name="SanBay">
-      <Column Name="MaSB" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenSB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="City" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Association Name="SanBay_LoTrinh" Member="LoTrinhs" ThisKey="MaSB" OtherKey="NoiXuatPhat" Type="LoTrinh" />
-      <Association Name="SanBay_LoTrinh1" Member="LoTrinhs1" ThisKey="MaSB" OtherKey="NoiDen" Type="LoTrinh" />
     </Type>
   </Table>
   <Table Name="dbo.Ve" Member="Ves">
