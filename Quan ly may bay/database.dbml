@@ -2,7 +2,7 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=QLCB;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="Quan_ly_may_bay.Properties.Settings" SettingsPropertyName="QLCBConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Account" Member="Accounts">
     <Type Name="Account">
-      <Column Name="ID" Type="System.String" DbType="Char(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Username" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="Password" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -37,14 +37,13 @@
   </Table>
   <Table Name="dbo.KhachHang" Member="KhachHangs">
     <Type Name="KhachHang">
-      <Column Name="MaKH" Type="System.String" DbType="Char(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="HoTenKH" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="CCCD" Type="System.String" DbType="Char(12)" CanBeNull="true" />
-      <Association Name="KhachHang_Ve" Member="Ves" ThisKey="MaKH" OtherKey="MaKH" Type="Ve" />
       <Association Name="Account_KhachHang" Member="Account" ThisKey="MaKH" OtherKey="ID" Type="Account" IsForeignKey="true" />
     </Type>
   </Table>
@@ -91,7 +90,7 @@
       <Column Name="NgayVaoLam" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="MaCV" Type="System.String" DbType="Char(4)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Column Name="ID" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Account_NhanVien" Member="Account" ThisKey="ID" OtherKey="ID" Type="Account" IsForeignKey="true" />
       <Association Name="ChucVu_NhanVien" Member="ChucVu" ThisKey="MaCV" OtherKey="MaCV" Type="ChucVu" IsForeignKey="true" />
@@ -105,7 +104,6 @@
       <Column Name="LevelSeat" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Seat" Type="System.String" DbType="Char(3)" CanBeNull="true" />
       <Association Name="ChuyenBay_Ve" Member="ChuyenBay" ThisKey="MaCB" OtherKey="MaCB" Type="ChuyenBay" IsForeignKey="true" />
-      <Association Name="KhachHang_Ve" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

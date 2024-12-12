@@ -30,12 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.TacGiaBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.LoginBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SignupBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -43,23 +44,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 3000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // kryptonButton4
-            // 
-            this.kryptonButton4.Location = new System.Drawing.Point(13, 13);
-            this.kryptonButton4.Margin = new System.Windows.Forms.Padding(4);
-            this.kryptonButton4.Name = "kryptonButton4";
-            this.kryptonButton4.Size = new System.Drawing.Size(91, 90);
-            this.kryptonButton4.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButton4.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButton4.StateCommon.Back.Image = global::Quan_ly_may_bay.Properties.Resources.nen1;
-            this.kryptonButton4.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
-            this.kryptonButton4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton4.StateCommon.Border.Rounding = 15;
-            this.kryptonButton4.TabIndex = 16;
-            this.kryptonButton4.Values.Text = "";
             // 
             // kryptonButton3
             // 
@@ -255,6 +239,17 @@
             this.SignupBtn.Values.Text = "Sign up";
             this.SignupBtn.Click += new System.EventHandler(this.SignupBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Quan_ly_may_bay.Properties.Resources.nen_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(115, 113);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainNotLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -262,10 +257,10 @@
             this.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.hinh_anh_may_bay;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1090, 690);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SignupBtn);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.TacGiaBtn);
-            this.Controls.Add(this.kryptonButton4);
             this.Controls.Add(this.kryptonButton3);
             this.Controls.Add(this.kryptonButton2);
             this.DoubleBuffered = true;
@@ -283,6 +278,7 @@
             this.StateCommon.Border.Width = 1;
             this.Text = "MainNotLogin";
             this.Load += new System.EventHandler(this.MainNotLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,11 +286,11 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton TacGiaBtn;
         private ComponentFactory.Krypton.Toolkit.KryptonButton LoginBtn;
         private ComponentFactory.Krypton.Toolkit.KryptonButton SignupBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -18,24 +18,29 @@ namespace Quan_ly_may_bay
         public Capnhatchuyenbay()
         {
             InitializeComponent();
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 10; i++)
             {
                 UC_CreateChuyenBay uc = new UC_CreateChuyenBay();
                 list.Add(uc);
             }
-            for (int i = 0; i < list.Count; i++)
+            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
+                if (i >= list.Count)
+                {
+                    Add.Enabled = false;
+                    break;
+                }
                 PanelTicket.Controls.Add(list[i]);
             }
         }
 
-        private void Add_Click(object sender, EventArgs e)
+        private void pAdd_Click(object sender, EventArgs e)
         {
-            if (list.Count < 6)
-            {
-                TaoChuyenBay frm = new TaoChuyenBay();
-                frm.ShowDialog();
-            }
+            this.Hide();
+            TaoChuyenBay frm = new TaoChuyenBay();
+            frm.ShowDialog();
+
+            this.Show();
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -45,6 +50,55 @@ namespace Quan_ly_may_bay
                 PanelTicket.Controls.Remove(list[i]);
             }
             list.Clear();
+        }
+
+        private void Substract_Click(object sender, EventArgs e)
+        {
+            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
+            {
+                if (i >= list.Count)
+                {
+                    Add.Enabled = false;
+                    break;
+                }
+                PanelTicket.Controls.Remove(list[i]);
+            }
+
+            lblStt.Text = (int.Parse(lblStt.Text) - 1).ToString();
+            if (int.Parse(lblStt.Text) == 0)
+            {
+                Substract.Enabled = false;
+            }
+            Add.Enabled = true;
+        }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
+            {
+                if (i >= list.Count)
+                {
+                    Add.Enabled = false;
+                    break;
+                }
+                PanelTicket.Controls.Remove(list[i]);
+            }
+            lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();
+            Substract.Enabled = true;
+        }
+
+        private void lblStt_TextChanged(object sender, EventArgs e)
+        {
+            
+                for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
+                {
+                    if (i >= list.Count)
+                    {
+                        pAdd.Enabled = false;
+                        break;
+                    }
+                    PanelTicket.Controls.Add(list[i]);
+                }
         }
     }
 }

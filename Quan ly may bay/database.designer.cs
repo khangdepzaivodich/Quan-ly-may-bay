@@ -168,7 +168,7 @@ namespace Quan_ly_may_bay
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _ID;
+		private int _ID;
 		
 		private string _Username;
 		
@@ -198,7 +198,7 @@ namespace Quan_ly_may_bay
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIDChanging(string value);
+    partial void OnIDChanging(int value);
     partial void OnIDChanged();
     partial void OnUsernameChanging(string value);
     partial void OnUsernameChanged();
@@ -229,8 +229,8 @@ namespace Quan_ly_may_bay
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Char(8) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ID
 		{
 			get
 			{
@@ -871,7 +871,7 @@ namespace Quan_ly_may_bay
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _MaKH;
+		private int _MaKH;
 		
 		private string _HoTenKH;
 		
@@ -885,15 +885,13 @@ namespace Quan_ly_may_bay
 		
 		private string _CCCD;
 		
-		private EntitySet<Ve> _Ves;
-		
 		private EntityRef<Account> _Account;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnMaKHChanging(string value);
+    partial void OnMaKHChanging(int value);
     partial void OnMaKHChanged();
     partial void OnHoTenKHChanging(string value);
     partial void OnHoTenKHChanged();
@@ -911,13 +909,12 @@ namespace Quan_ly_may_bay
 		
 		public KhachHang()
 		{
-			this._Ves = new EntitySet<Ve>(new Action<Ve>(this.attach_Ves), new Action<Ve>(this.detach_Ves));
 			this._Account = default(EntityRef<Account>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKH", DbType="Char(8) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaKH
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKH", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int MaKH
 		{
 			get
 			{
@@ -1060,19 +1057,6 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhachHang_Ve", Storage="_Ves", ThisKey="MaKH", OtherKey="MaKH")]
-		public EntitySet<Ve> Ves
-		{
-			get
-			{
-				return this._Ves;
-			}
-			set
-			{
-				this._Ves.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_KhachHang", Storage="_Account", ThisKey="MaKH", OtherKey="ID", IsForeignKey=true)]
 		public Account Account
 		{
@@ -1100,7 +1084,7 @@ namespace Quan_ly_may_bay
 					}
 					else
 					{
-						this._MaKH = default(string);
+						this._MaKH = default(int);
 					}
 					this.SendPropertyChanged("Account");
 				}
@@ -1125,18 +1109,6 @@ namespace Quan_ly_may_bay
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_Ves(Ve entity)
-		{
-			this.SendPropertyChanging();
-			entity.KhachHang = this;
-		}
-		
-		private void detach_Ves(Ve entity)
-		{
-			this.SendPropertyChanging();
-			entity.KhachHang = null;
 		}
 	}
 	
@@ -1847,7 +1819,7 @@ namespace Quan_ly_may_bay
 		
 		private string _SDT;
 		
-		private string _ID;
+		private System.Nullable<int> _ID;
 		
 		private System.Nullable<int> _Luong;
 		
@@ -1875,7 +1847,7 @@ namespace Quan_ly_may_bay
     partial void OnMaCVChanged();
     partial void OnSDTChanging(string value);
     partial void OnSDTChanged();
-    partial void OnIDChanging(string value);
+    partial void OnIDChanging(System.Nullable<int> value);
     partial void OnIDChanged();
     partial void OnLuongChanging(System.Nullable<int> value);
     partial void OnLuongChanged();
@@ -2052,8 +2024,8 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Char(8)")]
-		public string ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int")]
+		public System.Nullable<int> ID
 		{
 			get
 			{
@@ -2123,7 +2095,7 @@ namespace Quan_ly_may_bay
 					}
 					else
 					{
-						this._ID = default(string);
+						this._ID = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Account");
 				}
@@ -2203,8 +2175,6 @@ namespace Quan_ly_may_bay
 		
 		private EntityRef<ChuyenBay> _ChuyenBay;
 		
-		private EntityRef<KhachHang> _KhachHang;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2224,7 +2194,6 @@ namespace Quan_ly_may_bay
 		public Ve()
 		{
 			this._ChuyenBay = default(EntityRef<ChuyenBay>);
-			this._KhachHang = default(EntityRef<KhachHang>);
 			OnCreated();
 		}
 		
@@ -2259,10 +2228,6 @@ namespace Quan_ly_may_bay
 			{
 				if ((this._MaKH != value))
 				{
-					if (this._KhachHang.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnMaKHChanging(value);
 					this.SendPropertyChanging();
 					this._MaKH = value;
@@ -2366,40 +2331,6 @@ namespace Quan_ly_may_bay
 						this._MaCB = default(string);
 					}
 					this.SendPropertyChanged("ChuyenBay");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhachHang_Ve", Storage="_KhachHang", ThisKey="MaKH", OtherKey="MaKH", IsForeignKey=true)]
-		public KhachHang KhachHang
-		{
-			get
-			{
-				return this._KhachHang.Entity;
-			}
-			set
-			{
-				KhachHang previousValue = this._KhachHang.Entity;
-				if (((previousValue != value) 
-							|| (this._KhachHang.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._KhachHang.Entity = null;
-						previousValue.Ves.Remove(this);
-					}
-					this._KhachHang.Entity = value;
-					if ((value != null))
-					{
-						value.Ves.Add(this);
-						this._MaKH = value.MaKH;
-					}
-					else
-					{
-						this._MaKH = default(string);
-					}
-					this.SendPropertyChanged("KhachHang");
 				}
 			}
 		}

@@ -19,10 +19,10 @@ namespace Quan_ly_may_bay
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            this.Hide(); 
-            MainLogin frm = new MainLogin();
-            frm.ShowDialog();
-            this.Close();
+            //this.Hide(); 
+            //MainLogin frm = new MainLogin();
+            //frm.ShowDialog();
+            //this.Close();
         }
     }
 }

@@ -52,6 +52,7 @@
             this.cbbMaCV = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.txtNgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMaCV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +71,7 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(238, 50);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(168, 35);
+            this.txtUsername.Size = new System.Drawing.Size(168, 37);
             this.txtUsername.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.txtUsername.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
             this.txtUsername.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
@@ -79,7 +80,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtUsername.StateCommon.Border.Rounding = 20;
             this.txtUsername.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtUsername.StateCommon.Content.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "JohnDoe";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -88,7 +89,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(238, 105);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(168, 35);
+            this.txtPassword.Size = new System.Drawing.Size(168, 37);
             this.txtPassword.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
             this.txtPassword.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
@@ -97,7 +98,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtPassword.StateCommon.Border.Rounding = 20;
             this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtPassword.StateCommon.Content.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "123456";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -117,7 +118,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(238, 163);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(168, 35);
+            this.txtEmail.Size = new System.Drawing.Size(168, 37);
             this.txtEmail.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.txtEmail.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
             this.txtEmail.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
@@ -126,7 +127,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtEmail.StateCommon.Border.Rounding = 20;
             this.txtEmail.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtEmail.StateCommon.Content.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.TabIndex = 5;
             this.txtEmail.Text = "nguyenvana@gmail.com";
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -146,7 +147,7 @@
             // 
             this.txtLuong.Location = new System.Drawing.Point(238, 381);
             this.txtLuong.Name = "txtLuong";
-            this.txtLuong.Size = new System.Drawing.Size(168, 35);
+            this.txtLuong.Size = new System.Drawing.Size(168, 37);
             this.txtLuong.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.txtLuong.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
             this.txtLuong.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
@@ -155,7 +156,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtLuong.StateCommon.Border.Rounding = 20;
             this.txtLuong.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtLuong.StateCommon.Content.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLuong.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLuong.TabIndex = 11;
             this.txtLuong.Text = "2.000.000 VND";
             this.txtLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -197,7 +198,7 @@
             // 
             this.txtDiachi.Location = new System.Drawing.Point(639, 163);
             this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(168, 35);
+            this.txtDiachi.Size = new System.Drawing.Size(168, 37);
             this.txtDiachi.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.txtDiachi.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
             this.txtDiachi.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
@@ -206,7 +207,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtDiachi.StateCommon.Border.Rounding = 20;
             this.txtDiachi.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtDiachi.StateCommon.Content.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiachi.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiachi.TabIndex = 17;
             this.txtDiachi.Text = "Phường 1, Quận 8, YPHCM";
             this.txtDiachi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -237,7 +238,7 @@
             // 
             this.txtHoten.Location = new System.Drawing.Point(639, 50);
             this.txtHoten.Name = "txtHoten";
-            this.txtHoten.Size = new System.Drawing.Size(168, 35);
+            this.txtHoten.Size = new System.Drawing.Size(168, 37);
             this.txtHoten.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.txtHoten.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
             this.txtHoten.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
@@ -246,7 +247,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtHoten.StateCommon.Border.Rounding = 20;
             this.txtHoten.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtHoten.StateCommon.Content.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoten.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoten.TabIndex = 13;
             this.txtHoten.Text = "Nguyễn Văn A";
             this.txtHoten.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -266,7 +267,7 @@
             // 
             this.txtSdt.Location = new System.Drawing.Point(639, 288);
             this.txtSdt.Name = "txtSdt";
-            this.txtSdt.Size = new System.Drawing.Size(168, 35);
+            this.txtSdt.Size = new System.Drawing.Size(168, 37);
             this.txtSdt.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.txtSdt.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
             this.txtSdt.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
@@ -275,7 +276,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSdt.StateCommon.Border.Rounding = 20;
             this.txtSdt.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtSdt.StateCommon.Content.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSdt.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSdt.TabIndex = 21;
             this.txtSdt.Text = "0999999999";
             this.txtSdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -326,10 +327,12 @@
             // 
             // dtpNgayKy
             // 
-            this.dtpNgayKy.CustomFormat = "DD/mm/yyyy";
+            this.dtpNgayKy.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayKy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayKy.Location = new System.Drawing.Point(238, 264);
             this.dtpNgayKy.Name = "dtpNgayKy";
-            this.dtpNgayKy.Size = new System.Drawing.Size(195, 33);
+            this.dtpNgayKy.ShowUpDown = true;
+            this.dtpNgayKy.Size = new System.Drawing.Size(168, 35);
             this.dtpNgayKy.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.dtpNgayKy.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
             this.dtpNgayKy.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
@@ -338,7 +341,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.dtpNgayKy.StateCommon.Border.Rounding = 20;
             this.dtpNgayKy.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.dtpNgayKy.StateCommon.Content.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayKy.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayKy.TabIndex = 24;
             this.dtpNgayKy.ValueNullable = new System.DateTime(2024, 12, 7, 0, 0, 0, 0);
             // 
@@ -366,10 +369,11 @@
             // 
             // txtNgaySinh
             // 
-            this.txtNgaySinh.CustomFormat = "DD/mm/yyyy";
+            this.txtNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.txtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtNgaySinh.Location = new System.Drawing.Point(598, 107);
             this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(209, 33);
+            this.txtNgaySinh.Size = new System.Drawing.Size(209, 35);
             this.txtNgaySinh.StateCommon.Back.Color1 = System.Drawing.Color.Black;
             this.txtNgaySinh.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
             this.txtNgaySinh.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
@@ -378,7 +382,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtNgaySinh.StateCommon.Border.Rounding = 20;
             this.txtNgaySinh.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtNgaySinh.StateCommon.Content.Font = new System.Drawing.Font("Itim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgaySinh.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNgaySinh.TabIndex = 27;
             this.txtNgaySinh.ValueNullable = new System.DateTime(2024, 12, 7, 0, 0, 0, 0);
             // 
@@ -399,11 +403,8 @@
             this.kryptonButton1.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonButton1.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.kryptonButton1.OverrideFocus.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.OverrideFocus.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
             this.kryptonButton1.OverrideFocus.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.kryptonButton1.Size = new System.Drawing.Size(111, 51);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -420,39 +421,64 @@
             this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Itim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton1.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.kryptonButton1.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.kryptonButton1.StatePressed.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton1.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.kryptonButton1.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.kryptonButton1.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButton1.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.kryptonButton1.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.kryptonButton1.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.kryptonButton1.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.kryptonButton1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.kryptonButton1.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.kryptonButton1.StatePressed.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton1.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.kryptonButton1.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.kryptonButton1.StatePressed.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
             this.kryptonButton1.StatePressed.Border.Rounding = 20;
-            this.kryptonButton1.StatePressed.Border.Width = 1;
             this.kryptonButton1.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonButton1.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton1.StateTracking.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateTracking.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.kryptonButton1.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.kryptonButton1.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.kryptonButton1.StateTracking.Border.Color2 = System.Drawing.Color.Cyan;
-            this.kryptonButton1.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateTracking.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
             this.kryptonButton1.StateTracking.Border.Rounding = 20;
-            this.kryptonButton1.StateTracking.Border.Width = 1;
-            this.kryptonButton1.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
-            this.kryptonButton1.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
+            this.kryptonButton1.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.kryptonButton1.TabIndex = 28;
             this.kryptonButton1.TabStop = false;
             this.kryptonButton1.Values.Text = "Create";
+            // 
+            // kryptonButton3
+            // 
+            this.kryptonButton3.Location = new System.Drawing.Point(779, 12);
+            this.kryptonButton3.Name = "kryptonButton3";
+            this.kryptonButton3.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.Size = new System.Drawing.Size(28, 27);
+            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
+            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.DimGray;
+            this.kryptonButton3.StateCommon.Back.Image = global::Quan_ly_may_bay.Properties.Resources.x;
+            this.kryptonButton3.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.kryptonButton3.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.TabIndex = 31;
+            this.kryptonButton3.Values.Text = "";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // AddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(821, 495);
+            this.Controls.Add(this.kryptonButton3);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.txtNgaySinh);
             this.Controls.Add(this.cbbMaCV);
@@ -480,6 +506,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddStaff";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddStaff";
             ((System.ComponentModel.ISupportInitialize)(this.cbbMaCV)).EndInit();
             this.ResumeLayout(false);
@@ -513,5 +540,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbMaCV;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker txtNgaySinh;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
     }
 }

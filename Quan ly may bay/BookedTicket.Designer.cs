@@ -38,11 +38,10 @@
             // 
             // PanelTicket
             // 
-            this.PanelTicket.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTicket.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.PanelTicket.Location = new System.Drawing.Point(0, 0);
+            this.PanelTicket.Location = new System.Drawing.Point(50, 44);
             this.PanelTicket.Name = "PanelTicket";
-            this.PanelTicket.Size = new System.Drawing.Size(821, 495);
+            this.PanelTicket.Size = new System.Drawing.Size(727, 483);
             this.PanelTicket.TabIndex = 0;
             this.PanelTicket.WrapContents = false;
             // 
@@ -50,7 +49,7 @@
             // 
             this.Substract.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_left;
             this.Substract.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Substract.Location = new System.Drawing.Point(324, 526);
+            this.Substract.Location = new System.Drawing.Point(332, 566);
             this.Substract.Name = "Substract";
             this.Substract.Size = new System.Drawing.Size(53, 50);
             this.Substract.TabIndex = 12;
@@ -61,7 +60,7 @@
             // 
             this.lblStt.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStt.ForeColor = System.Drawing.Color.White;
-            this.lblStt.Location = new System.Drawing.Point(383, 526);
+            this.lblStt.Location = new System.Drawing.Point(391, 566);
             this.lblStt.Name = "lblStt";
             this.lblStt.Size = new System.Drawing.Size(47, 49);
             this.lblStt.TabIndex = 14;
@@ -73,7 +72,7 @@
             // 
             this.Add.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_right__1_;
             this.Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Add.Location = new System.Drawing.Point(436, 526);
+            this.Add.Location = new System.Drawing.Point(444, 566);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(53, 50);
             this.Add.TabIndex = 13;

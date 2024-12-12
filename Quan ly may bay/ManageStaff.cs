@@ -17,9 +17,19 @@ namespace Quan_ly_may_bay
         public ManageStaff()
         {
             InitializeComponent();
+            databaseDataContext db = new databaseDataContext();
+            var nv = db.NhanViens.Where(p => p.MaCV != "QLNS").ToList();
+            foreach(var list in nv)
+            {
+
+            }
             UC_Staff uc = new UC_Staff();
             pnlContain.Controls.Add(uc);
-            
+            uc = new UC_Staff();
+            pnlContain.Controls.Add(uc);
+            uc = new UC_Staff();
+            pnlContain.Controls.Add(uc);
+
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
@@ -27,6 +37,12 @@ namespace Quan_ly_may_bay
             this.Close();
         }
 
-
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddStaff frm = new AddStaff();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

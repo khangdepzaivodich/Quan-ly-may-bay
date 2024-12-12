@@ -22,5 +22,10 @@ namespace Quan_ly_may_bay
         {
 
         }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

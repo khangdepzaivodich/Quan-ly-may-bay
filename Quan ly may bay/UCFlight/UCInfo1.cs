@@ -17,7 +17,7 @@ namespace Quan_ly_may_bay.UCFlight
             InitializeComponent();
         }
 
-        private void kryptonButton2_Click(object sender, EventArgs e)
+        private void Xembtn(object sender, EventArgs e)
         {
             ReportChuyenBay reportChuyenBay = new ReportChuyenBay();
             reportChuyenBay.ShowDialog();

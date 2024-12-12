@@ -21,10 +21,26 @@ namespace Quan_ly_may_bay
             "Booked Ticket",
             "Flight Itinerary",
             "Create Flight",
+            "Manage Staff",
         };
         private Form frm;
+        private Account account;
         public MainLogin()
         {
+            InitializeComponent();
+            for (int i = 0; i < str.Count; i++)
+            {
+                UC_btnMainForm uC = new UC_btnMainForm();
+                uC.Dock = DockStyle.Top;
+                uC.lbl.Click += Btnclick;
+                uC.lbl.Text = str[i];
+                fpanelBtn.Controls.Add(uC);
+                uC.lbl.Click += Btnclick;
+            }
+        }
+        public MainLogin(Account _ac)
+        {
+            account = _ac;
             InitializeComponent();
             for(int i = 0; i < str.Count; i++)
             {
@@ -79,6 +95,13 @@ namespace Quan_ly_may_bay
             else if (uc.Text == "Create Flight")
             {
                 frm = new Capnhatchuyenbay();
+                frm.TopLevel = false;
+                panelMain.Controls.Add(frm);
+                frm.Show();
+            }
+            else if (uc.Text == "Manage Staff")
+            {
+                frm = new ManageStaff();
                 frm.TopLevel = false;
                 panelMain.Controls.Add(frm);
                 frm.Show();
