@@ -27,6 +27,10 @@ namespace Quan_ly_may_bay
             this.Close();
         }
 
-
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            AddStaff frm = new AddStaff();
+            frm.ShowDialog();
+        }
     }
 }
