@@ -28,10 +28,8 @@ namespace Quan_ly_may_bay
         private void lblForget_Click(object sender, EventArgs e)
         {
             this.Hide();
-            this.Close();
-                EmailForget emailForget = new EmailForget();
-                emailForget.ShowDialog();
-
+            EmailForget emailForget = new EmailForget();
+            emailForget.ShowDialog();
         }
 
         private void lblSignup_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ConfirmPassTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -35,7 +36,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SubmitButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.PasswordError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ConfirmPasswordError = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConfirmPasswordError)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -172,6 +177,16 @@
             this.SubmitButton.Values.Text = "Submit";
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
+            // PasswordError
+            // 
+            this.PasswordError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.PasswordError.ContainerControl = this;
+            // 
+            // ConfirmPasswordError
+            // 
+            this.ConfirmPasswordError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ConfirmPasswordError.ContainerControl = this;
+            // 
             // ResetPassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -194,6 +209,8 @@
             this.StateCommon.Border.Rounding = 30;
             this.StateCommon.Border.Width = 1;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasswordError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConfirmPasswordError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +225,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton SubmitButton;
+        private System.Windows.Forms.ErrorProvider PasswordError;
+        private System.Windows.Forms.ErrorProvider ConfirmPasswordError;
     }
 }

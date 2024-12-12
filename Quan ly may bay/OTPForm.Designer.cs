@@ -83,10 +83,11 @@
             this.kryptonRichTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 5, -1, -1);
             this.kryptonRichTextBox1.TabIndex = 10;
             this.kryptonRichTextBox1.Text = "";
+            this.kryptonRichTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kryptonRichTextBox1_KeyPress);
             // 
             // kryptonRichTextBox2
             // 
-            this.kryptonRichTextBox2.Location = new System.Drawing.Point(81, 157);
+            this.kryptonRichTextBox2.Location = new System.Drawing.Point(80, 157);
             this.kryptonRichTextBox2.MaxLength = 1;
             this.kryptonRichTextBox2.Name = "kryptonRichTextBox2";
             this.kryptonRichTextBox2.Size = new System.Drawing.Size(52, 62);
@@ -102,10 +103,11 @@
             this.kryptonRichTextBox2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 5, -1, -1);
             this.kryptonRichTextBox2.TabIndex = 11;
             this.kryptonRichTextBox2.Text = "";
+            this.kryptonRichTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kryptonRichTextBox1_KeyPress);
             // 
             // kryptonRichTextBox3
             // 
-            this.kryptonRichTextBox3.Location = new System.Drawing.Point(219, 157);
+            this.kryptonRichTextBox3.Location = new System.Drawing.Point(148, 157);
             this.kryptonRichTextBox3.MaxLength = 1;
             this.kryptonRichTextBox3.Name = "kryptonRichTextBox3";
             this.kryptonRichTextBox3.Size = new System.Drawing.Size(52, 62);
@@ -119,12 +121,13 @@
             this.kryptonRichTextBox3.StateCommon.Border.Width = 1;
             this.kryptonRichTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonRichTextBox3.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 5, -1, -1);
-            this.kryptonRichTextBox3.TabIndex = 13;
+            this.kryptonRichTextBox3.TabIndex = 12;
             this.kryptonRichTextBox3.Text = "";
+            this.kryptonRichTextBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kryptonRichTextBox1_KeyPress);
             // 
             // kryptonRichTextBox4
             // 
-            this.kryptonRichTextBox4.Location = new System.Drawing.Point(353, 157);
+            this.kryptonRichTextBox4.Location = new System.Drawing.Point(216, 157);
             this.kryptonRichTextBox4.MaxLength = 1;
             this.kryptonRichTextBox4.Name = "kryptonRichTextBox4";
             this.kryptonRichTextBox4.Size = new System.Drawing.Size(52, 62);
@@ -138,12 +141,13 @@
             this.kryptonRichTextBox4.StateCommon.Border.Width = 1;
             this.kryptonRichTextBox4.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonRichTextBox4.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 5, -1, -1);
-            this.kryptonRichTextBox4.TabIndex = 15;
+            this.kryptonRichTextBox4.TabIndex = 13;
             this.kryptonRichTextBox4.Text = "";
+            this.kryptonRichTextBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kryptonRichTextBox1_KeyPress);
             // 
             // kryptonRichTextBox5
             // 
-            this.kryptonRichTextBox5.Location = new System.Drawing.Point(151, 157);
+            this.kryptonRichTextBox5.Location = new System.Drawing.Point(284, 157);
             this.kryptonRichTextBox5.MaxLength = 1;
             this.kryptonRichTextBox5.Name = "kryptonRichTextBox5";
             this.kryptonRichTextBox5.Size = new System.Drawing.Size(52, 62);
@@ -157,12 +161,13 @@
             this.kryptonRichTextBox5.StateCommon.Border.Width = 1;
             this.kryptonRichTextBox5.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonRichTextBox5.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 5, -1, -1);
-            this.kryptonRichTextBox5.TabIndex = 12;
+            this.kryptonRichTextBox5.TabIndex = 14;
             this.kryptonRichTextBox5.Text = "";
+            this.kryptonRichTextBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kryptonRichTextBox1_KeyPress);
             // 
             // kryptonRichTextBox6
             // 
-            this.kryptonRichTextBox6.Location = new System.Drawing.Point(286, 157);
+            this.kryptonRichTextBox6.Location = new System.Drawing.Point(352, 157);
             this.kryptonRichTextBox6.MaxLength = 1;
             this.kryptonRichTextBox6.Name = "kryptonRichTextBox6";
             this.kryptonRichTextBox6.Size = new System.Drawing.Size(52, 62);
@@ -176,8 +181,9 @@
             this.kryptonRichTextBox6.StateCommon.Border.Width = 1;
             this.kryptonRichTextBox6.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonRichTextBox6.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, 5, -1, -1);
-            this.kryptonRichTextBox6.TabIndex = 14;
+            this.kryptonRichTextBox6.TabIndex = 15;
             this.kryptonRichTextBox6.Text = "";
+            this.kryptonRichTextBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kryptonRichTextBox1_KeyPress);
             // 
             // label2
             // 
@@ -334,7 +340,8 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // OTPForm

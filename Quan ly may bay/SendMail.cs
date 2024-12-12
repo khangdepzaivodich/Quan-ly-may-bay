@@ -10,12 +10,14 @@ namespace Quan_ly_may_bay
 {
     internal class SendMail
     {
-        public static void SendMailTo(string emailTo, string content)
+        public static string taikhoan = "hackgame.testing@gmail.com";
+        public static string matkhau = "kktx melb tfqh ynvp";
+        public static bool SendMailTo(string emailto, string content)
         {
-            var fromAddress = new MailAddress("hackgame.tetsting@gmail.com", "hackgame.tetsting@gmail.com");
-            var toAddress = new MailAddress(emailTo, emailTo);
-            const string fromPassword = "HackGame123";
-            const string subject = "Gửi mã OTP";
+            var formAddress = new MailAddress(taikhoan, "Admin quan ly hoc sinh");
+            var toAddress = new MailAddress(emailto, emailto);
+            string formPassword = matkhau;
+            string subject = "Thong bao tu he thong quan ly hoc sinh";
             string body = content;
 
             var smtp = new SmtpClient
@@ -25,15 +27,24 @@ namespace Quan_ly_may_bay
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                Credentials = new NetworkCredential(formAddress.Address, formPassword)
             };
-            using (var message = new MailMessage(fromAddress, toAddress)
+
+            try
             {
-                Subject = subject,
-                Body = body
-            })
+                using (var message = new MailMessage(formAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = body
+                })
+                {
+                    smtp.Send(message);
+                }
+                return true;
+            }
+            catch
             {
-                smtp.Send(message);
+                return false;
             }
         }
     }

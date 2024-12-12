@@ -47,12 +47,21 @@ namespace Quan_ly_may_bay
             {
                 rd = random.Next(100000, 999999);
             }
-            account.OTP = account.RandomKey = rd;
+            account.RandomKey = rd;
+            account.OTPDateSend = DateTime.Now;
+            db.SubmitChanges();
             SendMail.SendMailTo(account.Email, rd.ToString());
             this.Hide();
-            OTPForm oTPForm = new OTPForm(this, account);
+            OTPForm oTPForm = new OTPForm(this, account.ID);
             oTPForm.ShowDialog();
-            this.Show();
+            if(oTPForm.DialogResult == DialogResult.OK)
+            {
+                this.Show();
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
     }

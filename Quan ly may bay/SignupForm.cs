@@ -68,7 +68,6 @@ namespace Quan_ly_may_bay
                 //this.Close();
             }
             databaseDataContext db = new databaseDataContext();
-            Account lastAccount = db.Accounts.OrderByDescending(a => a.ID).FirstOrDefault();
             Account newAccount = new Account();
             newAccount.Username = UsernameTextBox.Text;
             newAccount.Email = EmailTextBox.Text;
@@ -77,7 +76,12 @@ namespace Quan_ly_may_bay
             newAccount.DateCreated = DateTime.Now;
             newAccount.OTPDateSend = DateTime.Now;
             newAccount.Active = 0;
-         
+            
+            if(db.Accounts.FirstOrDefault(p => p.Username == UsernameTextBox.Text) != null)
+            {
+                errUsername.SetError(UsernameTextBox, "Username đã tồn tại");
+                return;
+            }
             db.Accounts.InsertOnSubmit(newAccount);
             db.SubmitChanges();
 
