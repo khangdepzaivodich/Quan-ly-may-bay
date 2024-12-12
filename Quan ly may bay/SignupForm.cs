@@ -70,7 +70,6 @@ namespace Quan_ly_may_bay
             databaseDataContext db = new databaseDataContext();
             Account lastAccount = db.Accounts.OrderByDescending(a => a.ID).FirstOrDefault();
             Account newAccount = new Account();
-            newAccount.ID = (int.Parse(lastAccount.ID)+1).ToString();
             newAccount.Username = UsernameTextBox.Text;
             newAccount.Email = EmailTextBox.Text;
             newAccount.LevelID = 2;
