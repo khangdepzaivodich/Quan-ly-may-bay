@@ -81,7 +81,8 @@ namespace Quan_ly_may_bay
             }
             string str = PasswordTextBox.Text + account.OTP;
             byte[] hashedPassword = Common.HashPassword(str);
-            if (!account.Password.SequenceEqual(hashedPassword))
+            byte[] dbPasswordBytes = account.Password.ToArray();
+            if (!dbPasswordBytes.SequenceEqual(hashedPassword))
             {
                 MessageBox.Show("Mật khẩu sai!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

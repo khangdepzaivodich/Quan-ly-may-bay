@@ -48,12 +48,12 @@ namespace Quan_ly_may_bay
     partial void InsertMayBay(MayBay instance);
     partial void UpdateMayBay(MayBay instance);
     partial void DeleteMayBay(MayBay instance);
-    partial void InsertNhanVien(NhanVien instance);
-    partial void UpdateNhanVien(NhanVien instance);
-    partial void DeleteNhanVien(NhanVien instance);
     partial void InsertSanBay(SanBay instance);
     partial void UpdateSanBay(SanBay instance);
     partial void DeleteSanBay(SanBay instance);
+    partial void InsertNhanVien(NhanVien instance);
+    partial void UpdateNhanVien(NhanVien instance);
+    partial void DeleteNhanVien(NhanVien instance);
     partial void InsertVe(Ve instance);
     partial void UpdateVe(Ve instance);
     partial void DeleteVe(Ve instance);
@@ -137,19 +137,19 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		public System.Data.Linq.Table<NhanVien> NhanViens
-		{
-			get
-			{
-				return this.GetTable<NhanVien>();
-			}
-		}
-		
 		public System.Data.Linq.Table<SanBay> SanBays
 		{
 			get
 			{
 				return this.GetTable<SanBay>();
+			}
+		}
+		
+		public System.Data.Linq.Table<NhanVien> NhanViens
+		{
+			get
+			{
+				return this.GetTable<NhanVien>();
 			}
 		}
 		
@@ -1659,6 +1659,172 @@ namespace Quan_ly_may_bay
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SanBay")]
+	public partial class SanBay : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaSB;
+		
+		private string _TenSB;
+		
+		private string _City;
+		
+		private EntitySet<LoTrinh> _LoTrinhs;
+		
+		private EntitySet<LoTrinh> _LoTrinhs1;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaSBChanging(string value);
+    partial void OnMaSBChanged();
+    partial void OnTenSBChanging(string value);
+    partial void OnTenSBChanged();
+    partial void OnCityChanging(string value);
+    partial void OnCityChanged();
+    #endregion
+		
+		public SanBay()
+		{
+			this._LoTrinhs = new EntitySet<LoTrinh>(new Action<LoTrinh>(this.attach_LoTrinhs), new Action<LoTrinh>(this.detach_LoTrinhs));
+			this._LoTrinhs1 = new EntitySet<LoTrinh>(new Action<LoTrinh>(this.attach_LoTrinhs1), new Action<LoTrinh>(this.detach_LoTrinhs1));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSB", DbType="Char(3) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaSB
+		{
+			get
+			{
+				return this._MaSB;
+			}
+			set
+			{
+				if ((this._MaSB != value))
+				{
+					this.OnMaSBChanging(value);
+					this.SendPropertyChanging();
+					this._MaSB = value;
+					this.SendPropertyChanged("MaSB");
+					this.OnMaSBChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSB", DbType="NVarChar(50)")]
+		public string TenSB
+		{
+			get
+			{
+				return this._TenSB;
+			}
+			set
+			{
+				if ((this._TenSB != value))
+				{
+					this.OnTenSBChanging(value);
+					this.SendPropertyChanging();
+					this._TenSB = value;
+					this.SendPropertyChanged("TenSB");
+					this.OnTenSBChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="NVarChar(20)")]
+		public string City
+		{
+			get
+			{
+				return this._City;
+			}
+			set
+			{
+				if ((this._City != value))
+				{
+					this.OnCityChanging(value);
+					this.SendPropertyChanging();
+					this._City = value;
+					this.SendPropertyChanged("City");
+					this.OnCityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanBay_LoTrinh", Storage="_LoTrinhs", ThisKey="MaSB", OtherKey="NoiXuatPhat")]
+		public EntitySet<LoTrinh> LoTrinhs
+		{
+			get
+			{
+				return this._LoTrinhs;
+			}
+			set
+			{
+				this._LoTrinhs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanBay_LoTrinh1", Storage="_LoTrinhs1", ThisKey="MaSB", OtherKey="NoiDen")]
+		public EntitySet<LoTrinh> LoTrinhs1
+		{
+			get
+			{
+				return this._LoTrinhs1;
+			}
+			set
+			{
+				this._LoTrinhs1.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_LoTrinhs(LoTrinh entity)
+		{
+			this.SendPropertyChanging();
+			entity.SanBay = this;
+		}
+		
+		private void detach_LoTrinhs(LoTrinh entity)
+		{
+			this.SendPropertyChanging();
+			entity.SanBay = null;
+		}
+		
+		private void attach_LoTrinhs1(LoTrinh entity)
+		{
+			this.SendPropertyChanging();
+			entity.SanBay1 = this;
+		}
+		
+		private void detach_LoTrinhs1(LoTrinh entity)
+		{
+			this.SendPropertyChanging();
+			entity.SanBay1 = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NhanVien")]
 	public partial class NhanVien : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2016,172 +2182,6 @@ namespace Quan_ly_may_bay
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SanBay")]
-	public partial class SanBay : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _MaSB;
-		
-		private string _TenSB;
-		
-		private string _City;
-		
-		private EntitySet<LoTrinh> _LoTrinhs;
-		
-		private EntitySet<LoTrinh> _LoTrinhs1;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaSBChanging(string value);
-    partial void OnMaSBChanged();
-    partial void OnTenSBChanging(string value);
-    partial void OnTenSBChanged();
-    partial void OnCityChanging(string value);
-    partial void OnCityChanged();
-    #endregion
-		
-		public SanBay()
-		{
-			this._LoTrinhs = new EntitySet<LoTrinh>(new Action<LoTrinh>(this.attach_LoTrinhs), new Action<LoTrinh>(this.detach_LoTrinhs));
-			this._LoTrinhs1 = new EntitySet<LoTrinh>(new Action<LoTrinh>(this.attach_LoTrinhs1), new Action<LoTrinh>(this.detach_LoTrinhs1));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaSB", DbType="Char(3) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaSB
-		{
-			get
-			{
-				return this._MaSB;
-			}
-			set
-			{
-				if ((this._MaSB != value))
-				{
-					this.OnMaSBChanging(value);
-					this.SendPropertyChanging();
-					this._MaSB = value;
-					this.SendPropertyChanged("MaSB");
-					this.OnMaSBChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSB", DbType="NVarChar(50)")]
-		public string TenSB
-		{
-			get
-			{
-				return this._TenSB;
-			}
-			set
-			{
-				if ((this._TenSB != value))
-				{
-					this.OnTenSBChanging(value);
-					this.SendPropertyChanging();
-					this._TenSB = value;
-					this.SendPropertyChanged("TenSB");
-					this.OnTenSBChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="NVarChar(20)")]
-		public string City
-		{
-			get
-			{
-				return this._City;
-			}
-			set
-			{
-				if ((this._City != value))
-				{
-					this.OnCityChanging(value);
-					this.SendPropertyChanging();
-					this._City = value;
-					this.SendPropertyChanged("City");
-					this.OnCityChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanBay_LoTrinh", Storage="_LoTrinhs", ThisKey="MaSB", OtherKey="NoiXuatPhat")]
-		public EntitySet<LoTrinh> LoTrinhs
-		{
-			get
-			{
-				return this._LoTrinhs;
-			}
-			set
-			{
-				this._LoTrinhs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SanBay_LoTrinh1", Storage="_LoTrinhs1", ThisKey="MaSB", OtherKey="NoiDen")]
-		public EntitySet<LoTrinh> LoTrinhs1
-		{
-			get
-			{
-				return this._LoTrinhs1;
-			}
-			set
-			{
-				this._LoTrinhs1.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_LoTrinhs(LoTrinh entity)
-		{
-			this.SendPropertyChanging();
-			entity.SanBay = this;
-		}
-		
-		private void detach_LoTrinhs(LoTrinh entity)
-		{
-			this.SendPropertyChanging();
-			entity.SanBay = null;
-		}
-		
-		private void attach_LoTrinhs1(LoTrinh entity)
-		{
-			this.SendPropertyChanging();
-			entity.SanBay1 = this;
-		}
-		
-		private void detach_LoTrinhs1(LoTrinh entity)
-		{
-			this.SendPropertyChanging();
-			entity.SanBay1 = null;
 		}
 	}
 	
