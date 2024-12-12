@@ -75,6 +75,13 @@ namespace Quan_ly_may_bay
             if (account == null)
             {
                 MessageBox.Show("Username không tồn tại!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UsernameTextBox.Focus();
+                return;
+            }
+            if(account.Active == 0)
+            {
+                MessageBox.Show("Tài khoản chưa được kích hoạt! Nhấn OK để gửi mã OTP để kích hoạt", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                OTPForm otp = new OTPForm(this,account.ID);
                 return;
             }
             string str = PasswordTextBox.Text + account.OTP;

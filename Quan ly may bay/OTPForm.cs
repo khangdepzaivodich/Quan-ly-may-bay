@@ -17,6 +17,7 @@ namespace Quan_ly_may_bay
         private int id;
         databaseDataContext db = new databaseDataContext();
         Account account;
+        TimeSpan timeDifference;
         public OTPForm(Form _frm)
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace Quan_ly_may_bay
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
+            ///Kiem tra cac richtextbox co o trong ko
             foreach(KryptonRichTextBox textBox in this.Controls.OfType<KryptonRichTextBox>())
             {
                 if(textBox.Text == "")
@@ -47,20 +49,50 @@ namespace Quan_ly_may_bay
                     return;
                 }
             }
+
+            ///Chuoi OTP nguoi dung nhap
             string userOTP = kryptonRichTextBox1.Text + kryptonRichTextBox2.Text + kryptonRichTextBox3.Text + kryptonRichTextBox4.Text
                 + kryptonRichTextBox5.Text + kryptonRichTextBox6.Text;
-            if (frm is SignupForm)
+
+            ///Xuly ngoai le ve ma OTP
+            TimeSpan timeDifference = (TimeSpan)(DateTime.Now - account.OTPDateSend);
+            int secondsDifference = (int)timeDifference.TotalSeconds;
+            if (secondsDifference > 200)
             {
+                MessageBox.Show("Mã OTP không còn hiệu lực!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                foreach (KryptonRichTextBox textBox in this.Controls.OfType<KryptonRichTextBox>())
+                {
+                    textBox.Text = "";
+                }
+                return;
+            }
+
+            if (int.Parse(userOTP) != account.RandomKey)
+            {
+                MessageBox.Show("Mã OTP không chính xác", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                foreach (KryptonRichTextBox textBox in this.Controls.OfType<KryptonRichTextBox>())
+                {
+                    textBox.Text = "";
+                }
+                return;
+            }
+
+
+            ////Phan quyen form sau OTP
+            if (frm is SignupForm || frm is LoginForm)
+            {
+                if (account.Active == 0)
+                {
+                    account.DateActive = DateTime.Now;
+                }              
+                account.Active = 1;
+                db.SubmitChanges();
                 MainNotLogin mainLogin = new MainNotLogin();
                 mainLogin.ShowDialog();
+                this.Close();
             }
             else
             {
-                if(int.Parse(userOTP) != account.RandomKey)
-                {
-                    MessageBox.Show("Mã OTP không chính xác", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
                 account.OTP = account.RandomKey;
                 db.SubmitChanges();
                 ResetPassForm resetPassForm = new ResetPassForm(account.ID);
@@ -72,18 +104,23 @@ namespace Quan_ly_may_bay
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+            ///Text box thoi gian con hieu luc ko
             TimeSpan timeDifference = (TimeSpan)(DateTime.Now - account.OTPDateSend);
             int secondsDifference = (int)timeDifference.TotalSeconds;
-            if(secondsDifference > 200)
+            if(secondsDifference <= 200)
             {
-                SubmitButton.Enabled = false;
-                ResendButton.Enabled = true;
+                MessageBox.Show("Mã OTP còn hiệu lực!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                foreach (KryptonRichTextBox textBox in this.Controls.OfType<KryptonRichTextBox>())
+                {
+                    textBox.Text = "";
+                }
+                return;
             }
-            if(200 - secondsDifference >= 0)
+            if (200 - secondsDifference >= 0)
             {
                 label2.Text = $"OTP code is valid for {200 - secondsDifference} seconds";
             }
+            else label2.Text = "Vui lòng nhấn re-send để gửi lại mã!";
         }
 
         private void ResendButton_Click(object sender, EventArgs e)
@@ -99,10 +136,17 @@ namespace Quan_ly_may_bay
             account.OTPDateSend = DateTime.Now;
             db.SubmitChanges();
             ResendButton.Enabled = false;
+
+            ///Xóa toàn bộ OTP nguoi dung nhap
+            foreach (KryptonRichTextBox textBox in this.Controls.OfType<KryptonRichTextBox>())
+            {
+                textBox.Text = "";
+            }
         }
 
         private void kryptonRichTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ///Kiem tra richtextbox nhap vao la phai la so va xu ly hieu ung chuyen
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;

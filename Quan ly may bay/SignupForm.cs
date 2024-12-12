@@ -72,16 +72,31 @@ namespace Quan_ly_may_bay
             newAccount.Username = UsernameTextBox.Text;
             newAccount.Email = EmailTextBox.Text;
             newAccount.LevelID = 2;
-            newAccount.Password = Common.HashPassword(PasswordTextBox.Text);
             newAccount.DateCreated = DateTime.Now;
             newAccount.OTPDateSend = DateTime.Now;
             newAccount.Active = 0;
             
             if(db.Accounts.FirstOrDefault(p => p.Username == UsernameTextBox.Text) != null)
             {
-                errUsername.SetError(UsernameTextBox, "Username đã tồn tại");
+                errUsername.SetError(UsernameTextBox, "Username đã tồn tại!");
+                UsernameTextBox.Focus();
                 return;
             }
+            else if (db.Accounts.FirstOrDefault(p => p.Email == EmailTextBox.Text) != null)
+            {
+                errUsername.SetError(UsernameTextBox, "Email đã được dùng!");
+                EmailTextBox.Focus();
+                return;
+            }
+            
+            this.Hide();
+
+
+            Random random = new Random();
+            int rd = random.Next(100000, 999999);
+
+            newAccount.OTP = newAccount.RandomKey = rd;
+            newAccount.Password = Common.HashPassword(PasswordTextBox.Text + rd.ToString());
             db.Accounts.InsertOnSubmit(newAccount);
             db.SubmitChanges();
 
@@ -96,6 +111,12 @@ namespace Quan_ly_may_bay
             newKhachHang.CCCD = CCCDTextBox.Text;
             db.KhachHangs.InsertOnSubmit(newKhachHang);
             db.SubmitChanges();
+
+            SendMail.SendMailTo(newAccount.Email, rd.ToString());
+            this.Hide();
+            OTPForm oTPForm = new OTPForm(this, newAccount.ID);
+            oTPForm.ShowDialog();
+            this.Close();
         }
     }
 }

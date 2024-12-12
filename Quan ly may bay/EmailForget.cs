@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Quan_ly_may_bay.Base;
 
 namespace Quan_ly_may_bay
 {
@@ -41,6 +42,7 @@ namespace Quan_ly_may_bay
                 MessageBox.Show("Tài khoản chưa được kích hoạt!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             Random random = new Random();
             int rd = random.Next(100000, 999999);
             while(rd == account.OTP)
@@ -49,8 +51,8 @@ namespace Quan_ly_may_bay
             }
             account.RandomKey = rd;
             account.OTPDateSend = DateTime.Now;
-            db.SubmitChanges();
             SendMail.SendMailTo(account.Email, rd.ToString());
+            db.SubmitChanges();
             this.Hide();
             OTPForm oTPForm = new OTPForm(this, account.ID);
             oTPForm.ShowDialog();
