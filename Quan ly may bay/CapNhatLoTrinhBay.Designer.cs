@@ -30,23 +30,22 @@
         {
             this.PanelTicket = new System.Windows.Forms.FlowLayoutPanel();
             this.SubmitButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.Add = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Add)).BeginInit();
+            this.pAdd = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelTicket
             // 
-            this.PanelTicket.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTicket.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.PanelTicket.Location = new System.Drawing.Point(0, 0);
+            this.PanelTicket.Location = new System.Drawing.Point(43, 29);
             this.PanelTicket.Name = "PanelTicket";
-            this.PanelTicket.Size = new System.Drawing.Size(821, 495);
+            this.PanelTicket.Size = new System.Drawing.Size(735, 504);
             this.PanelTicket.TabIndex = 1;
             this.PanelTicket.WrapContents = false;
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(413, 525);
+            this.SubmitButton.Location = new System.Drawing.Point(667, 572);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.SubmitButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -110,31 +109,31 @@
             this.SubmitButton.Values.Text = "Submit";
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
-            // Add
+            // pAdd
             // 
-            this.Add.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.circle_plus;
-            this.Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Add.Location = new System.Drawing.Point(311, 518);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(75, 64);
-            this.Add.TabIndex = 13;
-            this.Add.TabStop = false;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
+            this.pAdd.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.circle_plus;
+            this.pAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pAdd.Location = new System.Drawing.Point(586, 566);
+            this.pAdd.Name = "pAdd";
+            this.pAdd.Size = new System.Drawing.Size(75, 64);
+            this.pAdd.TabIndex = 13;
+            this.pAdd.TabStop = false;
+            this.pAdd.Click += new System.EventHandler(this.pAdd_Click);
             // 
             // CapNhatLoTrinhBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(821, 612);
+            this.ClientSize = new System.Drawing.Size(821, 654);
             this.Controls.Add(this.SubmitButton);
-            this.Controls.Add(this.Add);
+            this.Controls.Add(this.pAdd);
             this.Controls.Add(this.PanelTicket);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CapNhatLoTrinhBay";
             this.Opacity = 0.8D;
             this.Text = "CapNhatLoTrinhBay";
-            ((System.ComponentModel.ISupportInitialize)(this.Add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pAdd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,7 +141,7 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel PanelTicket;
-        private System.Windows.Forms.PictureBox Add;
+        private System.Windows.Forms.PictureBox pAdd;
         private ComponentFactory.Krypton.Toolkit.KryptonButton SubmitButton;
     }
 }

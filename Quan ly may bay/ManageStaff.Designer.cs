@@ -40,11 +40,10 @@
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pnlContain = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.pnlContain = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMaCV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlContain)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -301,7 +300,7 @@
             // 
             // kryptonButton4
             // 
-            this.kryptonButton4.Location = new System.Drawing.Point(692, 388);
+            this.kryptonButton4.Location = new System.Drawing.Point(680, 581);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.OverrideDefault.Back.Color1 = System.Drawing.Color.Lime;
             this.kryptonButton4.OverrideDefault.Back.Color2 = System.Drawing.Color.Green;
@@ -366,10 +365,9 @@
             // 
             // pnlContain
             // 
-            this.pnlContain.Location = new System.Drawing.Point(12, 133);
+            this.pnlContain.Location = new System.Drawing.Point(20, 143);
             this.pnlContain.Name = "pnlContain";
-            this.pnlContain.Size = new System.Drawing.Size(764, 230);
-            this.pnlContain.StateCommon.Color1 = System.Drawing.Color.Black;
+            this.pnlContain.Size = new System.Drawing.Size(756, 411);
             this.pnlContain.TabIndex = 31;
             // 
             // ManageStaff
@@ -377,7 +375,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(821, 643);
             this.Controls.Add(this.pnlContain);
             this.Controls.Add(this.kryptonButton4);
             this.Controls.Add(this.kryptonPanel1);
@@ -389,7 +387,6 @@
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMaCV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlContain)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,7 +404,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbMaCV;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel pnlContain;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private System.Windows.Forms.FlowLayoutPanel pnlContain;
     }
 }
