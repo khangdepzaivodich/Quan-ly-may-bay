@@ -41,12 +41,14 @@ namespace Quan_ly_may_bay
         public MainLogin(int _id)
         {
             InitializeComponent();
+
                 account = db.Accounts.FirstOrDefault(p => p.ID == _id);
-            if (NameObject.Text.Length <= 7)
+            if (account.Username.Length <= 7)
             {
                 NameObject.Text = account.Username.ToString();
             }
-            else NameObject.Text = account.Username.ToString().Substring(0,6) + "...";
+            else NameObject.Text = account.Username.Substring(0, 6).ToString() + "...";
+
             if (account.LevelID == 0) NhiemVu.Text = "Admin";
             else if (account.LevelID == 2) NhiemVu.Text = "KhachHang";
             else
@@ -77,6 +79,7 @@ namespace Quan_ly_may_bay
                     fpanelBtn.Controls.Add(uC);
                     uC.lbl.Click += Btnclick;
                 }
+                XemThongTin.Enabled = false;
             }
             else 
             {

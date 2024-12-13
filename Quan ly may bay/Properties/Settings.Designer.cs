@@ -33,5 +33,16 @@ namespace Quan_ly_may_bay.Properties {
                 return ((string)(this["QLCBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=QLCB;Integrated Security=True;Encrypt=True;TrustSer" +
+            "verCertificate=True")]
+        public string QLCBConnectionString1 {
+            get {
+                return ((string)(this["QLCBConnectionString1"]));
+            }
+        }
     }
 }
