@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.cbbMaCV = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.cbbMaCV = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -40,17 +40,22 @@
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pnlContain = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblStt = new System.Windows.Forms.Label();
+            this.lblAdd = new System.Windows.Forms.PictureBox();
+            this.lblSubstract = new System.Windows.Forms.PictureBox();
+            this.flpContain = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMaCV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSubstract)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.cbbMaCV);
             this.kryptonPanel1.Controls.Add(this.kryptonButton2);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
-            this.kryptonPanel1.Controls.Add(this.cbbMaCV);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel4);
             this.kryptonPanel1.Controls.Add(this.kryptonTextBox4);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel3);
@@ -64,6 +69,28 @@
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.Black;
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.Black;
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // cbbMaCV
+            // 
+            this.cbbMaCV.DropDownWidth = 117;
+            this.cbbMaCV.Items.AddRange(new object[] {
+            "",
+            "GD",
+            "NS",
+            "NV"});
+            this.cbbMaCV.Location = new System.Drawing.Point(278, 49);
+            this.cbbMaCV.Name = "cbbMaCV";
+            this.cbbMaCV.Size = new System.Drawing.Size(129, 33);
+            this.cbbMaCV.Sorted = true;
+            this.cbbMaCV.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
+            this.cbbMaCV.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.CornflowerBlue;
+            this.cbbMaCV.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.CornflowerBlue;
+            this.cbbMaCV.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbbMaCV.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.White;
+            this.cbbMaCV.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Itim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMaCV.TabIndex = 26;
             // 
             // kryptonButton2
             // 
@@ -85,7 +112,6 @@
             this.kryptonButton2.StateCommon.Border.Rounding = 10;
             this.kryptonButton2.TabIndex = 30;
             this.kryptonButton2.Values.Text = "";
-            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // kryptonButton1
             // 
@@ -160,34 +186,6 @@
             this.kryptonButton1.TabIndex = 29;
             this.kryptonButton1.TabStop = false;
             this.kryptonButton1.Values.Text = "Find";
-            // 
-            // cbbMaCV
-            // 
-            this.cbbMaCV.DropDownWidth = 117;
-            this.cbbMaCV.Items.AddRange(new object[] {
-            "GD",
-            "NS",
-            "NV"});
-            this.cbbMaCV.Location = new System.Drawing.Point(278, 47);
-            this.cbbMaCV.Name = "cbbMaCV";
-            this.cbbMaCV.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.cbbMaCV.Size = new System.Drawing.Size(129, 33);
-            this.cbbMaCV.Sorted = true;
-            this.cbbMaCV.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
-            this.cbbMaCV.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.CornflowerBlue;
-            this.cbbMaCV.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbbMaCV.StateCommon.ComboBox.Border.Rounding = 2;
-            this.cbbMaCV.StateCommon.ComboBox.Border.Width = 2;
-            this.cbbMaCV.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.White;
-            this.cbbMaCV.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMaCV.StateCommon.Item.Back.Color1 = System.Drawing.Color.LightGray;
-            this.cbbMaCV.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.cbbMaCV.StateCommon.Item.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(7)))));
-            this.cbbMaCV.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMaCV.TabIndex = 26;
-            this.cbbMaCV.Text = "GD";
             // 
             // kryptonLabel4
             // 
@@ -363,12 +361,45 @@
             this.kryptonButton4.TabStop = false;
             this.kryptonButton4.Values.Text = "Print";
             // 
-            // pnlContain
+            // lblStt
             // 
-            this.pnlContain.Location = new System.Drawing.Point(20, 143);
-            this.pnlContain.Name = "pnlContain";
-            this.pnlContain.Size = new System.Drawing.Size(756, 411);
-            this.pnlContain.TabIndex = 31;
+            this.lblStt.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStt.ForeColor = System.Drawing.Color.White;
+            this.lblStt.Location = new System.Drawing.Point(327, 578);
+            this.lblStt.Name = "lblStt";
+            this.lblStt.Size = new System.Drawing.Size(47, 49);
+            this.lblStt.TabIndex = 33;
+            this.lblStt.Text = "0";
+            this.lblStt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAdd
+            // 
+            this.lblAdd.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_right__1_;
+            this.lblAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.lblAdd.Location = new System.Drawing.Point(390, 581);
+            this.lblAdd.Name = "lblAdd";
+            this.lblAdd.Size = new System.Drawing.Size(53, 50);
+            this.lblAdd.TabIndex = 32;
+            this.lblAdd.TabStop = false;
+            this.lblAdd.Click += new System.EventHandler(this.lblAdd_Click);
+            // 
+            // lblSubstract
+            // 
+            this.lblSubstract.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_left;
+            this.lblSubstract.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.lblSubstract.Location = new System.Drawing.Point(257, 577);
+            this.lblSubstract.Name = "lblSubstract";
+            this.lblSubstract.Size = new System.Drawing.Size(53, 50);
+            this.lblSubstract.TabIndex = 31;
+            this.lblSubstract.TabStop = false;
+            this.lblSubstract.Click += new System.EventHandler(this.lblSubstract_Click);
+            // 
+            // flpContain
+            // 
+            this.flpContain.Location = new System.Drawing.Point(15, 126);
+            this.flpContain.Name = "flpContain";
+            this.flpContain.Size = new System.Drawing.Size(761, 435);
+            this.flpContain.TabIndex = 34;
             // 
             // ManageStaff
             // 
@@ -376,7 +407,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(821, 643);
-            this.Controls.Add(this.pnlContain);
+            this.Controls.Add(this.flpContain);
+            this.Controls.Add(this.lblStt);
+            this.Controls.Add(this.lblSubstract);
+            this.Controls.Add(this.lblAdd);
             this.Controls.Add(this.kryptonButton4);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -387,6 +421,8 @@
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMaCV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblSubstract)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,10 +437,13 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbMaCV;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
-        private System.Windows.Forms.FlowLayoutPanel pnlContain;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbMaCV;
+        private System.Windows.Forms.Label lblStt;
+        private System.Windows.Forms.PictureBox lblAdd;
+        private System.Windows.Forms.PictureBox lblSubstract;
+        private System.Windows.Forms.FlowLayoutPanel flpContain;
     }
 }
