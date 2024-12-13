@@ -105,6 +105,7 @@
             this.btnDelete.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Values.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -140,6 +141,7 @@
             this.btnEdit.StateTracking.Back.Color2 = System.Drawing.Color.Green;
             this.btnEdit.TabIndex = 14;
             this.btnEdit.Values.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblMaNV
             // 

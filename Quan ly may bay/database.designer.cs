@@ -33,12 +33,12 @@ namespace Quan_ly_may_bay
     partial void InsertAccount(Account instance);
     partial void UpdateAccount(Account instance);
     partial void DeleteAccount(Account instance);
-    partial void InsertVe(Ve instance);
-    partial void UpdateVe(Ve instance);
-    partial void DeleteVe(Ve instance);
     partial void InsertChucVu(ChucVu instance);
     partial void UpdateChucVu(ChucVu instance);
     partial void DeleteChucVu(ChucVu instance);
+    partial void InsertVe(Ve instance);
+    partial void UpdateVe(Ve instance);
+    partial void DeleteVe(Ve instance);
     partial void InsertChuyenBay(ChuyenBay instance);
     partial void UpdateChuyenBay(ChuyenBay instance);
     partial void DeleteChuyenBay(ChuyenBay instance);
@@ -63,7 +63,7 @@ namespace Quan_ly_may_bay
     #endregion
 		
 		public databaseDataContext() : 
-				base(global::Quan_ly_may_bay.Properties.Settings.Default.QLCBConnectionString, mappingSource)
+				base(global::Quan_ly_may_bay.Properties.Settings.Default.QLCBConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -100,19 +100,19 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		public System.Data.Linq.Table<Ve> Ves
-		{
-			get
-			{
-				return this.GetTable<Ve>();
-			}
-		}
-		
 		public System.Data.Linq.Table<ChucVu> ChucVus
 		{
 			get
 			{
 				return this.GetTable<ChucVu>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Ve> Ves
+		{
+			get
+			{
+				return this.GetTable<Ve>();
 			}
 		}
 		
@@ -535,6 +535,176 @@ namespace Quan_ly_may_bay
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChucVu")]
+	public partial class ChucVu : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaCV;
+		
+		private string _TenCV;
+		
+		private string _MoTa;
+		
+		private EntitySet<NhanVien> _NhanViens;
+		
+		private EntityRef<PhanQuyen> _PhanQuyen;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaCVChanging(string value);
+    partial void OnMaCVChanged();
+    partial void OnTenCVChanging(string value);
+    partial void OnTenCVChanged();
+    partial void OnMoTaChanging(string value);
+    partial void OnMoTaChanged();
+    #endregion
+		
+		public ChucVu()
+		{
+			this._NhanViens = new EntitySet<NhanVien>(new Action<NhanVien>(this.attach_NhanViens), new Action<NhanVien>(this.detach_NhanViens));
+			this._PhanQuyen = default(EntityRef<PhanQuyen>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCV", DbType="Char(4) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaCV
+		{
+			get
+			{
+				return this._MaCV;
+			}
+			set
+			{
+				if ((this._MaCV != value))
+				{
+					this.OnMaCVChanging(value);
+					this.SendPropertyChanging();
+					this._MaCV = value;
+					this.SendPropertyChanged("MaCV");
+					this.OnMaCVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenCV", DbType="NVarChar(20)")]
+		public string TenCV
+		{
+			get
+			{
+				return this._TenCV;
+			}
+			set
+			{
+				if ((this._TenCV != value))
+				{
+					this.OnTenCVChanging(value);
+					this.SendPropertyChanging();
+					this._TenCV = value;
+					this.SendPropertyChanged("TenCV");
+					this.OnTenCVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTa", DbType="NVarChar(100)")]
+		public string MoTa
+		{
+			get
+			{
+				return this._MoTa;
+			}
+			set
+			{
+				if ((this._MoTa != value))
+				{
+					this.OnMoTaChanging(value);
+					this.SendPropertyChanging();
+					this._MoTa = value;
+					this.SendPropertyChanged("MoTa");
+					this.OnMoTaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_NhanVien", Storage="_NhanViens", ThisKey="MaCV", OtherKey="MaCV")]
+		public EntitySet<NhanVien> NhanViens
+		{
+			get
+			{
+				return this._NhanViens;
+			}
+			set
+			{
+				this._NhanViens.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_PhanQuyen", Storage="_PhanQuyen", ThisKey="MaCV", OtherKey="PQ", IsUnique=true, IsForeignKey=false)]
+		public PhanQuyen PhanQuyen
+		{
+			get
+			{
+				return this._PhanQuyen.Entity;
+			}
+			set
+			{
+				PhanQuyen previousValue = this._PhanQuyen.Entity;
+				if (((previousValue != value) 
+							|| (this._PhanQuyen.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._PhanQuyen.Entity = null;
+						previousValue.ChucVu = null;
+					}
+					this._PhanQuyen.Entity = value;
+					if ((value != null))
+					{
+						value.ChucVu = this;
+					}
+					this.SendPropertyChanged("PhanQuyen");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_NhanViens(NhanVien entity)
+		{
+			this.SendPropertyChanging();
+			entity.ChucVu = this;
+		}
+		
+		private void detach_NhanViens(NhanVien entity)
+		{
+			this.SendPropertyChanging();
+			entity.ChucVu = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Ve")]
 	public partial class Ve : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -731,176 +901,6 @@ namespace Quan_ly_may_bay
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChucVu")]
-	public partial class ChucVu : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _MaCV;
-		
-		private string _TenCV;
-		
-		private string _MoTa;
-		
-		private EntitySet<NhanVien> _NhanViens;
-		
-		private EntityRef<PhanQuyen> _PhanQuyen;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaCVChanging(string value);
-    partial void OnMaCVChanged();
-    partial void OnTenCVChanging(string value);
-    partial void OnTenCVChanged();
-    partial void OnMoTaChanging(string value);
-    partial void OnMoTaChanged();
-    #endregion
-		
-		public ChucVu()
-		{
-			this._NhanViens = new EntitySet<NhanVien>(new Action<NhanVien>(this.attach_NhanViens), new Action<NhanVien>(this.detach_NhanViens));
-			this._PhanQuyen = default(EntityRef<PhanQuyen>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCV", DbType="Char(4) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaCV
-		{
-			get
-			{
-				return this._MaCV;
-			}
-			set
-			{
-				if ((this._MaCV != value))
-				{
-					this.OnMaCVChanging(value);
-					this.SendPropertyChanging();
-					this._MaCV = value;
-					this.SendPropertyChanged("MaCV");
-					this.OnMaCVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenCV", DbType="NVarChar(20)")]
-		public string TenCV
-		{
-			get
-			{
-				return this._TenCV;
-			}
-			set
-			{
-				if ((this._TenCV != value))
-				{
-					this.OnTenCVChanging(value);
-					this.SendPropertyChanging();
-					this._TenCV = value;
-					this.SendPropertyChanged("TenCV");
-					this.OnTenCVChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTa", DbType="NVarChar(100)")]
-		public string MoTa
-		{
-			get
-			{
-				return this._MoTa;
-			}
-			set
-			{
-				if ((this._MoTa != value))
-				{
-					this.OnMoTaChanging(value);
-					this.SendPropertyChanging();
-					this._MoTa = value;
-					this.SendPropertyChanged("MoTa");
-					this.OnMoTaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_NhanVien", Storage="_NhanViens", ThisKey="MaCV", OtherKey="MaCV")]
-		public EntitySet<NhanVien> NhanViens
-		{
-			get
-			{
-				return this._NhanViens;
-			}
-			set
-			{
-				this._NhanViens.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_PhanQuyen", Storage="_PhanQuyen", ThisKey="MaCV", OtherKey="PQ", IsUnique=true, IsForeignKey=false)]
-		public PhanQuyen PhanQuyen
-		{
-			get
-			{
-				return this._PhanQuyen.Entity;
-			}
-			set
-			{
-				PhanQuyen previousValue = this._PhanQuyen.Entity;
-				if (((previousValue != value) 
-							|| (this._PhanQuyen.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._PhanQuyen.Entity = null;
-						previousValue.ChucVu = null;
-					}
-					this._PhanQuyen.Entity = value;
-					if ((value != null))
-					{
-						value.ChucVu = this;
-					}
-					this.SendPropertyChanged("PhanQuyen");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_NhanViens(NhanVien entity)
-		{
-			this.SendPropertyChanging();
-			entity.ChucVu = this;
-		}
-		
-		private void detach_NhanViens(NhanVien entity)
-		{
-			this.SendPropertyChanging();
-			entity.ChucVu = null;
 		}
 	}
 	

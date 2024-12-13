@@ -66,7 +66,7 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(211, 85);
+            this.exit.Location = new System.Drawing.Point(77, 85);
             this.exit.Name = "exit";
             this.exit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.exit.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -83,7 +83,7 @@
             // 
             // XemThongTin
             // 
-            this.XemThongTin.Location = new System.Drawing.Point(13, 85);
+            this.XemThongTin.Location = new System.Drawing.Point(12, 85);
             this.XemThongTin.Name = "XemThongTin";
             this.XemThongTin.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.XemThongTin.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -104,7 +104,7 @@
             this.NhiemVu.BackColor = System.Drawing.Color.Transparent;
             this.NhiemVu.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NhiemVu.ForeColor = System.Drawing.Color.White;
-            this.NhiemVu.Location = new System.Drawing.Point(107, 55);
+            this.NhiemVu.Location = new System.Drawing.Point(96, 54);
             this.NhiemVu.Name = "NhiemVu";
             this.NhiemVu.Size = new System.Drawing.Size(121, 24);
             this.NhiemVu.TabIndex = 3;
@@ -125,12 +125,11 @@
             this.NameObject.BackColor = System.Drawing.Color.Transparent;
             this.NameObject.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameObject.ForeColor = System.Drawing.Color.White;
-            this.NameObject.Location = new System.Drawing.Point(107, 14);
+            this.NameObject.Location = new System.Drawing.Point(95, 23);
             this.NameObject.Name = "NameObject";
-            this.NameObject.Size = new System.Drawing.Size(121, 30);
+            this.NameObject.Size = new System.Drawing.Size(138, 30);
             this.NameObject.TabIndex = 1;
             this.NameObject.Text = "Username";
-            this.NameObject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ImageUsername
             // 
