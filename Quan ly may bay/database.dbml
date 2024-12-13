@@ -33,6 +33,7 @@
       <Column Name="TenCV" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="MoTa" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Association Name="ChucVu_NhanVien" Member="NhanViens" ThisKey="MaCV" OtherKey="MaCV" Type="NhanVien" />
+      <Association Name="ChucVu_PhanQuyen" Member="PhanQuyen" ThisKey="MaCV" OtherKey="PQ" Type="PhanQuyen" Cardinality="One" />
     </Type>
   </Table>
   <Table Name="dbo.ChuyenBay" Member="ChuyenBays">
@@ -95,6 +96,16 @@
       <Column Name="Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Account_NhanVien" Member="Account" ThisKey="ID" OtherKey="ID" Type="Account" IsForeignKey="true" />
       <Association Name="ChucVu_NhanVien" Member="ChucVu" ThisKey="MaCV" OtherKey="MaCV" Type="ChucVu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhanQuyen" Member="PhanQuyens">
+    <Type Name="PhanQuyen">
+      <Column Name="PQ" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ViewTicket" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlightItinerary" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateFlight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ManageStaff" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ChucVu_PhanQuyen" Member="ChucVu" ThisKey="PQ" OtherKey="MaCV" Type="ChucVu" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.SanBay" Member="SanBays">

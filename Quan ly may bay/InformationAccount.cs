@@ -13,9 +13,14 @@ namespace Quan_ly_may_bay
 {
     public partial class InformationAccount : KryptonForm
     {
-        public InformationAccount()
+        private databaseDataContext db = new databaseDataContext();
+        private Account account;
+        public InformationAccount(int id)
         {
             InitializeComponent();
+            account = db.Accounts.FirstOrDefault(x => x.ID == id);
+            lblUsername.Text = "Username: " + account.Username;
+            lblGmail.Text = "Gmail: " + account.Username;
             btnSubmit.Text = "Edit";
         }
         private bool check = true;

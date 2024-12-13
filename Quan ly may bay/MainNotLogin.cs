@@ -100,12 +100,19 @@ namespace Quan_ly_may_bay
         {
             SignupForm signupForm = new SignupForm();
             signupForm.ShowDialog();
+            this.Close();
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
+            this.Close();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

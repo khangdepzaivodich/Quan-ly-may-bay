@@ -95,8 +95,9 @@ namespace Quan_ly_may_bay
 
             // Nếu mật khẩu hợp lệ, thực hiện các thao tác tiếp theo
             MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
             this.Close();
-            MainLogin frm = new MainLogin(account);
+            MainLogin frm = new MainLogin(account.ID);
             frm.ShowDialog();
         }
     }

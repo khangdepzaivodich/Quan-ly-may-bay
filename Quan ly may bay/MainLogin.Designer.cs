@@ -30,8 +30,9 @@
         {
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelObject = new System.Windows.Forms.Panel();
+            this.exit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.XemThongTin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.NhiemVu = new System.Windows.Forms.Label();
             this.fpanelBtn = new System.Windows.Forms.FlowLayoutPanel();
             this.NameObject = new System.Windows.Forms.Label();
             this.ImageUsername = new System.Windows.Forms.PictureBox();
@@ -51,8 +52,9 @@
             // panelObject
             // 
             this.panelObject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelObject.Controls.Add(this.exit);
             this.panelObject.Controls.Add(this.XemThongTin);
-            this.panelObject.Controls.Add(this.label1);
+            this.panelObject.Controls.Add(this.NhiemVu);
             this.panelObject.Controls.Add(this.fpanelBtn);
             this.panelObject.Controls.Add(this.NameObject);
             this.panelObject.Controls.Add(this.ImageUsername);
@@ -61,6 +63,23 @@
             this.panelObject.Name = "panelObject";
             this.panelObject.Size = new System.Drawing.Size(252, 643);
             this.panelObject.TabIndex = 1;
+            // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(211, 85);
+            this.exit.Name = "exit";
+            this.exit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.exit.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.exit.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
+            this.exit.Size = new System.Drawing.Size(34, 32);
+            this.exit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.exit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.exit.StateCommon.Back.Image = global::Quan_ly_may_bay.Properties.Resources.chevron_right_pipe;
+            this.exit.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.exit.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
+            this.exit.TabIndex = 5;
+            this.exit.Values.Text = "";
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // XemThongTin
             // 
@@ -79,17 +98,17 @@
             this.XemThongTin.Values.Text = "";
             this.XemThongTin.Click += new System.EventHandler(this.xemThongTin);
             // 
-            // label1
+            // NhiemVu
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(107, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 24);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Khách hàng";
+            this.NhiemVu.AutoSize = true;
+            this.NhiemVu.BackColor = System.Drawing.Color.Transparent;
+            this.NhiemVu.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhiemVu.ForeColor = System.Drawing.Color.White;
+            this.NhiemVu.Location = new System.Drawing.Point(107, 55);
+            this.NhiemVu.Name = "NhiemVu";
+            this.NhiemVu.Size = new System.Drawing.Size(121, 24);
+            this.NhiemVu.TabIndex = 3;
+            this.NhiemVu.Text = "Khách hàng";
             // 
             // fpanelBtn
             // 
@@ -103,15 +122,15 @@
             // 
             // NameObject
             // 
-            this.NameObject.AutoSize = true;
             this.NameObject.BackColor = System.Drawing.Color.Transparent;
             this.NameObject.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameObject.ForeColor = System.Drawing.Color.White;
-            this.NameObject.Location = new System.Drawing.Point(107, 12);
+            this.NameObject.Location = new System.Drawing.Point(107, 14);
             this.NameObject.Name = "NameObject";
-            this.NameObject.Size = new System.Drawing.Size(106, 24);
+            this.NameObject.Size = new System.Drawing.Size(121, 30);
             this.NameObject.TabIndex = 1;
             this.NameObject.Text = "Username";
+            this.NameObject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ImageUsername
             // 
@@ -153,7 +172,8 @@
         private System.Windows.Forms.Label NameObject;
         private System.Windows.Forms.PictureBox ImageUsername;
         private System.Windows.Forms.FlowLayoutPanel fpanelBtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label NhiemVu;
         private ComponentFactory.Krypton.Toolkit.KryptonButton XemThongTin;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton exit;
     }
 }

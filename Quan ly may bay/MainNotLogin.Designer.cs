@@ -36,6 +36,7 @@
             this.LoginBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SignupBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Exit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -250,6 +251,23 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
+            // Exit
+            // 
+            this.Exit.Location = new System.Drawing.Point(1036, 12);
+            this.Exit.Name = "Exit";
+            this.Exit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Exit.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Exit.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
+            this.Exit.Size = new System.Drawing.Size(42, 40);
+            this.Exit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Exit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Exit.StateCommon.Back.Image = global::Quan_ly_may_bay.Properties.Resources.Cancel;
+            this.Exit.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.Exit.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
+            this.Exit.TabIndex = 21;
+            this.Exit.Values.Text = "";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
             // MainNotLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -257,6 +275,7 @@
             this.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.hinh_anh_may_bay;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1090, 690);
+            this.Controls.Add(this.Exit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SignupBtn);
             this.Controls.Add(this.LoginBtn);
@@ -292,5 +311,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton LoginBtn;
         private ComponentFactory.Krypton.Toolkit.KryptonButton SignupBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton Exit;
     }
 }
