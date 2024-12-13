@@ -17,15 +17,6 @@
       <Association Name="Account_NhanVien" Member="NhanViens" ThisKey="ID" OtherKey="ID" Type="NhanVien" />
     </Type>
   </Table>
-  <Table Name="dbo.ChucVu" Member="ChucVus">
-    <Type Name="ChucVu">
-      <Column Name="MaCV" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenCV" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="MoTa" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Association Name="ChucVu_NhanVien" Member="NhanViens" ThisKey="MaCV" OtherKey="MaCV" Type="NhanVien" />
-      <Association Name="ChucVu_PhanQuyen" Member="PhanQuyen" ThisKey="MaCV" OtherKey="PQ" Type="PhanQuyen" Cardinality="One" />
-    </Type>
-  </Table>
   <Table Name="dbo.Ve" Member="Ves">
     <Type Name="Ve">
       <Column Name="MaVe" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -34,6 +25,15 @@
       <Column Name="LevelSeat" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Seat" Type="System.String" DbType="Char(3)" CanBeNull="true" />
       <Association Name="ChuyenBay_Ve" Member="ChuyenBay" ThisKey="MaCB" OtherKey="MaCB" Type="ChuyenBay" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChucVu" Member="ChucVus">
+    <Type Name="ChucVu">
+      <Column Name="MaCV" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenCV" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="ChucVu_NhanVien" Member="NhanViens" ThisKey="MaCV" OtherKey="MaCV" Type="NhanVien" />
+      <Association Name="ChucVu_PhanQuyen" Member="PhanQuyen" ThisKey="MaCV" OtherKey="PQ" Type="PhanQuyen" Cardinality="One" />
     </Type>
   </Table>
   <Table Name="dbo.ChuyenBay" Member="ChuyenBays">

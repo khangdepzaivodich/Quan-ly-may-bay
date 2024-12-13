@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quan_ly_may_bay.UCFlight
-{
+{ 
     public partial class UC_Staff : UserControl
     {
+        public event EventHandler DataChanged;
         public UC_Staff()
         {
             InitializeComponent();
@@ -42,19 +43,22 @@ namespace Quan_ly_may_bay.UCFlight
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            AddStaff add = new AddStaff(MaNV);
-            add.Show();
+            AddStaff add = new AddStaff(MaNV); // Khởi tạo form AddStaff với chế độ sửa
+            add.ShowDialog();
+            DataChanged?.Invoke(this, EventArgs.Empty);
 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             databaseDataContext db = new databaseDataContext();
-            NhanVien nv = db.NhanViens.Where(p => p.MaNV== MaNV).FirstOrDefault();
-            Account ac = db.Accounts.Where(p => p.ID==nv.ID).FirstOrDefault();
+            NhanVien nv = db.NhanViens.Where(p => p.MaNV == MaNV).FirstOrDefault();
+            Account ac = db.Accounts.Where(p => p.ID == nv.ID).FirstOrDefault();
             db.NhanViens.DeleteOnSubmit(nv);
             db.Accounts.DeleteOnSubmit(ac);
             db.SubmitChanges();
+
+            DataChanged?.Invoke(this, EventArgs.Empty); // Gọi sự kiện khi xóa dữ liệu
         }
     }
 }

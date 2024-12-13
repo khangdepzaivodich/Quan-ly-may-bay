@@ -134,7 +134,7 @@
             this.txtLuong.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.txtLuong.StateCommon.Content.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLuong.TabIndex = 11;
-            this.txtLuong.Text = "2.000.000 VND";
+            this.txtLuong.Text = "10000000";
             this.txtLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // kryptonLabel4
@@ -152,12 +152,12 @@
             // 
             this.kryptonLabel5.Location = new System.Drawing.Point(38, 323);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(129, 33);
+            this.kryptonLabel5.Size = new System.Drawing.Size(136, 33);
             this.kryptonLabel5.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonLabel5.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
             this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Itim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel5.TabIndex = 8;
-            this.kryptonLabel5.Values.Text = "Mã chức vụ";
+            this.kryptonLabel5.Values.Text = "Tên chức vụ";
             // 
             // kryptonLabel6
             // 
@@ -303,10 +303,10 @@
             // cbbMaCV
             // 
             this.cbbMaCV.DropDownWidth = 117;
-            this.cbbMaCV.Location = new System.Drawing.Point(238, 319);
+            this.cbbMaCV.Location = new System.Drawing.Point(238, 323);
             this.cbbMaCV.Name = "cbbMaCV";
             this.cbbMaCV.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.cbbMaCV.Size = new System.Drawing.Size(129, 30);
+            this.cbbMaCV.Size = new System.Drawing.Size(168, 30);
             this.cbbMaCV.Sorted = true;
             this.cbbMaCV.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
             this.cbbMaCV.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Lime;
