@@ -15,11 +15,19 @@ namespace Quan_ly_may_bay
         private KryptonButton[,] seats = new KryptonButton[7, 10];
         private databaseDataContext db = new databaseDataContext();
         private List<Ve> ve = new List<Ve>();
+       private List<Ve> tongVe = new List<Ve>(); 
         private int prevI = -1, prevJ = -1;
-        public ChoseSeat(string _maChuyenBay)
+        private string currentMaVe;
+        private Account account;
+        string maChuyenBay;
+        public ChoseSeat(string _maChuyenBay, int _id)
         {
             InitializeComponent();
             ve = db.Ves.Where(p => p.MaCB == _maChuyenBay).ToList();
+            maChuyenBay = _maChuyenBay;
+            account = db.Accounts.FirstOrDefault(p => p.ID == _id);
+            tongVe = db.Ves.OrderBy(p => p.MaVe).ToList();
+            currentMaVe = tongVe[tongVe.Count - 1].MaVe;
             CreateSeats();
             LoadSeats();
         }   
@@ -130,6 +138,52 @@ namespace Quan_ly_may_bay
             //Event
             _btn.Click += _btn_Click;
 
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            if(prevI != -1 && prevJ != -1)
+            {
+                string newMaVe = GenerateMaVe();
+                Ve newVe = new Ve();
+                newVe.MaVe = newMaVe;
+                newVe.MaCB = maChuyenBay;
+                newVe.MaKH = account.ID;
+                string newSeat;
+                int numSeat = prevI * 10 + prevJ + 1;
+                if (prevI <= 1)
+                {
+                    newVe.LevelSeat = 0;
+                    newSeat = "A";
+                }
+                else
+                {
+                    newSeat = "B";
+                    newVe.LevelSeat = 1;
+                    numSeat -= 20;
+                }
+                while(numSeat + newSeat.ToString().Length < 3)
+                {
+                    newSeat += "0";
+                }
+                newSeat += numSeat.ToString();
+                newVe.Seat = newSeat;
+                label3.Text = newSeat;
+            }
+        }
+
+        private string GenerateMaVe()
+        {
+            string maVe = currentMaVe;
+            int soMaVe = int.Parse(maVe.Substring(1, 7)) + 1;
+            string newMaVe = "V";
+            while (newMaVe.Length + soMaVe.ToString().Length < 8)
+            {
+                newMaVe += "0";
+            }
+            newMaVe += soMaVe.ToString();
+            currentMaVe = newMaVe;
+            return newMaVe;
         }
 
         private void _btn_Click(object sender, EventArgs e)

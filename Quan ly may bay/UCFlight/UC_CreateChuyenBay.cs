@@ -16,5 +16,41 @@ namespace Quan_ly_may_bay.UCFlight
         {
             InitializeComponent();
         }
+        public Label maCB
+        {
+            get => MaCB;
+            set => MaCB = value;   
+        }
+        public Label maLT
+        {
+            get => MaLT;
+            set => MaLT = value;
+        }
+        public Label gioKhoiHanh
+        {
+            get => GioKhoiHanh;
+            set => GioKhoiHanh = value;
+        }
+        public Label gioDen
+        {
+            get => GioDen;
+            set => GioDen = value;
+        }
+        public Label noiKhoiHanh
+        {
+            get => NoiKhoiHanh;
+            set => NoiKhoiHanh = value;
+        }
+        public Label noiDen
+        {
+            get => NoiDen;
+            set => NoiDen = value;
+        }
+
+        public Label SoGhe
+        {
+            get => SoGheConLai;
+            set => SoGheConLai = value;
+        }
     }
 }

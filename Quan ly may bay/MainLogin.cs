@@ -42,7 +42,7 @@ namespace Quan_ly_may_bay
         {
             InitializeComponent();
 
-                account = db.Accounts.FirstOrDefault(p => p.ID == _id);
+            account = db.Accounts.FirstOrDefault(p => p.ID == _id);
             if (account.Username.Length <= 7)
             {
                 NameObject.Text = account.Username.ToString();

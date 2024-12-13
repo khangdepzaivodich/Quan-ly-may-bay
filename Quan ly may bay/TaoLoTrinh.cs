@@ -14,6 +14,7 @@ namespace Quan_ly_may_bay
     public partial class TaoLoTrinh : KryptonForm
     {
         private databaseDataContext db = new databaseDataContext();
+        public static LoTrinh loTrinh = new LoTrinh();
         public TaoLoTrinh()
         {
             InitializeComponent();
@@ -54,13 +55,22 @@ namespace Quan_ly_may_bay
                 errGia.SetError(gia, "Giá vé nhập không đúng!");
                 return;
             }
-            LoTrinh loTrinh = new LoTrinh();
-            loTrinh.MaMB = cbbMaybay.ValueMember;
-            loTrinh.NoiXuatPhat = cbbFrom.ValueMember;
-            loTrinh.NoiDen = cbbTo.ValueMember;
+            if(cbbFrom.SelectedValue == cbbTo.SelectedValue)
+            {
+                MessageBox.Show("Nơi đến với nơi xuất phát không được trùng!","Warning",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            LoTrinh rowWithMaxStt = db.LoTrinhs
+                      .OrderByDescending(v => v.Stt) // Sắp xếp theo Stt giảm dần
+                      .FirstOrDefault();
+            loTrinh.MaLT = "HK"+(int.Parse(rowWithMaxStt.MaLT.Substring(2, 2))+1).ToString();
+            loTrinh.MaMB = cbbMaybay.SelectedValue.ToString();
+            loTrinh.NoiXuatPhat = cbbFrom.SelectedValue.ToString();
+            loTrinh.NoiDen = cbbTo.SelectedValue.ToString();
             loTrinh.GioCatCanh = TimeDi.Value.TimeOfDay;
             loTrinh.GioHaCanh = TimeDen.Value.TimeOfDay;
             loTrinh.Gia = int.Parse(gia.Text);
+            db.LoTrinhs.InsertOnSubmit(loTrinh);
             db.SubmitChanges();
             this.Close();
         }
