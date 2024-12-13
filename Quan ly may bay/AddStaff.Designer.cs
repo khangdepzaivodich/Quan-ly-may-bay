@@ -30,8 +30,6 @@
         {
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtUsername = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtEmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtLuong = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -46,11 +44,11 @@
             this.txtSdt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonRadioButton1 = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.kryptonRadioButton2 = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.dtpNgayKy = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.rdbNam = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdbNu = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.dpkNgayKy = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.cbbMaCV = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.txtNgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.dpkNgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMaCV)).BeginInit();
@@ -85,38 +83,9 @@
             this.txtUsername.Text = "JohnDoe";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(238, 105);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(168, 37);
-            this.txtPassword.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
-            this.txtPassword.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
-            this.txtPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPassword.StateCommon.Border.Rounding = 20;
-            this.txtPassword.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtPassword.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "123456";
-            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // kryptonLabel2
-            // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(38, 105);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(112, 33);
-            this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonLabel2.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Itim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.TabIndex = 2;
-            this.kryptonLabel2.Values.Text = "Password";
-            // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(238, 163);
+            this.txtEmail.Location = new System.Drawing.Point(238, 107);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(168, 37);
             this.txtEmail.StateCommon.Back.Color1 = System.Drawing.Color.Black;
@@ -134,7 +103,7 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(38, 163);
+            this.kryptonLabel3.Location = new System.Drawing.Point(38, 107);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(72, 33);
             this.kryptonLabel3.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
@@ -291,7 +260,6 @@
             this.kryptonLabel11.StateCommon.ShortText.Font = new System.Drawing.Font("Itim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel11.TabIndex = 20;
             this.kryptonLabel11.Values.Text = "Số điện thoại";
-            this.kryptonLabel11.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel11_Paint);
             // 
             // kryptonLabel12
             // 
@@ -304,46 +272,46 @@
             this.kryptonLabel12.TabIndex = 18;
             this.kryptonLabel12.Values.Text = "Giới tính";
             // 
-            // kryptonRadioButton1
+            // rdbNam
             // 
-            this.kryptonRadioButton1.Checked = true;
-            this.kryptonRadioButton1.Location = new System.Drawing.Point(639, 233);
-            this.kryptonRadioButton1.Name = "kryptonRadioButton1";
-            this.kryptonRadioButton1.Size = new System.Drawing.Size(56, 24);
-            this.kryptonRadioButton1.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonRadioButton1.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonRadioButton1.TabIndex = 22;
-            this.kryptonRadioButton1.Values.Text = "Nam";
+            this.rdbNam.Checked = true;
+            this.rdbNam.Location = new System.Drawing.Point(639, 233);
+            this.rdbNam.Name = "rdbNam";
+            this.rdbNam.Size = new System.Drawing.Size(56, 24);
+            this.rdbNam.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
+            this.rdbNam.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
+            this.rdbNam.TabIndex = 22;
+            this.rdbNam.Values.Text = "Nam";
             // 
-            // kryptonRadioButton2
+            // rdbNu
             // 
-            this.kryptonRadioButton2.Location = new System.Drawing.Point(715, 233);
-            this.kryptonRadioButton2.Name = "kryptonRadioButton2";
-            this.kryptonRadioButton2.Size = new System.Drawing.Size(44, 24);
-            this.kryptonRadioButton2.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonRadioButton2.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonRadioButton2.TabIndex = 23;
-            this.kryptonRadioButton2.Values.Text = "Nữ";
+            this.rdbNu.Location = new System.Drawing.Point(715, 233);
+            this.rdbNu.Name = "rdbNu";
+            this.rdbNu.Size = new System.Drawing.Size(44, 24);
+            this.rdbNu.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
+            this.rdbNu.StateCommon.ShortText.Color2 = System.Drawing.Color.White;
+            this.rdbNu.TabIndex = 23;
+            this.rdbNu.Values.Text = "Nữ";
             // 
-            // dtpNgayKy
+            // dpkNgayKy
             // 
-            this.dtpNgayKy.CustomFormat = "dd/MM/yyyy";
-            this.dtpNgayKy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayKy.Location = new System.Drawing.Point(238, 264);
-            this.dtpNgayKy.Name = "dtpNgayKy";
-            this.dtpNgayKy.ShowUpDown = true;
-            this.dtpNgayKy.Size = new System.Drawing.Size(168, 35);
-            this.dtpNgayKy.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.dtpNgayKy.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
-            this.dtpNgayKy.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
-            this.dtpNgayKy.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.dpkNgayKy.CustomFormat = "dd/MM/yyyy";
+            this.dpkNgayKy.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpkNgayKy.Location = new System.Drawing.Point(238, 264);
+            this.dpkNgayKy.Name = "dpkNgayKy";
+            this.dpkNgayKy.ShowUpDown = true;
+            this.dpkNgayKy.Size = new System.Drawing.Size(168, 35);
+            this.dpkNgayKy.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.dpkNgayKy.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
+            this.dpkNgayKy.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
+            this.dpkNgayKy.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dtpNgayKy.StateCommon.Border.Rounding = 20;
-            this.dtpNgayKy.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.dtpNgayKy.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayKy.TabIndex = 24;
-            this.dtpNgayKy.ValueNullable = new System.DateTime(2024, 12, 7, 0, 0, 0, 0);
+            this.dpkNgayKy.StateCommon.Border.Rounding = 20;
+            this.dpkNgayKy.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.dpkNgayKy.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpkNgayKy.TabIndex = 24;
+            this.dpkNgayKy.ValueNullable = new System.DateTime(2024, 12, 7, 0, 0, 0, 0);
             // 
             // cbbMaCV
             // 
@@ -367,24 +335,24 @@
             this.cbbMaCV.TabIndex = 25;
             this.cbbMaCV.Text = "GD";
             // 
-            // txtNgaySinh
+            // dpkNgaySinh
             // 
-            this.txtNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.txtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtNgaySinh.Location = new System.Drawing.Point(598, 107);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(209, 35);
-            this.txtNgaySinh.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.txtNgaySinh.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
-            this.txtNgaySinh.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
-            this.txtNgaySinh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.dpkNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dpkNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpkNgaySinh.Location = new System.Drawing.Point(598, 107);
+            this.dpkNgaySinh.Name = "dpkNgaySinh";
+            this.dpkNgaySinh.Size = new System.Drawing.Size(209, 35);
+            this.dpkNgaySinh.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.dpkNgaySinh.StateCommon.Border.Color1 = System.Drawing.Color.Lime;
+            this.dpkNgaySinh.StateCommon.Border.Color2 = System.Drawing.Color.Lime;
+            this.dpkNgaySinh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNgaySinh.StateCommon.Border.Rounding = 20;
-            this.txtNgaySinh.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtNgaySinh.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaySinh.TabIndex = 27;
-            this.txtNgaySinh.ValueNullable = new System.DateTime(2024, 12, 7, 0, 0, 0, 0);
+            this.dpkNgaySinh.StateCommon.Border.Rounding = 20;
+            this.dpkNgaySinh.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.dpkNgaySinh.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpkNgaySinh.TabIndex = 27;
+            this.dpkNgaySinh.ValueNullable = new System.DateTime(2024, 12, 7, 0, 0, 0, 0);
             // 
             // kryptonButton1
             // 
@@ -480,11 +448,11 @@
             this.ClientSize = new System.Drawing.Size(821, 495);
             this.Controls.Add(this.kryptonButton3);
             this.Controls.Add(this.kryptonButton1);
-            this.Controls.Add(this.txtNgaySinh);
+            this.Controls.Add(this.dpkNgaySinh);
             this.Controls.Add(this.cbbMaCV);
-            this.Controls.Add(this.dtpNgayKy);
-            this.Controls.Add(this.kryptonRadioButton2);
-            this.Controls.Add(this.kryptonRadioButton1);
+            this.Controls.Add(this.dpkNgayKy);
+            this.Controls.Add(this.rdbNu);
+            this.Controls.Add(this.rdbNam);
             this.Controls.Add(this.txtSdt);
             this.Controls.Add(this.kryptonLabel11);
             this.Controls.Add(this.kryptonLabel12);
@@ -499,8 +467,6 @@
             this.Controls.Add(this.kryptonLabel6);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.kryptonLabel3);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.kryptonLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -508,6 +474,7 @@
             this.Name = "AddStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddStaff";
+            this.Load += new System.EventHandler(this.AddStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cbbMaCV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -518,8 +485,6 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtUsername;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassword;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtEmail;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLuong;
@@ -534,11 +499,11 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSdt;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel11;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel12;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton kryptonRadioButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton kryptonRadioButton2;
-        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpNgayKy;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdbNam;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdbNu;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dpkNgayKy;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbMaCV;
-        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker txtNgaySinh;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dpkNgaySinh;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
     }

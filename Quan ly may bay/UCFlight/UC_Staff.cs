@@ -39,5 +39,22 @@ namespace Quan_ly_may_bay.UCFlight
             get => lblLuong.Text;
             set => lblLuong.Text = value;
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            AddStaff add = new AddStaff(MaNV);
+            add.Show();
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            databaseDataContext db = new databaseDataContext();
+            NhanVien nv = db.NhanViens.Where(p => p.MaNV== MaNV).FirstOrDefault();
+            Account ac = db.Accounts.Where(p => p.ID==nv.ID).FirstOrDefault();
+            db.NhanViens.DeleteOnSubmit(nv);
+            db.Accounts.DeleteOnSubmit(ac);
+            db.SubmitChanges();
+        }
     }
 }
