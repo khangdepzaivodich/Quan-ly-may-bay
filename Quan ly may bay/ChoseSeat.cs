@@ -29,7 +29,7 @@ namespace Quan_ly_may_bay
             {
                 int levelSeat = (int)(ve[i].LevelSeat);
                 string seat = ve[i].Seat;
-                int seatNum = int.Parse(seat.Substring(1, 3));
+                int seatNum = int.Parse(seat.Substring(1, 2));
                 int row = seatNum / 11;
                 int col = seatNum - row * 10 - 1;
                 if(levelSeat == 1)
