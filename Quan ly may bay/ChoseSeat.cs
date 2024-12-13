@@ -30,8 +30,8 @@ namespace Quan_ly_may_bay
                 int levelSeat = (int)(ve[i].LevelSeat);
                 string seat = ve[i].Seat;
                 int seatNum = int.Parse(seat.Substring(1, 3));
-                int row = seatNum / 10;
-                int col = 10 * (row + 1) - seatNum;
+                int row = seatNum / 11;
+                int col = seatNum - row * 10 - 1;
                 if(levelSeat == 1)
                 {
                     seats[row + 2, col].Enabled = false;
