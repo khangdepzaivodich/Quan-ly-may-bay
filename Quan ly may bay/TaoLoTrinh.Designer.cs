@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbbFrom = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.Time = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.kryptonDateTimePicker1 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.cbbMaybay = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.gia = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.TimeDi = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.TimeDen = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.CreateButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbFrom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
+            this.cbbFrom = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cbbTo = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.errGia = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMaybay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbFrom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errGia)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -54,7 +57,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label4.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(32, 46);
+            this.label4.Location = new System.Drawing.Point(13, 45);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 28);
@@ -68,7 +71,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label5.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(32, 110);
+            this.label5.Location = new System.Drawing.Point(13, 116);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 28);
@@ -82,7 +85,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label6.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(32, 188);
+            this.label6.Location = new System.Drawing.Point(13, 187);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 28);
@@ -96,7 +99,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label7.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(381, 38);
+            this.label7.Location = new System.Drawing.Point(490, 44);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 28);
@@ -110,7 +113,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label8.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(387, 110);
+            this.label8.Location = new System.Drawing.Point(490, 116);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 28);
@@ -124,7 +127,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label9.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(387, 188);
+            this.label9.Location = new System.Drawing.Point(490, 194);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(167, 28);
@@ -132,123 +135,86 @@
             this.label9.Text = "Giá (vnd/người)";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cbbFrom
+            // cbbMaybay
             // 
-            this.cbbFrom.DropDownWidth = 121;
-            this.cbbFrom.Location = new System.Drawing.Point(195, 38);
-            this.cbbFrom.Name = "cbbFrom";
-            this.cbbFrom.Size = new System.Drawing.Size(121, 36);
-            this.cbbFrom.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
-            this.cbbFrom.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.cbbFrom.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.cbbFrom.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbbMaybay.DropDownWidth = 121;
+            this.cbbMaybay.Location = new System.Drawing.Point(170, 44);
+            this.cbbMaybay.Name = "cbbMaybay";
+            this.cbbMaybay.Size = new System.Drawing.Size(306, 29);
+            this.cbbMaybay.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
+            this.cbbMaybay.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.cbbMaybay.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.cbbMaybay.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbbFrom.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.cbbFrom.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbFrom.StateCommon.DropBack.Color1 = System.Drawing.Color.Cyan;
-            this.cbbFrom.StateCommon.DropBack.Color2 = System.Drawing.Color.Cyan;
-            this.cbbFrom.StateCommon.Item.Back.Color1 = System.Drawing.Color.Cyan;
-            this.cbbFrom.StateCommon.Item.Back.Color2 = System.Drawing.Color.Cyan;
-            this.cbbFrom.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbFrom.TabIndex = 22;
+            this.cbbMaybay.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbbMaybay.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.White;
+            this.cbbMaybay.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMaybay.StateCommon.DropBack.Color1 = System.Drawing.Color.Cyan;
+            this.cbbMaybay.StateCommon.DropBack.Color2 = System.Drawing.Color.Cyan;
+            this.cbbMaybay.StateCommon.Item.Back.Color1 = System.Drawing.Color.Cyan;
+            this.cbbMaybay.StateCommon.Item.Back.Color2 = System.Drawing.Color.Cyan;
+            this.cbbMaybay.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMaybay.TabIndex = 22;
             // 
-            // kryptonComboBox1
+            // gia
             // 
-            this.kryptonComboBox1.DropDownWidth = 121;
-            this.kryptonComboBox1.Location = new System.Drawing.Point(195, 102);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(121, 36);
-            this.kryptonComboBox1.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.gia.Location = new System.Drawing.Point(655, 190);
+            this.gia.Name = "gia";
+            this.gia.Size = new System.Drawing.Size(157, 30);
+            this.gia.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.gia.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.gia.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.gia.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonComboBox1.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox1.StateCommon.DropBack.Color1 = System.Drawing.Color.Cyan;
-            this.kryptonComboBox1.StateCommon.DropBack.Color2 = System.Drawing.Color.Cyan;
-            this.kryptonComboBox1.StateCommon.Item.Back.Color1 = System.Drawing.Color.Cyan;
-            this.kryptonComboBox1.StateCommon.Item.Back.Color2 = System.Drawing.Color.Cyan;
-            this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox1.TabIndex = 23;
+            this.gia.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.gia.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gia.TabIndex = 25;
             // 
-            // kryptonComboBox2
+            // TimeDi
             // 
-            this.kryptonComboBox2.DropDownWidth = 121;
-            this.kryptonComboBox2.Location = new System.Drawing.Point(195, 188);
-            this.kryptonComboBox2.Name = "kryptonComboBox2";
-            this.kryptonComboBox2.Size = new System.Drawing.Size(121, 36);
-            this.kryptonComboBox2.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.TimeDi.CustomFormat = "hh:mm tt";
+            this.TimeDi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TimeDi.Location = new System.Drawing.Point(655, 44);
+            this.TimeDi.Name = "TimeDi";
+            this.TimeDi.ShowUpDown = true;
+            this.TimeDi.Size = new System.Drawing.Size(157, 26);
+            this.TimeDi.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.TimeDi.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.TimeDi.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.TimeDi.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox2.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonComboBox2.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox2.StateCommon.DropBack.Color1 = System.Drawing.Color.Cyan;
-            this.kryptonComboBox2.StateCommon.DropBack.Color2 = System.Drawing.Color.Cyan;
-            this.kryptonComboBox2.StateCommon.Item.Back.Color1 = System.Drawing.Color.Cyan;
-            this.kryptonComboBox2.StateCommon.Item.Back.Color2 = System.Drawing.Color.Cyan;
-            this.kryptonComboBox2.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox2.TabIndex = 24;
+            this.TimeDi.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.TimeDi.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.TimeDi.StateCommon.Content.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeDi.TabIndex = 26;
+            this.TimeDi.ValueNullable = new System.DateTime(2024, 12, 13, 12, 0, 0, 0);
             // 
-            // kryptonTextBox1
+            // TimeDen
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(561, 188);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(151, 30);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.TimeDen.CustomFormat = "hh:ss tt";
+            this.TimeDen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TimeDen.Location = new System.Drawing.Point(655, 114);
+            this.TimeDen.Name = "TimeDen";
+            this.TimeDen.ShowUpDown = true;
+            this.TimeDen.Size = new System.Drawing.Size(157, 26);
+            this.TimeDen.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.TimeDen.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.TimeDen.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.TimeDen.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.TabIndex = 25;
-            // 
-            // Time
-            // 
-            this.Time.CustomFormat = "dd/MM/yyyy";
-            this.Time.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Time.Location = new System.Drawing.Point(562, 40);
-            this.Time.Name = "Time";
-            this.Time.Size = new System.Drawing.Size(151, 26);
-            this.Time.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.Time.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.Time.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.Time.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Time.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.Time.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.Time.StateCommon.Content.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Time.TabIndex = 26;
-            // 
-            // kryptonDateTimePicker1
-            // 
-            this.kryptonDateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(562, 110);
-            this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
-            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(151, 26);
-            this.kryptonDateTimePicker1.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonDateTimePicker1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.kryptonDateTimePicker1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.kryptonDateTimePicker1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonDateTimePicker1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonDateTimePicker1.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonDateTimePicker1.StateCommon.Content.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonDateTimePicker1.TabIndex = 27;
+            this.TimeDen.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.TimeDen.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.TimeDen.StateCommon.Content.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeDen.TabIndex = 27;
+            this.TimeDen.ValueNullable = new System.DateTime(2024, 12, 13, 12, 0, 0, 0);
             // 
             // CreateButton
             // 
-            this.CreateButton.Location = new System.Drawing.Point(319, 266);
+            this.CreateButton.Location = new System.Drawing.Point(401, 268);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
             this.CreateButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(176)))), ((int)(((byte)(238)))));
@@ -316,27 +282,75 @@
             // 
             this.pictureBox1.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.circle_x__1_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(679, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(787, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 35);
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // cbbFrom
+            // 
+            this.cbbFrom.DropDownWidth = 121;
+            this.cbbFrom.Location = new System.Drawing.Point(170, 114);
+            this.cbbFrom.Name = "cbbFrom";
+            this.cbbFrom.Size = new System.Drawing.Size(306, 29);
+            this.cbbFrom.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
+            this.cbbFrom.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.cbbFrom.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.cbbFrom.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbbFrom.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbbFrom.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.White;
+            this.cbbFrom.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbFrom.StateCommon.DropBack.Color1 = System.Drawing.Color.Cyan;
+            this.cbbFrom.StateCommon.DropBack.Color2 = System.Drawing.Color.Cyan;
+            this.cbbFrom.StateCommon.Item.Back.Color1 = System.Drawing.Color.Cyan;
+            this.cbbFrom.StateCommon.Item.Back.Color2 = System.Drawing.Color.Cyan;
+            this.cbbFrom.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbFrom.TabIndex = 30;
+            // 
+            // cbbTo
+            // 
+            this.cbbTo.DropDownWidth = 121;
+            this.cbbTo.Location = new System.Drawing.Point(170, 191);
+            this.cbbTo.Name = "cbbTo";
+            this.cbbTo.Size = new System.Drawing.Size(306, 29);
+            this.cbbTo.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
+            this.cbbTo.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.cbbTo.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.cbbTo.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbbTo.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbbTo.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.White;
+            this.cbbTo.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTo.StateCommon.DropBack.Color1 = System.Drawing.Color.Cyan;
+            this.cbbTo.StateCommon.DropBack.Color2 = System.Drawing.Color.Cyan;
+            this.cbbTo.StateCommon.Item.Back.Color1 = System.Drawing.Color.Cyan;
+            this.cbbTo.StateCommon.Item.Back.Color2 = System.Drawing.Color.Cyan;
+            this.cbbTo.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTo.TabIndex = 31;
+            // 
+            // errGia
+            // 
+            this.errGia.ContainerControl = this;
+            // 
             // TaoLoTrinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(742, 347);
+            this.ClientSize = new System.Drawing.Size(845, 347);
+            this.Controls.Add(this.cbbTo);
+            this.Controls.Add(this.cbbFrom);
             this.Controls.Add(this.CreateButton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.kryptonDateTimePicker1);
-            this.Controls.Add(this.Time);
-            this.Controls.Add(this.kryptonTextBox1);
-            this.Controls.Add(this.kryptonComboBox2);
-            this.Controls.Add(this.kryptonComboBox1);
-            this.Controls.Add(this.cbbFrom);
+            this.Controls.Add(this.TimeDen);
+            this.Controls.Add(this.TimeDi);
+            this.Controls.Add(this.gia);
+            this.Controls.Add(this.cbbMaybay);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -356,10 +370,11 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.StateCommon.Border.Rounding = 30;
             this.Text = "TaoLoTrinh";
-            ((System.ComponentModel.ISupportInitialize)(this.cbbFrom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMaybay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbFrom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errGia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,13 +387,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbFrom;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker Time;
-        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker1;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbMaybay;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox gia;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker TimeDi;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker TimeDen;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton CreateButton;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbFrom;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbTo;
+        private System.Windows.Forms.ErrorProvider errGia;
     }
 }
