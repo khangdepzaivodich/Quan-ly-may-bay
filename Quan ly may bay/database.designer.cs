@@ -57,6 +57,9 @@ namespace Quan_ly_may_bay
     partial void InsertSanBay(SanBay instance);
     partial void UpdateSanBay(SanBay instance);
     partial void DeleteSanBay(SanBay instance);
+    partial void InsertPhanQuyen(PhanQuyen instance);
+    partial void UpdatePhanQuyen(PhanQuyen instance);
+    partial void DeletePhanQuyen(PhanQuyen instance);
     #endregion
 		
 		public databaseDataContext() : 
@@ -158,6 +161,14 @@ namespace Quan_ly_may_bay
 			get
 			{
 				return this.GetTable<SanBay>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PhanQuyen> PhanQuyens
+		{
+			get
+			{
+				return this.GetTable<PhanQuyen>();
 			}
 		}
 	}
@@ -737,6 +748,8 @@ namespace Quan_ly_may_bay
 		
 		private EntitySet<NhanVien> _NhanViens;
 		
+		private EntityRef<PhanQuyen> _PhanQuyen;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -752,6 +765,7 @@ namespace Quan_ly_may_bay
 		public ChucVu()
 		{
 			this._NhanViens = new EntitySet<NhanVien>(new Action<NhanVien>(this.attach_NhanViens), new Action<NhanVien>(this.detach_NhanViens));
+			this._PhanQuyen = default(EntityRef<PhanQuyen>);
 			OnCreated();
 		}
 		
@@ -825,6 +839,35 @@ namespace Quan_ly_may_bay
 			set
 			{
 				this._NhanViens.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_PhanQuyen", Storage="_PhanQuyen", ThisKey="MaCV", OtherKey="PQ", IsUnique=true, IsForeignKey=false)]
+		public PhanQuyen PhanQuyen
+		{
+			get
+			{
+				return this._PhanQuyen.Entity;
+			}
+			set
+			{
+				PhanQuyen previousValue = this._PhanQuyen.Entity;
+				if (((previousValue != value) 
+							|| (this._PhanQuyen.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._PhanQuyen.Entity = null;
+						previousValue.ChucVu = null;
+					}
+					this._PhanQuyen.Entity = value;
+					if ((value != null))
+					{
+						value.ChucVu = this;
+					}
+					this.SendPropertyChanged("PhanQuyen");
+				}
 			}
 		}
 		
@@ -2353,6 +2396,205 @@ namespace Quan_ly_may_bay
 		{
 			this.SendPropertyChanging();
 			entity.SanBay1 = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PhanQuyen")]
+	public partial class PhanQuyen : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _PQ;
+		
+		private System.Nullable<int> _ViewTicket;
+		
+		private System.Nullable<int> _FlightItinerary;
+		
+		private System.Nullable<int> _CreateFlight;
+		
+		private System.Nullable<int> _ManageStaff;
+		
+		private EntityRef<ChucVu> _ChucVu;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPQChanging(string value);
+    partial void OnPQChanged();
+    partial void OnViewTicketChanging(System.Nullable<int> value);
+    partial void OnViewTicketChanged();
+    partial void OnFlightItineraryChanging(System.Nullable<int> value);
+    partial void OnFlightItineraryChanged();
+    partial void OnCreateFlightChanging(System.Nullable<int> value);
+    partial void OnCreateFlightChanged();
+    partial void OnManageStaffChanging(System.Nullable<int> value);
+    partial void OnManageStaffChanged();
+    #endregion
+		
+		public PhanQuyen()
+		{
+			this._ChucVu = default(EntityRef<ChucVu>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PQ", DbType="Char(4) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string PQ
+		{
+			get
+			{
+				return this._PQ;
+			}
+			set
+			{
+				if ((this._PQ != value))
+				{
+					if (this._ChucVu.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnPQChanging(value);
+					this.SendPropertyChanging();
+					this._PQ = value;
+					this.SendPropertyChanged("PQ");
+					this.OnPQChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ViewTicket", DbType="Int")]
+		public System.Nullable<int> ViewTicket
+		{
+			get
+			{
+				return this._ViewTicket;
+			}
+			set
+			{
+				if ((this._ViewTicket != value))
+				{
+					this.OnViewTicketChanging(value);
+					this.SendPropertyChanging();
+					this._ViewTicket = value;
+					this.SendPropertyChanged("ViewTicket");
+					this.OnViewTicketChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlightItinerary", DbType="Int")]
+		public System.Nullable<int> FlightItinerary
+		{
+			get
+			{
+				return this._FlightItinerary;
+			}
+			set
+			{
+				if ((this._FlightItinerary != value))
+				{
+					this.OnFlightItineraryChanging(value);
+					this.SendPropertyChanging();
+					this._FlightItinerary = value;
+					this.SendPropertyChanged("FlightItinerary");
+					this.OnFlightItineraryChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateFlight", DbType="Int")]
+		public System.Nullable<int> CreateFlight
+		{
+			get
+			{
+				return this._CreateFlight;
+			}
+			set
+			{
+				if ((this._CreateFlight != value))
+				{
+					this.OnCreateFlightChanging(value);
+					this.SendPropertyChanging();
+					this._CreateFlight = value;
+					this.SendPropertyChanged("CreateFlight");
+					this.OnCreateFlightChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ManageStaff", DbType="Int")]
+		public System.Nullable<int> ManageStaff
+		{
+			get
+			{
+				return this._ManageStaff;
+			}
+			set
+			{
+				if ((this._ManageStaff != value))
+				{
+					this.OnManageStaffChanging(value);
+					this.SendPropertyChanging();
+					this._ManageStaff = value;
+					this.SendPropertyChanged("ManageStaff");
+					this.OnManageStaffChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_PhanQuyen", Storage="_ChucVu", ThisKey="PQ", OtherKey="MaCV", IsForeignKey=true)]
+		public ChucVu ChucVu
+		{
+			get
+			{
+				return this._ChucVu.Entity;
+			}
+			set
+			{
+				ChucVu previousValue = this._ChucVu.Entity;
+				if (((previousValue != value) 
+							|| (this._ChucVu.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ChucVu.Entity = null;
+						previousValue.PhanQuyen = null;
+					}
+					this._ChucVu.Entity = value;
+					if ((value != null))
+					{
+						value.PhanQuyen = this;
+						this._PQ = value.MaCV;
+					}
+					else
+					{
+						this._PQ = default(string);
+					}
+					this.SendPropertyChanged("ChucVu");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }
