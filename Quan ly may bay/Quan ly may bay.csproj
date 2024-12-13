@@ -287,6 +287,22 @@
     <Compile Include="Capnhatchuyenbay.Designer.cs">
       <DependentUpon>Capnhatchuyenbay.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLCBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLCBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLCBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLCBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDSNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportDSNV.Designer.cs">
+      <DependentUpon>ReportDSNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResetPassForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,6 +417,10 @@
     <EmbeddedResource Include="Capnhatchuyenbay.resx">
       <DependentUpon>Capnhatchuyenbay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportDSNV.rdlc" />
+    <EmbeddedResource Include="ReportDSNV.resx">
+      <DependentUpon>ReportDSNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResetPassForm.resx">
       <DependentUpon>ResetPassForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -495,6 +515,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLCBDataSet.xsc">
+      <DependentUpon>QLCBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLCBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLCBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLCBDataSet.xss">
+      <DependentUpon>QLCBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLCBDataSet1.xsc">
+      <DependentUpon>QLCBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLCBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLCBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLCBDataSet1.xss">
+      <DependentUpon>QLCBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Resources\hinh-anh-may-bay.jpg" />
   </ItemGroup>
   <ItemGroup>

@@ -117,4 +117,14 @@
       <Association Name="SanBay_LoTrinh1" Member="LoTrinhs1" ThisKey="MaSB" OtherKey="NoiDen" Type="LoTrinh" />
     </Type>
   </Table>
+  <Table Name="dbo.PhanQuyen" Member="PhanQuyens">
+    <Type Name="PhanQuyen">
+      <Column Name="PQ" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ViewTicket" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FlightItinerary" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateFlight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ManageStaff" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ChucVu_PhanQuyen" Member="ChucVu" ThisKey="PQ" OtherKey="MaCV" Type="ChucVu" IsForeignKey="true" />
+    </Type>
+  </Table>
 </Database>
