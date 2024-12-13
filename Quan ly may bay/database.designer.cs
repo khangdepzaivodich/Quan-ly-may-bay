@@ -63,7 +63,7 @@ namespace Quan_ly_may_bay
     #endregion
 		
 		public databaseDataContext() : 
-				base(global::Quan_ly_may_bay.Properties.Settings.Default.QLCBConnectionString, mappingSource)
+				base(global::Quan_ly_may_bay.Properties.Settings.Default.QLCBConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

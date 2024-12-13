@@ -31,7 +31,6 @@
             this.rdbNu = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.txtCCCD = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtDiaChi = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtNgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.rdbNam = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.txtHoTen = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblCCCD = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -46,6 +45,7 @@
             this.lblSDT = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtSDT = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnSubmit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtNgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@
             // 
             // txtCCCD
             // 
-            this.txtCCCD.Location = new System.Drawing.Point(179, 381);
+            this.txtCCCD.Location = new System.Drawing.Point(179, 441);
             this.txtCCCD.Margin = new System.Windows.Forms.Padding(4);
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Size = new System.Drawing.Size(195, 39);
@@ -69,6 +69,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtCCCD.StateCommon.Border.Rounding = 20;
+            this.txtCCCD.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtCCCD.TabIndex = 41;
             // 
             // txtDiaChi
@@ -81,19 +82,8 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtDiaChi.StateCommon.Border.Rounding = 20;
+            this.txtDiaChi.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtDiaChi.TabIndex = 40;
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Location = new System.Drawing.Point(179, 216);
-            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(195, 39);
-            this.txtNgaySinh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNgaySinh.StateCommon.Border.Rounding = 20;
-            this.txtNgaySinh.TabIndex = 39;
             // 
             // rdbNam
             // 
@@ -121,12 +111,13 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtHoTen.StateCommon.Border.Rounding = 20;
+            this.txtHoTen.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtHoTen.TabIndex = 37;
             // 
             // lblCCCD
             // 
             this.lblCCCD.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
-            this.lblCCCD.Location = new System.Drawing.Point(19, 384);
+            this.lblCCCD.Location = new System.Drawing.Point(20, 441);
             this.lblCCCD.Margin = new System.Windows.Forms.Padding(4);
             this.lblCCCD.Name = "lblCCCD";
             this.lblCCCD.Size = new System.Drawing.Size(100, 27);
@@ -192,29 +183,31 @@
             // 
             // lblGmail
             // 
+            this.lblGmail.AutoSize = false;
             this.lblGmail.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
-            this.lblGmail.Location = new System.Drawing.Point(155, 70);
+            this.lblGmail.Location = new System.Drawing.Point(109, 70);
             this.lblGmail.Margin = new System.Windows.Forms.Padding(4);
             this.lblGmail.Name = "lblGmail";
-            this.lblGmail.Size = new System.Drawing.Size(75, 27);
+            this.lblGmail.Size = new System.Drawing.Size(292, 27);
             this.lblGmail.StateNormal.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGmail.TabIndex = 48;
             this.lblGmail.Values.Text = "Gmail: ";
             // 
             // lblUsername
             // 
+            this.lblUsername.AutoSize = false;
             this.lblUsername.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
-            this.lblUsername.Location = new System.Drawing.Point(155, 25);
+            this.lblUsername.Location = new System.Drawing.Point(109, 25);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(4);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(109, 27);
+            this.lblUsername.Size = new System.Drawing.Size(316, 27);
             this.lblUsername.StateNormal.ShortText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.TabIndex = 47;
             this.lblUsername.Values.Text = "Username:  ";
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(41, 12);
+            this.kryptonButton1.Location = new System.Drawing.Point(12, 12);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
             this.kryptonButton1.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
@@ -229,7 +222,7 @@
             // lblSDT
             // 
             this.lblSDT.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
-            this.lblSDT.Location = new System.Drawing.Point(19, 441);
+            this.lblSDT.Location = new System.Drawing.Point(19, 393);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(4);
             this.lblSDT.Name = "lblSDT";
             this.lblSDT.Size = new System.Drawing.Size(128, 27);
@@ -239,7 +232,7 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(179, 441);
+            this.txtSDT.Location = new System.Drawing.Point(179, 381);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(195, 39);
@@ -247,6 +240,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtSDT.StateCommon.Border.Rounding = 20;
+            this.txtSDT.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtSDT.TabIndex = 46;
             // 
             // btnSubmit
@@ -278,11 +272,24 @@
             this.btnSubmit.Values.Text = "Edit";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtNgaySinh.Location = new System.Drawing.Point(179, 226);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(195, 37);
+            this.txtNgaySinh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtNgaySinh.StateCommon.Border.Rounding = 20;
+            this.txtNgaySinh.TabIndex = 48;
+            // 
             // InformationAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 606);
+            this.Controls.Add(this.txtNgaySinh);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.lblSDT);
@@ -290,7 +297,6 @@
             this.Controls.Add(this.rdbNu);
             this.Controls.Add(this.txtCCCD);
             this.Controls.Add(this.txtDiaChi);
-            this.Controls.Add(this.txtNgaySinh);
             this.Controls.Add(this.rdbNam);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.lblCCCD);
@@ -308,7 +314,6 @@
             this.StateCommon.Border.Rounding = 20;
             this.Text = "InformationAccount";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,7 +323,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdbNu;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtCCCD;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtDiaChi;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNgaySinh;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdbNam;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtHoTen;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblCCCD;
@@ -333,5 +337,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblUsername;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblGmail;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSubmit;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker txtNgaySinh;
     }
 }
