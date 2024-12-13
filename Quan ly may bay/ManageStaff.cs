@@ -15,13 +15,19 @@ namespace Quan_ly_may_bay
 {
     public partial class ManageStaff : KryptonForm
     {
+        databaseDataContext db = new databaseDataContext();
         List<NhanVien> nv;
         int soluong;
         public ManageStaff()
         {
             InitializeComponent();
             lblSubstract.Hide();
-            databaseDataContext db = new databaseDataContext();
+            loadDuLieu();
+        }
+
+        public void loadDuLieu()
+        {
+            flpContain.Controls.Clear();
             nv = db.NhanViens.OrderByDescending(p => p.MaNV).ToList();
             soluong = nv.Count();
             if (soluong <= 5) lblAdd.Hide();
@@ -39,12 +45,12 @@ namespace Quan_ly_may_bay
                 uc.Luong = nv[i].Luong.ToString() + " VND";
                 flpContain.Controls.Add(uc);
             }
-
         }
 
         private void lblSubstract_Click(object sender, EventArgs e)
         {
             lblAdd.Show();
+            flpContain.Controls.Clear();
             lblStt.Text = (int.Parse(lblStt.Text) - 1).ToString();
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
@@ -65,6 +71,7 @@ namespace Quan_ly_may_bay
         private void lblAdd_Click(object sender, EventArgs e)
         {
             lblSubstract.Show();
+            flpContain.Controls.Clear();
             lblStt.Text = (int.Parse(lblStt.Text)+1).ToString();
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
@@ -80,6 +87,18 @@ namespace Quan_ly_may_bay
                 uc.Luong = nv[i].Luong.ToString() + " VND";
                 flpContain.Controls.Add(uc);
             }
+        }
+
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            AddStaff add = new AddStaff();
+            add.Show();
+        }
+
+        private void ManageStaff_Load(object sender, EventArgs e)
+        {
+            loadDuLieu();
         }
     }
 }

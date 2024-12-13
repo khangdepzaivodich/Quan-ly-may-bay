@@ -30,7 +30,7 @@
         {
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.cbbMaCV = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnThem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -54,7 +54,7 @@
             // kryptonPanel1
             // 
             this.kryptonPanel1.Controls.Add(this.cbbMaCV);
-            this.kryptonPanel1.Controls.Add(this.kryptonButton2);
+            this.kryptonPanel1.Controls.Add(this.btnThem);
             this.kryptonPanel1.Controls.Add(this.kryptonButton1);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel4);
             this.kryptonPanel1.Controls.Add(this.kryptonTextBox4);
@@ -92,26 +92,27 @@
             this.cbbMaCV.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Itim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbMaCV.TabIndex = 26;
             // 
-            // kryptonButton2
+            // btnThem
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(698, 39);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.Aqua;
-            this.kryptonButton2.OverrideDefault.Back.Color2 = System.Drawing.Color.Aquamarine;
-            this.kryptonButton2.Size = new System.Drawing.Size(52, 50);
-            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.Aqua;
-            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.Aquamarine;
-            this.kryptonButton2.StateCommon.Back.Image = global::Quan_ly_may_bay.Properties.Resources.plus;
-            this.kryptonButton2.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
-            this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.Aqua;
-            this.kryptonButton2.StateCommon.Border.Color2 = System.Drawing.Color.Aquamarine;
-            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnThem.Location = new System.Drawing.Point(698, 39);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.OverrideDefault.Back.Color1 = System.Drawing.Color.Aqua;
+            this.btnThem.OverrideDefault.Back.Color2 = System.Drawing.Color.Aquamarine;
+            this.btnThem.Size = new System.Drawing.Size(52, 50);
+            this.btnThem.StateCommon.Back.Color1 = System.Drawing.Color.Aqua;
+            this.btnThem.StateCommon.Back.Color2 = System.Drawing.Color.Aquamarine;
+            this.btnThem.StateCommon.Back.Image = global::Quan_ly_may_bay.Properties.Resources.plus;
+            this.btnThem.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.btnThem.StateCommon.Border.Color1 = System.Drawing.Color.Aqua;
+            this.btnThem.StateCommon.Border.Color2 = System.Drawing.Color.Aquamarine;
+            this.btnThem.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateCommon.Border.Image = global::Quan_ly_may_bay.Properties.Resources.plus;
-            this.kryptonButton2.StateCommon.Border.Rounding = 10;
-            this.kryptonButton2.TabIndex = 30;
-            this.kryptonButton2.Values.Text = "";
+            this.btnThem.StateCommon.Border.Image = global::Quan_ly_may_bay.Properties.Resources.plus;
+            this.btnThem.StateCommon.Border.Rounding = 10;
+            this.btnThem.TabIndex = 30;
+            this.btnThem.Values.Text = "";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // kryptonButton1
             // 
@@ -417,6 +418,7 @@
             this.Name = "ManageStaff";
             this.Opacity = 0.9D;
             this.Text = "ManageStaff";
+            this.Load += new System.EventHandler(this.ManageStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
@@ -439,7 +441,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnThem;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbMaCV;
         private System.Windows.Forms.Label lblStt;
         private System.Windows.Forms.PictureBox lblAdd;
