@@ -25,7 +25,7 @@ namespace Quan_ly_may_bay
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChoseSeat frm = new ChoseSeat("mcb");
+            ChoseSeat frm = new ChoseSeat("HK10000", 10000000);
             frm.ShowDialog();
         }
     }

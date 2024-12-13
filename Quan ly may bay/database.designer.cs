@@ -33,12 +33,12 @@ namespace Quan_ly_may_bay
     partial void InsertAccount(Account instance);
     partial void UpdateAccount(Account instance);
     partial void DeleteAccount(Account instance);
-    partial void InsertChucVu(ChucVu instance);
-    partial void UpdateChucVu(ChucVu instance);
-    partial void DeleteChucVu(ChucVu instance);
     partial void InsertVe(Ve instance);
     partial void UpdateVe(Ve instance);
     partial void DeleteVe(Ve instance);
+    partial void InsertChucVu(ChucVu instance);
+    partial void UpdateChucVu(ChucVu instance);
+    partial void DeleteChucVu(ChucVu instance);
     partial void InsertChuyenBay(ChuyenBay instance);
     partial void UpdateChuyenBay(ChuyenBay instance);
     partial void DeleteChuyenBay(ChuyenBay instance);
@@ -100,19 +100,19 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		public System.Data.Linq.Table<ChucVu> ChucVus
-		{
-			get
-			{
-				return this.GetTable<ChucVu>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Ve> Ves
 		{
 			get
 			{
 				return this.GetTable<Ve>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ChucVu> ChucVus
+		{
+			get
+			{
+				return this.GetTable<ChucVu>();
 			}
 		}
 		
@@ -535,6 +535,205 @@ namespace Quan_ly_may_bay
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Ve")]
+	public partial class Ve : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaVe;
+		
+		private System.Nullable<int> _MaKH;
+		
+		private string _MaCB;
+		
+		private System.Nullable<int> _LevelSeat;
+		
+		private string _Seat;
+		
+		private EntityRef<ChuyenBay> _ChuyenBay;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaVeChanging(string value);
+    partial void OnMaVeChanged();
+    partial void OnMaKHChanging(System.Nullable<int> value);
+    partial void OnMaKHChanged();
+    partial void OnMaCBChanging(string value);
+    partial void OnMaCBChanged();
+    partial void OnLevelSeatChanging(System.Nullable<int> value);
+    partial void OnLevelSeatChanged();
+    partial void OnSeatChanging(string value);
+    partial void OnSeatChanged();
+    #endregion
+		
+		public Ve()
+		{
+			this._ChuyenBay = default(EntityRef<ChuyenBay>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaVe", DbType="Char(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaVe
+		{
+			get
+			{
+				return this._MaVe;
+			}
+			set
+			{
+				if ((this._MaVe != value))
+				{
+					this.OnMaVeChanging(value);
+					this.SendPropertyChanging();
+					this._MaVe = value;
+					this.SendPropertyChanged("MaVe");
+					this.OnMaVeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKH", DbType="Int")]
+		public System.Nullable<int> MaKH
+		{
+			get
+			{
+				return this._MaKH;
+			}
+			set
+			{
+				if ((this._MaKH != value))
+				{
+					this.OnMaKHChanging(value);
+					this.SendPropertyChanging();
+					this._MaKH = value;
+					this.SendPropertyChanged("MaKH");
+					this.OnMaKHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCB", DbType="Char(7)")]
+		public string MaCB
+		{
+			get
+			{
+				return this._MaCB;
+			}
+			set
+			{
+				if ((this._MaCB != value))
+				{
+					if (this._ChuyenBay.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaCBChanging(value);
+					this.SendPropertyChanging();
+					this._MaCB = value;
+					this.SendPropertyChanged("MaCB");
+					this.OnMaCBChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LevelSeat", DbType="Int")]
+		public System.Nullable<int> LevelSeat
+		{
+			get
+			{
+				return this._LevelSeat;
+			}
+			set
+			{
+				if ((this._LevelSeat != value))
+				{
+					this.OnLevelSeatChanging(value);
+					this.SendPropertyChanging();
+					this._LevelSeat = value;
+					this.SendPropertyChanged("LevelSeat");
+					this.OnLevelSeatChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Seat", DbType="Char(3)")]
+		public string Seat
+		{
+			get
+			{
+				return this._Seat;
+			}
+			set
+			{
+				if ((this._Seat != value))
+				{
+					this.OnSeatChanging(value);
+					this.SendPropertyChanging();
+					this._Seat = value;
+					this.SendPropertyChanged("Seat");
+					this.OnSeatChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChuyenBay_Ve", Storage="_ChuyenBay", ThisKey="MaCB", OtherKey="MaCB", IsForeignKey=true)]
+		public ChuyenBay ChuyenBay
+		{
+			get
+			{
+				return this._ChuyenBay.Entity;
+			}
+			set
+			{
+				ChuyenBay previousValue = this._ChuyenBay.Entity;
+				if (((previousValue != value) 
+							|| (this._ChuyenBay.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ChuyenBay.Entity = null;
+						previousValue.Ves.Remove(this);
+					}
+					this._ChuyenBay.Entity = value;
+					if ((value != null))
+					{
+						value.Ves.Add(this);
+						this._MaCB = value.MaCB;
+					}
+					else
+					{
+						this._MaCB = default(string);
+					}
+					this.SendPropertyChanged("ChuyenBay");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChucVu")]
 	public partial class ChucVu : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -702,205 +901,6 @@ namespace Quan_ly_may_bay
 		{
 			this.SendPropertyChanging();
 			entity.ChucVu = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Ve")]
-	public partial class Ve : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _MaVe;
-		
-		private string _MaKH;
-		
-		private string _MaCB;
-		
-		private System.Nullable<int> _LevelSeat;
-		
-		private string _Seat;
-		
-		private EntityRef<ChuyenBay> _ChuyenBay;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaVeChanging(string value);
-    partial void OnMaVeChanged();
-    partial void OnMaKHChanging(string value);
-    partial void OnMaKHChanged();
-    partial void OnMaCBChanging(string value);
-    partial void OnMaCBChanged();
-    partial void OnLevelSeatChanging(System.Nullable<int> value);
-    partial void OnLevelSeatChanged();
-    partial void OnSeatChanging(string value);
-    partial void OnSeatChanged();
-    #endregion
-		
-		public Ve()
-		{
-			this._ChuyenBay = default(EntityRef<ChuyenBay>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaVe", DbType="Char(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaVe
-		{
-			get
-			{
-				return this._MaVe;
-			}
-			set
-			{
-				if ((this._MaVe != value))
-				{
-					this.OnMaVeChanging(value);
-					this.SendPropertyChanging();
-					this._MaVe = value;
-					this.SendPropertyChanged("MaVe");
-					this.OnMaVeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKH", DbType="Char(8)")]
-		public string MaKH
-		{
-			get
-			{
-				return this._MaKH;
-			}
-			set
-			{
-				if ((this._MaKH != value))
-				{
-					this.OnMaKHChanging(value);
-					this.SendPropertyChanging();
-					this._MaKH = value;
-					this.SendPropertyChanged("MaKH");
-					this.OnMaKHChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCB", DbType="Char(7)")]
-		public string MaCB
-		{
-			get
-			{
-				return this._MaCB;
-			}
-			set
-			{
-				if ((this._MaCB != value))
-				{
-					if (this._ChuyenBay.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMaCBChanging(value);
-					this.SendPropertyChanging();
-					this._MaCB = value;
-					this.SendPropertyChanged("MaCB");
-					this.OnMaCBChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LevelSeat", DbType="Int")]
-		public System.Nullable<int> LevelSeat
-		{
-			get
-			{
-				return this._LevelSeat;
-			}
-			set
-			{
-				if ((this._LevelSeat != value))
-				{
-					this.OnLevelSeatChanging(value);
-					this.SendPropertyChanging();
-					this._LevelSeat = value;
-					this.SendPropertyChanged("LevelSeat");
-					this.OnLevelSeatChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Seat", DbType="Char(3)")]
-		public string Seat
-		{
-			get
-			{
-				return this._Seat;
-			}
-			set
-			{
-				if ((this._Seat != value))
-				{
-					this.OnSeatChanging(value);
-					this.SendPropertyChanging();
-					this._Seat = value;
-					this.SendPropertyChanged("Seat");
-					this.OnSeatChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChuyenBay_Ve", Storage="_ChuyenBay", ThisKey="MaCB", OtherKey="MaCB", IsForeignKey=true)]
-		public ChuyenBay ChuyenBay
-		{
-			get
-			{
-				return this._ChuyenBay.Entity;
-			}
-			set
-			{
-				ChuyenBay previousValue = this._ChuyenBay.Entity;
-				if (((previousValue != value) 
-							|| (this._ChuyenBay.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ChuyenBay.Entity = null;
-						previousValue.Ves.Remove(this);
-					}
-					this._ChuyenBay.Entity = value;
-					if ((value != null))
-					{
-						value.Ves.Add(this);
-						this._MaCB = value.MaCB;
-					}
-					else
-					{
-						this._MaCB = default(string);
-					}
-					this.SendPropertyChanged("ChuyenBay");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
 		}
 	}
 	
