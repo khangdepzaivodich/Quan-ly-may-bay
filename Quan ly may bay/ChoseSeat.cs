@@ -13,11 +13,34 @@ namespace Quan_ly_may_bay
     public partial class ChoseSeat : KryptonForm
     {
         private KryptonButton[,] seats = new KryptonButton[7, 10];
+        private databaseDataContext db = new databaseDataContext();
+        private List<Ve> ve = new List<Ve>();
         private int prevI = -1, prevJ = -1;
-        public ChoseSeat()
+        public ChoseSeat(string _maChuyenBay)
         {
             InitializeComponent();
+            ve = db.Ves.Where(p => p.MaCB == _maChuyenBay).ToList();
             CreateSeats();
+            LoadSeats();
+        }   
+        private void LoadSeats()
+        {
+            for(int i = 0; i < ve.Count; i++)
+            {
+                int levelSeat = (int)(ve[i].LevelSeat);
+                string seat = ve[i].Seat;
+                int seatNum = int.Parse(seat.Substring(1, 3));
+                int row = seatNum / 10;
+                int col = 10 * (row + 1) - seatNum;
+                if(levelSeat == 1)
+                {
+                    seats[row + 2, col].Enabled = false;
+                }
+                else
+                {
+                    seats[row, col].Enabled = false;
+                }
+            }
         }
         private void CreateSeats()
         {
