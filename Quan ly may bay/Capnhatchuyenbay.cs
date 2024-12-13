@@ -15,86 +15,150 @@ namespace Quan_ly_may_bay
     public partial class Capnhatchuyenbay : KryptonForm
     {
         private List<UC_CreateChuyenBay> list = new List<UC_CreateChuyenBay>();
+        private databaseDataContext db = new databaseDataContext();
+        private List<ChuyenBay> listCB;
         public Capnhatchuyenbay()
         {
             InitializeComponent();
-            for (int i = 0; i < 10; i++)
+            listCB = db.ChuyenBays.ToList();
+            for (int i = 0; i < listCB.Count; i++)
             {
                 UC_CreateChuyenBay uc = new UC_CreateChuyenBay();
+                uc.maCB.Text = listCB[i].MaCB;
+                uc.maLT.Text = listCB[i].MaLT;
+
+                LoTrinh lb = db.LoTrinhs.FirstOrDefault(p=>p.MaLT == listCB[i].MaLT);
+
+
+                if (lb.GioHaCanh.HasValue && lb.GioCatCanh.HasValue && listCB[i].NgayKH.HasValue)
+                {
+                    DateTime ngayKhoiHanh = listCB[i].NgayKH.Value; // Ngày khởi hành
+                    TimeSpan gioCatCanh = lb.GioCatCanh.Value; // Giờ cất cánh
+                    TimeSpan gioHaCanh = lb.GioHaCanh.Value;   // Giờ hạ cánh
+
+                    // Xác định ngày hạ cánh
+                    DateTime ngayHaCanh = ngayKhoiHanh + gioHaCanh;
+                    if (gioHaCanh < gioCatCanh) // Hạ cánh vào ngày hôm sau
+                    {
+                        ngayHaCanh = ngayHaCanh.AddDays(1);
+                    }
+
+                    // Định dạng giờ và ngày hạ cánh
+                    uc.gioDen.Text = DateTime.Today.Add(gioHaCanh).ToString("hh:mm tt") + " " + ngayHaCanh.ToString("dd/MM/yyyy");
+                    uc.gioKhoiHanh.Text = DateTime.Today.Add(gioCatCanh).ToString("hh:mm tt") + " " + ngayKhoiHanh.ToString("dd/MM/yyyy");
+                }
+                else
+                {
+                    uc.gioDen.Text = "Không xác định"; // Xử lý nếu giá trị bị thiếu
+                    uc.gioKhoiHanh.Text = "Không xác định"; // Xử lý nếu giá trị bị thiếu
+                }
+
+                SanBay sb1 = db.SanBays.FirstOrDefault(p => p.MaSB == lb.NoiXuatPhat);
+                uc.noiDen.Text = sb1.City;
+
+                SanBay sb2 = db.SanBays.FirstOrDefault(p => p.MaSB == lb.NoiDen);
+                uc.noiKhoiHanh.Text = sb2.City;
+                uc.SoGhe.Text = "100/100";
+
                 list.Add(uc);
             }
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
                 if (i >= list.Count)
                 {
-                    Add.Enabled = false;
+                    Add.Visible = false;
                     break;
                 }
                 PanelTicket.Controls.Add(list[i]);
             }
+            Substract.Visible = false;
         }
 
         private void pAdd_Click(object sender, EventArgs e)
         {
-            this.Hide();
             TaoChuyenBay frm = new TaoChuyenBay();
             frm.ShowDialog();
 
-            this.Show();
-        }
+            
+            PanelTicket.Controls.Clear();
+            ChuyenBay cb = db.ChuyenBays.OrderByDescending(p=>p.Stt).FirstOrDefault();
+            UC_CreateChuyenBay uc = new UC_CreateChuyenBay();
+            uc.maCB.Text = cb.MaCB;
+            uc.maLT.Text = cb.MaLT;
 
-        private void SubmitButton_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < list.Count; i++)
+            LoTrinh lb = db.LoTrinhs.FirstOrDefault(p => p.MaLT == cb.MaLT);
+
+
+            if (lb.GioHaCanh.HasValue && lb.GioCatCanh.HasValue && cb.NgayKH.HasValue)
             {
-                PanelTicket.Controls.Remove(list[i]);
-            }
-            list.Clear();
-        }
+                DateTime ngayKhoiHanh = cb.NgayKH.Value; // Ngày khởi hành
+                TimeSpan gioCatCanh = lb.GioCatCanh.Value; // Giờ cất cánh
+                TimeSpan gioHaCanh = lb.GioHaCanh.Value;   // Giờ hạ cánh
 
-        private void Substract_Click(object sender, EventArgs e)
-        {
+                // Xác định ngày hạ cánh
+                DateTime ngayHaCanh = ngayKhoiHanh + gioHaCanh;
+                if (gioHaCanh < gioCatCanh) // Hạ cánh vào ngày hôm sau
+                {
+                    ngayHaCanh = ngayHaCanh.AddDays(1);
+                }
+
+                // Định dạng giờ và ngày hạ cánh
+                uc.gioDen.Text = DateTime.Today.Add(gioHaCanh).ToString("hh:mm tt") + " " + ngayHaCanh.ToString("dd/MM/yyyy");
+                uc.gioKhoiHanh.Text = DateTime.Today.Add(gioCatCanh).ToString("hh:mm tt") + " " + ngayKhoiHanh.ToString("dd/MM/yyyy");
+            }
+            else
+            {
+                uc.gioDen.Text = "Không xác định"; // Xử lý nếu giá trị bị thiếu
+                uc.gioKhoiHanh.Text = "Không xác định"; // Xử lý nếu giá trị bị thiếu
+            }
+
+            SanBay sb1 = db.SanBays.FirstOrDefault(p => p.MaSB == lb.NoiXuatPhat);
+            uc.noiDen.Text = sb1.City;
+
+            SanBay sb2 = db.SanBays.FirstOrDefault(p => p.MaSB == lb.NoiDen);
+            uc.noiKhoiHanh.Text = sb2.City;
+            uc.SoGhe.Text = "100/100";
+
+            list.Insert(0, uc);
+
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
                 if (i >= list.Count)
                 {
-                    Add.Enabled = false;
+                    Add.Visible = false;
                     break;
                 }
-                PanelTicket.Controls.Remove(list[i]);
+                PanelTicket.Controls.Add(list[i]);
             }
+            Substract.Visible = false;
+        }
 
+
+        private void Substract_Click(object sender, EventArgs e)
+        {
+            PanelTicket.Controls.Clear();
             lblStt.Text = (int.Parse(lblStt.Text) - 1).ToString();
             if (int.Parse(lblStt.Text) == 0)
             {
-                Substract.Enabled = false;
+                Substract.Visible = false;
             }
-            Add.Enabled = true;
+            Add.Visible = true;
         }
 
         private void Add_Click(object sender, EventArgs e)
         {
-            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
-            {
-                if (i >= list.Count)
-                {
-                    Add.Enabled = false;
-                    break;
-                }
-                PanelTicket.Controls.Remove(list[i]);
-            }
+            PanelTicket.Controls.Clear();
             lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();
-            Substract.Enabled = true;
+            Substract.Visible = true;
         }
 
         private void lblStt_TextChanged(object sender, EventArgs e)
         {
-            
                 for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
                 {
                     if (i >= list.Count)
                     {
-                        pAdd.Enabled = false;
+                        Add.Visible = false;
                         break;
                     }
                     PanelTicket.Controls.Add(list[i]);

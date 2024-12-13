@@ -99,7 +99,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label7.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(490, 44);
+            this.label7.Location = new System.Drawing.Point(480, 45);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 28);
@@ -113,7 +113,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label8.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(490, 116);
+            this.label8.Location = new System.Drawing.Point(480, 117);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 28);
@@ -127,7 +127,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label9.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(490, 194);
+            this.label9.Location = new System.Drawing.Point(480, 195);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(167, 28);
@@ -138,7 +138,7 @@
             // cbbMaybay
             // 
             this.cbbMaybay.DropDownWidth = 121;
-            this.cbbMaybay.Location = new System.Drawing.Point(170, 44);
+            this.cbbMaybay.Location = new System.Drawing.Point(157, 45);
             this.cbbMaybay.Name = "cbbMaybay";
             this.cbbMaybay.Size = new System.Drawing.Size(306, 29);
             this.cbbMaybay.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
@@ -292,7 +292,7 @@
             // cbbFrom
             // 
             this.cbbFrom.DropDownWidth = 121;
-            this.cbbFrom.Location = new System.Drawing.Point(170, 114);
+            this.cbbFrom.Location = new System.Drawing.Point(157, 115);
             this.cbbFrom.Name = "cbbFrom";
             this.cbbFrom.Size = new System.Drawing.Size(306, 29);
             this.cbbFrom.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
@@ -314,7 +314,7 @@
             // cbbTo
             // 
             this.cbbTo.DropDownWidth = 121;
-            this.cbbTo.Location = new System.Drawing.Point(170, 191);
+            this.cbbTo.Location = new System.Drawing.Point(157, 192);
             this.cbbTo.Name = "cbbTo";
             this.cbbTo.Size = new System.Drawing.Size(306, 29);
             this.cbbTo.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.Black;
