@@ -56,7 +56,7 @@ namespace Quan_ly_may_bay
                 uc.detailBtn.Tag = i;
                 list.Add(uc);
             }
-            filteredList = list;
+            filteredList = new List<UC_Ticket>(list);
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
                 if (i >= list.Count)
@@ -148,54 +148,9 @@ namespace Quan_ly_may_bay
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             PanelTicket.Controls.Clear();
-            filteredList = list;
 
-            if (!string.IsNullOrEmpty(cbbFrom.Text))
-            {
-                for(int i =  0; i < filteredList.Count; ++i)
-                {
-                    if (!filteredList[i].from.Text.Contains(cbbFrom.Text))
-                    {
-                        filteredList.RemoveAt(i);
-                    }
-                }
-               
-            }
-
-            if (!string.IsNullOrEmpty(cbbTo.Text))
-            {
-                for (int i = 0; i < filteredList.Count; ++i)
-                {
-                    if (!filteredList[i].to.Text.Contains(cbbTo.Text))
-                    {
-                        filteredList.RemoveAt(i);
-                    }
-                }
-                
-            }
-
-            //if (!string.IsNullOrEmpty(Time.Text))
-            //{
-            //    for (int i = 0; i < filteredList.Count; ++i)
-            //    {
-            //        if (filteredList[i].date1.Text != Time.Value.ToString("dd/MM/yyyy"))
-            //        {
-            //            filteredList.RemoveAt(i);
-            //        }
-            //    }
-               
-            //}
-
-            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
-            {
-                if (i >= filteredList.Count)
-                {
-                    Add.Enabled = false;
-                    break;
-                }
-                PanelTicket.Controls.Add(filteredList[i]);
-            }
-            label4.Text = filteredList.Count.ToString();
+            
         }
+
     }
 }

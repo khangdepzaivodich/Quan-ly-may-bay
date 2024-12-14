@@ -1,4 +1,5 @@
-﻿using Quan_ly_may_bay.UCFlight;
+﻿using ComponentFactory.Krypton.Toolkit;
+using Quan_ly_may_bay.UCFlight;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,14 +16,15 @@ namespace Quan_ly_may_bay
     {
         private List<UCInfo1> list = new List<UCInfo1>();
         databaseDataContext db = new databaseDataContext();
+        private int id;
         List<Ve> ve = new List<Ve>();
         public BookedTicket(int _id)
         {
             InitializeComponent();
+            id = _id;
             ve = db.Ves.Where(p => p.MaKH == _id).ToList();
             for(int i = 0; i < ve.Count; ++i)
             {
-                Console.WriteLine("Có");
                 ChuyenBay chuyenBay = db.ChuyenBays.FirstOrDefault(p => p.MaCB == ve[i].MaCB);
                 LoTrinh loTrinh = db.LoTrinhs.FirstOrDefault(p => p.MaLT == chuyenBay.MaLT);
                 UCInfo1 uc = new UCInfo1();
@@ -45,6 +47,8 @@ namespace Quan_ly_may_bay
                 string noiDen = db.SanBays.FirstOrDefault(p => p.MaSB == loTrinh.NoiDen).City.ToString();
                 uc.From.Text = noiXuatPhat;
                 uc.To.Text = noiDen;
+                uc.Click += WatchBtn_Click;
+                uc.WatchBtn.Tag = i;
                 list.Add(uc);
             }
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
@@ -57,7 +61,16 @@ namespace Quan_ly_may_bay
                 PanelTicket.Controls.Add(list[i]);
             }
         }
+        private void WatchBtn_Click(object sender, EventArgs e)
+        {
+            KryptonButton btn = sender as KryptonButton;
+            string hoten = db.KhachHangs.FirstOrDefault(p => p.MaKH == id).HoTenKH;
+            string cccd = db.KhachHangs.FirstOrDefault(p => p.MaKH == id).CCCD;
+            string phoneNum = db.KhachHangs.FirstOrDefault(p => p.MaKH == id).SDT;
+            string from = list[(int)btn.Tag].From.Text;
+            string maCB = ve[(int)btn.Tag].MaCB;
 
+        }
         private void lblStt_TextChanged(object sender, EventArgs e)
         {
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)

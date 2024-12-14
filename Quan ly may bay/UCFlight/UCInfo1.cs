@@ -18,11 +18,6 @@ namespace Quan_ly_may_bay.UCFlight
             InitializeComponent();
         }
 
-        private void Xembtn(object sender, EventArgs e)
-        {
-            ReportChuyenBay reportChuyenBay = new ReportChuyenBay();
-            reportChuyenBay.ShowDialog();
-        }
         public Label Level
         {
             get => label1;

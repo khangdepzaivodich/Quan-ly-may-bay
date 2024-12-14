@@ -32,27 +32,27 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.hanhLy = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.Submitbtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.seat = new System.Windows.Forms.Label();
+            this.time1 = new System.Windows.Forms.Label();
+            this.to = new System.Windows.Forms.Label();
+            this.from = new System.Windows.Forms.Label();
+            this.maCB = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.phoneNumLabel = new System.Windows.Forms.Label();
+            this.CCCDLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -101,36 +101,64 @@
             // 
             // kryptonPanel2
             // 
-            this.kryptonPanel2.Controls.Add(this.label20);
+            this.kryptonPanel2.Controls.Add(this.hanhLy);
             this.kryptonPanel2.Controls.Add(this.label19);
             this.kryptonPanel2.Controls.Add(this.Submitbtn);
-            this.kryptonPanel2.Controls.Add(this.label17);
-            this.kryptonPanel2.Controls.Add(this.label16);
-            this.kryptonPanel2.Controls.Add(this.label15);
-            this.kryptonPanel2.Controls.Add(this.label14);
-            this.kryptonPanel2.Controls.Add(this.label13);
+            this.kryptonPanel2.Controls.Add(this.seat);
+            this.kryptonPanel2.Controls.Add(this.time1);
+            this.kryptonPanel2.Controls.Add(this.to);
+            this.kryptonPanel2.Controls.Add(this.from);
+            this.kryptonPanel2.Controls.Add(this.maCB);
             this.kryptonPanel2.Controls.Add(this.label12);
             this.kryptonPanel2.Controls.Add(this.label11);
             this.kryptonPanel2.Controls.Add(this.label10);
             this.kryptonPanel2.Controls.Add(this.label9);
-            this.kryptonPanel2.Controls.Add(this.label8);
-            this.kryptonPanel2.Controls.Add(this.label7);
-            this.kryptonPanel2.Controls.Add(this.label6);
-            this.kryptonPanel2.Controls.Add(this.label5);
+            this.kryptonPanel2.Controls.Add(this.label);
+            this.kryptonPanel2.Controls.Add(this.phoneNumLabel);
+            this.kryptonPanel2.Controls.Add(this.CCCDLabel);
+            this.kryptonPanel2.Controls.Add(this.nameLabel);
             this.kryptonPanel2.Controls.Add(this.label4);
             this.kryptonPanel2.Controls.Add(this.label3);
             this.kryptonPanel2.Controls.Add(this.label2);
             this.kryptonPanel2.Controls.Add(this.label1);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonPanel2.Location = new System.Drawing.Point(0, 82);
+            this.kryptonPanel2.Location = new System.Drawing.Point(0, 78);
             this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(821, 561);
+            this.kryptonPanel2.Size = new System.Drawing.Size(821, 565);
             this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.kryptonPanel2.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.kryptonPanel2.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.kryptonPanel2.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.kryptonPanel2.TabIndex = 2;
+            // 
+            // hanhLy
+            // 
+            this.hanhLy.AutoSize = true;
+            this.hanhLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.hanhLy.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hanhLy.ForeColor = System.Drawing.Color.White;
+            this.hanhLy.Location = new System.Drawing.Point(590, 458);
+            this.hanhLy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.hanhLy.Name = "hanhLy";
+            this.hanhLy.Size = new System.Drawing.Size(69, 35);
+            this.hanhLy.TabIndex = 19;
+            this.hanhLy.Text = "10kg";
+            this.hanhLy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label19.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(392, 458);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(103, 35);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "Hành lý";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Submitbtn
             // 
@@ -176,75 +204,75 @@
             this.Submitbtn.TabIndex = 17;
             this.Submitbtn.Values.Text = "Xuất vé";
             // 
-            // label17
+            // seat
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label17.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(590, 388);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(73, 35);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "B150";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.seat.AutoSize = true;
+            this.seat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.seat.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seat.ForeColor = System.Drawing.Color.White;
+            this.seat.Location = new System.Drawing.Point(590, 388);
+            this.seat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.seat.Name = "seat";
+            this.seat.Size = new System.Drawing.Size(73, 35);
+            this.seat.TabIndex = 16;
+            this.seat.Text = "B150";
+            this.seat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // time1
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label16.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(590, 318);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(194, 35);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "10h 21-12-2024";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.time1.AutoSize = true;
+            this.time1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.time1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time1.ForeColor = System.Drawing.Color.White;
+            this.time1.Location = new System.Drawing.Point(590, 318);
+            this.time1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.time1.Name = "time1";
+            this.time1.Size = new System.Drawing.Size(194, 35);
+            this.time1.TabIndex = 15;
+            this.time1.Text = "10h 21-12-2024";
+            this.time1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // to
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label15.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(590, 248);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(105, 35);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "TP.HCM";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.to.AutoSize = true;
+            this.to.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.to.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.to.ForeColor = System.Drawing.Color.White;
+            this.to.Location = new System.Drawing.Point(590, 248);
+            this.to.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.to.Name = "to";
+            this.to.Size = new System.Drawing.Size(105, 35);
+            this.to.TabIndex = 14;
+            this.to.Text = "TP.HCM";
+            this.to.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // from
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label14.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(590, 178);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(93, 35);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Hà Nội";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.from.AutoSize = true;
+            this.from.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.from.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.from.ForeColor = System.Drawing.Color.White;
+            this.from.Location = new System.Drawing.Point(590, 178);
+            this.from.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.from.Name = "from";
+            this.from.Size = new System.Drawing.Size(93, 35);
+            this.from.TabIndex = 13;
+            this.from.Text = "Hà Nội";
+            this.from.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // maCB
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label13.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(590, 108);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 35);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "HK54601";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.maCB.AutoSize = true;
+            this.maCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.maCB.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maCB.ForeColor = System.Drawing.Color.White;
+            this.maCB.Location = new System.Drawing.Point(590, 108);
+            this.maCB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.maCB.Name = "maCB";
+            this.maCB.Size = new System.Drawing.Size(118, 35);
+            this.maCB.TabIndex = 12;
+            this.maCB.Text = "HK54601";
+            this.maCB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
@@ -302,61 +330,61 @@
             this.label9.Text = "Từ:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // label
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label8.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(392, 108);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(157, 35);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Chuyến bay:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.White;
+            this.label.Location = new System.Drawing.Point(392, 108);
+            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(157, 35);
+            this.label.TabIndex = 7;
+            this.label.Text = "Chuyến bay:";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // phoneNumLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label7.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(195, 240);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 35);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "123456789";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.phoneNumLabel.AutoSize = true;
+            this.phoneNumLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.phoneNumLabel.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneNumLabel.ForeColor = System.Drawing.Color.White;
+            this.phoneNumLabel.Location = new System.Drawing.Point(195, 240);
+            this.phoneNumLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.phoneNumLabel.Name = "phoneNumLabel";
+            this.phoneNumLabel.Size = new System.Drawing.Size(141, 35);
+            this.phoneNumLabel.TabIndex = 6;
+            this.phoneNumLabel.Text = "123456789";
+            this.phoneNumLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // CCCDLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label6.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(197, 173);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 35);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "123456789";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CCCDLabel.AutoSize = true;
+            this.CCCDLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CCCDLabel.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CCCDLabel.ForeColor = System.Drawing.Color.White;
+            this.CCCDLabel.Location = new System.Drawing.Point(197, 173);
+            this.CCCDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CCCDLabel.Name = "CCCDLabel";
+            this.CCCDLabel.Size = new System.Drawing.Size(141, 35);
+            this.CCCDLabel.TabIndex = 5;
+            this.CCCDLabel.Text = "123456789";
+            this.CCCDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // nameLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label5.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(195, 108);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 35);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Nguyễn Văn A";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.nameLabel.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(195, 108);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(176, 35);
+            this.nameLabel.TabIndex = 4;
+            this.nameLabel.Text = "Nguyễn Văn A";
+            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -424,34 +452,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label19.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(392, 458);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(103, 35);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "Hành lý";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label20.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(590, 458);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(69, 35);
-            this.label20.TabIndex = 19;
-            this.label20.Text = "10kg";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ReportChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -493,19 +493,19 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label seat;
+        private System.Windows.Forms.Label time1;
+        private System.Windows.Forms.Label to;
+        private System.Windows.Forms.Label from;
+        private System.Windows.Forms.Label maCB;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label phoneNumLabel;
+        private System.Windows.Forms.Label CCCDLabel;
+        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -513,6 +513,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton Submitbtn;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label hanhLy;
     }
 }
