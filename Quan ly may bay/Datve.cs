@@ -117,13 +117,29 @@ namespace Quan_ly_may_bay
             PanelTicket.Controls.Clear();
             filteredList = new List<UC_Ticket>();
 
-
+            if(cbbFrom.Text == "" || cbbTo.Text == "")
+            {
+                cbbFrom.Text = "";
+                cbbTo.Text = "";
+            }
+            if(cbbFrom.Text != "" && cbbTo.Text != "" && Time.Value == null)
+            {
+                return;
+            }
             for (int i = 0; i < list.Count; ++i)
             {
+                if(cbbFrom.Text != "" && cbbTo.Text != "")
                 if (list[i].from.Text == cbbFrom.Text && list[i].to.Text == cbbTo.Text && list[i].date1.Text == Time.Value.ToString("dd/MM/yyyy")) // Điều kiện lọc
                 {
                     filteredList.Add(list[i]);
                 }
+                else if(Time.Value.ToString("dd/MM/yyyy") != "")
+                    {
+                        if (list[i].date1.Text == Time.Value.ToString("dd/MM/yyyy")) // Điều kiện lọc
+                        {
+                            filteredList.Add(list[i]);
+                        }
+                    }
             }
 
             if (list.Count == 0)

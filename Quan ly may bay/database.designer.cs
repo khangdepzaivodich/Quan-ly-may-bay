@@ -551,6 +551,8 @@ namespace Quan_ly_may_bay
 		
 		private string _Seat;
 		
+		private System.Nullable<int> _Gia;
+		
 		private EntityRef<ChuyenBay> _ChuyenBay;
 		
 		private EntityRef<KhachHang> _KhachHang;
@@ -569,6 +571,8 @@ namespace Quan_ly_may_bay
     partial void OnLevelSeatChanged();
     partial void OnSeatChanging(string value);
     partial void OnSeatChanged();
+    partial void OnGiaChanging(System.Nullable<int> value);
+    partial void OnGiaChanged();
     #endregion
 		
 		public Ve()
@@ -682,6 +686,26 @@ namespace Quan_ly_may_bay
 					this._Seat = value;
 					this.SendPropertyChanged("Seat");
 					this.OnSeatChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia", DbType="Int")]
+		public System.Nullable<int> Gia
+		{
+			get
+			{
+				return this._Gia;
+			}
+			set
+			{
+				if ((this._Gia != value))
+				{
+					this.OnGiaChanging(value);
+					this.SendPropertyChanging();
+					this._Gia = value;
+					this.SendPropertyChanged("Gia");
+					this.OnGiaChanged();
 				}
 			}
 		}
