@@ -276,6 +276,12 @@
     <Compile Include="OTPForm.Designer.cs">
       <DependentUpon>OTPForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PQ.Designer.cs">
+      <DependentUpon>PQ.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -416,6 +422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Capnhatchuyenbay.resx">
       <DependentUpon>Capnhatchuyenbay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PQ.resx">
+      <DependentUpon>PQ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportDSNV.rdlc" />
     <EmbeddedResource Include="ReportDSNV.resx">

@@ -32,6 +32,12 @@ namespace Quan_ly_may_bay
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
+            if(dTpKhoiHanh.Value < DateTime.Now.AddDays(3))
+            {
+                MessageBox.Show("Thời gian phải lớn hơn 3 ngày so với hiện tại!","Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             ChuyenBay cb = db.ChuyenBays.OrderByDescending(p=>p.Stt).FirstOrDefault();
             ChuyenBay cbThem = new ChuyenBay();
 
@@ -41,7 +47,14 @@ namespace Quan_ly_may_bay
 
             cbThem.NgayKH = dTpKhoiHanh.Value;
 
-            cbThem.SoGhe = 100;
+            cbThem.SoGhe = int.Parse(SoGhe.Text);
+
+            ChuyenBay check = db.ChuyenBays.FirstOrDefault(p=>p.MaLT == cbThem.MaLT && p.NgayKH == dTpKhoiHanh.Value);
+            if(check != null)
+            {
+                MessageBox.Show("Chuyến bay đã tồn tại!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             db.ChuyenBays.InsertOnSubmit(cbThem);
             db.SubmitChanges();

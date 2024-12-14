@@ -82,7 +82,7 @@
             // 
             // pAdd
             // 
-            this.pAdd.Location = new System.Drawing.Point(757, 606);
+            this.pAdd.Location = new System.Drawing.Point(757, 577);
             this.pAdd.Name = "pAdd";
             this.pAdd.OverrideDefault.Back.Color1 = System.Drawing.Color.Aqua;
             this.pAdd.OverrideDefault.Back.Color2 = System.Drawing.Color.Aquamarine;
@@ -107,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(821, 668);
+            this.ClientSize = new System.Drawing.Size(821, 644);
             this.Controls.Add(this.pAdd);
             this.Controls.Add(this.lblStt);
             this.Controls.Add(this.Add);

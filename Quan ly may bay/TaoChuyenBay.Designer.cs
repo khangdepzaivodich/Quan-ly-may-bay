@@ -44,7 +44,7 @@
             this.txtGioHaCanh = new System.Windows.Forms.Label();
             this.txtGia = new System.Windows.Forms.Label();
             this.dTpKhoiHanh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.SoGhe = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.CreateButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbbLT = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -256,20 +256,20 @@
             this.dTpKhoiHanh.StateCommon.Content.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dTpKhoiHanh.TabIndex = 28;
             // 
-            // kryptonTextBox1
+            // SoGhe
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(226, 287);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(151, 30);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.SoGhe.Location = new System.Drawing.Point(226, 287);
+            this.SoGhe.Name = "SoGhe";
+            this.SoGhe.Size = new System.Drawing.Size(151, 30);
+            this.SoGhe.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.SoGhe.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.SoGhe.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(184)))), ((int)(((byte)(210)))));
+            this.SoGhe.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.TabIndex = 30;
+            this.SoGhe.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.SoGhe.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SoGhe.TabIndex = 30;
             // 
             // CreateButton
             // 
@@ -380,7 +380,7 @@
             this.Controls.Add(this.cbbLT);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CreateButton);
-            this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.SoGhe);
             this.Controls.Add(this.dTpKhoiHanh);
             this.Controls.Add(this.txtGia);
             this.Controls.Add(this.txtGioHaCanh);
@@ -436,7 +436,7 @@
         private System.Windows.Forms.Label txtGioHaCanh;
         private System.Windows.Forms.Label txtGia;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dTpKhoiHanh;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox SoGhe;
         private ComponentFactory.Krypton.Toolkit.KryptonButton CreateButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbLT;

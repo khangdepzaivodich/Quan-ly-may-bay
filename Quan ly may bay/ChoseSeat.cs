@@ -148,7 +148,7 @@ namespace Quan_ly_may_bay
                 Ve newVe = new Ve();
                 newVe.MaVe = newMaVe;
                 newVe.MaCB = maChuyenBay;
-                newVe.MaKH = account.ID;
+               // newVe.MaKH = account.ID;
                 string newSeat;
                 int numSeat = prevI * 10 + prevJ + 1;
                 if (prevI <= 1)
@@ -168,7 +168,7 @@ namespace Quan_ly_may_bay
                 }
                 newSeat += numSeat.ToString();
                 newVe.Seat = newSeat;
-                label3.Text = newSeat;
+                //label3.Text = newSeat;
             }
         }
 

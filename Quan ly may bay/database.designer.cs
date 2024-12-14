@@ -543,13 +543,15 @@ namespace Quan_ly_may_bay
 		
 		private string _MaVe;
 		
-		private System.Nullable<int> _MaKH;
+		private string _MaKH;
 		
 		private string _MaCB;
 		
 		private System.Nullable<int> _LevelSeat;
 		
 		private string _Seat;
+		
+		private int _Stt;
 		
 		private EntityRef<ChuyenBay> _ChuyenBay;
 		
@@ -559,7 +561,7 @@ namespace Quan_ly_may_bay
     partial void OnCreated();
     partial void OnMaVeChanging(string value);
     partial void OnMaVeChanged();
-    partial void OnMaKHChanging(System.Nullable<int> value);
+    partial void OnMaKHChanging(string value);
     partial void OnMaKHChanged();
     partial void OnMaCBChanging(string value);
     partial void OnMaCBChanged();
@@ -567,6 +569,8 @@ namespace Quan_ly_may_bay
     partial void OnLevelSeatChanged();
     partial void OnSeatChanging(string value);
     partial void OnSeatChanged();
+    partial void OnSttChanging(int value);
+    partial void OnSttChanged();
     #endregion
 		
 		public Ve()
@@ -595,8 +599,8 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKH", DbType="Int")]
-		public System.Nullable<int> MaKH
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKH", DbType="Char(8)")]
+		public string MaKH
 		{
 			get
 			{
@@ -679,6 +683,26 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int Stt
+		{
+			get
+			{
+				return this._Stt;
+			}
+			set
+			{
+				if ((this._Stt != value))
+				{
+					this.OnSttChanging(value);
+					this.SendPropertyChanging();
+					this._Stt = value;
+					this.SendPropertyChanged("Stt");
+					this.OnSttChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChuyenBay_Ve", Storage="_ChuyenBay", ThisKey="MaCB", OtherKey="MaCB", IsForeignKey=true)]
 		public ChuyenBay ChuyenBay
 		{
@@ -746,6 +770,8 @@ namespace Quan_ly_may_bay
 		
 		private string _MoTa;
 		
+		private int _Stt;
+		
 		private EntitySet<NhanVien> _NhanViens;
 		
 		private EntityRef<PhanQuyen> _PhanQuyen;
@@ -760,6 +786,8 @@ namespace Quan_ly_may_bay
     partial void OnTenCVChanged();
     partial void OnMoTaChanging(string value);
     partial void OnMoTaChanged();
+    partial void OnSttChanging(int value);
+    partial void OnSttChanged();
     #endregion
 		
 		public ChucVu()
@@ -825,6 +853,26 @@ namespace Quan_ly_may_bay
 					this._MoTa = value;
 					this.SendPropertyChanged("MoTa");
 					this.OnMoTaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int Stt
+		{
+			get
+			{
+				return this._Stt;
+			}
+			set
+			{
+				if ((this._Stt != value))
+				{
+					this.OnSttChanging(value);
+					this.SendPropertyChanging();
+					this._Stt = value;
+					this.SendPropertyChanged("Stt");
+					this.OnSttChanged();
 				}
 			}
 		}
