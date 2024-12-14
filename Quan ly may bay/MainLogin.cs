@@ -125,14 +125,14 @@ namespace Quan_ly_may_bay
             uc.BackColor = Color.FromArgb(128, 255, 255, 255);
             if (uc.Text == "View Ticket")
             {
-                frm = new Datve();
+                frm = new Datve(account.ID);
                 frm.TopLevel = false;
                 panelMain.Controls.Add(frm);
                 frm.Show();
             }
             else if (uc.Text == "Booked Ticket")
             {
-                frm = new BookedTicket();
+                frm = new BookedTicket(account.ID);
                 frm.TopLevel = false;
                 panelMain.Controls.Add(frm);
                 frm.Show();

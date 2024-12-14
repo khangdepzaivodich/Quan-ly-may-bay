@@ -15,9 +15,9 @@ namespace Quan_ly_may_bay
         private KryptonButton[,] seats = new KryptonButton[7, 10];
         private databaseDataContext db = new databaseDataContext();
         private List<Ve> ve = new List<Ve>();
-       private List<Ve> tongVe = new List<Ve>(); 
+        private List<Ve> tongVe = new List<Ve>(); 
         private int prevI = -1, prevJ = -1;
-        private string currentMaVe;
+        private int currentSoVe;
         private Account account;
         string maChuyenBay;
         public ChoseSeat(string _maChuyenBay, int _id)
@@ -27,7 +27,7 @@ namespace Quan_ly_may_bay
             maChuyenBay = _maChuyenBay;
             account = db.Accounts.FirstOrDefault(p => p.ID == _id);
             tongVe = db.Ves.OrderBy(p => p.MaVe).ToList();
-            currentMaVe = tongVe[tongVe.Count - 1].MaVe;
+            currentSoVe = tongVe.Count;
             CreateSeats();
             LoadSeats();
         }   
@@ -148,7 +148,7 @@ namespace Quan_ly_may_bay
                 Ve newVe = new Ve();
                 newVe.MaVe = newMaVe;
                 newVe.MaCB = maChuyenBay;
-               // newVe.MaKH = account.ID;
+                newVe.MaKH = account.ID;
                 string newSeat;
                 int numSeat = prevI * 10 + prevJ + 1;
                 if (prevI <= 1)
@@ -168,22 +168,24 @@ namespace Quan_ly_may_bay
                 }
                 newSeat += numSeat.ToString();
                 newVe.Seat = newSeat;
-                //label3.Text = newSeat;
             }
         }
 
         private string GenerateMaVe()
         {
-            string maVe = currentMaVe;
-            int soMaVe = int.Parse(maVe.Substring(1, 7)) + 1;
-            string newMaVe = "V";
-            while (newMaVe.Length + soMaVe.ToString().Length < 8)
+            string newMaVe = "HK";
+            while (newMaVe.Length + currentSoVe.ToString().Length < 10)
             {
                 newMaVe += "0";
             }
-            newMaVe += soMaVe.ToString();
-            currentMaVe = newMaVe;
+            ++currentSoVe;
+            newMaVe += currentSoVe.ToString();
             return newMaVe;
+        }
+
+        private void CloseLabel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void _btn_Click(object sender, EventArgs e)
