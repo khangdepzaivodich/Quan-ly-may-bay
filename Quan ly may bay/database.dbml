@@ -33,6 +33,7 @@
       <Column Name="MaCV" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenCV" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="MoTa" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Association Name="ChucVu_NhanVien" Member="NhanViens" ThisKey="MaCV" OtherKey="MaCV" Type="NhanVien" />
       <Association Name="ChucVu_PhanQuyen" Member="PhanQuyen" ThisKey="MaCV" OtherKey="PQ" Type="PhanQuyen" Cardinality="One" />
     </Type>
@@ -43,6 +44,7 @@
       <Column Name="MaLT" Type="System.String" DbType="Char(4)" CanBeNull="true" />
       <Column Name="NgayKH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="SoGhe" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Association Name="ChuyenBay_Ve" Member="Ves" ThisKey="MaCB" OtherKey="MaCB" Type="Ve" />
       <Association Name="LoTrinh_ChuyenBay" Member="LoTrinh" ThisKey="MaLT" OtherKey="MaLT" Type="LoTrinh" IsForeignKey="true" />
     </Type>
@@ -69,6 +71,7 @@
       <Column Name="GioCatCanh" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
       <Column Name="GioHaCanh" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
       <Column Name="Gia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Association Name="LoTrinh_ChuyenBay" Member="ChuyenBays" ThisKey="MaLT" OtherKey="MaLT" Type="ChuyenBay" />
       <Association Name="MayBay_LoTrinh" Member="MayBay" ThisKey="MaMB" OtherKey="MaMB" Type="MayBay" IsForeignKey="true" />
       <Association Name="SanBay_LoTrinh" Member="SanBay" ThisKey="NoiXuatPhat" OtherKey="MaSB" Type="SanBay" IsForeignKey="true" />
@@ -81,6 +84,7 @@
       <Column Name="TypeMB" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="DateNhapVe" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="HangSanXuat" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Association Name="MayBay_LoTrinh" Member="LoTrinhs" ThisKey="MaMB" OtherKey="MaMB" Type="LoTrinh" />
     </Type>
   </Table>
@@ -95,7 +99,7 @@
       <Column Name="MaCV" Type="System.String" DbType="Char(4)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Luong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Luong" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
       <Association Name="Account_NhanVien" Member="Account" ThisKey="ID" OtherKey="ID" Type="Account" IsForeignKey="true" />
       <Association Name="ChucVu_NhanVien" Member="ChucVu" ThisKey="MaCV" OtherKey="MaCV" Type="ChucVu" IsForeignKey="true" />
     </Type>
@@ -107,6 +111,7 @@
       <Column Name="FlightItinerary" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CreateFlight" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ManageStaff" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Association Name="ChucVu_PhanQuyen" Member="ChucVu" ThisKey="PQ" OtherKey="MaCV" Type="ChucVu" IsForeignKey="true" />
     </Type>
   </Table>
@@ -115,6 +120,7 @@
       <Column Name="MaSB" Type="System.String" DbType="Char(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenSB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="City" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Association Name="SanBay_LoTrinh" Member="LoTrinhs" ThisKey="MaSB" OtherKey="NoiXuatPhat" Type="LoTrinh" />
       <Association Name="SanBay_LoTrinh1" Member="LoTrinhs1" ThisKey="MaSB" OtherKey="NoiDen" Type="LoTrinh" />
     </Type>

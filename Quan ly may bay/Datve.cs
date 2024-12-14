@@ -19,7 +19,7 @@ namespace Quan_ly_may_bay
         private List<UC_Ticket> filteredList = new List<UC_Ticket>();
         private List<ChuyenBay> chuyenBays = new List<ChuyenBay>();
         private int id;
-        databaseDataContext db = new databaseDataContext();
+        private databaseDataContext db = new databaseDataContext();
         public Datve(int _id)
         {
             InitializeComponent();
@@ -64,47 +64,14 @@ namespace Quan_ly_may_bay
                     Add.Enabled = false;
                     break;
                 }
-                PanelTicket.Controls.Add(filteredList[i]);
+                PanelTicket.Controls.Add(list[i]);
             }
-            cbbFrom.Items.Add("Đắk Lắk");
-            cbbFrom.Items.Add("Cà Mau");
-            cbbFrom.Items.Add("Khánh Hòa");
-            cbbFrom.Items.Add("Đà Nẵng");
-            cbbFrom.Items.Add("Điện Biên");
-            cbbFrom.Items.Add("Lâm Đồng");
-            cbbFrom.Items.Add("Hà Nội");
-            cbbFrom.Items.Add("Thừa Thiên Huế");
-            cbbFrom.Items.Add("Kiên Giang");
-            cbbFrom.Items.Add("Gia Lai");
-            cbbFrom.Items.Add("TP Hồ Chí Minh");
-            cbbFrom.Items.Add("Phú Yên");
-            cbbFrom.Items.Add("Thanh Hóa");
-            cbbFrom.Items.Add("Cần Thơ");
-            cbbFrom.Items.Add("Quảng Nam");
-            cbbFrom.Items.Add("Bà Rịa - Vũng Tàu");
-            cbbFrom.Items.Add("Quảng Bình");
-            cbbFrom.Items.Add("Quảng Ninh");
-            cbbFrom.Items.Add("Nghệ An");
 
-            cbbTo.Items.Add("Đắk Lắk");
-            cbbTo.Items.Add("Cà Mau");
-            cbbTo.Items.Add("Khánh Hòa");
-            cbbTo.Items.Add("Đà Nẵng");
-            cbbTo.Items.Add("Điện Biên");
-            cbbTo.Items.Add("Lâm Đồng");
-            cbbTo.Items.Add("Hà Nội");
-            cbbTo.Items.Add("Thừa Thiên Huế");
-            cbbTo.Items.Add("Kiên Giang");
-            cbbTo.Items.Add("Gia Lai");
-            cbbTo.Items.Add("TP Hồ Chí Minh");
-            cbbTo.Items.Add("Phú Yên");
-            cbbTo.Items.Add("Thanh Hóa");
-            cbbTo.Items.Add("Cần Thơ");
-            cbbTo.Items.Add("Quảng Nam");
-            cbbTo.Items.Add("Bà Rịa - Vũng Tàu");
-            cbbTo.Items.Add("Quảng Bình");
-            cbbTo.Items.Add("Quảng Ninh");
-            cbbTo.Items.Add("Nghệ An");
+            cbbFrom.DataSource = db.SanBays;
+            cbbFrom.DisplayMember = "City";
+
+            cbbTo.DataSource = db.SanBays.ToList();
+            cbbTo.DisplayMember = "City";
         }
         private void DetailBtn_Click(object sender, EventArgs e)
         {
@@ -148,43 +115,25 @@ namespace Quan_ly_may_bay
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             PanelTicket.Controls.Clear();
-            filteredList = list;
+            filteredList = new List<UC_Ticket>();
 
-            if (!string.IsNullOrEmpty(cbbFrom.Text))
+
+            for (int i = 0; i < list.Count; ++i)
             {
-                for(int i =  0; i < filteredList.Count; ++i)
+                if (list[i].from.Text == cbbFrom.Text && list[i].to.Text == cbbTo.Text && list[i].date1.Text == Time.Value.ToString("dd/MM/yyyy")) // Điều kiện lọc
                 {
-                    if (!filteredList[i].from.Text.Contains(cbbFrom.Text))
-                    {
-                        filteredList.RemoveAt(i);
-                    }
+                    filteredList.Add(list[i]);
                 }
-               
             }
 
-            if (!string.IsNullOrEmpty(cbbTo.Text))
+            if (list.Count == 0)
             {
-                for (int i = 0; i < filteredList.Count; ++i)
-                {
-                    if (!filteredList[i].to.Text.Contains(cbbTo.Text))
-                    {
-                        filteredList.RemoveAt(i);
-                    }
-                }
-                
+                MessageBox.Show("Không tìm thấy kết quả phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Add.Enabled = false;
+                return;
             }
 
-            //if (!string.IsNullOrEmpty(Time.Text))
-            //{
-            //    for (int i = 0; i < filteredList.Count; ++i)
-            //    {
-            //        if (filteredList[i].date1.Text != Time.Value.ToString("dd/MM/yyyy"))
-            //        {
-            //            filteredList.RemoveAt(i);
-            //        }
-            //    }
-               
-            //}
+            lblStt.Text = "0";
 
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
@@ -195,7 +144,6 @@ namespace Quan_ly_may_bay
                 }
                 PanelTicket.Controls.Add(filteredList[i]);
             }
-            label4.Text = filteredList.Count.ToString();
         }
     }
 }
