@@ -202,14 +202,17 @@
   <data name="pngtree-orange-suitcase-icon-image_1168652-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-orange-suitcase-icon-image_1168652-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="nen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nen1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="quangninh2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quangninh2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="line" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="circle-x (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circle-x (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nui-phu-si-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nui-phu-si-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quangninh3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quangninh3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,31 +220,31 @@
   <data name="nen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="circle-x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle-x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="chuong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chuong.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow-big-down-lines" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-big-down-lines.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nen1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="line" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hanoi3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hanoi3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="chevron-right-pipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chevron-right-pipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow-left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nui-phu-si-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nui-phu-si-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="circle-x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle-x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hcm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hcm2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chevron-right-pipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chevron-right-pipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

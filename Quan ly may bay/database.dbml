@@ -19,12 +19,14 @@
   </Table>
   <Table Name="dbo.Ve" Member="Ves">
     <Type Name="Ve">
+      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaVe" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaKH" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaCB" Type="System.String" DbType="Char(7)" CanBeNull="true" />
       <Column Name="LevelSeat" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Seat" Type="System.String" DbType="Char(3)" CanBeNull="true" />
       <Association Name="ChuyenBay_Ve" Member="ChuyenBay" ThisKey="MaCB" OtherKey="MaCB" Type="ChuyenBay" IsForeignKey="true" />
+      <Association Name="KhachHang_Ve" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ChucVu" Member="ChucVus">
@@ -55,6 +57,7 @@
       <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
       <Column Name="SDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="CCCD" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Association Name="KhachHang_Ve" Member="Ves" ThisKey="MaKH" OtherKey="MaKH" Type="Ve" />
       <Association Name="Account_KhachHang" Member="Account" ThisKey="MaKH" OtherKey="ID" Type="Account" IsForeignKey="true" />
     </Type>
   </Table>

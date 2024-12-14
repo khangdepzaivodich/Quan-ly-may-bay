@@ -17,7 +17,7 @@ namespace Quan_ly_may_bay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManageStaff(10000000));
+            Application.Run(new Chitietchuyenbay());
         }
     }
 }

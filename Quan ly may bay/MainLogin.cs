@@ -33,6 +33,7 @@ namespace Quan_ly_may_bay
             "Flight Itinerary",
             "Create Flight",
             "Manage Staff",
+            "Manager",
         };
         private Form frm;
         private Account account;
@@ -111,10 +112,6 @@ namespace Quan_ly_may_bay
 
         private void Btnclick(object sender, EventArgs e)
         {
-            //foreach(Form frm in panelMain.Controls)
-            //{
-            //    panelMain.Controls.Remove(frm);
-            //}
             panelMain.Controls.Remove(frm);
             foreach (UC_btnMainForm btn in fpanelBtn.Controls)
             {
@@ -128,14 +125,14 @@ namespace Quan_ly_may_bay
             uc.BackColor = Color.FromArgb(128, 255, 255, 255);
             if (uc.Text == "View Ticket")
             {
-                frm = new Datve();
+                frm = new Datve(account.ID);
                 frm.TopLevel = false;
                 panelMain.Controls.Add(frm);
                 frm.Show();
             }
             else if (uc.Text == "Booked Ticket")
             {
-                frm = new BookedTicket();
+                frm = new BookedTicket(account.ID);
                 frm.TopLevel = false;
                 panelMain.Controls.Add(frm);
                 frm.Show();
@@ -157,6 +154,13 @@ namespace Quan_ly_may_bay
             else if (uc.Text == "Manage Staff")
             {
                 frm = new ManageStaff(account.ID);
+                frm.TopLevel = false;
+                panelMain.Controls.Add(frm);
+                frm.Show();
+            }
+            else if (uc.Text == "Manager")
+            {
+                frm = new PQ();
                 frm.TopLevel = false;
                 panelMain.Controls.Add(frm);
                 frm.Show();

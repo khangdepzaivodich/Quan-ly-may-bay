@@ -34,7 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.DetailBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -135,24 +135,24 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "11/01/2024";
             // 
-            // kryptonButton3
+            // DetailBtn
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(693, 19);
-            this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kryptonButton3.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kryptonButton3.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton3.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton3.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold);
-            this.kryptonButton3.Size = new System.Drawing.Size(84, 38);
-            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.GreenYellow;
-            this.kryptonButton3.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
-            this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton3.TabIndex = 12;
-            this.kryptonButton3.Values.Text = "Chi tiết";
+            this.DetailBtn.Location = new System.Drawing.Point(693, 19);
+            this.DetailBtn.Name = "DetailBtn";
+            this.DetailBtn.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DetailBtn.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DetailBtn.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.DetailBtn.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.DetailBtn.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold);
+            this.DetailBtn.Size = new System.Drawing.Size(84, 38);
+            this.DetailBtn.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DetailBtn.StateCommon.Back.Color2 = System.Drawing.Color.GreenYellow;
+            this.DetailBtn.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Dashed;
+            this.DetailBtn.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.DetailBtn.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.DetailBtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailBtn.TabIndex = 12;
+            this.DetailBtn.Values.Text = "Chi tiết";
             // 
             // pictureBox1
             // 
@@ -197,7 +197,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.kryptonButton3);
+            this.Controls.Add(this.DetailBtn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -220,7 +220,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton DetailBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
