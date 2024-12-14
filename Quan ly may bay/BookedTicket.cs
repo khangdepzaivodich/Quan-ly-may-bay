@@ -22,6 +22,7 @@ namespace Quan_ly_may_bay
             ve = db.Ves.Where(p => p.MaKH == _id).OrderBy(p => p.Stt).ToList();
             for(int i = 0; i < ve.Count; ++i)
             {
+                Console.WriteLine("Có");
                 ChuyenBay chuyenBay = db.ChuyenBays.FirstOrDefault(p => p.MaCB == ve[i].MaCB);
                 LoTrinh loTrinh = db.LoTrinhs.FirstOrDefault(p => p.MaLT == chuyenBay.MaLT);
                 UCInfo1 uc = new UCInfo1();

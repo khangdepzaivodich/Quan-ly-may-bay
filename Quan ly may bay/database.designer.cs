@@ -541,6 +541,8 @@ namespace Quan_ly_may_bay
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
+		private int _Stt;
+		
 		private string _MaVe;
 		
 		private System.Nullable<int> _MaKH;
@@ -551,8 +553,6 @@ namespace Quan_ly_may_bay
 		
 		private string _Seat;
 		
-		private int _Stt;
-		
 		private EntityRef<ChuyenBay> _ChuyenBay;
 		
 		private EntityRef<KhachHang> _KhachHang;
@@ -561,6 +561,8 @@ namespace Quan_ly_may_bay
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
+    partial void OnSttChanging(int value);
+    partial void OnSttChanged();
     partial void OnMaVeChanging(string value);
     partial void OnMaVeChanged();
     partial void OnMaKHChanging(System.Nullable<int> value);
@@ -571,8 +573,6 @@ namespace Quan_ly_may_bay
     partial void OnLevelSeatChanged();
     partial void OnSeatChanging(string value);
     partial void OnSeatChanged();
-    partial void OnSttChanging(int value);
-    partial void OnSttChanged();
     #endregion
 		
 		public Ve()
@@ -580,6 +580,26 @@ namespace Quan_ly_may_bay
 			this._ChuyenBay = default(EntityRef<ChuyenBay>);
 			this._KhachHang = default(EntityRef<KhachHang>);
 			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int Stt
+		{
+			get
+			{
+				return this._Stt;
+			}
+			set
+			{
+				if ((this._Stt != value))
+				{
+					this.OnSttChanging(value);
+					this.SendPropertyChanging();
+					this._Stt = value;
+					this.SendPropertyChanged("Stt");
+					this.OnSttChanged();
+				}
+			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaVe", DbType="Char(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
@@ -686,26 +706,6 @@ namespace Quan_ly_may_bay
 					this._Seat = value;
 					this.SendPropertyChanged("Seat");
 					this.OnSeatChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int Stt
-		{
-			get
-			{
-				return this._Stt;
-			}
-			set
-			{
-				if ((this._Stt != value))
-				{
-					this.OnSttChanging(value);
-					this.SendPropertyChanging();
-					this._Stt = value;
-					this.SendPropertyChanged("Stt");
-					this.OnSttChanged();
 				}
 			}
 		}
