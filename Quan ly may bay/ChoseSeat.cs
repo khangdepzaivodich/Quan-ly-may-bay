@@ -12,14 +12,16 @@ namespace Quan_ly_may_bay
 {
     public partial class ChoseSeat : KryptonForm
     {
-        private KryptonButton[,] seats = new KryptonButton[7, 10];
+        private KryptonButton[,] seats = new KryptonButton[10, 10];
         private databaseDataContext db = new databaseDataContext();
         private List<Ve> ve = new List<Ve>();
         private List<Ve> tongVe = new List<Ve>(); 
         private int prevI = -1, prevJ = -1;
         private int currentSoVe;
         private Account account;
+       
         string maChuyenBay;
+        Chitietchuyenbay chitietchuyenbay;
         public ChoseSeat(string _maChuyenBay, int _id)
         {
             InitializeComponent();
@@ -30,7 +32,20 @@ namespace Quan_ly_may_bay
             currentSoVe = tongVe.Count;
             CreateSeats();
             LoadSeats();
-        }   
+        }
+        public ChoseSeat(string _maChuyenBay, int _id, Chitietchuyenbay _chitietchuyenbay)
+        {
+            InitializeComponent();
+            chitietchuyenbay = _chitietchuyenbay;
+            ve = db.Ves.Where(p => p.MaCB == _maChuyenBay).ToList();
+            maChuyenBay = _maChuyenBay;
+            account = db.Accounts.FirstOrDefault(p => p.ID == _id);
+            tongVe = db.Ves.OrderBy(p => p.MaVe).ToList();
+            currentSoVe = tongVe.Count;
+            CreateSeats();
+            LoadSeats();
+        }
+
         private void LoadSeats()
         {
             for(int i = 0; i < ve.Count; i++)
@@ -77,7 +92,7 @@ namespace Quan_ly_may_bay
                     button.BringToFront();
                 }
             }
-            for(int i = 2; i < 7; ++i)
+            for(int i = 2; i < 10; ++i)
             {
                 for (int j = 0; j < 5; ++j)
                 {
@@ -168,8 +183,9 @@ namespace Quan_ly_may_bay
                 }
                 newSeat += numSeat.ToString();
                 newVe.Seat = newSeat;
-                db.Ves.InsertOnSubmit(newVe);
-                db.SubmitChanges();
+                chitietchuyenbay.SetValue(newSeat);
+                chitietchuyenbay.SetVe(newVe);
+                this.Close();
             }
         }
 
@@ -182,6 +198,7 @@ namespace Quan_ly_may_bay
             }
             ++currentSoVe;
             newMaVe += currentSoVe.ToString();
+           
             return newMaVe;
         }
 

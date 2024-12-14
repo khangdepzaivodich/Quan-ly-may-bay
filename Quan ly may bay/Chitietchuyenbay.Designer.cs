@@ -30,26 +30,23 @@
         {
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.time1 = new System.Windows.Forms.Label();
+            this.date1 = new System.Windows.Forms.Label();
+            this.time2 = new System.Windows.Forms.Label();
+            this.from = new System.Windows.Forms.Label();
+            this.sanbay1 = new System.Windows.Forms.Label();
+            this.to = new System.Windows.Forms.Label();
+            this.sanbay2 = new System.Windows.Forms.Label();
+            this.date2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.tongSoTextBox = new System.Windows.Forms.Label();
+            this.giaHanhLyTextBox = new System.Windows.Forms.Label();
+            this.giaVeTextBox = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -65,7 +62,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Black;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(12, 9);
@@ -77,7 +74,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 41);
@@ -86,101 +83,101 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "HK10056";
             // 
-            // label2
+            // time1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(146, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "10:00";
+            this.time1.AutoSize = true;
+            this.time1.BackColor = System.Drawing.Color.Transparent;
+            this.time1.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time1.ForeColor = System.Drawing.Color.Lime;
+            this.time1.Location = new System.Drawing.Point(146, 28);
+            this.time1.Name = "time1";
+            this.time1.Size = new System.Drawing.Size(56, 20);
+            this.time1.TabIndex = 11;
+            this.time1.Text = "10:00";
             // 
-            // label3
+            // date1
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Lime;
-            this.label3.Location = new System.Drawing.Point(146, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 20);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "10/12/2024";
+            this.date1.AutoSize = true;
+            this.date1.BackColor = System.Drawing.Color.Transparent;
+            this.date1.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date1.ForeColor = System.Drawing.Color.Lime;
+            this.date1.Location = new System.Drawing.Point(146, 52);
+            this.date1.Name = "date1";
+            this.date1.Size = new System.Drawing.Size(106, 20);
+            this.date1.TabIndex = 12;
+            this.date1.Text = "10/12/2024";
             // 
-            // label4
+            // time2
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(146, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 20);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "11:00";
+            this.time2.AutoSize = true;
+            this.time2.BackColor = System.Drawing.Color.Transparent;
+            this.time2.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time2.ForeColor = System.Drawing.Color.Yellow;
+            this.time2.Location = new System.Drawing.Point(146, 148);
+            this.time2.Name = "time2";
+            this.time2.Size = new System.Drawing.Size(54, 20);
+            this.time2.TabIndex = 13;
+            this.time2.Text = "11:00";
             // 
-            // label6
+            // from
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Lime;
-            this.label6.Location = new System.Drawing.Point(293, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 20);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Hà Nội";
+            this.from.AutoSize = true;
+            this.from.BackColor = System.Drawing.Color.Transparent;
+            this.from.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.from.ForeColor = System.Drawing.Color.Lime;
+            this.from.Location = new System.Drawing.Point(293, 28);
+            this.from.Name = "from";
+            this.from.Size = new System.Drawing.Size(64, 20);
+            this.from.TabIndex = 15;
+            this.from.Text = "Hà Nội";
             // 
-            // label8
+            // sanbay1
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Black;
-            this.label8.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Lime;
-            this.label8.Location = new System.Drawing.Point(293, 52);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(139, 20);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Sân bay Nội Bài";
+            this.sanbay1.AutoSize = true;
+            this.sanbay1.BackColor = System.Drawing.Color.Transparent;
+            this.sanbay1.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sanbay1.ForeColor = System.Drawing.Color.Lime;
+            this.sanbay1.Location = new System.Drawing.Point(293, 52);
+            this.sanbay1.Name = "sanbay1";
+            this.sanbay1.Size = new System.Drawing.Size(139, 20);
+            this.sanbay1.TabIndex = 16;
+            this.sanbay1.Text = "Sân bay Nội Bài";
             // 
-            // label9
+            // to
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Black;
-            this.label9.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Yellow;
-            this.label9.Location = new System.Drawing.Point(293, 148);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 20);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Phú Quốc";
+            this.to.AutoSize = true;
+            this.to.BackColor = System.Drawing.Color.Transparent;
+            this.to.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.to.ForeColor = System.Drawing.Color.Yellow;
+            this.to.Location = new System.Drawing.Point(293, 148);
+            this.to.Name = "to";
+            this.to.Size = new System.Drawing.Size(87, 20);
+            this.to.TabIndex = 17;
+            this.to.Text = "Phú Quốc";
             // 
-            // label10
+            // sanbay2
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Black;
-            this.label10.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Yellow;
-            this.label10.Location = new System.Drawing.Point(293, 186);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(158, 20);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Sân bay Phú Quốc";
+            this.sanbay2.AutoSize = true;
+            this.sanbay2.BackColor = System.Drawing.Color.Transparent;
+            this.sanbay2.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sanbay2.ForeColor = System.Drawing.Color.Yellow;
+            this.sanbay2.Location = new System.Drawing.Point(293, 186);
+            this.sanbay2.Name = "sanbay2";
+            this.sanbay2.Size = new System.Drawing.Size(158, 20);
+            this.sanbay2.TabIndex = 18;
+            this.sanbay2.Text = "Sân bay Phú Quốc";
             // 
-            // label5
+            // date2
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(146, 186);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 20);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "10/12/2024";
+            this.date2.AutoSize = true;
+            this.date2.BackColor = System.Drawing.Color.Transparent;
+            this.date2.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date2.ForeColor = System.Drawing.Color.Yellow;
+            this.date2.Location = new System.Drawing.Point(146, 186);
+            this.date2.Name = "date2";
+            this.date2.Size = new System.Drawing.Size(106, 20);
+            this.date2.TabIndex = 19;
+            this.date2.Text = "10/12/2024";
             // 
             // pictureBox1
             // 
@@ -195,7 +192,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Black;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Cyan;
             this.label11.Location = new System.Drawing.Point(12, 236);
@@ -215,11 +212,12 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(54, 22);
             this.numericUpDown1.TabIndex = 23;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Black;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Cyan;
             this.label12.Location = new System.Drawing.Point(325, 237);
@@ -243,12 +241,9 @@
             // 
             // kryptonGroupBox1.Panel
             // 
-            this.kryptonGroupBox1.Panel.Controls.Add(this.label18);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.label17);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.label16);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.label15);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.label14);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.label13);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.tongSoTextBox);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.giaHanhLyTextBox);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.giaVeTextBox);
             this.kryptonGroupBox1.Panel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.kryptonGroupBox1.Size = new System.Drawing.Size(321, 157);
             this.kryptonGroupBox1.StateCommon.Back.Color1 = System.Drawing.Color.Black;
@@ -270,77 +265,41 @@
             this.kryptonGroupBox1.TabIndex = 27;
             this.kryptonGroupBox1.Values.Heading = "Tổng";
             // 
-            // label13
+            // tongSoTextBox
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Black;
-            this.label13.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(3, 10);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 20);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Giá vé";
+            this.tongSoTextBox.AutoSize = true;
+            this.tongSoTextBox.BackColor = System.Drawing.Color.Black;
+            this.tongSoTextBox.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tongSoTextBox.ForeColor = System.Drawing.Color.White;
+            this.tongSoTextBox.Location = new System.Drawing.Point(3, 82);
+            this.tongSoTextBox.Name = "tongSoTextBox";
+            this.tongSoTextBox.Size = new System.Drawing.Size(73, 20);
+            this.tongSoTextBox.TabIndex = 30;
+            this.tongSoTextBox.Text = "Tổng số";
             // 
-            // label14
+            // giaHanhLyTextBox
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Black;
-            this.label14.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(3, 44);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(102, 20);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "Giá hành lý";
+            this.giaHanhLyTextBox.AutoSize = true;
+            this.giaHanhLyTextBox.BackColor = System.Drawing.Color.Black;
+            this.giaHanhLyTextBox.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.giaHanhLyTextBox.ForeColor = System.Drawing.Color.White;
+            this.giaHanhLyTextBox.Location = new System.Drawing.Point(3, 44);
+            this.giaHanhLyTextBox.Name = "giaHanhLyTextBox";
+            this.giaHanhLyTextBox.Size = new System.Drawing.Size(102, 20);
+            this.giaHanhLyTextBox.TabIndex = 29;
+            this.giaHanhLyTextBox.Text = "Giá hành lý";
             // 
-            // label15
+            // giaVeTextBox
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Black;
-            this.label15.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(3, 82);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 20);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Tổng số";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Black;
-            this.label16.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(138, 10);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 20);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "Giá vé";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Black;
-            this.label17.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(138, 44);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 20);
-            this.label17.TabIndex = 32;
-            this.label17.Text = "Giá vé";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Black;
-            this.label18.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(138, 82);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 20);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "Giá vé";
+            this.giaVeTextBox.AutoSize = true;
+            this.giaVeTextBox.BackColor = System.Drawing.Color.Black;
+            this.giaVeTextBox.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.giaVeTextBox.ForeColor = System.Drawing.Color.White;
+            this.giaVeTextBox.Location = new System.Drawing.Point(3, 10);
+            this.giaVeTextBox.Name = "giaVeTextBox";
+            this.giaVeTextBox.Size = new System.Drawing.Size(60, 20);
+            this.giaVeTextBox.TabIndex = 28;
+            this.giaVeTextBox.Text = "Giá vé";
             // 
             // pictureBox2
             // 
@@ -375,12 +334,13 @@
             this.button2.TabIndex = 35;
             this.button2.Text = "Thanh toán";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Chitietchuyenbay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(564, 452);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -391,19 +351,19 @@
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.date2);
+            this.Controls.Add(this.sanbay2);
+            this.Controls.Add(this.to);
+            this.Controls.Add(this.sanbay1);
+            this.Controls.Add(this.from);
+            this.Controls.Add(this.time2);
+            this.Controls.Add(this.date1);
+            this.Controls.Add(this.time1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Chitietchuyenbay";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StateCommon.Border.Color1 = System.Drawing.Color.White;
             this.StateCommon.Border.Color2 = System.Drawing.Color.White;
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -430,26 +390,23 @@
 
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label time1;
+        private System.Windows.Forms.Label date1;
+        private System.Windows.Forms.Label time2;
+        private System.Windows.Forms.Label from;
+        private System.Windows.Forms.Label sanbay1;
+        private System.Windows.Forms.Label to;
+        private System.Windows.Forms.Label sanbay2;
+        private System.Windows.Forms.Label date2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label tongSoTextBox;
+        private System.Windows.Forms.Label giaHanhLyTextBox;
+        private System.Windows.Forms.Label giaVeTextBox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
