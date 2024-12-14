@@ -27,7 +27,6 @@ namespace Quan_ly_may_bay
         public OTPForm(Form _frm, int _id)
         {
             InitializeComponent();
-            ResendButton.Enabled = false;
             frm = _frm;
             id = _id;
             account = db.Accounts.FirstOrDefault(p => p.ID == id);
@@ -35,6 +34,8 @@ namespace Quan_ly_may_bay
         private void CloseLabel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            MainNotLogin mainLogin = new MainNotLogin();
+            mainLogin.ShowDialog();
             this.Close();
         }
 
@@ -125,7 +126,6 @@ namespace Quan_ly_may_bay
             SendMail.SendMailTo(account.Email, rd.ToString());
             account.OTPDateSend = DateTime.Now;
             db.SubmitChanges();
-            ResendButton.Enabled = false;
 
             ///Xóa toàn bộ OTP nguoi dung nhap
             foreach (KryptonRichTextBox textBox in this.Controls.OfType<KryptonRichTextBox>())

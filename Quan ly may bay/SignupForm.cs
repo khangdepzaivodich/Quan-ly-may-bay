@@ -84,7 +84,7 @@ namespace Quan_ly_may_bay
             }
             else if (db.Accounts.FirstOrDefault(p => p.Email == EmailTextBox.Text) != null)
             {
-                errUsername.SetError(UsernameTextBox, "Email đã được dùng!");
+                errEmail.SetError(EmailTextBox, "Email đã được dùng!");
                 EmailTextBox.Focus();
                 return;
             }
@@ -112,7 +112,7 @@ namespace Quan_ly_may_bay
             db.KhachHangs.InsertOnSubmit(newKhachHang);
             db.SubmitChanges();
 
-            SendMail.SendMailTo(newAccount.Email, rd.ToString());
+            SendMail.SendMailTo(newAccount.Email, "Mã xác thực của bạn là " + rd.ToString());
             this.Hide();
             OTPForm oTPForm = new OTPForm(this, newAccount.ID);
             oTPForm.ShowDialog();
