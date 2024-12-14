@@ -81,7 +81,19 @@ namespace Quan_ly_may_bay
             if(account.Active == 0)
             {
                 MessageBox.Show("Tài khoản chưa được kích hoạt! Nhấn OK để gửi mã OTP để kích hoạt", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                OTPForm otp = new OTPForm(this,account.ID);
+                Random random = new Random();
+                int rd = random.Next(100000, 999999);
+                while (rd == account.OTP)
+                {
+                    rd = random.Next(100000, 999999);
+                }
+                account.RandomKey = rd;
+                account.OTPDateSend = DateTime.Now;
+                SendMail.SendMailTo(account.Email, rd.ToString());
+                db.SubmitChanges();
+                this.Hide();
+                OTPForm oTPForm = new OTPForm(this, account.ID);
+                oTPForm.ShowDialog();
                 return;
             }
             string str = PasswordTextBox.Text + account.OTP;

@@ -16,9 +16,10 @@ namespace Quan_ly_may_bay
     public partial class Datve : KryptonForm
     {
         private List<UC_Ticket> list = new List<UC_Ticket>();
+        private List<UC_Ticket> filteredList = new List<UC_Ticket>();
         private List<ChuyenBay> chuyenBays = new List<ChuyenBay>();
         private int id;
-        databaseDataContext db = new databaseDataContext();
+        private databaseDataContext db = new databaseDataContext();
         public Datve(int _id)
         {
             InitializeComponent();
@@ -55,6 +56,7 @@ namespace Quan_ly_may_bay
                 uc.detailBtn.Tag = i;
                 list.Add(uc);
             }
+            filteredList = list;
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
                 if (i >= list.Count)
@@ -64,25 +66,31 @@ namespace Quan_ly_may_bay
                 }
                 PanelTicket.Controls.Add(list[i]);
             }
+
+            cbbFrom.DataSource = db.SanBays;
+            cbbFrom.DisplayMember = "City";
+
+            cbbTo.DataSource = db.SanBays.ToList();
+            cbbTo.DisplayMember = "City";
         }
         private void DetailBtn_Click(object sender, EventArgs e)
         {
             KryptonButton btn = sender as KryptonButton;
             int indx = (int)btn.Tag;
             string maCB = chuyenBays[indx].MaCB;
-            ChoseSeat choseSeat = new ChoseSeat(maCB, id);
-            choseSeat.Show();
+            Chitietchuyenbay chitietchuyenbay = new Chitietchuyenbay(maCB, id);
+            chitietchuyenbay.Show();
 
         }
         private void lblStt_TextChanged(object sender, EventArgs e)
         {
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
-                if (i >= list.Count) {
+                if (i >= filteredList.Count) {
                     Add.Enabled = false;
                     break;
                 }
-                PanelTicket.Controls.Add(list[i]);
+                PanelTicket.Controls.Add(filteredList[i]);
             }
         }
 
@@ -97,10 +105,45 @@ namespace Quan_ly_may_bay
             Add.Enabled = true;
         }
 
-        private void Add_Click(object sender, EventArgs e){
+        private void Add_Click(object sender, EventArgs e)
+        {
             PanelTicket.Controls.Clear();
             lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();     
             Substract.Enabled = true;
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            PanelTicket.Controls.Clear();
+            filteredList = new List<UC_Ticket>();
+
+
+            for (int i = 0; i < list.Count; ++i)
+            {
+                if (list[i].from.Text == cbbFrom.Text && list[i].to.Text == cbbTo.Text && list[i].date1.Text == Time.Value.ToString("dd/MM/yyyy")) // Điều kiện lọc
+                {
+                    filteredList.Add(list[i]);
+                }
+            }
+
+            if (list.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy kết quả phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Add.Enabled = false;
+                return;
+            }
+
+            lblStt.Text = "0";
+
+            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
+            {
+                if (i >= filteredList.Count)
+                {
+                    Add.Enabled = false;
+                    break;
+                }
+                PanelTicket.Controls.Add(filteredList[i]);
+            }
         }
     }
 }

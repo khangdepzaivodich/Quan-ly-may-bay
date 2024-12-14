@@ -40,6 +40,7 @@
             this.Add = new System.Windows.Forms.PictureBox();
             this.Substract = new System.Windows.Forms.PictureBox();
             this.lblStt = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cbbFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Add)).BeginInit();
@@ -87,6 +88,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.cbbFrom.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbbFrom.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.White;
             this.cbbFrom.StateCommon.DropBack.Color1 = System.Drawing.Color.Cyan;
             this.cbbFrom.StateCommon.DropBack.Color2 = System.Drawing.Color.Cyan;
             this.cbbFrom.StateCommon.Item.Back.Color1 = System.Drawing.Color.Cyan;
@@ -143,6 +145,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.cbbTo.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbbTo.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.White;
             this.cbbTo.StateCommon.DropBack.Color1 = System.Drawing.Color.Cyan;
             this.cbbTo.StateCommon.DropBack.Color2 = System.Drawing.Color.Cyan;
             this.cbbTo.StateCommon.Item.Back.Color1 = System.Drawing.Color.Cyan;
@@ -188,6 +191,7 @@
             this.btnTimkiem.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimkiem.TabIndex = 8;
             this.btnTimkiem.Values.Text = "Tìm kiếm";
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // PanelTicket
             // 
@@ -233,12 +237,23 @@
             this.lblStt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblStt.TextChanged += new System.EventHandler(this.lblStt_TextChanged);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(132, 599);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 16);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "d";
+            // 
             // Datve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(821, 643);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblStt);
             this.Controls.Add(this.Substract);
             this.Controls.Add(this.Add);
@@ -287,5 +302,6 @@
         private System.Windows.Forms.PictureBox Add;
         private System.Windows.Forms.PictureBox Substract;
         private System.Windows.Forms.Label lblStt;
+        private System.Windows.Forms.Label label4;
     }
 }
