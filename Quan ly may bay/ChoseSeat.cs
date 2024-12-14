@@ -168,6 +168,8 @@ namespace Quan_ly_may_bay
                 }
                 newSeat += numSeat.ToString();
                 newVe.Seat = newSeat;
+                db.Ves.InsertOnSubmit(newVe);
+                db.SubmitChanges();
             }
         }
 

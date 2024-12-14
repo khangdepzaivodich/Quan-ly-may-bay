@@ -19,7 +19,7 @@ namespace Quan_ly_may_bay
         public BookedTicket(int _id)
         {
             InitializeComponent();
-            ve = db.Ves.Where(p => p.MaKH == _id).OrderBy(p => p.Stt).ToList();
+            ve = db.Ves.Where(p => p.MaKH == _id).ToList();
             for(int i = 0; i < ve.Count; ++i)
             {
                 Console.WriteLine("Có");

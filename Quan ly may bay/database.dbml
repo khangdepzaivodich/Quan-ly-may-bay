@@ -19,7 +19,6 @@
   </Table>
   <Table Name="dbo.Ve" Member="Ves">
     <Type Name="Ve">
-      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaVe" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MaKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaCB" Type="System.String" DbType="Char(7)" CanBeNull="true" />

@@ -20,7 +20,7 @@ namespace Quan_ly_may_bay
         public AddStaff()
         {
             InitializeComponent();
-            
+            txtLuong.Text = string.Format("{0:N0}", 10000000);
         }
 
         public AddStaff(int _manv)
@@ -133,7 +133,7 @@ namespace Quan_ly_may_bay
                 int rd = random.Next(100000, 999999);
 
                 newAccount.OTP = newAccount.RandomKey = rd;
-                newAccount.Password = Common.HashPassword(txtUsername.Text + rd.ToString());
+                newAccount.Password = Common.HashPassword("123456" + rd.ToString());
                 db.Accounts.InsertOnSubmit(newAccount);
                 db.SubmitChanges();
 
@@ -164,6 +164,23 @@ namespace Quan_ly_may_bay
             this.Close();
         }
 
+        private void txtLuong_TextChanged(object sender, EventArgs e)
+        {
+            // Temporarily remove the event handler to prevent recursive calls
+            txtLuong.TextChanged -= txtLuong_TextChanged;
 
+            // Check if the input is numeric
+            if (decimal.TryParse(txtLuong.Text, out decimal salary))
+            {
+                // Format the number with commas as thousands separators
+                txtLuong.Text = string.Format("{0:N0}", salary);
+            }
+
+            // Reattach the event handler
+            txtLuong.TextChanged += txtLuong_TextChanged;
+
+            // Move the cursor to the end of the TextBox
+            txtLuong.Select(txtLuong.Text.Length, 0);
+        }
     }
 }
