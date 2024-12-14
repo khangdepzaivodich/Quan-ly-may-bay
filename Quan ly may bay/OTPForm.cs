@@ -107,15 +107,6 @@ namespace Quan_ly_may_bay
             ///Text box thoi gian con hieu luc ko
             TimeSpan timeDifference = (TimeSpan)(DateTime.Now - account.OTPDateSend);
             int secondsDifference = (int)timeDifference.TotalSeconds;
-            if(secondsDifference <= 200)
-            {
-                MessageBox.Show("Mã OTP còn hiệu lực!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                foreach (KryptonRichTextBox textBox in this.Controls.OfType<KryptonRichTextBox>())
-                {
-                    textBox.Text = "";
-                }
-                return;
-            }
             if (200 - secondsDifference >= 0)
             {
                 label2.Text = $"OTP code is valid for {200 - secondsDifference} seconds";

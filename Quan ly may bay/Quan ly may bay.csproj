@@ -178,6 +178,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -336,6 +337,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\SqlServerTypes\Loader.cs" />
+    <Compile Include="ThongkeTaichinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongkeTaichinh.Designer.cs">
+      <DependentUpon>ThongkeTaichinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCFlight\UC_Author.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -477,6 +484,9 @@
     <EmbeddedResource Include="TaoLoTrinh.resx">
       <DependentUpon>TaoLoTrinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongkeTaichinh.resx">
+      <DependentUpon>ThongkeTaichinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCFlight\UCInfo1.resx">
       <DependentUpon>UCInfo1.cs</DependentUpon>
     </EmbeddedResource>
@@ -601,6 +611,7 @@
     <None Include="Resources\arrow-big-down-lines.png" />
     <None Include="Resources\plus.png" />
     <None Include="Resources\chevron-right-pipe.png" />
+    <None Include="Resources\printer.png" />
     <Content Include="SqlServerTypes\SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\SqlServerTypes\x64\SqlServerSpatial140.dll" />

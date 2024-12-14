@@ -129,6 +129,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PQ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PQ";
             ((System.ComponentModel.ISupportInitialize)(this.datas)).EndInit();
             this.ResumeLayout(false);

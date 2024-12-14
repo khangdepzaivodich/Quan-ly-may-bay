@@ -49,15 +49,7 @@ namespace Quan_ly_may_bay
 
         private void Substract_Click(object sender, EventArgs e)
         {
-            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
-            {
-                if (i >= list.Count)
-                {
-                    Add.Enabled = false;
-                    break;
-                }
-                PanelTicket.Controls.Remove(list[i]);
-            }
+            PanelTicket.Controls.Clear();
             lblStt.Text = (int.Parse(lblStt.Text) - 1).ToString();
             if (int.Parse(lblStt.Text) == 0)
             {
@@ -67,15 +59,7 @@ namespace Quan_ly_may_bay
         }
 
         private void Add_Click(object sender, EventArgs e){
-            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
-            {
-                if (i >= list.Count)
-                {
-                    Add.Enabled = false;
-                    break;
-                }
-                PanelTicket.Controls.Remove(list[i]);
-            }
+            PanelTicket.Controls.Clear();
             lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();     
             Substract.Enabled = true;
         }
