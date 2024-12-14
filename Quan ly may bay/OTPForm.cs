@@ -123,7 +123,7 @@ namespace Quan_ly_may_bay
                 rd = random.Next(100000, 999999);
             }
             account.RandomKey = rd;
-            SendMail.SendMailTo(account.Email, rd.ToString());
+            SendMail.SendMailTo(account.Email, "Mã xác thực của bạn là " + rd.ToString());
             account.OTPDateSend = DateTime.Now;
             db.SubmitChanges();
 
