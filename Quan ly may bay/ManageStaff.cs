@@ -20,11 +20,13 @@ namespace Quan_ly_may_bay
         databaseDataContext db;
         List<NhanVien> nv;
         List<NhanVien> tkiem;
+        int ID;
         bool check = true;
         int soluong;
-        public ManageStaff()
+        public ManageStaff(int _ID)
         {
             InitializeComponent();
+            ID = _ID;
             db = new databaseDataContext();
             cbbMaCV.DataSource = db.ChucVus.OrderBy(p => p.MaCV);
             cbbMaCV.DisplayMember = "MaCV";
@@ -153,6 +155,7 @@ namespace Quan_ly_may_bay
                     if (!char.IsDigit(c))
                     {
                         MessageBox.Show("Mã nhân viên không hợp lệ");
+                        check = false;
                         txtMaNV.Text = "";
                         txtMaNV.Focus();
                         return;
@@ -173,6 +176,7 @@ namespace Quan_ly_may_bay
                 else
                 {
                     MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo");
+                    check = false;
                     return;
                 }
             }
@@ -186,6 +190,7 @@ namespace Quan_ly_may_bay
                             if (txtLuong.Text[0] == '-')
                             {
                                 MessageBox.Show("Số lương không hợp lệ!", "Thông báo");
+                                check = false;
                                 txtLuong.Text = "";
                                 txtLuong.Focus();
                                 return;
@@ -229,6 +234,7 @@ namespace Quan_ly_may_bay
                             if (txtLuong.Text[0] == '-')
                             {
                                 MessageBox.Show("Số lương không hợp lệ!", "Thông báo");
+                                check = false;
                                 txtLuong.Text = "";
                                 txtLuong.Focus();
                                 return;
@@ -256,6 +262,7 @@ namespace Quan_ly_may_bay
                         if (txtLuong.Text[0] == '-')
                         {
                             MessageBox.Show("Số lương không hợp lệ!", "Thông báo");
+                            check = false;
                             txtLuong.Text = "";
                             txtLuong.Focus();
                             return;
@@ -269,8 +276,8 @@ namespace Quan_ly_may_bay
                     }
                 }
             }
-          
             MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo");
+            check = false;
             loadDuLieu();
         }
 
@@ -315,6 +322,10 @@ namespace Quan_ly_may_bay
                 txtMaNV.Show();
                 loadDuLieu();
             }
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
         }
     }
 }

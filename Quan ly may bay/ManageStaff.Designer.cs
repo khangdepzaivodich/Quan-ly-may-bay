@@ -365,6 +365,7 @@
             this.kryptonButton4.TabIndex = 30;
             this.kryptonButton4.TabStop = false;
             this.kryptonButton4.Values.Text = "Print";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
             // 
             // lblStt
             // 
