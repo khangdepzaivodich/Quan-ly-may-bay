@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,36 @@ namespace Quan_ly_may_bay.UCFlight
         {
             ReportChuyenBay reportChuyenBay = new ReportChuyenBay();
             reportChuyenBay.ShowDialog();
+        }
+        public Label Level
+        {
+            get => label1;
+            set => label1 = value;
+        }
+        public Label Date1
+        {
+            get => label2; 
+            set => label2 = value;
+        }
+        public Label From
+        {
+            get => label6;
+            set => label6 = value;
+        }
+        public Label Date2
+        {
+            get => label4;
+            set => label4 = value;
+        }
+        public Label To
+        {
+            get => label7; 
+            set => label7 = value;
+        }
+        public KryptonButton WatchBtn
+        {
+            get => XemBtn; 
+            set => XemBtn = value;
         }
     }
 }
