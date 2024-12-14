@@ -14,10 +14,10 @@ namespace Quan_ly_may_bay
         public static string matkhau = "kktx melb tfqh ynvp";
         public static bool SendMailTo(string emailto, string content)
         {
-            var formAddress = new MailAddress(taikhoan, "Admin quan ly hoc sinh");
+            var formAddress = new MailAddress(taikhoan, "HKPLANE");
             var toAddress = new MailAddress(emailto, emailto);
             string formPassword = matkhau;
-            string subject = "Thong bao tu he thong quan ly hoc sinh";
+            string subject = "Thong bao xác thực mã OTP";
             string body = content;
 
             var smtp = new SmtpClient
