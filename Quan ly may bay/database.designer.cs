@@ -551,8 +551,6 @@ namespace Quan_ly_may_bay
 		
 		private string _Seat;
 		
-		private int _Stt;
-		
 		private EntityRef<ChuyenBay> _ChuyenBay;
 		
     #region Extensibility Method Definitions
@@ -569,8 +567,6 @@ namespace Quan_ly_may_bay
     partial void OnLevelSeatChanged();
     partial void OnSeatChanging(string value);
     partial void OnSeatChanged();
-    partial void OnSttChanging(int value);
-    partial void OnSttChanged();
     #endregion
 		
 		public Ve()
@@ -683,26 +679,6 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int Stt
-		{
-			get
-			{
-				return this._Stt;
-			}
-			set
-			{
-				if ((this._Stt != value))
-				{
-					this.OnSttChanging(value);
-					this.SendPropertyChanging();
-					this._Stt = value;
-					this.SendPropertyChanged("Stt");
-					this.OnSttChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChuyenBay_Ve", Storage="_ChuyenBay", ThisKey="MaCB", OtherKey="MaCB", IsForeignKey=true)]
 		public ChuyenBay ChuyenBay
 		{
@@ -770,8 +746,6 @@ namespace Quan_ly_may_bay
 		
 		private string _MoTa;
 		
-		private int _Stt;
-		
 		private EntitySet<NhanVien> _NhanViens;
 		
 		private EntityRef<PhanQuyen> _PhanQuyen;
@@ -786,8 +760,6 @@ namespace Quan_ly_may_bay
     partial void OnTenCVChanged();
     partial void OnMoTaChanging(string value);
     partial void OnMoTaChanged();
-    partial void OnSttChanging(int value);
-    partial void OnSttChanged();
     #endregion
 		
 		public ChucVu()
@@ -853,26 +825,6 @@ namespace Quan_ly_may_bay
 					this._MoTa = value;
 					this.SendPropertyChanged("MoTa");
 					this.OnMoTaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int Stt
-		{
-			get
-			{
-				return this._Stt;
-			}
-			set
-			{
-				if ((this._Stt != value))
-				{
-					this.OnSttChanging(value);
-					this.SendPropertyChanging();
-					this._Stt = value;
-					this.SendPropertyChanged("Stt");
-					this.OnSttChanged();
 				}
 			}
 		}
@@ -966,8 +918,6 @@ namespace Quan_ly_may_bay
 		
 		private System.Nullable<int> _SoGhe;
 		
-		private int _Stt;
-		
 		private EntitySet<Ve> _Ves;
 		
 		private EntityRef<LoTrinh> _LoTrinh;
@@ -984,8 +934,6 @@ namespace Quan_ly_may_bay
     partial void OnNgayKHChanged();
     partial void OnSoGheChanging(System.Nullable<int> value);
     partial void OnSoGheChanged();
-    partial void OnSttChanging(int value);
-    partial void OnSttChanged();
     #endregion
 		
 		public ChuyenBay()
@@ -1075,26 +1023,6 @@ namespace Quan_ly_may_bay
 					this._SoGhe = value;
 					this.SendPropertyChanged("SoGhe");
 					this.OnSoGheChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int Stt
-		{
-			get
-			{
-				return this._Stt;
-			}
-			set
-			{
-				if ((this._Stt != value))
-				{
-					this.OnSttChanging(value);
-					this.SendPropertyChanging();
-					this._Stt = value;
-					this.SendPropertyChanged("Stt");
-					this.OnSttChanged();
 				}
 			}
 		}
@@ -1446,8 +1374,6 @@ namespace Quan_ly_may_bay
 		
 		private System.Nullable<int> _Gia;
 		
-		private int _Stt;
-		
 		private EntitySet<ChuyenBay> _ChuyenBays;
 		
 		private EntityRef<MayBay> _MayBay;
@@ -1474,8 +1400,6 @@ namespace Quan_ly_may_bay
     partial void OnGioHaCanhChanged();
     partial void OnGiaChanging(System.Nullable<int> value);
     partial void OnGiaChanged();
-    partial void OnSttChanging(int value);
-    partial void OnSttChanged();
     #endregion
 		
 		public LoTrinh()
@@ -1635,26 +1559,6 @@ namespace Quan_ly_may_bay
 					this._Gia = value;
 					this.SendPropertyChanged("Gia");
 					this.OnGiaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int Stt
-		{
-			get
-			{
-				return this._Stt;
-			}
-			set
-			{
-				if ((this._Stt != value))
-				{
-					this.OnSttChanging(value);
-					this.SendPropertyChanging();
-					this._Stt = value;
-					this.SendPropertyChanged("Stt");
-					this.OnSttChanged();
 				}
 			}
 		}
@@ -1821,8 +1725,6 @@ namespace Quan_ly_may_bay
 		
 		private string _HangSanXuat;
 		
-		private int _Stt;
-		
 		private EntitySet<LoTrinh> _LoTrinhs;
 		
     #region Extensibility Method Definitions
@@ -1837,8 +1739,6 @@ namespace Quan_ly_may_bay
     partial void OnDateNhapVeChanged();
     partial void OnHangSanXuatChanging(string value);
     partial void OnHangSanXuatChanged();
-    partial void OnSttChanging(int value);
-    partial void OnSttChanged();
     #endregion
 		
 		public MayBay()
@@ -1927,26 +1827,6 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int Stt
-		{
-			get
-			{
-				return this._Stt;
-			}
-			set
-			{
-				if ((this._Stt != value))
-				{
-					this.OnSttChanging(value);
-					this.SendPropertyChanging();
-					this._Stt = value;
-					this.SendPropertyChanged("Stt");
-					this.OnSttChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MayBay_LoTrinh", Storage="_LoTrinhs", ThisKey="MaMB", OtherKey="MaMB")]
 		public EntitySet<LoTrinh> LoTrinhs
 		{
@@ -2017,7 +1897,7 @@ namespace Quan_ly_may_bay
 		
 		private System.Nullable<int> _ID;
 		
-		private System.Nullable<long> _Luong;
+		private System.Nullable<int> _Luong;
 		
 		private EntityRef<Account> _Account;
 		
@@ -2045,7 +1925,7 @@ namespace Quan_ly_may_bay
     partial void OnSDTChanged();
     partial void OnIDChanging(System.Nullable<int> value);
     partial void OnIDChanged();
-    partial void OnLuongChanging(System.Nullable<long> value);
+    partial void OnLuongChanging(System.Nullable<int> value);
     partial void OnLuongChanged();
     #endregion
 		
@@ -2244,8 +2124,8 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Luong", DbType="BigInt")]
-		public System.Nullable<long> Luong
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Luong", DbType="Int")]
+		public System.Nullable<int> Luong
 		{
 			get
 			{
@@ -2369,8 +2249,6 @@ namespace Quan_ly_may_bay
 		
 		private System.Nullable<int> _ManageStaff;
 		
-		private int _Stt;
-		
 		private EntityRef<ChucVu> _ChucVu;
 		
     #region Extensibility Method Definitions
@@ -2387,8 +2265,6 @@ namespace Quan_ly_may_bay
     partial void OnCreateFlightChanged();
     partial void OnManageStaffChanging(System.Nullable<int> value);
     partial void OnManageStaffChanged();
-    partial void OnSttChanging(int value);
-    partial void OnSttChanged();
     #endregion
 		
 		public PhanQuyen()
@@ -2501,26 +2377,6 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int Stt
-		{
-			get
-			{
-				return this._Stt;
-			}
-			set
-			{
-				if ((this._Stt != value))
-				{
-					this.OnSttChanging(value);
-					this.SendPropertyChanging();
-					this._Stt = value;
-					this.SendPropertyChanged("Stt");
-					this.OnSttChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ChucVu_PhanQuyen", Storage="_ChucVu", ThisKey="PQ", OtherKey="MaCV", IsForeignKey=true)]
 		public ChucVu ChucVu
 		{
@@ -2588,8 +2444,6 @@ namespace Quan_ly_may_bay
 		
 		private string _City;
 		
-		private int _Stt;
-		
 		private EntitySet<LoTrinh> _LoTrinhs;
 		
 		private EntitySet<LoTrinh> _LoTrinhs1;
@@ -2604,8 +2458,6 @@ namespace Quan_ly_may_bay
     partial void OnTenSBChanged();
     partial void OnCityChanging(string value);
     partial void OnCityChanged();
-    partial void OnSttChanging(int value);
-    partial void OnSttChanged();
     #endregion
 		
 		public SanBay()
@@ -2671,26 +2523,6 @@ namespace Quan_ly_may_bay
 					this._City = value;
 					this.SendPropertyChanged("City");
 					this.OnCityChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int Stt
-		{
-			get
-			{
-				return this._Stt;
-			}
-			set
-			{
-				if ((this._Stt != value))
-				{
-					this.OnSttChanging(value);
-					this.SendPropertyChanging();
-					this._Stt = value;
-					this.SendPropertyChanged("Stt");
-					this.OnSttChanged();
 				}
 			}
 		}

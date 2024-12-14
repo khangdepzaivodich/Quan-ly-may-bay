@@ -156,7 +156,7 @@ namespace Quan_ly_may_bay
             }
             else if (uc.Text == "Manage Staff")
             {
-                frm = new ManageStaff();
+                frm = new ManageStaff(account.ID);
                 frm.TopLevel = false;
                 panelMain.Controls.Add(frm);
                 frm.Show();
