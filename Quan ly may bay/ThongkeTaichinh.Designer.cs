@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cbbMaCV = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.btnFInd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtTenNV = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtNam = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flpContain = new System.Windows.Forms.FlowLayoutPanel();
+            this.chartDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMaCV)).BeginInit();
             this.flpContain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbbMaCV
@@ -185,31 +185,48 @@
             this.kryptonLabel2.TabIndex = 3;
             this.kryptonLabel2.Values.Text = "Năm";
             // 
-            // txtTenNV
+            // txtNam
             // 
-            this.txtTenNV.Location = new System.Drawing.Point(46, 38);
-            this.txtTenNV.Multiline = true;
-            this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(120, 42);
-            this.txtTenNV.StateCommon.Back.Color1 = System.Drawing.Color.Black;
-            this.txtTenNV.StateCommon.Border.Color1 = System.Drawing.Color.CornflowerBlue;
-            this.txtTenNV.StateCommon.Border.Color2 = System.Drawing.Color.CornflowerBlue;
-            this.txtTenNV.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtNam.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNam.Location = new System.Drawing.Point(46, 38);
+            this.txtNam.Multiline = true;
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Size = new System.Drawing.Size(120, 42);
+            this.txtNam.StateCommon.Back.Color1 = System.Drawing.Color.Black;
+            this.txtNam.StateCommon.Border.Color1 = System.Drawing.Color.CornflowerBlue;
+            this.txtNam.StateCommon.Border.Color2 = System.Drawing.Color.CornflowerBlue;
+            this.txtNam.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtTenNV.StateCommon.Border.Rounding = 5;
-            this.txtTenNV.StateCommon.Border.Width = 2;
-            this.txtTenNV.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtTenNV.StateCommon.Content.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenNV.TabIndex = 2;
+            this.txtNam.StateCommon.Border.Rounding = 5;
+            this.txtNam.StateCommon.Border.Width = 2;
+            this.txtNam.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.txtNam.StateCommon.Content.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNam.TabIndex = 2;
             // 
             // flpContain
             // 
-            this.flpContain.Controls.Add(this.chart1);
+            this.flpContain.Controls.Add(this.chartDoanhThu);
             this.flpContain.Location = new System.Drawing.Point(27, 144);
             this.flpContain.Name = "flpContain";
             this.flpContain.Size = new System.Drawing.Size(761, 435);
             this.flpContain.TabIndex = 40;
+            // 
+            // chartDoanhThu
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartDoanhThu.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartDoanhThu.Legends.Add(legend2);
+            this.chartDoanhThu.Location = new System.Drawing.Point(3, 3);
+            this.chartDoanhThu.Name = "chartDoanhThu";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartDoanhThu.Series.Add(series2);
+            this.chartDoanhThu.Size = new System.Drawing.Size(758, 432);
+            this.chartDoanhThu.TabIndex = 0;
+            this.chartDoanhThu.Text = "chart1";
             // 
             // kryptonButton4
             // 
@@ -284,7 +301,7 @@
             this.kryptonPanel1.Controls.Add(this.kryptonLabel4);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel3);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel2);
-            this.kryptonPanel1.Controls.Add(this.txtTenNV);
+            this.kryptonPanel1.Controls.Add(this.txtNam);
             this.kryptonPanel1.Location = new System.Drawing.Point(24, 30);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(764, 92);
@@ -313,22 +330,6 @@
             this.kryptonComboBox1.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Itim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBox1.TabIndex = 31;
             // 
-            // chart1
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(3, 3);
-            this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(758, 432);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
             // ThongkeTaichinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -343,11 +344,11 @@
             this.Text = "ThongkeTaichinh";
             ((System.ComponentModel.ISupportInitialize)(this.cbbMaCV)).EndInit();
             this.flpContain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,11 +360,11 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTenNV;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNam;
         private System.Windows.Forms.FlowLayoutPanel flpContain;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDoanhThu;
     }
 }
