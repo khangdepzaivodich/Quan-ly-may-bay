@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -73,7 +74,6 @@ namespace Quan_ly_may_bay
             }
             Substract.Visible = false;
         }
-
         private void pAdd_Click(object sender, EventArgs e)
         {
             TaoChuyenBay frm = new TaoChuyenBay();
