@@ -14,15 +14,13 @@ namespace Quan_ly_may_bay
 {
     public partial class AddStaff : KryptonForm
     {
+        public event EventHandler DataChanged;
         databaseDataContext db = new databaseDataContext();
         int manv = -1;
         public AddStaff()
         {
             InitializeComponent();
-            var macV = db.ChucVus.Select(c => new {c.MaCV,c.TenCV}).ToList();
-            cbbMaCV.DataSource = macV;
-            cbbMaCV.DisplayMember = "TenCv";
-            cbbMaCV.ValueMember = "MaCV";
+            
         }
 
         public AddStaff(int _manv)
@@ -39,6 +37,9 @@ namespace Quan_ly_may_bay
 
         private void AddStaff_Load(object sender, EventArgs e)
         {
+            cbbMaCV.DataSource = db.ChucVus.OrderBy(p => p.MaCV);
+            cbbMaCV.DisplayMember = "TenCv";
+            cbbMaCV.ValueMember = "MaCV";
             if (manv != -1)
             {
                 NhanVien nv = db.NhanViens.FirstOrDefault(p => p.MaNV == manv);
@@ -70,7 +71,7 @@ namespace Quan_ly_may_bay
                 txtSdt.Enabled = false;
                 dpkNgayKy.Enabled = false;
 
-                cbbMaCV.Text = nv.MaCV;
+                cbbMaCV.SelectedValue = nv.MaCV;
                 txtLuong.Text = nv.Luong.ToString();
             }
         }
@@ -143,21 +144,26 @@ namespace Quan_ly_may_bay
                 if (rdbNam.Checked) newNhanVien.GioiTinh = "Nam";
                 else newNhanVien.GioiTinh = "Nữ";
                 newNhanVien.NgayVaoLam = dpkNgayKy.Value;
-                newNhanVien.MaCV = cbbMaCV.ValueMember;
+                newNhanVien.MaCV = cbbMaCV.SelectedValue.ToString();
                 newNhanVien.SDT = txtSdt.Text;
                 newNhanVien.ID = newAccount.ID;
                 newNhanVien.Luong = int.Parse(txtLuong.Text);
                 db.NhanViens.InsertOnSubmit(newNhanVien);
-                db.SubmitChanges();
+                db.SubmitChanges();                
             }
             else
             {
                 NhanVien nv = db.NhanViens.FirstOrDefault(p => p.MaNV == manv);
-                nv.MaCV = cbbMaCV.ValueMember;
+                nv.MaCV = cbbMaCV.SelectedValue.ToString() ;
                 nv.Luong = int.Parse(txtLuong.Text);
                 db.SubmitChanges();
             }
+
+            DataChanged?.Invoke(this, EventArgs.Empty);
+
             this.Close();
         }
+
+
     }
 }
