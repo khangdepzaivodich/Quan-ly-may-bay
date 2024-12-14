@@ -40,14 +40,16 @@ namespace Quan_ly_may_bay
             flpContain.Controls.Clear();
             if (check)
             {
+                btnIn.Hide();
                 db = new databaseDataContext();
-                nv = db.NhanViens.OrderByDescending(p => p.MaNV).ToList();                
+                nv = db.NhanViens.OrderByDescending(p => p.MaNV).ToList();    
             }
             else
             {
+                btnIn.Show();
                 nv = tkiem;
             }
-            soluong = nv.Count();
+            soluong = nv.Count;
             if (soluong <= 5) lblSubstract.Hide();
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
@@ -147,6 +149,12 @@ namespace Quan_ly_may_bay
         private void btnFInd_Click(object sender, EventArgs e)
         {
             check = false;
+            if (txtMaNV.Text == "" && txtTenNV.Text == "" && cbbMaCV.Text == "" && txtLuong.Text == "")
+            {
+                tkiem = nv;
+                loadDuLieu();
+                return;
+            }
             if (txtMaNV.Text != "")
             {
                 string s = txtMaNV.Text;
@@ -155,28 +163,22 @@ namespace Quan_ly_may_bay
                     if (!char.IsDigit(c))
                     {
                         MessageBox.Show("Mã nhân viên không hợp lệ");
-                        check = false;
+                        check = true;
                         txtMaNV.Text = "";
                         txtMaNV.Focus();
                         return;
                     }
                 }
-                NhanVien nv = db.NhanViens.FirstOrDefault(p => p.MaNV == int.Parse(s));
+                tkiem = db.NhanViens.Where(p => p.MaNV == int.Parse(s)).ToList();
                 if (nv != null)
                 {
-                    flpContain.Controls.Clear();
-                    UC_Staff uc = new UC_Staff();
-                    uc.MaNV = nv.MaNV;
-                    uc.TenNV = nv.HoTenNV;
-                    uc.MaCV = nv.MaCV;
-                    uc.Luong = nv.Luong.ToString() + " VND";
-                    flpContain.Controls.Add(uc);
+                    loadDuLieu();
                     return;
                 }
                 else
                 {
                     MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo");
-                    check = false;
+                    check = true;
                     return;
                 }
             }
@@ -187,10 +189,10 @@ namespace Quan_ly_may_bay
                     if (cbbMaCV.Text != ""){
                         if (txtLuong.Text != "")
                         {
-                            if (txtLuong.Text[0] == '-')
+                            if (int.TryParse(txtLuong.Text, out int result)?false:true)
                             {
                                 MessageBox.Show("Số lương không hợp lệ!", "Thông báo");
-                                check = false;
+                                check = true;
                                 txtLuong.Text = "";
                                 txtLuong.Focus();
                                 return;
@@ -231,10 +233,10 @@ namespace Quan_ly_may_bay
                     {
                         if (txtLuong.Text != "")
                         {
-                            if (txtLuong.Text[0] == '-')
+                            if (int.TryParse(txtLuong.Text, out int result) ? false : true)
                             {
                                 MessageBox.Show("Số lương không hợp lệ!", "Thông báo");
-                                check = false;
+                                check = true;
                                 txtLuong.Text = "";
                                 txtLuong.Focus();
                                 return;
@@ -259,14 +261,18 @@ namespace Quan_ly_may_bay
                     }
                     else
                     {
-                        if (txtLuong.Text[0] == '-')
+                        if (txtLuong.Text != "")
                         {
-                            MessageBox.Show("Số lương không hợp lệ!", "Thông báo");
-                            check = false;
-                            txtLuong.Text = "";
-                            txtLuong.Focus();
-                            return;
+                            if (int.TryParse(txtLuong.Text, out int result) ? false : true)
+                            {
+                                MessageBox.Show("Số lương không hợp lệ!", "Thông báo");
+                                check = true;
+                                txtLuong.Text = "";
+                                txtLuong.Focus();
+                                return;
+                            }
                         }
+                        
                         tkiem = db.NhanViens.Where(p =>p.Luong >= int.Parse(txtLuong.Text)).ToList();
                         if (tkiem != null)
                         {
@@ -277,7 +283,7 @@ namespace Quan_ly_may_bay
                 }
             }
             MessageBox.Show("Không tìm thấy nhân viên!", "Thông báo");
-            check = false;
+            check = true;
             loadDuLieu();
         }
 
@@ -324,8 +330,10 @@ namespace Quan_ly_may_bay
             }
         }
 
-        private void kryptonButton4_Click(object sender, EventArgs e)
-        {
+        private void btnIn_Click(object sender, EventArgs e)
+        {       
+                ReportDSNV rp = new ReportDSNV(ID, txtMaNV.Text == "" ? -1 : int.Parse(txtMaNV.Text), txtTenNV.Text, cbbMaCV.Text, txtLuong.Text == "" ? -1 : int.Parse(txtLuong.Text));
+                rp.Show();
         }
     }
 }
