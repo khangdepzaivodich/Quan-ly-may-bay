@@ -133,6 +133,7 @@
             // 
             // XemBtn
             // 
+            this.XemBtn.Location = new System.Drawing.Point(594, 34);
             this.XemBtn.Location = new System.Drawing.Point(590, 25);
             this.XemBtn.Margin = new System.Windows.Forms.Padding(4);
             this.XemBtn.Name = "XemBtn";

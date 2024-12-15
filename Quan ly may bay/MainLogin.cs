@@ -33,6 +33,7 @@ namespace Quan_ly_may_bay
             "Flight Itinerary",
             "Create Flight",
             "Manage Staff",
+            "Financial",
             "Manager",
         };
         private Form frm;
@@ -161,6 +162,13 @@ namespace Quan_ly_may_bay
             else if (uc.Text == "Manager")
             {
                 frm = new PQ();
+                frm.TopLevel = false;
+                panelMain.Controls.Add(frm);
+                frm.Show();
+            }
+            else if (uc.Text == "Financial")
+            {
+                frm = new ThongkeTaichinh();
                 frm.TopLevel = false;
                 panelMain.Controls.Add(frm);
                 frm.Show();

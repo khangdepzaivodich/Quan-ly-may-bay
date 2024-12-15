@@ -13,6 +13,7 @@ namespace Quan_ly_may_bay.UCFlight
 {
     public partial class UCInfo1 : UserControl
     {
+        string mave;
         public UCInfo1()
         {
             InitializeComponent();
@@ -43,7 +44,14 @@ namespace Quan_ly_may_bay.UCFlight
             get => label7; 
             set => label7 = value;
         }
-        public KryptonButton WatchBtn
+
+        public string MaVe
+        {
+            get => mave;
+            set => mave = value;
+        }
+
+        private void Xembtn(object sender, EventArgs e)
         {
             get => XemBtn; 
             set => XemBtn = value;

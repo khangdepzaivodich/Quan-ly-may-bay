@@ -433,6 +433,7 @@
     <EmbeddedResource Include="PQ.resx">
       <DependentUpon>PQ.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportVeMayBay.rdlc" />
     <EmbeddedResource Include="ReportDSNV.rdlc" />
     <EmbeddedResource Include="ReportDSNV.resx">
       <DependentUpon>ReportDSNV.cs</DependentUpon>
@@ -446,11 +447,11 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="ReportChuyenBay.cs">
+    <Compile Include="ReportVeMayBay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportChuyenBay.Designer.cs">
-      <DependentUpon>ReportChuyenBay.cs</DependentUpon>
+    <Compile Include="ReportVeMayBay.Designer.cs">
+      <DependentUpon>ReportVeMayBay.cs</DependentUpon>
     </Compile>
     <Compile Include="TaoChuyenBay.cs">
       <SubType>Form</SubType>
@@ -475,8 +476,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportChuyenBay.resx">
-      <DependentUpon>ReportChuyenBay.cs</DependentUpon>
+    <EmbeddedResource Include="ReportVeMayBay.resx">
+      <DependentUpon>ReportVeMayBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaoChuyenBay.resx">
       <DependentUpon>TaoChuyenBay.cs</DependentUpon>

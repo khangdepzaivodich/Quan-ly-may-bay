@@ -61,7 +61,7 @@ namespace Quan_ly_may_bay
             {
                 if (i >= list.Count)
                 {
-                    Add.Enabled = false;
+                    Add.Visible = false;
                     break;
                 }
                 PanelTicket.Controls.Add(list[i]);
@@ -86,7 +86,7 @@ namespace Quan_ly_may_bay
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
                 if (i >= filteredList.Count) {
-                    Add.Enabled = false;
+                    Add.Visible = false;
                     break;
                 }
                 PanelTicket.Controls.Add(filteredList[i]);
@@ -99,16 +99,16 @@ namespace Quan_ly_may_bay
             lblStt.Text = (int.Parse(lblStt.Text) - 1).ToString();
             if (int.Parse(lblStt.Text) == 0)
             {
-                Substract.Enabled = false;
+                Substract.Visible = false;
             }
-            Add.Enabled = true;
+            Add.Visible = true;
         }
 
         private void Add_Click(object sender, EventArgs e)
         {
             PanelTicket.Controls.Clear();
             lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();     
-            Substract.Enabled = true;
+            Substract.Visible = true;
         }
 
         private void btnTimkiem_Click(object sender, EventArgs e)
@@ -116,19 +116,35 @@ namespace Quan_ly_may_bay
             PanelTicket.Controls.Clear();
             filteredList = new List<UC_Ticket>();
 
-
+            if(cbbFrom.Text == "" || cbbTo.Text == "")
+            {
+                cbbFrom.Text = "";
+                cbbTo.Text = "";
+            }
+            if(cbbFrom.Text != "" && cbbTo.Text != "" && Time.Value == null)
+            {
+                return;
+            }
             for (int i = 0; i < list.Count; ++i)
             {
+                if(cbbFrom.Text != "" && cbbTo.Text != "")
                 if (list[i].from.Text == cbbFrom.Text && list[i].to.Text == cbbTo.Text && list[i].date1.Text == Time.Value.ToString("dd/MM/yyyy")) // Điều kiện lọc
                 {
                     filteredList.Add(list[i]);
                 }
+                else if(Time.Value.ToString("dd/MM/yyyy") != "")
+                    {
+                        if (list[i].date1.Text == Time.Value.ToString("dd/MM/yyyy")) // Điều kiện lọc
+                        {
+                            filteredList.Add(list[i]);
+                        }
+                    }
             }
 
             if (list.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy kết quả phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Add.Enabled = false;
+                Add.Visible = false;
                 return;
             }
 
@@ -138,11 +154,12 @@ namespace Quan_ly_may_bay
             {
                 if (i >= filteredList.Count)
                 {
-                    Add.Enabled = false;
+                    Add.Visible = false;
                     break;
                 }
                 PanelTicket.Controls.Add(filteredList[i]);
             }
+            Substract.Visible = false;
         }
     }
 }
