@@ -54,6 +54,7 @@ namespace Quan_ly_may_bay
                 uc.WatchBtn.Tag = i;
                 list.Add(uc);
             }
+            if (list.Count <= 5) Add.Hide();
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
                 if (i >= list.Count)
@@ -80,26 +81,16 @@ namespace Quan_ly_may_bay
             ReportChuyenBay reportChuyenBay = new ReportChuyenBay(hoten, cccd, phoneNum, maCB, from, to, time1, seat, hanhLy, mave);
             reportChuyenBay.Show();
         }
-        private void lblStt_TextChanged(object sender, EventArgs e)
-        {
-            Add.Show();
-            PanelTicket.Controls.Clear();
-            lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();
-            if (int.Parse(lblStt.Text) * 5 + 5 >= list.Count) Add.Hide();
-            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
-            {
-                PanelTicket.Controls.Add(list[i]);
-            }
-        }
 
         private void Add_Click(object sender, EventArgs e)
         {
             Substract.Show();
             PanelTicket.Controls.Clear();
-            lblStt.Text = (int.Parse(lblStt.Text) - 1).ToString();
-            if (int.Parse(lblStt.Text) == 0) Substract.Hide();
+            lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();
+            if (int.Parse(lblStt.Text) * 5 + 5 >= list.Count) Add.Hide();
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
+                if (i >= list.Count) return;
                 PanelTicket.Controls.Add(list[i]);
             }
         }
@@ -107,7 +98,8 @@ namespace Quan_ly_may_bay
         {
             Add.Show();
             PanelTicket.Controls.Clear();
-            lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();
+            lblStt.Text = (int.Parse(lblStt.Text) - 1).ToString();
+            if (int.Parse(lblStt.Text) == 0) Substract.Hide();
             if (int.Parse(lblStt.Text) * 5 + 5 >= list.Count) Add.Hide();
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
