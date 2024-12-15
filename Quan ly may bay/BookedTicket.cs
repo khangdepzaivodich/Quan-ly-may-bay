@@ -22,6 +22,7 @@ namespace Quan_ly_may_bay
         public BookedTicket(int _id)
         {
             InitializeComponent();
+            Substract.Hide();
             id = _id;
             ve = db.Ves.Where(p => p.MaKH == _id).ToList();
             for(int i = 0; i < ve.Count; ++i)
@@ -96,6 +97,17 @@ namespace Quan_ly_may_bay
             PanelTicket.Controls.Clear();
             lblStt.Text = (int.Parse(lblStt.Text) - 1).ToString();
             if (int.Parse(lblStt.Text) == 0) Substract.Hide();
+            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
+            {
+                PanelTicket.Controls.Add(list[i]);
+            }
+        }
+        private void Substract_Click(object sender, EventArgs e)
+        {
+            Add.Show();
+            PanelTicket.Controls.Clear();
+            lblStt.Text = (int.Parse(lblStt.Text) + 1).ToString();
+            if (int.Parse(lblStt.Text) * 5 + 5 >= list.Count) Add.Hide();
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
                 PanelTicket.Controls.Add(list[i]);

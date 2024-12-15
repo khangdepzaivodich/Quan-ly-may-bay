@@ -51,10 +51,11 @@ namespace Quan_ly_may_bay.UCFlight
             set => mave = value;
         }
 
-        private void Xembtn(object sender, EventArgs e)
+        public KryptonButton WatchBtn
         {
-            get => XemBtn; 
+            get => XemBtn;
             set => XemBtn = value;
         }
+    
     }
 }
