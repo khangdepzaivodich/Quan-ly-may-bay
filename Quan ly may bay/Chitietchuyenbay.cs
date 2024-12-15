@@ -112,6 +112,11 @@ namespace Quan_ly_may_bay
                 MessageBox.Show("Đặt vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox1.Text = "";
             }
+            else
+            {
+                MessageBox.Show("Đặt vé không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Close();
         }
 
     }
