@@ -191,9 +191,9 @@
             this.label2.Font = new System.Drawing.Font("Itim", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(35, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(345, 28);
+            this.label2.Size = new System.Drawing.Size(331, 28);
             this.label2.TabIndex = 16;
-            this.label2.Text = "OTP code is valid for 200 seconds";
+            this.label2.Text = "OTP code is valid for 60 seconds";
             // 
             // SubmitButton
             // 

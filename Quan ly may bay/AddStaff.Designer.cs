@@ -136,6 +136,7 @@
             this.txtLuong.TabIndex = 11;
             this.txtLuong.Text = "10000000";
             this.txtLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLuong.TextChanged += new System.EventHandler(this.txtLuong_TextChanged);
             // 
             // kryptonLabel4
             // 

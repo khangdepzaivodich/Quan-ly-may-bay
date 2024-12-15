@@ -107,11 +107,10 @@ namespace Quan_ly_may_bay
             ///Text box thoi gian con hieu luc ko
             TimeSpan timeDifference = (TimeSpan)(DateTime.Now - account.OTPDateSend);
             int secondsDifference = (int)timeDifference.TotalSeconds;
-            if (200 - secondsDifference >= 0)
+            if (60 - secondsDifference >= 0)
             {
-                label2.Text = $"OTP code is valid for {200 - secondsDifference} seconds";
+                label2.Text = $"OTP code is valid for {60 - secondsDifference} seconds";
             }
-            else label2.Text = "Vui lòng nhấn re-send để gửi lại mã!";
         }
 
         private void ResendButton_Click(object sender, EventArgs e)
