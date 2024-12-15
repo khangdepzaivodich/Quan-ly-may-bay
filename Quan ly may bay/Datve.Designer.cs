@@ -37,14 +37,15 @@
             this.Time = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.btnTimkiem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.PanelTicket = new System.Windows.Forms.FlowLayoutPanel();
-            this.Add = new System.Windows.Forms.PictureBox();
-            this.Substract = new System.Windows.Forms.PictureBox();
             this.lblStt = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Substract = new System.Windows.Forms.PictureBox();
+            this.Add = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cbbFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Substract)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ThanhTieuDe
@@ -203,28 +204,6 @@
             this.PanelTicket.TabIndex = 9;
             this.PanelTicket.WrapContents = false;
             // 
-            // Add
-            // 
-            this.Add.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_right__1_;
-            this.Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Add.Location = new System.Drawing.Point(443, 581);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(53, 50);
-            this.Add.TabIndex = 10;
-            this.Add.TabStop = false;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
-            // 
-            // Substract
-            // 
-            this.Substract.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_left;
-            this.Substract.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Substract.Location = new System.Drawing.Point(330, 580);
-            this.Substract.Name = "Substract";
-            this.Substract.Size = new System.Drawing.Size(53, 50);
-            this.Substract.TabIndex = 11;
-            this.Substract.TabStop = false;
-            this.Substract.Click += new System.EventHandler(this.Substract_Click);
-            // 
             // lblStt
             // 
             this.lblStt.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,15 +216,38 @@
             this.lblStt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblStt.TextChanged += new System.EventHandler(this.lblStt_TextChanged);
             // 
-            // label4
+            // Substract
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(132, 599);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 16);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "d";
+            this.Substract.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_left;
+            this.Substract.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Substract.Location = new System.Drawing.Point(330, 580);
+            this.Substract.Name = "Substract";
+            this.Substract.Size = new System.Drawing.Size(53, 50);
+            this.Substract.TabIndex = 11;
+            this.Substract.TabStop = false;
+            this.Substract.Click += new System.EventHandler(this.Substract_Click);
+            // 
+            // Add
+            // 
+            this.Add.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_right__1_;
+            this.Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Add.Location = new System.Drawing.Point(443, 581);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(53, 50);
+            this.Add.TabIndex = 10;
+            this.Add.TabStop = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.reload__1_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(753, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 36);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Datve
             // 
@@ -253,7 +255,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(821, 643);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblStt);
             this.Controls.Add(this.Substract);
             this.Controls.Add(this.Add);
@@ -281,8 +283,9 @@
             this.Text = "Datve";
             ((System.ComponentModel.ISupportInitialize)(this.cbbFrom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Substract)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,6 +305,6 @@
         private System.Windows.Forms.PictureBox Add;
         private System.Windows.Forms.PictureBox Substract;
         private System.Windows.Forms.Label lblStt;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

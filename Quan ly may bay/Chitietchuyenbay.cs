@@ -79,6 +79,7 @@ namespace Quan_ly_may_bay
             }
             ve.Gia = (int)(giaVe + giaHanhLy);
             ve.HanhLy = soHanhLy;
+
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)

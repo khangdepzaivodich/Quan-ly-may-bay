@@ -25,6 +25,7 @@ namespace Quan_ly_may_bay
             InitializeComponent();
             id = _id;
             chuyenBays = db.ChuyenBays.OrderBy(p => p.Stt).ToList();
+            Substract.Visible = false;
             for(int i = 0; i < chuyenBays.Count; ++i)
             {
                 UC_Ticket uc = new UC_Ticket();
@@ -60,7 +61,7 @@ namespace Quan_ly_may_bay
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
                 if (i >= list.Count)
-                {
+                {   
                     Add.Visible = false;
                     break;
                 }
@@ -73,12 +74,37 @@ namespace Quan_ly_may_bay
             cbbTo.DataSource = db.SanBays.ToList();
             cbbTo.DisplayMember = "City";
         }
+        private void RefreshList()
+        {
+            db = new databaseDataContext();
+            chuyenBays.Clear();
+            chuyenBays = db.ChuyenBays.OrderBy(p => p.Stt).ToList();
+            for (int i = 0; i < chuyenBays.Count; ++i)
+            {
+                int passengerCount = db.Ves.Count(p => p.MaCB == chuyenBays[i].MaCB);
+                list[i].passengers.Text = $"{passengerCount}/100";
+            }
+            PanelTicket.Controls.Clear();
+            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
+            {
+                if (i >= list.Count)
+                {
+                    Add.Visible = false;
+                    break;
+                }
+
+                PanelTicket.Controls.Add(list[i]);
+            }
+            Substract.Visible = false;
+            Add.Visible = true;
+        }
         private void DetailBtn_Click(object sender, EventArgs e)
         {
             KryptonButton btn = sender as KryptonButton;
             int indx = (int)btn.Tag;
             string maCB = chuyenBays[indx].MaCB;
             Chitietchuyenbay chitietchuyenbay = new Chitietchuyenbay(maCB, id);
+            chitietchuyenbay.FormClosed += (s, args) => RefreshList();
             chitietchuyenbay.Show();
         }
         private void lblStt_TextChanged(object sender, EventArgs e)
@@ -127,24 +153,17 @@ namespace Quan_ly_may_bay
             }
             for (int i = 0; i < list.Count; ++i)
             {
-                if(cbbFrom.Text != "" && cbbTo.Text != "")
                 if (list[i].from.Text == cbbFrom.Text && list[i].to.Text == cbbTo.Text && list[i].date1.Text == Time.Value.ToString("dd/MM/yyyy")) // Điều kiện lọc
                 {
                     filteredList.Add(list[i]);
                 }
-                else if(Time.Value.ToString("dd/MM/yyyy") != "")
-                    {
-                        if (list[i].date1.Text == Time.Value.ToString("dd/MM/yyyy")) // Điều kiện lọc
-                        {
-                            filteredList.Add(list[i]);
-                        }
-                    }
             }
 
-            if (list.Count == 0)
+            if (filteredList.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy kết quả phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Add.Visible = false;
+                Substract.Visible = false;
                 return;
             }
 
@@ -160,6 +179,25 @@ namespace Quan_ly_may_bay
                 PanelTicket.Controls.Add(filteredList[i]);
             }
             Substract.Visible = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Add.Visible = true;
+            Substract.Visible = false;
+            filteredList = new List<UC_Ticket>(list);
+            lblStt.Text = "0";
+            PanelTicket.Controls.Clear();
+            for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
+            {
+                if (i >= list.Count)
+                {
+                    Add.Visible = false;
+                    break;
+                }
+                PanelTicket.Controls.Add(list[i]);
+            }
+
         }
     }
 }
