@@ -133,7 +133,8 @@
             // 
             // XemBtn
             // 
-            this.XemBtn.Location = new System.Drawing.Point(567, 22);
+            this.XemBtn.Location = new System.Drawing.Point(594, 34);
+            this.XemBtn.Location = new System.Drawing.Point(590, 25);
             this.XemBtn.Margin = new System.Windows.Forms.Padding(4);
             this.XemBtn.Name = "XemBtn";
             this.XemBtn.OverrideDefault.Back.Color1 = System.Drawing.Color.LightBlue;
@@ -173,8 +174,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.XemBtn.TabIndex = 10;
-            this.XemBtn.Values.Text = "Xuất vé";
-            this.XemBtn.Click += new System.EventHandler(this.Xembtn);
+            this.XemBtn.Values.Text = "Xem";
             // 
             // pictureBox1
             // 

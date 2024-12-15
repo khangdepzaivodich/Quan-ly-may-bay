@@ -19,7 +19,6 @@ namespace Quan_ly_may_bay.UCFlight
             InitializeComponent();
         }
 
-
         public Label Level
         {
             get => label1;
@@ -52,10 +51,11 @@ namespace Quan_ly_may_bay.UCFlight
             set => mave = value;
         }
 
-        private void Xembtn(object sender, EventArgs e)
+        public KryptonButton WatchBtn
         {
-            ReportChuyenBay reportChuyenBay = new ReportChuyenBay(mave);
-            reportChuyenBay.ShowDialog();
+            get => XemBtn;
+            set => XemBtn = value;
         }
+    
     }
 }

@@ -551,9 +551,9 @@ namespace Quan_ly_may_bay
 		
 		private string _Seat;
 		
-		private System.Nullable<int> _HanhLy;
-		
 		private System.Nullable<int> _Gia;
+		
+		private System.Nullable<int> _HanhLy;
 		
 		private EntityRef<ChuyenBay> _ChuyenBay;
 		
@@ -573,10 +573,10 @@ namespace Quan_ly_may_bay
     partial void OnLevelSeatChanged();
     partial void OnSeatChanging(string value);
     partial void OnSeatChanged();
-    partial void OnHanhLyChanging(System.Nullable<int> value);
-    partial void OnHanhLyChanged();
     partial void OnGiaChanging(System.Nullable<int> value);
     partial void OnGiaChanged();
+    partial void OnHanhLyChanging(System.Nullable<int> value);
+    partial void OnHanhLyChanged();
     #endregion
 		
 		public Ve()
@@ -694,26 +694,6 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HanhLy", DbType="Int")]
-		public System.Nullable<int> HanhLy
-		{
-			get
-			{
-				return this._HanhLy;
-			}
-			set
-			{
-				if ((this._HanhLy != value))
-				{
-					this.OnHanhLyChanging(value);
-					this.SendPropertyChanging();
-					this._HanhLy = value;
-					this.SendPropertyChanged("HanhLy");
-					this.OnHanhLyChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia", DbType="Int")]
 		public System.Nullable<int> Gia
 		{
@@ -730,6 +710,26 @@ namespace Quan_ly_may_bay
 					this._Gia = value;
 					this.SendPropertyChanged("Gia");
 					this.OnGiaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HanhLy", DbType="Int")]
+		public System.Nullable<int> HanhLy
+		{
+			get
+			{
+				return this._HanhLy;
+			}
+			set
+			{
+				if ((this._HanhLy != value))
+				{
+					this.OnHanhLyChanging(value);
+					this.SendPropertyChanging();
+					this._HanhLy = value;
+					this.SendPropertyChanged("HanhLy");
+					this.OnHanhLyChanged();
 				}
 			}
 		}
@@ -2462,7 +2462,7 @@ namespace Quan_ly_may_bay
 		
 		private System.Nullable<int> _ManageStaff;
 		
-		private System.Nullable<int> _FinancialStatistics;
+		private int _Stt;
 		
 		private EntityRef<ChucVu> _ChucVu;
 		
@@ -2480,8 +2480,8 @@ namespace Quan_ly_may_bay
     partial void OnCreateFlightChanged();
     partial void OnManageStaffChanging(System.Nullable<int> value);
     partial void OnManageStaffChanged();
-    partial void OnFinancialStatisticsChanging(System.Nullable<int> value);
-    partial void OnFinancialStatisticsChanged();
+    partial void OnSttChanging(int value);
+    partial void OnSttChanged();
     #endregion
 		
 		public PhanQuyen()
@@ -2594,22 +2594,22 @@ namespace Quan_ly_may_bay
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FinancialStatistics", DbType="Int")]
-		public System.Nullable<int> FinancialStatistics
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stt", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int Stt
 		{
 			get
 			{
-				return this._FinancialStatistics;
+				return this._Stt;
 			}
 			set
 			{
-				if ((this._FinancialStatistics != value))
+				if ((this._Stt != value))
 				{
-					this.OnFinancialStatisticsChanging(value);
+					this.OnSttChanging(value);
 					this.SendPropertyChanging();
-					this._FinancialStatistics = value;
-					this.SendPropertyChanged("FinancialStatistics");
-					this.OnFinancialStatisticsChanged();
+					this._Stt = value;
+					this.SendPropertyChanged("Stt");
+					this.OnSttChanged();
 				}
 			}
 		}

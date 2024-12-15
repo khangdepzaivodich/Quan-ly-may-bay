@@ -56,7 +56,7 @@ namespace Quan_ly_may_bay
                 uc.detailBtn.Tag = i;
                 list.Add(uc);
             }
-            filteredList = list;
+            filteredList = new List<UC_Ticket>(list);
             for (int i = 5 * int.Parse(lblStt.Text); i < 5 * int.Parse(lblStt.Text) + 5; i++)
             {
                 if (i >= list.Count)
@@ -80,7 +80,6 @@ namespace Quan_ly_may_bay
             string maCB = chuyenBays[indx].MaCB;
             Chitietchuyenbay chitietchuyenbay = new Chitietchuyenbay(maCB, id);
             chitietchuyenbay.Show();
-
         }
         private void lblStt_TextChanged(object sender, EventArgs e)
         {
