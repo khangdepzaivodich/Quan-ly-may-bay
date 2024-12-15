@@ -76,7 +76,8 @@ namespace Quan_ly_may_bay
             string time1 = timeSpans[(int)btn.Tag].Hours.ToString() + "h " + list[(int)btn.Tag].Date1.Text;
             string seat = ve[(int)btn.Tag].Seat;
             int hanhLy = (int)ve[(int)btn.Tag].HanhLy;
-            ReportChuyenBay reportChuyenBay = new ReportChuyenBay(hoten, cccd, phoneNum, maCB, from, to, time1, seat, hanhLy);
+            string mave = ve[(int)btn.Tag].MaVe;
+            ReportChuyenBay reportChuyenBay = new ReportChuyenBay(hoten, cccd, phoneNum, maCB, from, to, time1, seat, hanhLy, mave);
             reportChuyenBay.Show();
         }
         private void lblStt_TextChanged(object sender, EventArgs e)

@@ -439,6 +439,9 @@
     <EmbeddedResource Include="PQ.resx">
       <DependentUpon>PQ.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportChuyenBay.resx">
+      <DependentUpon>ReportChuyenBay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportVeMayBay.rdlc" />
     <EmbeddedResource Include="ReportDSNV.rdlc" />
     <EmbeddedResource Include="ReportDSNV.resx">

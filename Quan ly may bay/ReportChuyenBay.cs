@@ -13,14 +13,15 @@ namespace Quan_ly_may_bay
 {
     public partial class ReportChuyenBay : KryptonForm
     {
+        string mave;
         public ReportChuyenBay
         (   
             string _hoten, string _cccd, string _phoneNum, string _maCB, string _from, string _to,
-            string _time1, string _seat, int _hanhLy
+            string _time1, string _seat, int _hanhLy, string _mave
         )
         {
             InitializeComponent();
-
+            mave = _mave;
             nameLabel.Text = _hoten;
             CCCDLabel.Text = _cccd;
             phoneNumLabel.Text = _phoneNum;
@@ -33,6 +34,13 @@ namespace Quan_ly_may_bay
         }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void Submitbtn_Click(object sender, EventArgs e)
+        {
+            ReportVeMayBay report = new ReportVeMayBay(mave);
+            report.Show();
             this.Close();
         }
     }

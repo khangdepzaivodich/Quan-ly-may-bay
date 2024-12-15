@@ -203,6 +203,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Submitbtn.TabIndex = 17;
             this.Submitbtn.Values.Text = "Xuất vé";
+            this.Submitbtn.Click += new System.EventHandler(this.Submitbtn_Click);
             // 
             // seat
             // 
