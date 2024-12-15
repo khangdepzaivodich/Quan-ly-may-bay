@@ -18,6 +18,7 @@ namespace Quan_ly_may_bay
         databaseDataContext db = new databaseDataContext();
         private int id;
         List<Ve> ve = new List<Ve>();
+        private List<TimeSpan> timeSpans = new List<TimeSpan>();
         public BookedTicket(int _id)
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace Quan_ly_may_bay
                 DateTime ngayKhoiHanh = chuyenBay.NgayKH.Value; // Ngày khởi hành
                 TimeSpan gioCatCanh = loTrinh.GioCatCanh.Value; // Giờ cất cánh
                 TimeSpan gioHaCanh = loTrinh.GioHaCanh.Value;   // Giờ hạ cánh
-
+                timeSpans.Add(gioCatCanh);
                 // Xác định ngày hạ cánh
                 DateTime ngayHaCanh = ngayKhoiHanh + gioHaCanh;
                 if (gioHaCanh < gioCatCanh) // Hạ cánh vào ngày hôm sau
@@ -47,7 +48,7 @@ namespace Quan_ly_may_bay
                 string noiDen = db.SanBays.FirstOrDefault(p => p.MaSB == loTrinh.NoiDen).City.ToString();
                 uc.From.Text = noiXuatPhat;
                 uc.To.Text = noiDen;
-                uc.Click += WatchBtn_Click;
+                uc.WatchBtn.Click += WatchBtn_Click;
                 uc.WatchBtn.Tag = i;
                 list.Add(uc);
             }
@@ -67,9 +68,14 @@ namespace Quan_ly_may_bay
             string hoten = db.KhachHangs.FirstOrDefault(p => p.MaKH == id).HoTenKH;
             string cccd = db.KhachHangs.FirstOrDefault(p => p.MaKH == id).CCCD;
             string phoneNum = db.KhachHangs.FirstOrDefault(p => p.MaKH == id).SDT;
-            string from = list[(int)btn.Tag].From.Text;
             string maCB = ve[(int)btn.Tag].MaCB;
-
+            string from = list[(int)btn.Tag].From.Text;
+            string to = list[(int)btn.Tag].To.Text;
+            string time1 = timeSpans[(int)btn.Tag].Hours.ToString() + "h " + list[(int)btn.Tag].Date1.Text;
+            string seat = ve[(int)btn.Tag].Seat;
+            int hanhLy = (int)ve[(int)btn.Tag].HanhLy;
+            ReportChuyenBay reportChuyenBay = new ReportChuyenBay(hoten, cccd, phoneNum, maCB, from, to, time1, seat, hanhLy);
+            reportChuyenBay.Show();
         }
         private void lblStt_TextChanged(object sender, EventArgs e)
         {

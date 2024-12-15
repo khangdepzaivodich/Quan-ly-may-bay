@@ -80,7 +80,6 @@ namespace Quan_ly_may_bay
             string maCB = chuyenBays[indx].MaCB;
             Chitietchuyenbay chitietchuyenbay = new Chitietchuyenbay(maCB, id);
             chitietchuyenbay.Show();
-
         }
         private void lblStt_TextChanged(object sender, EventArgs e)
         {

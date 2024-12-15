@@ -24,6 +24,8 @@
       <Column Name="MaCB" Type="System.String" DbType="Char(7)" CanBeNull="true" />
       <Column Name="LevelSeat" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Seat" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HanhLy" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="ChuyenBay_Ve" Member="ChuyenBay" ThisKey="MaCB" OtherKey="MaCB" Type="ChuyenBay" IsForeignKey="true" />
       <Association Name="KhachHang_Ve" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
     </Type>

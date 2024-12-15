@@ -77,7 +77,8 @@ namespace Quan_ly_may_bay
                 giaHanhLyTextBox.Text = $"Giá hành lý    {giaHanhLy}";
                 tongSoTextBox.Text = $"Tổng số    {giaVe + giaHanhLy}";
             }
-            //ve.Gia = giaVe + giaHanhLy;
+            ve.Gia = (int)(giaVe + giaHanhLy);
+            ve.HanhLy = soHanhLy;
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -95,7 +96,8 @@ namespace Quan_ly_may_bay
                 giaHanhLyTextBox.Text = $"Giá hành lý    {giaHanhLy}";
                 tongSoTextBox.Text = $"Tổng số    {giaVe + giaHanhLy}";
             }
-            //ve.Gia = giaVe + giaHanhLy;
+            ve.Gia = (int)(giaVe + giaHanhLy);
+            ve.HanhLy = soHanhLy;
         }
         public void SetVe(Ve _ve)
         {
@@ -103,10 +105,14 @@ namespace Quan_ly_may_bay
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            db.Ves.InsertOnSubmit(ve);
-            db.SubmitChanges();
-            MessageBox.Show("Đặt vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            textBox1.Text = "";
+            if(textBox1.Text != "")
+            {
+                db.Ves.InsertOnSubmit(ve);
+                db.SubmitChanges();
+                MessageBox.Show("Đặt vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox1.Text = "";
+            }
         }
+
     }
 }
