@@ -111,7 +111,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.label6.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(162, 42);
+            this.label6.Location = new System.Drawing.Point(144, 42);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 24);
@@ -133,7 +133,6 @@
             // 
             // XemBtn
             // 
-            this.XemBtn.Location = new System.Drawing.Point(594, 34);
             this.XemBtn.Location = new System.Drawing.Point(590, 25);
             this.XemBtn.Margin = new System.Windows.Forms.Padding(4);
             this.XemBtn.Name = "XemBtn";
@@ -181,9 +180,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox1.BackgroundImage = global::Quan_ly_may_bay.Properties.Resources.arrow_right_bar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(289, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(303, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(84, 58);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
