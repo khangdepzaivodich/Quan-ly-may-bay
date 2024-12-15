@@ -173,7 +173,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.XemBtn.TabIndex = 10;
-            this.XemBtn.Values.Text = "Xem";
+            this.XemBtn.Values.Text = "Xuất vé";
             this.XemBtn.Click += new System.EventHandler(this.Xembtn);
             // 
             // pictureBox1
