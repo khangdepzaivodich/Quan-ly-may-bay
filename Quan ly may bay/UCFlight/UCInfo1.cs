@@ -13,16 +13,13 @@ namespace Quan_ly_may_bay.UCFlight
 {
     public partial class UCInfo1 : UserControl
     {
+        string mave;
         public UCInfo1()
         {
             InitializeComponent();
         }
 
-        private void Xembtn(object sender, EventArgs e)
-        {
-            ReportChuyenBay reportChuyenBay = new ReportChuyenBay();
-            reportChuyenBay.ShowDialog();
-        }
+
         public Label Level
         {
             get => label1;
@@ -48,10 +45,17 @@ namespace Quan_ly_may_bay.UCFlight
             get => label7; 
             set => label7 = value;
         }
-        public KryptonButton WatchBtn
+
+        public string MaVe
         {
-            get => XemBtn; 
-            set => XemBtn = value;
+            get => mave;
+            set => mave = value;
+        }
+
+        private void Xembtn(object sender, EventArgs e)
+        {
+            ReportChuyenBay reportChuyenBay = new ReportChuyenBay(mave);
+            reportChuyenBay.ShowDialog();
         }
     }
 }
