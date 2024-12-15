@@ -66,7 +66,6 @@
             this.lblStt.TabIndex = 14;
             this.lblStt.Text = "0";
             this.lblStt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblStt.TextChanged += new System.EventHandler(this.lblStt_TextChanged);
             // 
             // Add
             // 

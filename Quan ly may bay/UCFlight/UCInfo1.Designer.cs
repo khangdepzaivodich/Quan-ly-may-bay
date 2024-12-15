@@ -133,7 +133,7 @@
             // 
             // XemBtn
             // 
-            this.XemBtn.Location = new System.Drawing.Point(567, 22);
+            this.XemBtn.Location = new System.Drawing.Point(594, 34);
             this.XemBtn.Margin = new System.Windows.Forms.Padding(4);
             this.XemBtn.Name = "XemBtn";
             this.XemBtn.OverrideDefault.Back.Color1 = System.Drawing.Color.LightBlue;

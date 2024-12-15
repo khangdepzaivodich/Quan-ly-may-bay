@@ -12,10 +12,10 @@ using Microsoft.Reporting.WinForms;
 
 namespace Quan_ly_may_bay
 {
-    public partial class ReportChuyenBay : KryptonForm
+    public partial class ReportVeMayBay : KryptonForm
     {
         string mave;
-        public ReportChuyenBay(string _mave)
+        public ReportVeMayBay(string _mave)
         {
             InitializeComponent();
             mave = _mave;

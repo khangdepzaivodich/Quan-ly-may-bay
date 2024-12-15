@@ -1,6 +1,6 @@
 ﻿namespace Quan_ly_may_bay
 {
-    partial class ReportChuyenBay
+    partial class ReportVeMayBay
     {
         /// <summary>
         /// Required designer variable.

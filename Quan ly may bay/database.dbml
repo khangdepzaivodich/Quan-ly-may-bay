@@ -113,7 +113,7 @@
       <Column Name="FlightItinerary" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CreateFlight" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ManageStaff" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="FinancialStatistics" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Association Name="ChucVu_PhanQuyen" Member="ChucVu" ThisKey="PQ" OtherKey="MaCV" Type="ChucVu" IsForeignKey="true" />
     </Type>
   </Table>

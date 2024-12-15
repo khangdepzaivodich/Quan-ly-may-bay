@@ -54,7 +54,7 @@ namespace Quan_ly_may_bay.UCFlight
 
         private void Xembtn(object sender, EventArgs e)
         {
-            ReportChuyenBay reportChuyenBay = new ReportChuyenBay(mave);
+            ReportVeMayBay reportChuyenBay = new ReportVeMayBay(mave);
             reportChuyenBay.ShowDialog();
         }
     }
