@@ -17,7 +17,7 @@ namespace Quan_ly_may_bay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReportChuyenBay("HK00000001"));
+            Application.Run(new MainLogin(10000004));
         }
     }
 }
