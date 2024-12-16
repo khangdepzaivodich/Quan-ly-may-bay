@@ -26,6 +26,7 @@ namespace Quan_ly_may_bay
             "Flight Itinerary",
             "Create Flight",
             "Manage Staff",
+            "Financial",
         };
         private List<string> admin = new List<string>
         {

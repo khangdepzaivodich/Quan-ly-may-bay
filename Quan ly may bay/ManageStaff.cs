@@ -65,7 +65,11 @@ namespace Quan_ly_may_bay
                 uc.TenNV = nv[i].HoTenNV.Length < 15 ? nv[i].HoTenNV : nv[i].HoTenNV.Substring(0,14) + "...";
                 uc.MaCV = nv[i].MaCV;
                 uc.Luong = nv[i].Luong.ToString() + " VND";
-
+                if (nv[i].ID == ID)
+                {
+                    uc.Delete.Visible = false;
+                    uc.Edit.Visible = false;
+                }
                 // Đăng ký sự kiện DataChanged
                 uc.DataChanged += (s, args) =>
                 {
@@ -89,7 +93,12 @@ namespace Quan_ly_may_bay
                     uc.TenNV = nv[i].HoTenNV;
                     uc.MaCV = nv[i].MaCV;
                     uc.Luong = nv[i].Luong.ToString() + " VND";
-                    flpContain.Controls.Add(uc);
+                if (nv[i].ID == ID)
+                {
+                    uc.Delete.Visible = false;
+                    uc.Edit.Visible = false;
+                }
+                flpContain.Controls.Add(uc);
                 }
             
         }
@@ -112,7 +121,12 @@ namespace Quan_ly_may_bay
                     uc.TenNV = nv[i].HoTenNV;
                     uc.MaCV = nv[i].MaCV;
                     uc.Luong = nv[i].Luong.ToString() + " VND";
-                    flpContain.Controls.Add(uc);
+                if (nv[i].ID == ID)
+                {
+                    uc.Delete.Visible = false;
+                    uc.Edit.Visible = false;
+                }
+                flpContain.Controls.Add(uc);
                 }
         }
 

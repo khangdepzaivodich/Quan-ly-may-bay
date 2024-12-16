@@ -147,7 +147,7 @@ namespace Quan_ly_may_bay
                 newNhanVien.MaCV = cbbMaCV.SelectedValue.ToString();
                 newNhanVien.SDT = txtSdt.Text;
                 newNhanVien.ID = newAccount.ID;
-                newNhanVien.Luong = int.Parse(txtLuong.Text);
+                newNhanVien.Luong = int.Parse(txtLuong.Tag.ToString());
                 db.NhanViens.InsertOnSubmit(newNhanVien);
                 db.SubmitChanges();                
             }
@@ -173,6 +173,7 @@ namespace Quan_ly_may_bay
             if (decimal.TryParse(txtLuong.Text, out decimal salary))
             {
                 // Format the number with commas as thousands separators
+                txtLuong.Tag = salary;
                 txtLuong.Text = string.Format("{0:N0}", salary);
             }
 

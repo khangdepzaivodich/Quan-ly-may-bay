@@ -86,6 +86,7 @@ namespace Quan_ly_may_bay
             else if (frm is LoginForm)
             {
                 account.RandomKey = account.OTP;
+                account.Active = 1;
                 db.SubmitChanges();
                 MainNotLogin mainLogin = new MainNotLogin();
                 mainLogin.ShowDialog();

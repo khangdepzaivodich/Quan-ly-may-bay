@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,16 @@ namespace Quan_ly_may_bay.UCFlight
         public UC_Staff()
         {
             InitializeComponent();
+        }
+        public KryptonButton Delete
+        {
+            get => btnDelete;
+            set => btnDelete = value;
+        }
+        public KryptonButton Edit
+        {
+            get => btnEdit;
+            set => btnEdit = value;
         }
         public int MaNV
         {
