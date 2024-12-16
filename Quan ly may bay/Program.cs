@@ -17,7 +17,7 @@ namespace Quan_ly_may_bay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainLogin(10000005));
+            Application.Run(new MainLogin(10000001));
         }
     }
 }

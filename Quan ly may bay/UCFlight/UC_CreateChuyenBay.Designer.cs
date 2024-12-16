@@ -37,6 +37,7 @@
             this.MaLT = new System.Windows.Forms.Label();
             this.SoGheConLai = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.XuatBtn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,7 +152,7 @@
             this.SoGheConLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.SoGheConLai.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoGheConLai.ForeColor = System.Drawing.Color.White;
-            this.SoGheConLai.Location = new System.Drawing.Point(667, 32);
+            this.SoGheConLai.Location = new System.Drawing.Point(665, 14);
             this.SoGheConLai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SoGheConLai.Name = "SoGheConLai";
             this.SoGheConLai.Size = new System.Drawing.Size(63, 24);
@@ -169,11 +170,56 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // XuatBtn
+            // 
+            this.XuatBtn.Location = new System.Drawing.Point(654, 44);
+            this.XuatBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.XuatBtn.Name = "XuatBtn";
+            this.XuatBtn.OverrideDefault.Back.Color1 = System.Drawing.Color.LightBlue;
+            this.XuatBtn.OverrideDefault.Back.Color2 = System.Drawing.Color.SteelBlue;
+            this.XuatBtn.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.XuatBtn.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.XuatBtn.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.XuatBtn.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.XuatBtn.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.XuatBtn.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold);
+            this.XuatBtn.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.XuatBtn.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(41)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.XuatBtn.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.XuatBtn.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.XuatBtn.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.XuatBtn.Size = new System.Drawing.Size(91, 32);
+            this.XuatBtn.StateCommon.Back.Color1 = System.Drawing.Color.LightBlue;
+            this.XuatBtn.StateCommon.Back.Color2 = System.Drawing.Color.SteelBlue;
+            this.XuatBtn.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.XuatBtn.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.XuatBtn.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.XuatBtn.StateCommon.Border.Rounding = 0;
+            this.XuatBtn.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.XuatBtn.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.XuatBtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XuatBtn.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(170)))));
+            this.XuatBtn.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.XuatBtn.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.XuatBtn.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.XuatBtn.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.XuatBtn.TabIndex = 22;
+            this.XuatBtn.Values.Text = "Danh sách";
+            // 
             // UC_CreateChuyenBay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.XuatBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SoGheConLai);
             this.Controls.Add(this.MaLT);
@@ -202,5 +248,6 @@
         private System.Windows.Forms.Label MaLT;
         private System.Windows.Forms.Label SoGheConLai;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton XuatBtn;
     }
 }
