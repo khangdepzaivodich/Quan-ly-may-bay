@@ -37,6 +37,7 @@ namespace Quan_ly_may_bay
                 DateTime ngayKhoiHanh = chuyenBay.NgayKH.Value; // Ngày khởi hành
                 TimeSpan gioCatCanh = loTrinh.GioCatCanh.Value; // Giờ cất cánh
                 TimeSpan gioHaCanh = loTrinh.GioHaCanh.Value; // Giờ hạ cánh
+                timeSpans.Add(gioHaCanh);
 
                 // Tính giờ khởi hành và hạ cánh
                 DateTime thoiGianKhoiHanh = ngayKhoiHanh + gioCatCanh;

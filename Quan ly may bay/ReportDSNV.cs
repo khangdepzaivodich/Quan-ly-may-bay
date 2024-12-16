@@ -37,10 +37,9 @@ namespace Quan_ly_may_bay
             ReportParameter[] para = new ReportParameter[2];
 
             // Lấy thông tin người in
-            para[0] = new ReportParameter("nguoiin", db.NhanViens
-                                        .Where(p => p.ID == IDnguoiin)
-                                        .Select(p => p.HoTenNV)
-                                        .FirstOrDefault() );
+            para[0] = new ReportParameter("nguoiin", db.Accounts
+                                        .FirstOrDefault(p => p.ID == IDnguoiin).Username);
+                                     
 
             IQueryable<NhanVien> query = db.NhanViens;
 
