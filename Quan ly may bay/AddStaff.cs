@@ -155,7 +155,7 @@ namespace Quan_ly_may_bay
             {
                 NhanVien nv = db.NhanViens.FirstOrDefault(p => p.MaNV == manv);
                 nv.MaCV = cbbMaCV.SelectedValue.ToString() ;
-                nv.Luong = int.Parse(txtLuong.Text);
+                nv.Luong = int.Parse(txtLuong.Tag.ToString());
                 db.SubmitChanges();
             }
 

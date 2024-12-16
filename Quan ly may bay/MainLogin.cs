@@ -31,7 +31,6 @@ namespace Quan_ly_may_bay
         };
         private List<string> admin = new List<string>
         {
-            "View Ticket",
             "Flight Itinerary",
             "Create Flight",
             "Manage Staff",
@@ -82,7 +81,6 @@ namespace Quan_ly_may_bay
                     uC.lbl.Click += Btnclick;
                     uC.lbl.Text = admin[i];
                     uC.lbl.Click += Btnclick;
-                    if (admin[i] == "View Ticket") uC.lbl.BackColor = Color.FromArgb(128, 255, 255, 255);
                     fpanelBtn.Controls.Add(uC);
                 }
                 XemThongTin.Enabled = false;
