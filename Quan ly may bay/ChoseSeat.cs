@@ -192,11 +192,11 @@ namespace Quan_ly_may_bay
         private string GenerateMaVe()
         {
             string newMaVe = "HK";
+            ++currentSoVe;
             while (newMaVe.Length + currentSoVe.ToString().Length < 10)
             {
                 newMaVe += "0";
             }
-            ++currentSoVe;
             newMaVe += currentSoVe.ToString();
            
             return newMaVe;

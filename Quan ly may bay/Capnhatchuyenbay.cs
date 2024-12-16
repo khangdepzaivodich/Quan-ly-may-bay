@@ -59,7 +59,7 @@ namespace Quan_ly_may_bay
 
                 SanBay sb2 = db.SanBays.FirstOrDefault(p => p.MaSB == lb.NoiDen);
                 uc.noiKhoiHanh.Text = sb2.City;
-                uc.SoGhe.Text = "100/100";
+                uc.SoGhe.Text = $"{db.Ves.Count(p => p.MaCB == listCB[i].MaCB)}/100";
 
                 list.Add(uc);
             }
