@@ -98,16 +98,26 @@ namespace Quan_ly_may_bay
 
         private void SignupBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             SignupForm signupForm = new SignupForm();
             signupForm.ShowDialog();
-            this.Close();
+            if(signupForm.DialogResult == DialogResult.Cancel)
+            {
+                this.Show();
+            }
+            else this.Close();
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
-            this.Close();
+            if (loginForm.DialogResult == DialogResult.Cancel)
+            {
+                this.Show();
+            }
+            else this.Close();
         }
 
         private void Exit_Click(object sender, EventArgs e)

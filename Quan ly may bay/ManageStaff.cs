@@ -62,7 +62,7 @@ namespace Quan_ly_may_bay
                 UC_Staff uc = new UC_Staff();
 
                 uc.MaNV = nv[i].MaNV;
-                uc.TenNV = nv[i].HoTenNV;
+                uc.TenNV = nv[i].HoTenNV.Length < 15 ? nv[i].HoTenNV : nv[i].HoTenNV.Substring(0,14) + "...";
                 uc.MaCV = nv[i].MaCV;
                 uc.Luong = nv[i].Luong.ToString() + " VND";
 

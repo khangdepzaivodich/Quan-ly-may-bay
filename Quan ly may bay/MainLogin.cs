@@ -66,8 +66,9 @@ namespace Quan_ly_may_bay
                     uC.Dock = DockStyle.Top;
                     uC.lbl.Click += Btnclick;
                     uC.lbl.Text = kh[i];
-                    fpanelBtn.Controls.Add(uC);
                     uC.lbl.Click += Btnclick;
+                    if (kh[i] == "View Ticket") uC.lbl.BackColor = Color.FromArgb(128, 255, 255, 255);
+                    fpanelBtn.Controls.Add(uC);
                 }
             }
             else if(account.LevelID == 0)
@@ -78,8 +79,9 @@ namespace Quan_ly_may_bay
                     uC.Dock = DockStyle.Top;
                     uC.lbl.Click += Btnclick;
                     uC.lbl.Text = admin[i];
-                    fpanelBtn.Controls.Add(uC);
                     uC.lbl.Click += Btnclick;
+                    if (admin[i] == "View Ticket") uC.lbl.BackColor = Color.FromArgb(128, 255, 255, 255);
+                    fpanelBtn.Controls.Add(uC);
                 }
                 XemThongTin.Enabled = false;
             }
@@ -93,7 +95,7 @@ namespace Quan_ly_may_bay
                     pQ.FlightItinerary,
                     pQ.CreateFlight,
                     pQ.ManageStaff,
-                    // Thêm các cột khác nếu cần
+                    pQ.FinancialStatistics
                 };
                 for(int i = 0; i < nv.Count; i++)
                 {
@@ -103,11 +105,17 @@ namespace Quan_ly_may_bay
                         uC.Dock = DockStyle.Top;
                         uC.lbl.Click += Btnclick;
                         uC.lbl.Text = nv[i];
-                        fpanelBtn.Controls.Add(uC);
+                        if (nv[i] == "View Ticket") uC.lbl.BackColor = Color.FromArgb(128, 255, 255, 255);
                         uC.lbl.Click += Btnclick;
+                        fpanelBtn.Controls.Add(uC);
                     }
                 }
             }
+
+            frm = new Datve(account.ID);
+            frm.TopLevel = false;
+            panelMain.Controls.Add(frm);
+            frm.Show();
         }
 
 

@@ -36,6 +36,7 @@
             this.FlightItinerary = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.CreateFlight = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ManageStaff = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.FinancialStatistic = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,8 @@
             this.ViewTicket,
             this.FlightItinerary,
             this.CreateFlight,
-            this.ManageStaff});
+            this.ManageStaff,
+            this.FinancialStatistic});
             this.datas.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.datas.Location = new System.Drawing.Point(0, 124);
             this.datas.Name = "datas";
@@ -119,6 +121,15 @@
             this.ManageStaff.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ManageStaff.Width = 115;
             // 
+            // FinancialStatistic
+            // 
+            this.FinancialStatistic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.FinancialStatistic.DataPropertyName = "FinancialStatistics";
+            this.FinancialStatistic.HeaderText = "Financial Statistics";
+            this.FinancialStatistic.MinimumWidth = 6;
+            this.FinancialStatistic.Name = "FinancialStatistic";
+            this.FinancialStatistic.Width = 111;
+            // 
             // PQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -147,5 +158,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn FlightItinerary;
         private System.Windows.Forms.DataGridViewCheckBoxColumn CreateFlight;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ManageStaff;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn FinancialStatistic;
     }
 }

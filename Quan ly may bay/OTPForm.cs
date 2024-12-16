@@ -17,13 +17,6 @@ namespace Quan_ly_may_bay
         private int id;
         databaseDataContext db = new databaseDataContext();
         Account account;
-        TimeSpan timeDifference;
-        public OTPForm(Form _frm)
-        {
-            InitializeComponent();
-            ResendButton.Enabled = false;
-            frm = _frm;
-        }
         public OTPForm(Form _frm, int _id)
         {
             InitializeComponent();
@@ -33,9 +26,7 @@ namespace Quan_ly_may_bay
         }
         private void CloseLabel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            MainNotLogin mainLogin = new MainNotLogin();
-            mainLogin.ShowDialog();
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
@@ -78,18 +69,27 @@ namespace Quan_ly_may_bay
                 return;
             }
 
+            MessageBox.Show("Xác nhận thành công!", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             ////Phan quyen form sau OTP
-            if (frm is SignupForm || frm is LoginForm)
+            if (frm is SignupForm)
             {
-                if (account.Active == 0)
-                {
-                    account.DateActive = DateTime.Now;
-                }              
+                account.DateActive = DateTime.Now;
+                account.OTP = account.RandomKey;
                 account.Active = 1;
                 db.SubmitChanges();
                 MainNotLogin mainLogin = new MainNotLogin();
                 mainLogin.ShowDialog();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else if (frm is LoginForm)
+            {
+                account.RandomKey = account.OTP;
+                db.SubmitChanges();
+                MainNotLogin mainLogin = new MainNotLogin();
+                mainLogin.ShowDialog();
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
@@ -98,7 +98,7 @@ namespace Quan_ly_may_bay
                 db.SubmitChanges();
                 ResetPassForm resetPassForm = new ResetPassForm(account.ID);
                 resetPassForm.ShowDialog();
-                this.DialogResult = DialogResult.Cancel;
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
         }

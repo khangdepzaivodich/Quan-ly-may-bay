@@ -18,48 +18,37 @@ namespace Quan_ly_may_bay
 
         {
             InitializeComponent();
-            datas.DataSource = db.PhanQuyens.Select(p => new { p.PQ,p.ViewTicket, p.FlightItinerary, p.CreateFlight, p.ManageStaff }).ToList();
+            datas.DataSource = db.PhanQuyens.Select(p => new { p.PQ,p.ViewTicket, p.FlightItinerary, p.CreateFlight, p.ManageStaff,p.FinancialStatistics }).ToList();
         }
 
         private void data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 1 && e.ColumnIndex <= 4) // Kiểm tra cột [1-4]
+            string pqValue = "";
+            if (e.RowIndex == 0) pqValue = "GDDH";
+            else if (e.RowIndex == 1) pqValue = "NVCB";
+            else if (e.RowIndex == 2) pqValue = "QLNS";
+            if(pqValue != "")
             {
-                string pqValue = datas.Rows[e.RowIndex].Cells[0].Value?.ToString(); // Lấy mã PQ
-                if (!string.IsNullOrEmpty(pqValue))
+                PhanQuyen p = db.PhanQuyens.FirstOrDefault(k => k.PQ == pqValue);
+                // Cập nhật giá trị theo cột được click
+                if (e.ColumnIndex == 1) p.ViewTicket = p.ViewTicket == 1 ? 0 : 1;
+                else if (e.ColumnIndex == 2) p.FlightItinerary = p.FlightItinerary == 1 ? 0 : 1;
+                else if (e.ColumnIndex == 3) p.CreateFlight = p.CreateFlight == 1 ? 0 : 1;
+                else if (e.ColumnIndex == 4) p.ManageStaff = p.ManageStaff == 1 ? 0 : 1;
+                else if (e.ColumnIndex == 5) p.FinancialStatistics = p.FinancialStatistics == 1 ? 0 : 1;
+                // Lưu thay đổi vào database
+                db.SubmitChanges();
+                datas.DataSource = db.PhanQuyens.Select(m => new
                 {
-                    PhanQuyen p = db.PhanQuyens.FirstOrDefault(k => k.PQ == pqValue);
-                    if (p != null)
-                    {
-                        // Cập nhật giá trị theo cột được click
-                        if (e.ColumnIndex == 1) p.ViewTicket = p.ViewTicket == 1 ? 0 : 1;
-                        else if (e.ColumnIndex == 2) p.FlightItinerary = p.FlightItinerary == 1 ? 0 : 1;
-                        else if (e.ColumnIndex == 3) p.CreateFlight = p.CreateFlight == 1 ? 0 : 1;
-                        else if (e.ColumnIndex == 4) p.ManageStaff = p.ManageStaff == 1 ? 0 : 1;
-
-                        // Lưu thay đổi vào database
-                        db.SubmitChanges();
-
-                        // Cập nhật lại DataGridView
-                        datas.DataSource = db.PhanQuyens.Select(m => new
-                        {
-                            m.PQ,
-                            m.ViewTicket,
-                            m.FlightItinerary,
-                            m.CreateFlight,
-                            m.ManageStaff
-                        }).ToList();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không tìm thấy bản ghi phù hợp để cập nhật.", "Thông báo");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Giá trị cột đầu tiên không hợp lệ.", "Thông báo");
-                }
+                    m.PQ,
+                    m.ViewTicket,
+                    m.FlightItinerary,
+                    m.CreateFlight,
+                    m.ManageStaff,
+                    m.FinancialStatistics,
+                }).ToList();
             }
+
         }
 
     }

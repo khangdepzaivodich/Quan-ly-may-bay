@@ -21,6 +21,7 @@ namespace Quan_ly_may_bay
 
         private void CloseLabel_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
@@ -62,10 +63,6 @@ namespace Quan_ly_may_bay
             if (!check)
             {
                 return;
-                //this.Hide();
-                //OTPForm frm = new OTPForm(this);
-                //    frm.ShowDialog();
-                //this.Close();
             }
             databaseDataContext db = new databaseDataContext();
             Account newAccount = new Account();
@@ -88,9 +85,6 @@ namespace Quan_ly_may_bay
                 EmailTextBox.Focus();
                 return;
             }
-            
-            this.Hide();
-
 
             Random random = new Random();
             int rd = random.Next(100000, 999999);
@@ -116,6 +110,7 @@ namespace Quan_ly_may_bay
             this.Hide();
             OTPForm oTPForm = new OTPForm(this, newAccount.ID);
             oTPForm.ShowDialog();
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

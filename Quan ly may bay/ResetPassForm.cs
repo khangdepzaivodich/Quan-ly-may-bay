@@ -16,10 +16,6 @@ namespace Quan_ly_may_bay
         Account account;
         databaseDataContext db = new databaseDataContext();
         int id;
-        public ResetPassForm()
-        {
-            InitializeComponent();
-        }
         public ResetPassForm(int _id)
         {
             InitializeComponent();
@@ -44,6 +40,9 @@ namespace Quan_ly_may_bay
             string pass = PasswordTexBox.Text + account.OTP; 
             account.Password = Common.HashPassword(pass);
             db.SubmitChanges();
+            MainNotLogin frm = new MainNotLogin();
+            frm.ShowDialog();
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

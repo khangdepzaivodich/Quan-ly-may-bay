@@ -22,6 +22,7 @@ namespace Quan_ly_may_bay
 
         private void CloseLabel_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
@@ -30,14 +31,31 @@ namespace Quan_ly_may_bay
             this.Hide();
             EmailForget emailForget = new EmailForget();
             emailForget.ShowDialog();
+            if (emailForget.DialogResult == DialogResult.Cancel)
+            {
+                this.Show();
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void lblSignup_Click(object sender, EventArgs e)
         {
             this.Hide();
-            this.Close();
                 SignupForm signupForm = new SignupForm();
                 signupForm.ShowDialog();
+            if (signupForm.DialogResult == DialogResult.Cancel)
+            {
+                this.Show();
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void labelHover(object sender, EventArgs e)
@@ -94,6 +112,15 @@ namespace Quan_ly_may_bay
                 this.Hide();
                 OTPForm oTPForm = new OTPForm(this, account.ID);
                 oTPForm.ShowDialog();
+                if (oTPForm.DialogResult == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
                 return;
             }
             string str = PasswordTextBox.Text + account.OTP;
@@ -104,11 +131,38 @@ namespace Quan_ly_may_bay
                 MessageBox.Show("Mật khẩu sai!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            if (account.Active == 1 && account.RandomKey != account.OTP)
+            {
+                MessageBox.Show("Tài khoản cần xác nhận lại mã OTP", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Random random = new Random();
+                int rd = random.Next(100000, 999999);
+                while (rd == account.OTP)
+                {
+                    rd = random.Next(100000, 999999);
+                }
+                account.RandomKey = rd;
+                account.OTPDateSend = DateTime.Now;
+                SendMail.SendMailTo(account.Email, "Mã xác thực của bạn là " + rd.ToString());
+                db.SubmitChanges();
+                this.Hide();
+                OTPForm oTPForm = new OTPForm(this, account.ID);
+                oTPForm.ShowDialog();
+                if (oTPForm.DialogResult == DialogResult.Cancel)
+                {
+                    this.Show();
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                return;
+            }
             // Nếu mật khẩu hợp lệ, thực hiện các thao tác tiếp theo
             MessageBox.Show("Đăng nhập thành công!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Hide();
-            this.Close();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             MainLogin frm = new MainLogin(account.ID);
             frm.ShowDialog();
         }

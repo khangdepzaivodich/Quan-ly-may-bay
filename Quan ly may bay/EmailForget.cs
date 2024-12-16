@@ -23,9 +23,7 @@ namespace Quan_ly_may_bay
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            MainNotLogin mainNotLogin = new MainNotLogin();
-            mainNotLogin.ShowDialog();
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
@@ -55,15 +53,18 @@ namespace Quan_ly_may_bay
             account.OTPDateSend = DateTime.Now;
             SendMail.SendMailTo(account.Email,"Mã xác thực của bạn là " + rd.ToString());
             db.SubmitChanges();
+
+
             this.Hide();
             OTPForm oTPForm = new OTPForm(this, account.ID);
             oTPForm.ShowDialog();
-            if(oTPForm.DialogResult == DialogResult.OK)
+            if(oTPForm.DialogResult == DialogResult.Cancel)
             {
                 this.Show();
             }
             else
             {
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
         }

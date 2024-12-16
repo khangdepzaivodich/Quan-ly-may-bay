@@ -218,7 +218,7 @@
             this.txtLuong.StateCommon.Border.Rounding = 5;
             this.txtLuong.StateCommon.Border.Width = 2;
             this.txtLuong.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtLuong.StateCommon.Content.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLuong.StateCommon.Content.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLuong.TabIndex = 6;
             this.txtLuong.TextChanged += new System.EventHandler(this.txtLuong_TextChanged);
             // 
@@ -263,7 +263,7 @@
             this.txtTenNV.StateCommon.Border.Rounding = 5;
             this.txtTenNV.StateCommon.Border.Width = 2;
             this.txtTenNV.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtTenNV.StateCommon.Content.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNV.StateCommon.Content.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenNV.TabIndex = 2;
             this.txtTenNV.TextChanged += new System.EventHandler(this.txtTenNV_TextChanged);
             // 
@@ -296,7 +296,7 @@
             this.txtMaNV.StateCommon.Border.Rounding = 5;
             this.txtMaNV.StateCommon.Border.Width = 2;
             this.txtMaNV.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtMaNV.StateCommon.Content.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.StateCommon.Content.Font = new System.Drawing.Font("Itim", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.TabIndex = 0;
             this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMaNV.TextChanged += new System.EventHandler(this.txtMaNV_TextChanged);
