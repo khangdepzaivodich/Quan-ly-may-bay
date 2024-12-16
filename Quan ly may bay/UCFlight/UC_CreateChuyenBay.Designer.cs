@@ -213,6 +213,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.XuatBtn.TabIndex = 22;
             this.XuatBtn.Values.Text = "Danh sách";
+            this.XuatBtn.Click += new System.EventHandler(this.XuatBtn_Click);
             // 
             // UC_CreateChuyenBay
             // 

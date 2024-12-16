@@ -52,5 +52,11 @@ namespace Quan_ly_may_bay.UCFlight
             get => SoGheConLai;
             set => SoGheConLai = value;
         }
+
+        private void XuatBtn_Click(object sender, EventArgs e)
+        {
+            ReportDSHK rp =new ReportDSHK(MaCB.Text, MaLT.Text, gioKhoiHanh.Text, noiKhoiHanh.Text, noiDen.Text);
+            rp.Show();
+        }
     }
 }
