@@ -9,13 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Quan_ly_may_bay.Base;
 
 namespace Quan_ly_may_bay
 {
     public partial class BookedTicket : Form
     {
         private List<UCInfo1> list = new List<UCInfo1>();
-        databaseDataContext db = new databaseDataContext();
+        databaseDataContext db = new databaseDataContext(Common.connectionString);
         private int id;
         List<Ve> ve = new List<Ve>();
         private List<TimeSpan> timeSpans = new List<TimeSpan>();
@@ -31,20 +32,26 @@ namespace Quan_ly_may_bay
                 LoTrinh loTrinh = db.LoTrinhs.FirstOrDefault(p => p.MaLT == chuyenBay.MaLT);
                 UCInfo1 uc = new UCInfo1();
                 int levelSeat = (int)ve[i].LevelSeat;
+
+
                 DateTime ngayKhoiHanh = chuyenBay.NgayKH.Value; // Ngày khởi hành
                 TimeSpan gioCatCanh = loTrinh.GioCatCanh.Value; // Giờ cất cánh
-                TimeSpan gioHaCanh = loTrinh.GioHaCanh.Value;   // Giờ hạ cánh
-                timeSpans.Add(gioCatCanh);
-                // Xác định ngày hạ cánh
-                DateTime ngayHaCanh = ngayKhoiHanh + gioHaCanh;
-                if (gioHaCanh < gioCatCanh) // Hạ cánh vào ngày hôm sau
+                TimeSpan gioHaCanh = loTrinh.GioHaCanh.Value; // Giờ hạ cánh
+
+                // Tính giờ khởi hành và hạ cánh
+                DateTime thoiGianKhoiHanh = ngayKhoiHanh + gioCatCanh;
+                DateTime thoiGianHaCanh = ngayKhoiHanh + gioHaCanh;
+
+                // Xác định ngày hạ cánh, nếu giờ hạ cánh nhỏ hơn giờ cất cánh thì hạ cánh vào ngày hôm sau
+                if (gioHaCanh < gioCatCanh)
                 {
-                    ngayHaCanh = ngayHaCanh.AddDays(1);
+                    thoiGianHaCanh = thoiGianHaCanh.AddDays(1);
                 }
-                uc.Level.Text = levelSeat == 0 ? "Thương gia" : "Phổ thông";
-                // Định dạng giờ và ngày hạ cánh
-                uc.Date1.Text = ngayKhoiHanh.ToString("dd/MM/yyyy");
-                uc.Date2.Text = ngayHaCanh.ToString("dd/MM/yyyy");
+
+                // Định dạng giờ khởi hành và hạ cánh
+                uc.Date1.Text = thoiGianKhoiHanh.ToString("HH'h' dd/MM/yyyy");
+                uc.Date2.Text = thoiGianHaCanh.ToString("HH'h' dd/MM/yyyy");
+
                 string noiXuatPhat = db.SanBays.FirstOrDefault(p => p.MaSB == loTrinh.NoiXuatPhat).City.ToString();
                 string noiDen = db.SanBays.FirstOrDefault(p => p.MaSB == loTrinh.NoiDen).City.ToString();
                 uc.From.Text = noiXuatPhat;

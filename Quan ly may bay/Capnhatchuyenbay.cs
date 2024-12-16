@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using Quan_ly_may_bay.UCFlight;
-
+using Quan_ly_may_bay.Base;
 namespace Quan_ly_may_bay
 {
     public partial class Capnhatchuyenbay : KryptonForm
     {
         private List<UC_CreateChuyenBay> list = new List<UC_CreateChuyenBay>();
-        private databaseDataContext db = new databaseDataContext();
+        private databaseDataContext db = new databaseDataContext(Common.connectionString);
         private List<ChuyenBay> listCB;
         public Capnhatchuyenbay()
         {
@@ -31,28 +31,24 @@ namespace Quan_ly_may_bay
                 LoTrinh lb = db.LoTrinhs.FirstOrDefault(p=>p.MaLT == listCB[i].MaLT);
 
 
-                if (lb.GioHaCanh.HasValue && lb.GioCatCanh.HasValue && listCB[i].NgayKH.HasValue)
-                {
-                    DateTime ngayKhoiHanh = listCB[i].NgayKH.Value; // Ngày khởi hành
-                    TimeSpan gioCatCanh = lb.GioCatCanh.Value; // Giờ cất cánh
-                    TimeSpan gioHaCanh = lb.GioHaCanh.Value;   // Giờ hạ cánh
+                DateTime ngayKhoiHanh = listCB[i].NgayKH.Value; // Ngày khởi hành
+                TimeSpan gioCatCanh = lb.GioCatCanh.Value; // Giờ cất cánh
+                TimeSpan gioHaCanh = lb.GioHaCanh.Value; // Giờ hạ cánh
 
-                    // Xác định ngày hạ cánh
-                    DateTime ngayHaCanh = ngayKhoiHanh + gioHaCanh;
-                    if (gioHaCanh < gioCatCanh) // Hạ cánh vào ngày hôm sau
-                    {
-                        ngayHaCanh = ngayHaCanh.AddDays(1);
-                    }
+                // Tính giờ khởi hành và hạ cánh
+                DateTime thoiGianKhoiHanh = ngayKhoiHanh + gioCatCanh;
+                DateTime thoiGianHaCanh = ngayKhoiHanh + gioHaCanh;
 
-                    // Định dạng giờ và ngày hạ cánh
-                    uc.gioDen.Text = DateTime.Today.Add(gioHaCanh).ToString("hh:mm tt") + " " + ngayHaCanh.ToString("dd/MM/yyyy");
-                    uc.gioKhoiHanh.Text = DateTime.Today.Add(gioCatCanh).ToString("hh:mm tt") + " " + ngayKhoiHanh.ToString("dd/MM/yyyy");
-                }
-                else
+                // Xác định ngày hạ cánh, nếu giờ hạ cánh nhỏ hơn giờ cất cánh thì hạ cánh vào ngày hôm sau
+                if (gioHaCanh < gioCatCanh)
                 {
-                    uc.gioDen.Text = "Không xác định"; // Xử lý nếu giá trị bị thiếu
-                    uc.gioKhoiHanh.Text = "Không xác định"; // Xử lý nếu giá trị bị thiếu
+                    thoiGianHaCanh = thoiGianHaCanh.AddDays(1);
                 }
+
+                // Định dạng giờ khởi hành và hạ cánh
+                uc.gioDen.Text = thoiGianHaCanh.ToString("HH'h' dd/MM/yyyy");
+                uc.gioKhoiHanh.Text = thoiGianKhoiHanh.ToString("HH'h' dd/MM/yyyy");
+
 
                 SanBay sb1 = db.SanBays.FirstOrDefault(p => p.MaSB == lb.NoiXuatPhat);
                 uc.noiDen.Text = sb1.City;

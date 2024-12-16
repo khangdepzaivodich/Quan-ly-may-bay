@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.ConfirmNewPassTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,7 +39,9 @@
             this.SubmitButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.CloseLabel = new System.Windows.Forms.Label();
+            this.errConfirm = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errConfirm)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -187,6 +190,7 @@
             this.SubmitButton.TabIndex = 37;
             this.SubmitButton.TabStop = false;
             this.SubmitButton.Values.Text = "Submit";
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // pictureBox2
             // 
@@ -208,6 +212,10 @@
             this.CloseLabel.TabIndex = 38;
             this.CloseLabel.Text = "X";
             this.CloseLabel.Click += new System.EventHandler(this.CloseLabel_Click);
+            // 
+            // errConfirm
+            // 
+            this.errConfirm.ContainerControl = this;
             // 
             // ChangePasswordForm
             // 
@@ -234,6 +242,7 @@
             this.StateCommon.Border.Rounding = 30;
             this.StateCommon.Border.Width = 1;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errConfirm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +260,6 @@
         private System.Windows.Forms.Label SignupUsernameTextBox;
         private ComponentFactory.Krypton.Toolkit.KryptonButton SubmitButton;
         private System.Windows.Forms.Label CloseLabel;
+        private System.Windows.Forms.ErrorProvider errConfirm;
     }
 }

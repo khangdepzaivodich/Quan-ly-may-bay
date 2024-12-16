@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Quan_ly_may_bay.Base;
 
 namespace Quan_ly_may_bay
 {
@@ -39,7 +40,7 @@ namespace Quan_ly_may_bay
         };
         private Form frm;
         private Account account;
-        private databaseDataContext db = new databaseDataContext();
+        private databaseDataContext db = new databaseDataContext(Common.connectionString);
 
         public MainLogin(int _id)
         {
@@ -208,5 +209,23 @@ namespace Quan_ly_may_bay
             MainNotLogin frm = new MainNotLogin();
             frm.ShowDialog();
          }
+
+        private void ChangePassword_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Remove(frm);
+            foreach (UC_btnMainForm btn in fpanelBtn.Controls)
+            {
+                if (btn.ColorBtn != Color.Transparent)
+                {
+                    btn.ColorBtn = Color.Transparent;
+                    break;
+                }
+            }
+            frm = new ChangePasswordForm(account.ID);
+            frm.TopLevel = false;
+            frm.Location = new Point(50, 10);
+            panelMain.Controls.Add(frm);
+            frm.Show();
+        }
     }
 }

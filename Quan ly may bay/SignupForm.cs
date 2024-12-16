@@ -64,7 +64,7 @@ namespace Quan_ly_may_bay
             {
                 return;
             }
-            databaseDataContext db = new databaseDataContext();
+            databaseDataContext db = new databaseDataContext(Common.connectionString);
             Account newAccount = new Account();
             newAccount.Username = UsernameTextBox.Text;
             newAccount.Email = EmailTextBox.Text;

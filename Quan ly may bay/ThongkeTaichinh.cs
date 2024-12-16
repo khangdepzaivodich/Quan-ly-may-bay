@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using Quan_ly_may_bay.Base;
 
 namespace Quan_ly_may_bay
 {
     public partial class ThongkeTaichinh : Form
     {
-        private databaseDataContext db = new databaseDataContext();
+        private databaseDataContext db = new databaseDataContext(Common.connectionString);
         public ThongkeTaichinh()
         {
             InitializeComponent();

@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Quan_ly_may_bay.Base;
 
 namespace Quan_ly_may_bay
 {
     public partial class TaoLoTrinh : KryptonForm
     {
-        private databaseDataContext db = new databaseDataContext();
+        private databaseDataContext db = new databaseDataContext(Common.connectionString);
         public static LoTrinh loTrinh = new LoTrinh();
         public TaoLoTrinh()
         {

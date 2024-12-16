@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Quan_ly_may_bay.Base;
 namespace Quan_ly_may_bay
 {
     public partial class ChoseSeat : KryptonForm
     {
         private KryptonButton[,] seats = new KryptonButton[10, 10];
-        private databaseDataContext db = new databaseDataContext();
+        private databaseDataContext db = new databaseDataContext(Common.connectionString);
         private List<Ve> ve = new List<Ve>();
         private List<Ve> tongVe = new List<Ve>(); 
         private int prevI = -1, prevJ = -1;

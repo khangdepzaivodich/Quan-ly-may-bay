@@ -30,7 +30,7 @@ namespace Quan_ly_may_bay
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             string email = textBox1.Text;
-            databaseDataContext db = new databaseDataContext();
+            databaseDataContext db = new databaseDataContext(Common.connectionString);
             Account account = db.Accounts.FirstOrDefault(p => p.Email == email);
             if (account == null)
             {

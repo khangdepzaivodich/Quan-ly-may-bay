@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.Media3D.Converters;
 using ComponentFactory.Krypton.Toolkit;
+using Quan_ly_may_bay.Base;
 
 namespace Quan_ly_may_bay
 {
     public partial class InformationAccount : KryptonForm
     {
-        private databaseDataContext db = new databaseDataContext();
+        private databaseDataContext db = new databaseDataContext(Common.connectionString);
         private Account account;
         private KhachHang khachang;
         private NhanVien nhanvien;

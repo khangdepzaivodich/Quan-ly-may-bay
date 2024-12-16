@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using Quan_ly_may_bay.UCFlight;
+using Quan_ly_may_bay.Base;
 
 namespace Quan_ly_may_bay
 {
@@ -19,33 +20,39 @@ namespace Quan_ly_may_bay
         private List<UC_Ticket> filteredList = new List<UC_Ticket>();
         private List<ChuyenBay> chuyenBays = new List<ChuyenBay>();
         private int id;
-        private databaseDataContext db = new databaseDataContext();
+        private databaseDataContext db = new databaseDataContext(Common.connectionString);
         public Datve(int _id)
         {
             InitializeComponent();
             id = _id;
-            chuyenBays = db.ChuyenBays.OrderBy(p => p.Stt).ToList();
+            chuyenBays = db.ChuyenBays.Where(p => p.NgayKH > DateTime.Now).OrderBy(p => p.Stt).ToList();
             Substract.Visible = false;
             for(int i = 0; i < chuyenBays.Count; ++i)
             {
                 UC_Ticket uc = new UC_Ticket();
                 LoTrinh lb = db.LoTrinhs.FirstOrDefault(p => p.MaLT == chuyenBays[i].MaLT);
+
                 DateTime ngayKhoiHanh = chuyenBays[i].NgayKH.Value; // Ngày khởi hành
                 TimeSpan gioCatCanh = lb.GioCatCanh.Value; // Giờ cất cánh
-                TimeSpan gioHaCanh = lb.GioHaCanh.Value;   // Giờ hạ cánh
+                TimeSpan gioHaCanh = lb.GioHaCanh.Value; // Giờ hạ cánh
 
-                // Xác định ngày hạ cánh
-                DateTime ngayHaCanh = ngayKhoiHanh + gioHaCanh;
-                if (gioHaCanh < gioCatCanh) // Hạ cánh vào ngày hôm sau
+                // Tính thời gian cất cánh và hạ cánh
+                DateTime thoiGianCatCanh = ngayKhoiHanh + gioCatCanh;
+                DateTime thoiGianHaCanh = ngayKhoiHanh + gioHaCanh;
+
+                // Xác định ngày hạ cánh, nếu giờ hạ cánh nhỏ hơn giờ cất cánh thì là ngày hôm sau
+                if (gioHaCanh < gioCatCanh)
                 {
-                    ngayHaCanh = ngayHaCanh.AddDays(1);
+                    thoiGianHaCanh = thoiGianHaCanh.AddDays(1);
                 }
 
-                // Định dạng giờ và ngày hạ cánh
-                uc.time2.Text = DateTime.Today.Add(gioHaCanh).Hour.ToString() + "h";
-                uc.time1.Text = DateTime.Today.Add(gioCatCanh).Hour.ToString() + "h";    
-                uc.date1.Text = ngayKhoiHanh.ToString("dd/MM/yyyy"); 
-                uc.date2.Text = ngayHaCanh.ToString("dd/MM/yyyy");
+                // Định dạng giờ và ngày cho UI
+                uc.time1.Text = thoiGianCatCanh.ToString("HH'h'"); // Giờ cất cánh
+                uc.time2.Text = thoiGianHaCanh.ToString("HH'h'"); // Giờ hạ cánh
+                uc.date1.Text = thoiGianCatCanh.ToString("dd/MM/yyyy"); // Ngày cất cánh
+                uc.date2.Text = thoiGianHaCanh.ToString("dd/MM/yyyy"); // Ngày hạ cánh
+
+
 
                 int passengerCount = db.Ves.Count(p => p.MaCB == chuyenBays[i].MaCB);
                 string noiXuatPhat = db.SanBays.FirstOrDefault(p => p.MaSB == lb.NoiXuatPhat).City.ToString();
@@ -76,9 +83,11 @@ namespace Quan_ly_may_bay
         }
         private void RefreshList()
         {
-            db = new databaseDataContext();
+            db = new databaseDataContext(Common.connectionString);
             chuyenBays.Clear();
-            chuyenBays = db.ChuyenBays.OrderBy(p => p.Stt).ToList();
+            chuyenBays = db.ChuyenBays.Where(p => p.NgayKH > DateTime.Now).OrderBy(p => p.Stt).ToList();
+
+
             for (int i = 0; i < chuyenBays.Count; ++i)
             {
                 int passengerCount = db.Ves.Count(p => p.MaCB == chuyenBays[i].MaCB);

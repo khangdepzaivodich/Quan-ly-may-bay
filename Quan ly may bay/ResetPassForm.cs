@@ -14,7 +14,7 @@ namespace Quan_ly_may_bay
     public partial class ResetPassForm : KryptonForm
     {
         Account account;
-        databaseDataContext db = new databaseDataContext();
+        databaseDataContext db = new databaseDataContext(Common.connectionString);
         int id;
         public ResetPassForm(int _id)
         {

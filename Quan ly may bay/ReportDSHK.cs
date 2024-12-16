@@ -23,7 +23,7 @@ namespace Quan_ly_may_bay
 
         private void ReportDSHK_Load(object sender, EventArgs e)
         {
-            databaseDataContext db = new databaseDataContext();
+            databaseDataContext db = new databaseDataContext(Common.connectionString);
 
             // Lấy thông tin về mã máy bay từ chuyến bay
             string mamb = db.LoTrinhs.FirstOrDefault(p => p.MaLT == malt).MaMB;

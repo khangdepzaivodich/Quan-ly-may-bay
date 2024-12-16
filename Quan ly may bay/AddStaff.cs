@@ -15,7 +15,7 @@ namespace Quan_ly_may_bay
     public partial class AddStaff : KryptonForm
     {
         public event EventHandler DataChanged;
-        databaseDataContext db = new databaseDataContext();
+        databaseDataContext db = new databaseDataContext(Common.connectionString);
         int manv = -1;
         public AddStaff()
         {

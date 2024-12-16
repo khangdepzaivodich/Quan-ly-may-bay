@@ -9,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Quan_ly_may_bay.Base;
 namespace Quan_ly_may_bay
 {
     public partial class OTPForm : KryptonForm
     {
         private Form frm;
         private int id;
-        databaseDataContext db = new databaseDataContext();
+        databaseDataContext db = new databaseDataContext(Common.connectionString);
         Account account;
         public OTPForm(Form _frm, int _id)
         {
@@ -85,6 +86,7 @@ namespace Quan_ly_may_bay
             }
             else if (frm is LoginForm)
             {
+                if(account.Active == 0) account.DateActive = DateTime.Now;
                 account.RandomKey = account.OTP;
                 account.Active = 1;
                 db.SubmitChanges();

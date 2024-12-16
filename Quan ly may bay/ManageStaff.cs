@@ -12,6 +12,7 @@ using System.Windows.Documents;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using Quan_ly_may_bay.UCFlight;
+using Quan_ly_may_bay.Base;
 
 namespace Quan_ly_may_bay
 {
@@ -27,7 +28,7 @@ namespace Quan_ly_may_bay
         {
             InitializeComponent();
             ID = _ID;
-            db = new databaseDataContext();
+            db = new databaseDataContext(Common.connectionString);
             cbbMaCV.DataSource = db.ChucVus.OrderBy(p => p.MaCV);
             cbbMaCV.DisplayMember = "MaCV";
             cbbMaCV.ValueMember = "MaCV";
@@ -41,7 +42,7 @@ namespace Quan_ly_may_bay
             if (check)
             {
                 btnIn.Hide();
-                db = new databaseDataContext();
+                db = new databaseDataContext(Common.connectionString);
                 nv = db.NhanViens.OrderByDescending(p => p.MaNV).ToList();    
             }
             else

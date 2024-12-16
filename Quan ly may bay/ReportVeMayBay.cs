@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using Microsoft.Reporting.WinForms;
+using Quan_ly_may_bay.Base;
 
 namespace Quan_ly_may_bay
 {
@@ -28,7 +29,7 @@ namespace Quan_ly_may_bay
 
         private void ReportChuyenBay_Load(object sender, EventArgs e)
         {
-            databaseDataContext db = new databaseDataContext();
+            databaseDataContext db = new databaseDataContext(Common.connectionString);
             Ve ve = db.Ves.FirstOrDefault(p => p.MaVe == mave);
             KhachHang kh = db.KhachHangs.FirstOrDefault(p => p.MaKH == ve.MaKH);
             ChuyenBay cb = db.ChuyenBays.FirstOrDefault(p => p.MaCB == ve.MaCB);

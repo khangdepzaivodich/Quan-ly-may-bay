@@ -1,5 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms.VisualStyles;
+using System.Configuration;
 
 namespace Quan_ly_may_bay.Base
 {
@@ -12,5 +14,6 @@ namespace Quan_ly_may_bay.Base
                 return sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
             }
         }
+        public static string connectionString = ConfigurationManager.ConnectionStrings["QLCBConnectString"].ConnectionString;
     }
 }

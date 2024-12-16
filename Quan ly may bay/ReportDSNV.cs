@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Quan_ly_may_bay.Base;
 
 namespace Quan_ly_may_bay
 {
@@ -32,7 +33,7 @@ namespace Quan_ly_may_bay
 
         private void ReportDSNV_Load(object sender, EventArgs e)
         {
-            databaseDataContext db = new databaseDataContext();
+            databaseDataContext db = new databaseDataContext(Common.connectionString);
             ReportParameter[] para = new ReportParameter[2];
 
             // Lấy thông tin người in

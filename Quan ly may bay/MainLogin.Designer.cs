@@ -30,6 +30,7 @@
         {
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelObject = new System.Windows.Forms.Panel();
+            this.ChangePassword = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.exit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.XemThongTin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.NhiemVu = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             // panelObject
             // 
             this.panelObject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelObject.Controls.Add(this.ChangePassword);
             this.panelObject.Controls.Add(this.exit);
             this.panelObject.Controls.Add(this.XemThongTin);
             this.panelObject.Controls.Add(this.NhiemVu);
@@ -64,9 +66,26 @@
             this.panelObject.Size = new System.Drawing.Size(252, 643);
             this.panelObject.TabIndex = 1;
             // 
+            // ChangePassword
+            // 
+            this.ChangePassword.Location = new System.Drawing.Point(60, 85);
+            this.ChangePassword.Name = "ChangePassword";
+            this.ChangePassword.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ChangePassword.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ChangePassword.OverrideDefault.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
+            this.ChangePassword.Size = new System.Drawing.Size(31, 32);
+            this.ChangePassword.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ChangePassword.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ChangePassword.StateCommon.Back.Image = global::Quan_ly_may_bay.Properties.Resources.key;
+            this.ChangePassword.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Stretch;
+            this.ChangePassword.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
+            this.ChangePassword.TabIndex = 6;
+            this.ChangePassword.Values.Text = "";
+            this.ChangePassword.Click += new System.EventHandler(this.ChangePassword_Click);
+            // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(77, 85);
+            this.exit.Location = new System.Drawing.Point(97, 85);
             this.exit.Name = "exit";
             this.exit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.exit.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -174,5 +193,6 @@
         private System.Windows.Forms.Label NhiemVu;
         private ComponentFactory.Krypton.Toolkit.KryptonButton XemThongTin;
         private ComponentFactory.Krypton.Toolkit.KryptonButton exit;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton ChangePassword;
     }
 }

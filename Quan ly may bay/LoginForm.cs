@@ -88,7 +88,7 @@ namespace Quan_ly_may_bay
             if (!check) return;
 
 
-            databaseDataContext db = new databaseDataContext();
+            databaseDataContext db = new databaseDataContext(Common.connectionString);
             Account account = db.Accounts.FirstOrDefault(p => p.Username == UsernameTextBox.Text);
             if (account == null)
             {

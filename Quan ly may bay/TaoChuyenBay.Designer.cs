@@ -258,6 +258,7 @@
             // 
             // SoGhe
             // 
+            this.SoGhe.Enabled = false;
             this.SoGhe.Location = new System.Drawing.Point(226, 287);
             this.SoGhe.Name = "SoGhe";
             this.SoGhe.Size = new System.Drawing.Size(151, 30);
@@ -270,6 +271,7 @@
             this.SoGhe.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.SoGhe.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoGhe.TabIndex = 30;
+            this.SoGhe.Text = "100";
             // 
             // CreateButton
             // 
