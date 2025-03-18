@@ -11,7 +11,7 @@ namespace Quan_ly_may_bay
     internal class SendMail
     {
         public static string taikhoan = "hackgame.testing@gmail.com";
-        public static string matkhau = "kktx melb tfqh ynvp";
+        public static string matkhau = ".........";
         public static bool SendMailTo(string emailto, string content)
         {
             var formAddress = new MailAddress(taikhoan, "HKPLANE");
